@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>ALANKRA | Luxury in Every Detail</title>
 
-  <meta name="description"
-        content="ALANKRA — Anti-tarnish jewellery designed for everyday elegance. Luxury in Every Detail.">
+  <meta
+    name="description"
+    content="ALANKRA — Anti-tarnish jewellery designed for everyday elegance. Luxury in Every Detail."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -26,15 +39,18 @@
       --white: #ffffff;
     }
 
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: 'Montserrat', sans-serif;
@@ -43,563 +59,1131 @@
       line-height: 1.6;
     }
 
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
 
     img {
       display: block;
       max-width: 100%;
     }
 
-    /* =========================
+
+    /* ========================================
        TOP BAR
-    ========================= */
+    ======================================== */
 
     .top-bar {
-      background: var(--dark-emerald);
-      color: white;
-      text-align: center;
-      padding: 9px 15px;
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-    }
 
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      background: var(--ivory);
-      border-bottom: 1px solid rgba(197,161,90,.25);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav {
-      max-width: 1250px;
-      height: 92px;
-      margin: auto;
-      padding: 0 30px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-    }
-
-    .brand img {
-      width: 125px;
-      height: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 35px;
-      font-size: 11px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      transition: .3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 18px;
-      font-size: 20px;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 720px;
-
-      background:
-        linear-gradient(
-          rgba(6,31,27,.25),
-          rgba(6,31,27,.48)
-        ),
-        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=90")
-        center/cover;
+      height: 28px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      text-align: center;
+      background: var(--dark-emerald);
+
       color: white;
+
+      font-size: 9px;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
     }
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+
+      height: 82px;
+
+      background: rgba(248, 245, 237, 0.98);
+
+      border-bottom: 1px solid rgba(197, 161, 90, 0.25);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+    }
+
+
+    nav {
+
+      max-width: 1350px;
+
+      height: 100%;
+
+      margin: auto;
+
+      padding: 0 35px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    /* LOGO */
+
+    .brand {
+
+      width: 210px;
+
+      display: flex;
+
+      align-items: center;
+
+    }
+
+
+    .brand img {
+
+      width: 175px;
+
+      height: auto;
+
+      display: block;
+
+    }
+
+
+    /* NAVIGATION */
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 38px;
+
+      list-style: none;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .nav-links a {
+
+      position: relative;
+
+      transition: 0.3s ease;
+
+    }
+
+
+    .nav-links a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -7px;
+
+      width: 0;
+
+      height: 1px;
+
+      background: var(--gold);
+
+      transition: 0.3s ease;
+
+    }
+
+
+    .nav-links a:hover {
+
+      color: var(--gold);
+
+    }
+
+
+    .nav-links a:hover::after {
+
+      width: 100%;
+
+    }
+
+
+    /* HEADER ICONS */
+
+    .nav-actions {
+
+      width: 210px;
+
+      display: flex;
+
+      justify-content: flex-end;
+
+      align-items: center;
+
+      gap: 20px;
+
+    }
+
+
+    .nav-icon {
+
+      font-size: 19px;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+
+    }
+
+
+    .nav-icon:hover {
+
+      color: var(--gold);
+
+    }
+
+
+    /* ========================================
+       HERO
+    ======================================== */
+
+    .hero {
+
+      min-height: 700px;
+
+      background:
+
+        linear-gradient(
+          rgba(6, 31, 27, 0.28),
+          rgba(6, 31, 27, 0.55)
+        ),
+
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=90")
+
+        center center / cover;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: white;
+
+    }
+
 
     .hero-content {
-      max-width: 750px;
-      padding: 30px;
+
+      max-width: 800px;
+
+      padding: 40px 25px;
+
     }
+
 
     .hero-kicker {
-      font-size: 11px;
+
+      font-size: 10px;
+
       letter-spacing: 5px;
+
       text-transform: uppercase;
-      margin-bottom: 25px;
+
+      margin-bottom: 24px;
+
     }
+
 
     .hero h1 {
+
       font-family: 'Cormorant Garamond', serif;
+
       font-weight: 400;
-      font-size: clamp(55px, 8vw, 100px);
-      line-height: .9;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
+
+      font-size: clamp(55px, 7vw, 96px);
+
+      line-height: 0.92;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 28px;
+
     }
+
 
     .hero p {
-      font-size: 14px;
+
+      font-size: 13px;
+
       font-weight: 300;
-      letter-spacing: 1px;
+
+      letter-spacing: 0.8px;
+
       margin-bottom: 35px;
+
     }
+
 
     .hero-button {
+
       display: inline-block;
-      padding: 15px 36px;
-      border: 1px solid white;
-      font-size: 10px;
+
+      padding: 15px 38px;
+
+      border: 1px solid rgba(255,255,255,0.85);
+
+      font-size: 9px;
+
       letter-spacing: 2.5px;
+
       text-transform: uppercase;
-      transition: .3s;
+
+      transition: 0.35s ease;
+
     }
+
 
     .hero-button:hover {
+
       background: white;
+
       color: var(--emerald);
+
     }
 
-    /* =========================
-       SECTIONS
-    ========================= */
+
+    /* ========================================
+       GENERAL SECTIONS
+    ======================================== */
 
     .section {
+
       max-width: 1250px;
+
       margin: auto;
-      padding: 95px 30px;
+
+      padding: 100px 30px;
+
     }
+
 
     .section-heading {
+
       text-align: center;
-      margin-bottom: 50px;
+
+      margin-bottom: 55px;
+
     }
+
 
     .section-heading span {
+
       color: var(--gold);
-      font-size: 10px;
+
+      font-size: 9px;
+
       letter-spacing: 4px;
+
       text-transform: uppercase;
+
     }
+
 
     .section-heading h2 {
+
       font-family: 'Cormorant Garamond', serif;
-      font-size: 52px;
+
+      font-size: 54px;
+
+      line-height: 1;
+
       font-weight: 400;
+
       color: var(--emerald);
-      margin-top: 7px;
+
+      margin-top: 10px;
+
     }
 
-    /* =========================
+
+    /* ========================================
        COLLECTIONS
-    ========================= */
+    ======================================== */
 
     .collections {
+
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 20px;
+
     }
+
 
     .collection {
+
       height: 500px;
+
       position: relative;
+
       overflow: hidden;
+
       background: #ddd;
+
     }
+
 
     .collection img {
+
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
-      transition: transform .7s ease;
+
+      transition: transform 0.8s ease;
+
     }
+
 
     .collection:hover img {
+
       transform: scale(1.05);
+
     }
 
+
     .collection-overlay {
+
       position: absolute;
+
       inset: 0;
 
       background:
+
         linear-gradient(
-          transparent 45%,
-          rgba(0,0,0,.7)
+          transparent 42%,
+          rgba(0,0,0,0.72)
         );
 
       display: flex;
+
       align-items: flex-end;
+
       justify-content: center;
 
       padding: 35px;
+
       color: white;
+
       text-align: center;
+
     }
+
 
     .collection-overlay h3 {
+
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+
+      font-size: 35px;
+
       font-weight: 400;
+
     }
+
 
     .collection-overlay p {
-      font-size: 9px;
+
+      font-size: 8px;
+
       letter-spacing: 2px;
+
       margin-top: 5px;
+
       text-transform: uppercase;
+
     }
 
-    /* =========================
+
+    /* ========================================
        PRODUCTS
-    ========================= */
+    ======================================== */
 
     .products {
+
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 18px;
+
     }
+
 
     .product {
+
       background: white;
+
       overflow: hidden;
+
+      transition: transform 0.3s ease;
+
     }
+
+
+    .product:hover {
+
+      transform: translateY(-4px);
+
+    }
+
 
     .product-image {
+
       aspect-ratio: 1 / 1.1;
+
       overflow: hidden;
+
       background: #e9e5dc;
+
     }
+
 
     .product-image img {
+
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
-      transition: transform .6s ease;
+
+      transition: transform 0.6s ease;
+
     }
 
-    .product:hover img {
+
+    .product:hover .product-image img {
+
       transform: scale(1.04);
+
     }
+
 
     .product-info {
+
       text-align: center;
-      padding: 18px 10px 22px;
+
+      padding: 18px 10px 23px;
+
     }
+
 
     .product-info h3 {
+
       font-family: 'Cormorant Garamond', serif;
+
       font-size: 23px;
+
       font-weight: 500;
+
     }
+
 
     .product-info p {
-      font-size: 11px;
+
+      font-size: 10px;
+
       color: #777;
-      margin-top: 4px;
+
+      margin-top: 3px;
+
     }
+
 
     .product-price {
+
       color: var(--emerald) !important;
+
       font-weight: 600;
+
       margin-top: 8px !important;
+
     }
 
-    /* =========================
-       BRAND STORY
-    ========================= */
+
+    /* ========================================
+       STORY
+    ======================================== */
 
     .story {
+
       background: var(--emerald);
+
       color: white;
+
     }
+
 
     .story-content {
+
       max-width: 850px;
+
       margin: auto;
-      padding: 110px 30px;
+
+      padding: 115px 30px;
+
       text-align: center;
+
     }
+
 
     .story-content span {
+
       color: #d9bf86;
-      font-size: 10px;
+
+      font-size: 9px;
+
       letter-spacing: 4px;
+
       text-transform: uppercase;
+
     }
+
 
     .story-content h2 {
+
       font-family: 'Cormorant Garamond', serif;
-      font-size: 58px;
+
+      font-size: 60px;
+
       font-weight: 400;
-      line-height: 1;
-      margin: 20px 0 25px;
+
+      line-height: 0.95;
+
+      margin: 20px 0 28px;
+
     }
+
 
     .story-content p {
+
       max-width: 650px;
+
       margin: auto;
-      font-size: 14px;
+
+      font-size: 13px;
+
       font-weight: 300;
+
       line-height: 2;
+
       color: #eee;
+
     }
 
-    /* =========================
-       WHY ALANKRA
-    ========================= */
+
+    /* ========================================
+       FEATURES
+    ======================================== */
 
     .features {
+
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 25px;
+
       text-align: center;
+
     }
+
 
     .feature {
+
       padding: 25px 15px;
+
     }
+
 
     .feature-symbol {
+
       color: var(--gold);
-      font-size: 26px;
+
+      font-size: 25px;
+
       margin-bottom: 15px;
+
     }
+
 
     .feature h3 {
+
       font-family: 'Cormorant Garamond', serif;
+
       font-size: 25px;
+
       font-weight: 500;
+
       color: var(--emerald);
+
     }
+
 
     .feature p {
-      font-size: 11px;
+
+      font-size: 10px;
+
       color: #777;
+
       margin-top: 8px;
+
+      line-height: 1.7;
+
     }
 
-    /* =========================
+
+    /* ========================================
        NEWSLETTER
-    ========================= */
+    ======================================== */
 
     .newsletter {
+
       background: var(--cream);
+
       text-align: center;
+
       padding: 100px 30px;
+
     }
+
 
     .newsletter h2 {
+
       font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
+
+      font-size: 52px;
+
       font-weight: 400;
+
       color: var(--emerald);
+
     }
+
 
     .newsletter p {
-      font-size: 12px;
+
+      font-size: 11px;
+
       margin: 12px 0 25px;
+
     }
+
 
     .newsletter-form {
+
       max-width: 450px;
+
       margin: auto;
+
       display: flex;
+
       border-bottom: 1px solid var(--emerald);
+
     }
+
 
     .newsletter-form input {
+
       flex: 1;
+
       border: none;
+
       background: transparent;
+
       padding: 14px 5px;
+
       outline: none;
+
       font-family: inherit;
+
+      font-size: 12px;
+
     }
+
 
     .newsletter-form button {
+
       border: none;
+
       background: none;
+
       cursor: pointer;
+
       color: var(--emerald);
-      font-size: 10px;
+
+      font-size: 9px;
+
       letter-spacing: 2px;
+
     }
 
-    /* =========================
+
+    /* ========================================
        FOOTER
-    ========================= */
+    ======================================== */
 
     footer {
+
       background: var(--dark-emerald);
+
       color: white;
+
       padding: 70px 30px 25px;
+
     }
 
+
     .footer-content {
+
       max-width: 1100px;
+
       margin: auto;
 
       display: grid;
+
       grid-template-columns: 2fr 1fr 1fr;
+
       gap: 70px;
+
     }
+
 
     .footer-logo img {
+
       width: 150px;
+
     }
+
 
     .footer-about {
+
       max-width: 350px;
+
       color: #ccc;
-      font-size: 11px;
+
+      font-size: 10px;
+
       line-height: 2;
+
       margin-top: 15px;
+
     }
+
 
     footer h4 {
+
       color: #d9bf86;
-      font-size: 10px;
+
+      font-size: 9px;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
       margin-bottom: 20px;
+
     }
+
 
     footer ul {
+
       list-style: none;
+
     }
+
 
     footer li {
-      font-size: 11px;
+
+      font-size: 10px;
+
       color: #ddd;
+
       margin-bottom: 10px;
+
     }
+
 
     .copyright {
+
       max-width: 1100px;
+
       margin: 55px auto 0;
+
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,.15);
+
+      border-top: 1px solid rgba(255,255,255,0.15);
+
       text-align: center;
-      font-size: 9px;
+
+      font-size: 8px;
+
       letter-spacing: 1px;
+
       color: #aaa;
+
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
 
-    @media (max-width: 850px) {
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      header {
+
+        height: 72px;
+
+      }
+
 
       nav {
-        height: 75px;
-        padding: 0 18px;
+
+        padding: 0 20px;
+
       }
+
+
+      .brand {
+
+        width: auto;
+
+      }
+
 
       .brand img {
-        width: 100px;
+
+        width: 135px;
+
       }
+
 
       .nav-links {
+
         display: none;
+
       }
+
+
+      .nav-actions {
+
+        width: auto;
+
+      }
+
 
       .hero {
-        min-height: 600px;
+
+        min-height: 620px;
+
       }
+
 
       .hero h1 {
-        font-size: 60px;
+
+        font-size: 58px;
+
       }
+
 
       .collections {
+
         grid-template-columns: 1fr;
+
       }
+
 
       .collection {
-        height: 430px;
+
+        height: 440px;
+
       }
+
 
       .products {
+
         grid-template-columns: repeat(2, 1fr);
+
         gap: 10px;
+
       }
+
 
       .features {
+
         grid-template-columns: repeat(2, 1fr);
+
       }
+
 
       .footer-content {
+
         grid-template-columns: 1fr;
+
         gap: 40px;
+
       }
+
 
       .section {
-        padding: 70px 18px;
+
+        padding: 75px 18px;
+
       }
+
 
       .section-heading h2 {
-        font-size: 43px;
+
+        font-size: 44px;
+
       }
 
-      .story-content h2 {
-        font-size: 46px;
+
+      .story-content {
+
+        padding: 90px 25px;
+
       }
+
+
+      .story-content h2 {
+
+        font-size: 47px;
+
+      }
+
+
+      .newsletter h2 {
+
+        font-size: 43px;
+
+      }
+
+    }
+
+
+    /* ========================================
+       SMALL PHONES
+    ======================================== */
+
+    @media (max-width: 480px) {
+
+      .top-bar {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+      }
+
+
+      .hero {
+
+        min-height: 580px;
+
+      }
+
+
+      .hero h1 {
+
+        font-size: 49px;
+
+      }
+
+
+      .hero p {
+
+        font-size: 11px;
+
+      }
+
+
+      .products {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+
+      .features {
+
+        gap: 10px;
+
+      }
+
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- TOP BAR -->
+
+  <!-- ========================================
+       TOP BAR
+  ======================================== -->
 
   <div class="top-bar">
+
     Anti-Tarnish Jewellery · Luxury in Every Detail
+
   </div>
 
 
-  <!-- HEADER -->
+  <!-- ========================================
+       HEADER
+  ======================================== -->
 
   <header>
 
     <nav>
 
+
       <a href="#" class="brand">
-        <img src="LOGO.png" alt="ALANKRA">
+
+        <img
+          src="WEBSITE LOGO.png"
+          alt="ALANKRA — Luxury in Every Detail"
+        >
+
       </a>
+
 
       <ul class="nav-links">
 
@@ -621,49 +1205,71 @@
 
       </ul>
 
+
       <div class="nav-actions">
 
-        <span>♡</span>
-        <span>🛍</span>
+        <span class="nav-icon">♡</span>
+
+        <span class="nav-icon">🛍</span>
 
       </div>
+
 
     </nav>
 
   </header>
 
 
-  <!-- HERO -->
+  <!-- ========================================
+       HERO
+  ======================================== -->
 
   <section class="hero">
 
     <div class="hero-content">
 
+
       <div class="hero-kicker">
+
         The ALANKRA Collection
+
       </div>
 
+
       <h1>
+
         Jewellery<br>
         That Feels Like You.
+
       </h1>
 
+
       <p>
-        Timeless pieces. Modern elegance. Made for every version of you.
+
+        Timeless pieces. Modern elegance.
+        Made for every version of you.
+
       </p>
 
+
       <a href="#shop" class="hero-button">
+
         Shop Collection
+
       </a>
+
 
     </div>
 
   </section>
 
 
-  <!-- COLLECTIONS -->
+  <!-- ========================================
+       COLLECTIONS
+  ======================================== -->
 
   <section class="section" id="collections">
+
 
     <div class="section-heading">
 
@@ -675,6 +1281,7 @@
 
 
     <div class="collections">
+
 
       <a href="#shop" class="collection">
 
@@ -741,14 +1348,18 @@
 
       </a>
 
+
     </div>
 
   </section>
 
 
-  <!-- BESTSELLERS -->
+  <!-- ========================================
+       BESTSELLERS
+  ======================================== -->
 
   <section class="section" id="shop">
+
 
     <div class="section-heading">
 
@@ -762,16 +1373,19 @@
     <div class="products">
 
 
+      <!-- PRODUCT 1 -->
+
       <div class="product">
 
         <div class="product-image">
 
           <img
             src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA necklace"
+            alt="ALANKRA Signature Necklace"
           >
 
         </div>
+
 
         <div class="product-info">
 
@@ -786,16 +1400,19 @@
       </div>
 
 
+      <!-- PRODUCT 2 -->
+
       <div class="product">
 
         <div class="product-image">
 
           <img
             src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA ring"
+            alt="ALANKRA Crystal Ring"
           >
 
         </div>
+
 
         <div class="product-info">
 
@@ -810,16 +1427,19 @@
       </div>
 
 
+      <!-- PRODUCT 3 -->
+
       <div class="product">
 
         <div class="product-image">
 
           <img
             src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA earrings"
+            alt="ALANKRA Vintage Earrings"
           >
 
         </div>
+
 
         <div class="product-info">
 
@@ -834,16 +1454,19 @@
       </div>
 
 
+      <!-- PRODUCT 4 -->
+
       <div class="product">
 
         <div class="product-image">
 
           <img
             src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA bracelet"
+            alt="ALANKRA Gold Knot Bracelet"
           >
 
         </div>
+
 
         <div class="product-info">
 
@@ -857,38 +1480,55 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- STORY -->
+  <!-- ========================================
+       BRAND STORY
+  ======================================== -->
 
   <section class="story" id="story">
 
+
     <div class="story-content">
+
 
       <span>The ALANKRA Story</span>
 
+
       <h2>
+
         Luxury doesn't have to be loud.
+
       </h2>
 
+
       <p>
-        ALANKRA was created for those who believe that jewellery is more
-        than an accessory. It is a detail, a memory, a mood and a reflection
-        of who you are. Each piece is chosen to bring effortless elegance
+
+        ALANKRA was created for those who believe that jewellery
+        is more than an accessory. It is a detail, a memory,
+        a mood and a reflection of who you are.
+
+        Each piece is chosen to bring effortless elegance
         into your everyday.
+
       </p>
+
 
     </div>
 
   </section>
 
 
-  <!-- WHY ALANKRA -->
+  <!-- ========================================
+       WHY ALANKRA
+  ======================================== -->
 
   <section class="section" id="care">
+
 
     <div class="section-heading">
 
@@ -959,17 +1599,26 @@
   </section>
 
 
-  <!-- NEWSLETTER -->
+  <!-- ========================================
+       NEWSLETTER
+  ======================================== -->
 
   <section class="newsletter">
 
+
     <h2>
+
       Stay in the ALANKRA circle.
+
     </h2>
 
+
     <p>
+
       Discover new launches, special drops and everything beautiful.
+
     </p>
+
 
     <form class="newsletter-form">
 
@@ -980,28 +1629,39 @@
       >
 
       <button type="submit">
+
         JOIN
+
       </button>
 
     </form>
 
+
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
 
   <footer>
+
 
     <div class="footer-content">
 
 
       <div>
 
+
         <div class="footer-logo">
 
-          <img src="LOGO.png" alt="ALANKRA">
+          <img
+            src="LOGO.png"
+            alt="ALANKRA"
+          >
 
         </div>
+
 
         <p class="footer-about">
 
@@ -1012,39 +1672,54 @@
 
         </p>
 
+
       </div>
 
 
       <div>
 
+
         <h4>Shop</h4>
+
 
         <ul>
 
           <li>New Arrivals</li>
+
           <li>Necklaces</li>
+
           <li>Earrings</li>
+
           <li>Rings</li>
+
           <li>Bracelets</li>
 
         </ul>
+
 
       </div>
 
 
       <div>
 
+
         <h4>Help</h4>
+
 
         <ul>
 
           <li>Jewellery Care</li>
+
           <li>Shipping</li>
+
           <li>Returns</li>
+
           <li>FAQ</li>
+
           <li>Contact</li>
 
         </ul>
+
 
       </div>
 
@@ -1058,8 +1733,10 @@
 
     </div>
 
+
   </footer>
 
 
 </body>
+
 </html>
