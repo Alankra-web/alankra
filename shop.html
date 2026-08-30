@@ -1,5 +1,5 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -8,10 +8,11 @@
 
   <title>Shop | ALANKRA — Luxury in Every Detail</title>
 
-  <meta
-    name="description"
-    content="Discover ALANKRA's collection of anti-tarnish jewellery — elegant necklaces, earrings, bracelets and rings designed for everyday luxury."
-  >
+<meta
+name="description"
+content="Discover ALANKRA's collection of anti-tarnish jewellery — elegant necklaces, earrings, bracelets and rings designed for everyday luxury."
+
+>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,26 +27,29 @@
     :root {
       --emerald: #0b332c;
       --deep-emerald: #061f1b;
-      --emerald-soft: #123f36;
+      --emerald-mid: #123f36;
 
       --ivory: #f8f5ed;
       --cream: #eee8dc;
-      --white: #ffffff;
+      --soft-white: #fcfaf5;
 
       --gold: #c5a15a;
-      --gold-light: #d9bf86;
+      --gold-light: #dfc78f;
 
-      --text: #25231f;
+      --text: #24231f;
       --muted: #77736b;
 
-      --border: rgba(11, 51, 44, 0.13);
+      --border: rgba(11, 51, 44, 0.12);
       --gold-border: rgba(197, 161, 90, 0.28);
+
+      --serif: 'Cormorant Garamond', serif;
+      --sans: 'Montserrat', sans-serif;
     }
 
 
-    /* ==============================
+    /* =========================================
        RESET
-    ============================== */
+    ========================================= */
 
     * {
       margin: 0;
@@ -58,9 +62,9 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
       background: var(--ivory);
       color: var(--text);
+      font-family: var(--sans);
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -80,21 +84,21 @@
     }
 
 
-    /* ==============================
+    /* =========================================
        TOP BAR
-    ============================== */
+    ========================================= */
 
     .top-bar {
       height: 30px;
-
-      background: var(--deep-emerald);
-      color: #f4eee1;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
       padding: 0 15px;
+
+      background: var(--deep-emerald);
+      color: #f4eee1;
 
       font-size: 8px;
       font-weight: 400;
@@ -105,28 +109,28 @@
     }
 
 
-    /* ==============================
+    /* =========================================
        HEADER
-    ============================== */
+    ========================================= */
 
     header {
-      height: 94px;
-
       position: sticky;
       top: 0;
       z-index: 1000;
+
+      height: 94px;
 
       background: rgba(248, 245, 237, 0.96);
 
       border-bottom: 1px solid var(--gold-border);
 
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     nav {
       width: 100%;
-      max-width: 1450px;
+      max-width: 1500px;
       height: 100%;
 
       margin: 0 auto;
@@ -138,12 +142,12 @@
     }
 
 
-    /* ==============================
+    /* =========================================
        LOGO
-    ============================== */
+    ========================================= */
 
     .brand {
-      width: 260px;
+      width: 270px;
       height: 94px;
 
       display: flex;
@@ -155,22 +159,21 @@
     }
 
     .brand img {
-      width: 255px;
+      width: 260px;
+      max-width: none;
       height: auto;
 
-      max-width: none;
+      object-fit: contain;
 
       display: block;
-
-      object-fit: contain;
 
       mix-blend-mode: multiply;
     }
 
 
-    /* ==============================
+    /* =========================================
        NAVIGATION
-    ============================== */
+    ========================================= */
 
     .nav-links {
       display: flex;
@@ -181,13 +184,13 @@
 
       list-style: none;
 
+      white-space: nowrap;
+
       font-size: 9px;
       font-weight: 500;
-      letter-spacing: 2.3px;
+      letter-spacing: 2.2px;
 
       text-transform: uppercase;
-
-      white-space: nowrap;
     }
 
     .nav-links a {
@@ -195,14 +198,13 @@
 
       color: var(--emerald);
 
-      transition: color 0.3s ease;
+      transition: color .3s ease;
     }
 
     .nav-links a::after {
       content: "";
 
       position: absolute;
-
       left: 0;
       bottom: -8px;
 
@@ -211,7 +213,7 @@
 
       background: var(--gold);
 
-      transition: width 0.3s ease;
+      transition: width .3s ease;
     }
 
     .nav-links a:hover,
@@ -225,23 +227,24 @@
     }
 
 
-    /* ==============================
-       NAV ACTIONS
-    ============================== */
+    /* =========================================
+       HEADER ACTIONS
+    ========================================= */
 
     .nav-actions {
-      width: 260px;
+      width: 270px;
 
       display: flex;
-      justify-content: flex-end;
       align-items: center;
+      justify-content: flex-end;
 
-      gap: 16px;
+      gap: 10px;
 
       flex-shrink: 0;
     }
 
-    .nav-action {
+    .nav-action,
+    .mobile-menu {
       width: 38px;
       height: 38px;
 
@@ -250,84 +253,125 @@
       justify-content: center;
 
       border: 1px solid var(--border);
-
       border-radius: 50%;
 
-      background: rgba(255,255,255,0.45);
+      background: rgba(255,255,255,.45);
 
       color: var(--emerald);
 
-      font-size: 17px;
-
       cursor: pointer;
 
-      transition: all 0.3s ease;
+      transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
     }
 
-    .nav-action:hover {
+    .nav-action:hover,
+    .mobile-menu:hover {
       background: var(--emerald);
       color: white;
       border-color: var(--emerald);
+      transform: translateY(-1px);
     }
 
+    .nav-icon {
+      width: 16px;
+      height: 16px;
+    }
 
-    /* ==============================
-       MOBILE MENU BUTTON
-    ============================== */
+    .bag-icon {
+      width: 15px;
+      height: 17px;
+    }
 
     .mobile-menu {
       display: none;
-
-      width: 38px;
-      height: 38px;
-
-      align-items: center;
-      justify-content: center;
-
-      border: 1px solid var(--border);
-      border-radius: 50%;
-
-      background: transparent;
-
-      color: var(--emerald);
-
-      font-size: 17px;
-
-      cursor: pointer;
     }
 
 
-    /* ==============================
-       SHOP HERO
-    ============================== */
+    /* =========================================
+       MOBILE NAV
+    ========================================= */
+
+    .mobile-nav {
+      position: fixed;
+      top: 124px;
+      left: 0;
+      right: 0;
+
+      z-index: 998;
+
+      display: none;
+
+      padding: 22px 24px 28px;
+
+      background: rgba(248,245,237,.98);
+
+      border-bottom: 1px solid var(--gold-border);
+
+      box-shadow: 0 12px 35px rgba(0,0,0,.08);
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+
+      padding: 13px 0;
+
+      border-bottom: 1px solid rgba(11,51,44,.08);
+
+      color: var(--emerald);
+
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2.2px;
+
+      text-transform: uppercase;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: 0;
+    }
+
+    .mobile-nav a.active {
+      color: var(--gold);
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
 
     .shop-hero {
-      min-height: 430px;
-
       position: relative;
+
+      min-height: 510px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
 
       background:
         linear-gradient(
           90deg,
-          rgba(6,31,27,0.88),
-          rgba(6,31,27,0.67),
-          rgba(6,31,27,0.78)
+          rgba(5,28,24,.96) 0%,
+          rgba(6,31,27,.82) 46%,
+          rgba(6,31,27,.94) 100%
         ),
         url("WEBSITE LOGO.png");
 
-      background-size: auto, 420px auto;
       background-repeat: no-repeat;
       background-position: center, center;
+      background-size: cover, 390px auto;
 
       background-color: var(--deep-emerald);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      overflow: hidden;
     }
 
     .shop-hero::before {
@@ -338,92 +382,116 @@
 
       background:
         radial-gradient(
-          circle at center,
-          rgba(197,161,90,0.10),
-          transparent 55%
+          circle at 50% 50%,
+          rgba(197,161,90,.14),
+          transparent 40%
         );
+    }
+
+    .shop-hero::after {
+      content: "";
+
+      position: absolute;
+      inset: 20px;
+
+      border: 1px solid rgba(197,161,90,.17);
 
       pointer-events: none;
     }
 
-    .shop-hero-content {
+    .hero-content {
       position: relative;
       z-index: 2;
 
       max-width: 850px;
 
-      padding: 70px 25px;
+      padding: 90px 25px;
+
+      text-align: center;
     }
 
-    .shop-kicker {
+    .hero-kicker {
+      margin-bottom: 20px;
+
       color: var(--gold-light);
 
       font-size: 8px;
       font-weight: 500;
-
       letter-spacing: 5px;
 
       text-transform: uppercase;
-
-      margin-bottom: 20px;
     }
 
-    .shop-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-
+    .hero-content h1 {
       color: white;
 
-      font-size: clamp(56px, 7vw, 88px);
+      font-family: var(--serif);
 
+      font-size: clamp(62px, 8vw, 104px);
       font-weight: 400;
 
-      line-height: 0.9;
-
-      letter-spacing: -1px;
-
-      margin-bottom: 24px;
+      line-height: .84;
+      letter-spacing: -2px;
     }
 
     .hero-line {
-      width: 42px;
+      width: 48px;
       height: 1px;
 
+      margin: 27px auto 25px;
+
       background: var(--gold);
-
-      margin: 0 auto 24px;
     }
 
-    .shop-hero p {
-      max-width: 540px;
-
-      margin: auto;
-
-      color: rgba(255,255,255,0.78);
-
-      font-size: 11px;
-      font-weight: 300;
-
-      letter-spacing: 0.8px;
-
-      line-height: 1.9;
-    }
-
-
-    /* ==============================
-       SHOP INTRO
-    ============================== */
-
-    .shop-intro {
-      max-width: 850px;
+    .hero-content p {
+      max-width: 500px;
 
       margin: 0 auto;
 
-      padding: 75px 25px 35px;
+      color: rgba(255,255,255,.73);
+
+      font-size: 10px;
+      font-weight: 300;
+
+      letter-spacing: .9px;
+      line-height: 2;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+
+      z-index: 3;
+
+      transform: translateX(-50%);
+
+      color: rgba(255,255,255,.48);
+
+      font-size: 7px;
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================
+       INTRO
+    ========================================= */
+
+    .shop-intro {
+      max-width: 900px;
+
+      margin: auto;
+
+      padding: 90px 25px 48px;
 
       text-align: center;
     }
 
     .intro-label {
+      margin-bottom: 14px;
+
       color: var(--gold);
 
       font-size: 8px;
@@ -432,91 +500,89 @@
       letter-spacing: 4px;
 
       text-transform: uppercase;
-
-      margin-bottom: 14px;
     }
 
     .shop-intro h2 {
-      font-family: 'Cormorant Garamond', serif;
-
-      font-size: clamp(34px, 4vw, 48px);
-
-      font-weight: 500;
-
       color: var(--emerald);
 
-      line-height: 1;
+      font-family: var(--serif);
+
+      font-size: clamp(40px, 5vw, 58px);
+      font-weight: 500;
+
+      line-height: .95;
     }
 
     .shop-intro p {
-      max-width: 580px;
+      max-width: 590px;
 
-      margin: 16px auto 0;
+      margin: 20px auto 0;
 
       color: var(--muted);
 
       font-size: 10px;
+      font-weight: 300;
 
-      line-height: 1.9;
+      line-height: 2;
     }
 
 
-    /* ==============================
+    /* =========================================
        SHOP SECTION
-    ============================== */
+    ========================================= */
 
     .shop-section {
       width: 100%;
-      max-width: 1380px;
+      max-width: 1400px;
 
       margin: auto;
 
-      padding: 25px 35px 110px;
+      padding: 20px 35px 120px;
     }
 
 
-    /* ==============================
-       FILTER BAR
-    ============================== */
+    /* =========================================
+       FILTER
+    ========================================= */
 
     .filter-wrap {
+      margin-bottom: 42px;
+
+      padding: 16px 0;
+
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-
-      padding: 18px 0;
-
-      margin-bottom: 48px;
     }
 
     .filter-bar {
       display: flex;
-      justify-content: center;
       align-items: center;
-
-      gap: 9px;
+      justify-content: center;
 
       flex-wrap: wrap;
+
+      gap: 8px;
     }
 
     .filter-btn {
+      padding: 10px 22px;
+
       border: 1px solid transparent;
 
       background: transparent;
 
       color: var(--muted);
 
-      padding: 10px 22px;
-
       font-size: 8px;
       font-weight: 500;
 
-      letter-spacing: 2px;
+      letter-spacing: 1.9px;
 
       text-transform: uppercase;
 
       cursor: pointer;
 
-      transition: all 0.3s ease;
+      transition: all .3s ease;
     }
 
     .filter-btn:hover {
@@ -524,92 +590,112 @@
     }
 
     .filter-btn.active {
-      border-color: var(--emerald);
-
       background: var(--emerald);
+
+      border-color: var(--emerald);
 
       color: white;
     }
 
 
-    /* ==============================
-       PRODUCT COUNT
-    ============================== */
+    /* =========================================
+       SHOP META
+    ========================================= */
 
     .shop-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+
+      padding: 0 2px;
     }
 
     .shop-meta span {
-      font-size: 8px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
       color: var(--muted);
+
+      font-size: 7px;
+      font-weight: 500;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
     }
 
 
-    /* ==============================
+    /* =========================================
        PRODUCT GRID
-    ============================== */
+    ========================================= */
 
     .products {
       display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0,1fr));
 
-      gap: 45px 20px;
+      column-gap: 20px;
+      row-gap: 54px;
     }
 
 
-    /* ==============================
-       PRODUCT CARD
-    ============================== */
+    /* =========================================
+       PRODUCT
+    ========================================= */
 
     .product {
-      position: relative;
-
-      background: transparent;
-
       min-width: 0;
     }
 
+    .product.hidden {
+      display: none;
+    }
 
-    /* ==============================
+
+    /* =========================================
        PRODUCT IMAGE
-    ============================== */
+    ========================================= */
 
     .product-image {
       position: relative;
 
       width: 100%;
 
-      aspect-ratio: 1 / 1.12;
+      aspect-ratio: 1 / 1.14;
 
       overflow: hidden;
 
-      background: #eee9df;
+      background:
+        linear-gradient(
+          145deg,
+          #f1ece2,
+          #e9e2d5
+        );
 
-      border: 1px solid rgba(11,51,44,0.06);
+      border: 1px solid rgba(11,51,44,.06);
+    }
+
+    .product-image::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      border: 1px solid rgba(197,161,90,.10);
+
+      pointer-events: none;
     }
 
     .product-image img {
       width: 100%;
       height: 100%;
 
-      /*
-        CONTAIN keeps your original jewellery images
-        fully visible and prevents cropping.
-      */
+      padding: 12px;
 
       object-fit: contain;
 
-      padding: 10px;
-
-      transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+      transition:
+        transform .8s cubic-bezier(.2,.7,.2,1),
+        filter .4s ease;
     }
 
     .product:hover .product-image img {
@@ -617,30 +703,30 @@
     }
 
 
-    /* ==============================
+    /* =========================================
        PRODUCT NUMBER
-    ============================== */
+    ========================================= */
 
     .product-number {
       position: absolute;
 
-      left: 14px;
-      top: 14px;
+      top: 15px;
+      left: 15px;
 
-      z-index: 4;
+      z-index: 5;
 
       color: var(--emerald);
 
-      font-size: 8px;
+      font-size: 7px;
       font-weight: 500;
 
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
     }
 
 
-    /* ==============================
+    /* =========================================
        WISHLIST
-    ============================== */
+    ========================================= */
 
     .wishlist {
       position: absolute;
@@ -648,7 +734,7 @@
       top: 11px;
       right: 11px;
 
-      z-index: 5;
+      z-index: 6;
 
       width: 36px;
       height: 36px;
@@ -657,34 +743,35 @@
       align-items: center;
       justify-content: center;
 
-      border: 1px solid rgba(11,51,44,0.12);
-
+      border: 1px solid rgba(11,51,44,.12);
       border-radius: 50%;
 
-      background: rgba(255,255,255,0.90);
+      background: rgba(252,250,245,.92);
 
       color: var(--emerald);
 
-      font-size: 17px;
-
       cursor: pointer;
 
-      transition: all 0.3s ease;
+      transition: all .3s ease;
     }
 
     .wishlist:hover,
     .wishlist.liked {
       background: var(--emerald);
+      border-color: var(--emerald);
 
       color: white;
+    }
 
-      border-color: var(--emerald);
+    .heart {
+      font-size: 17px;
+      line-height: 1;
     }
 
 
-    /* ==============================
+    /* =========================================
        QUICK VIEW
-    ============================== */
+    ========================================= */
 
     .quick-view {
       position: absolute;
@@ -693,42 +780,39 @@
       right: 14px;
       bottom: 14px;
 
-      z-index: 4;
+      z-index: 5;
 
-      padding: 12px;
+      padding: 13px;
 
-      background: rgba(248,245,237,0.94);
+      border: 1px solid rgba(197,161,90,.30);
 
-      border: 1px solid rgba(197,161,90,0.25);
+      background: rgba(248,245,237,.95);
 
       color: var(--emerald);
-
-      text-align: center;
 
       font-size: 7px;
       font-weight: 500;
 
       letter-spacing: 2.5px;
 
+      text-align: center;
       text-transform: uppercase;
 
       opacity: 0;
+      transform: translateY(10px);
 
-      transform: translateY(8px);
-
-      transition: all 0.35s ease;
+      transition: all .35s ease;
     }
 
     .product:hover .quick-view {
       opacity: 1;
-
       transform: translateY(0);
     }
 
 
-    /* ==============================
+    /* =========================================
        PRODUCT INFO
-    ============================== */
+    ========================================= */
 
     .product-info {
       padding: 17px 5px 0;
@@ -737,25 +821,24 @@
     }
 
     .product-category {
+      margin-bottom: 7px;
+
       color: var(--gold);
 
       font-size: 7px;
       font-weight: 500;
 
-      letter-spacing: 2.5px;
+      letter-spacing: 2.4px;
 
       text-transform: uppercase;
-
-      margin-bottom: 7px;
     }
 
     .product-info h3 {
-      font-family: 'Cormorant Garamond', serif;
-
       color: var(--text);
 
-      font-size: 24px;
+      font-family: var(--serif);
 
+      font-size: 25px;
       font-weight: 500;
 
       line-height: 1.05;
@@ -773,47 +856,57 @@
     }
 
 
-    /* ==============================
-       HIDDEN PRODUCTS
-    ============================== */
-
-    .product.hidden {
-      display: none;
-    }
-
-
-    /* ==============================
+    /* =========================================
        EMPTY STATE
-    ============================== */
+    ========================================= */
 
     .no-products {
       display: none;
 
-      padding: 80px 20px;
-
-      text-align: center;
+      padding: 90px 20px;
 
       color: var(--muted);
 
-      font-size: 11px;
-    }
-
-
-    /* ==============================
-       LUXURY STATEMENT
-    ============================== */
-
-    .luxury-strip {
-      background: var(--deep-emerald);
-
-      padding: 70px 25px;
+      font-size: 10px;
 
       text-align: center;
-
-      color: white;
     }
 
-    .luxury-strip-label {
+
+    /* =========================================
+       LUXURY STRIP
+    ========================================= */
+
+    .luxury-strip {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 92px 25px;
+
+      background: var(--deep-emerald);
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .luxury-strip::before {
+      content: "";
+
+      position: absolute;
+      inset: 25px;
+
+      border: 1px solid rgba(197,161,90,.14);
+
+      pointer-events: none;
+    }
+
+    .luxury-label {
+      position: relative;
+
+      margin-bottom: 15px;
+
       color: var(--gold-light);
 
       font-size: 8px;
@@ -821,24 +914,25 @@
       letter-spacing: 4px;
 
       text-transform: uppercase;
-
-      margin-bottom: 15px;
     }
 
     .luxury-strip h2 {
-      font-family: 'Cormorant Garamond', serif;
+      position: relative;
 
-      font-size: clamp(35px, 5vw, 54px);
+      font-family: var(--serif);
 
+      font-size: clamp(42px, 5vw, 62px);
       font-weight: 400;
 
-      line-height: 1;
+      line-height: .95;
     }
 
     .luxury-strip p {
-      margin-top: 14px;
+      position: relative;
 
-      color: rgba(255,255,255,0.65);
+      margin-top: 15px;
+
+      color: rgba(255,255,255,.58);
 
       font-size: 9px;
 
@@ -846,21 +940,22 @@
     }
 
 
-    /* ==============================
+    /* =========================================
        FOOTER
-    ============================== */
+    ========================================= */
 
     footer {
+      padding: 78px 35px 25px;
+
       background: var(--deep-emerald);
 
       color: white;
 
-      padding: 75px 35px 25px;
-
-      border-top: 1px solid rgba(197,161,90,0.18);
+      border-top: 1px solid rgba(197,161,90,.18);
     }
 
     .footer-content {
+      width: 100%;
       max-width: 1150px;
 
       margin: auto;
@@ -873,7 +968,7 @@
     }
 
     .footer-logo img {
-      width: 150px;
+      width: 155px;
 
       height: auto;
 
@@ -885,7 +980,7 @@
 
       margin-top: 18px;
 
-      color: rgba(255,255,255,0.62);
+      color: rgba(255,255,255,.60);
 
       font-size: 9px;
 
@@ -893,6 +988,8 @@
     }
 
     footer h4 {
+      margin-bottom: 22px;
+
       color: var(--gold-light);
 
       font-size: 8px;
@@ -901,8 +998,6 @@
       letter-spacing: 2.5px;
 
       text-transform: uppercase;
-
-      margin-bottom: 22px;
     }
 
     footer ul {
@@ -912,13 +1007,13 @@
     footer li {
       margin-bottom: 11px;
 
-      color: rgba(255,255,255,0.72);
+      color: rgba(255,255,255,.68);
 
       font-size: 9px;
     }
 
     footer li a {
-      transition: color 0.3s ease;
+      transition: color .3s ease;
     }
 
     footer li a:hover {
@@ -932,21 +1027,21 @@
 
       padding-top: 20px;
 
-      border-top: 1px solid rgba(255,255,255,0.12);
+      border-top: 1px solid rgba(255,255,255,.12);
 
-      text-align: center;
-
-      color: rgba(255,255,255,0.42);
+      color: rgba(255,255,255,.38);
 
       font-size: 7px;
 
       letter-spacing: 1.8px;
+
+      text-align: center;
     }
 
 
-    /* ==============================
+    /* =========================================
        TABLET
-    ============================== */
+    ========================================= */
 
     @media (max-width: 1150px) {
 
@@ -963,23 +1058,23 @@
       }
 
       .nav-links {
-        gap: 22px;
+        gap: 20px;
       }
 
       .nav-actions {
-        width: 180px;
+        width: 190px;
       }
 
       .products {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0,1fr));
       }
 
     }
 
 
-    /* ==============================
+    /* =========================================
        MOBILE
-    ============================== */
+    ========================================= */
 
     @media (max-width: 850px) {
 
@@ -988,7 +1083,7 @@
 
         font-size: 7px;
 
-        letter-spacing: 1.8px;
+        letter-spacing: 1.7px;
       }
 
       header {
@@ -1015,46 +1110,64 @@
       .nav-actions {
         width: auto;
 
-        gap: 8px;
+        gap: 7px;
       }
 
-      .nav-action {
+      .nav-action,
+      .mobile-menu {
         width: 34px;
         height: 34px;
-
-        font-size: 15px;
       }
 
       .mobile-menu {
         display: flex;
       }
 
+      .mobile-nav {
+        top: 104px;
+      }
+
       .shop-hero {
-        min-height: 390px;
+        min-height: 430px;
 
-        background-size: auto, 300px auto;
+        background-size: cover, 290px auto;
       }
 
-      .shop-hero-content {
-        padding: 60px 20px;
+      .shop-hero::after {
+        inset: 14px;
       }
 
-      .shop-hero h1 {
-        font-size: 58px;
+      .hero-content {
+        padding: 70px 20px;
+      }
+
+      .hero-content h1 {
+        font-size: 61px;
+
+        letter-spacing: -1px;
+      }
+
+      .hero-content p {
+        font-size: 9px;
       }
 
       .shop-intro {
-        padding: 60px 22px 25px;
+        padding: 70px 22px 35px;
+      }
+
+      .shop-intro h2 {
+        font-size: 43px;
       }
 
       .shop-section {
-        padding: 20px 18px 80px;
+        padding: 18px 18px 85px;
       }
 
       .products {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0,1fr));
 
-        gap: 35px 12px;
+        column-gap: 12px;
+        row-gap: 38px;
       }
 
       .product-image {
@@ -1062,11 +1175,25 @@
       }
 
       .product-image img {
-        padding: 6px;
+        padding: 7px;
+      }
+
+      .product-info {
+        padding-top: 13px;
       }
 
       .product-info h3 {
         font-size: 21px;
+      }
+
+      .product-category {
+        font-size: 6px;
+
+        letter-spacing: 1.7px;
+      }
+
+      .product-price {
+        font-size: 9px;
       }
 
       .quick-view {
@@ -1086,99 +1213,114 @@
     }
 
 
-    /* ==============================
+    /* =========================================
        SMALL PHONES
-    ============================== */
+    ========================================= */
 
     @media (max-width: 480px) {
 
       .brand {
-        width: 160px;
+        width: 155px;
       }
 
       .brand img {
         width: 165px;
       }
 
-      .nav-action {
-        width: 32px;
-        height: 32px;
-      }
-
+      .nav-action,
       .mobile-menu {
         width: 32px;
         height: 32px;
       }
 
       .shop-hero {
-        min-height: 350px;
+        min-height: 365px;
 
-        background-size: auto, 240px auto;
+        background-size: cover, 235px auto;
       }
 
-      .shop-hero h1 {
-        font-size: 49px;
+      .hero-content h1 {
+        font-size: 50px;
       }
 
-      .shop-hero p {
-        font-size: 9px;
+      .hero-kicker {
+        font-size: 7px;
+        letter-spacing: 3.5px;
+      }
+
+      .shop-intro {
+        padding: 58px 20px 30px;
       }
 
       .shop-intro h2 {
-        font-size: 36px;
+        font-size: 37px;
+      }
+
+      .shop-intro p {
+        font-size: 9px;
       }
 
       .filter-wrap {
-        padding: 14px 0;
+        padding: 13px 0;
       }
 
       .filter-bar {
-        gap: 5px;
+        gap: 4px;
       }
 
       .filter-btn {
-        padding: 9px 12px;
+        padding: 8px 11px;
 
-        font-size: 7px;
+        font-size: 6.5px;
 
+        letter-spacing: 1.2px;
+      }
+
+      .shop-meta span {
+        font-size: 6px;
         letter-spacing: 1.3px;
       }
 
       .products {
-        gap: 30px 10px;
+        column-gap: 9px;
+        row-gap: 31px;
       }
 
       .product-number {
-        left: 9px;
         top: 9px;
+        left: 9px;
       }
 
       .wishlist {
+        top: 7px;
+        right: 7px;
+
         width: 31px;
         height: 31px;
-
-        top: 8px;
-        right: 8px;
-
-        font-size: 15px;
       }
 
-      .product-info {
-        padding-top: 13px;
+      .heart {
+        font-size: 15px;
       }
 
       .product-info h3 {
         font-size: 19px;
       }
 
-      .product-category {
-        font-size: 6px;
-
-        letter-spacing: 1.8px;
+      .luxury-strip {
+        padding: 70px 20px;
       }
 
-      .product-price {
-        font-size: 9px;
+      .luxury-strip::before {
+        inset: 16px;
+      }
+
+      .luxury-strip h2 {
+        font-size: 43px;
+      }
+
+      footer {
+        padding: 65px 22px 22px;
       }
 
       .footer-content {
@@ -1194,1283 +1336,1348 @@
     }
 
   </style>
-</head>
 
+</head>
 
 <body>
 
-
-  <!-- ==============================
+  <!-- =========================================
        TOP BAR
-  ============================== -->
+  ========================================= -->
 
   <div class="top-bar">
     Anti-Tarnish Jewellery · Luxury in Every Detail
   </div>
 
-
-  <!-- ==============================
+  <!-- =========================================
        HEADER
-  ============================== -->
+  ========================================= -->
 
   <header>
 
-    <nav>
+```
+<nav>
 
-      <a href="index.html" class="brand">
-        <img
-          src="WEBSITE LOGO.png"
-          alt="ALANKRA — Luxury in Every Detail"
-        >
-      </a>
-
-
-      <ul class="nav-links">
-
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-
-        <li>
-          <a href="shop.html" class="active">Shop</a>
-        </li>
-
-        <li>
-          <a href="index.html#collections">Collections</a>
-        </li>
-
-        <li>
-          <a href="index.html#story">Our Story</a>
-        </li>
-
-        <li>
-          <a href="index.html#care">Jewellery Care</a>
-        </li>
-
-      </ul>
+  <a href="index.html" class="brand">
+    <img
+      src="WEBSITE LOGO.png"
+      alt="ALANKRA — Luxury in Every Detail"
+    >
+  </a>
 
 
-      <div class="nav-actions">
+  <ul class="nav-links">
 
-        <button
-          class="nav-action"
-          aria-label="Wishlist"
-          onclick="scrollToProducts()"
-        >
-          ♡
-        </button>
+    <li>
+      <a href="index.html">Home</a>
+    </li>
 
-        <button
-          class="nav-action"
-          aria-label="Shopping bag"
-          onclick="scrollToProducts()"
-        >
-          ♡
-        </button>
+    <li>
+      <a href="shop.html" class="active">Shop</a>
+    </li>
 
-        <button
-          class="mobile-menu"
-          aria-label="Menu"
-          onclick="toggleMobileMenu()"
-        >
-          ☰
-        </button>
+    <li>
+      <a href="index.html#collections">Collections</a>
+    </li>
 
-      </div>
+    <li>
+      <a href="index.html#story">Our Story</a>
+    </li>
 
-    </nav>
+    <li>
+      <a href="index.html#care">Jewellery Care</a>
+    </li>
+
+  </ul>
+
+
+  <div class="nav-actions">
+
+    <!-- Wishlist -->
+
+    <button
+      class="nav-action"
+      aria-label="Wishlist"
+      onclick="scrollToProducts()"
+    >
+
+      <svg
+        class="nav-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path
+          d="M20.8 8.8c0 5.5-8.8 10.3-8.8 10.3S3.2 14.3 3.2 8.8A4.3 4.3 0 0 1 11 6a4.3 4.3 0 0 1 7.8 2.8Z"
+        />
+      </svg>
+
+    </button>
+
+
+    <!-- Shopping bag -->
+
+    <button
+      class="nav-action"
+      aria-label="Shopping bag"
+      onclick="scrollToProducts()"
+    >
+
+      <svg
+        class="bag-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path d="M6 8h12l1 13H5L6 8Z"/>
+        <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+      </svg>
+
+    </button>
+
+
+    <!-- Mobile menu -->
+
+    <button
+      class="mobile-menu"
+      aria-label="Open menu"
+      aria-expanded="false"
+      onclick="toggleMobileMenu()"
+    >
+      <span id="menuIcon">☰</span>
+    </button>
+
+  </div>
+
+</nav>
+```
 
   </header>
 
-
-  <!-- ==============================
+  <!-- =========================================
        MOBILE NAVIGATION
-  ============================== -->
+  ========================================= -->
 
   <div
+    class="mobile-nav"
     id="mobileNav"
-    style="
-      display:none;
-      position:fixed;
-      top:104px;
-      left:0;
-      right:0;
-      z-index:999;
-      background:#f8f5ed;
-      border-bottom:1px solid rgba(197,161,90,0.25);
-      padding:25px 20px;
-    "
   >
 
-    <a
-      href="index.html"
-      style="
-        display:block;
-        padding:12px 0;
-        color:#0b332c;
-        font-size:10px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-      "
-    >
-      Home
-    </a>
+```
+<a href="index.html">
+  Home
+</a>
 
-    <a
-      href="shop.html"
-      style="
-        display:block;
-        padding:12px 0;
-        color:#c5a15a;
-        font-size:10px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-      "
-    >
-      Shop
-    </a>
+<a href="shop.html" class="active">
+  Shop
+</a>
 
-    <a
-      href="index.html#collections"
-      style="
-        display:block;
-        padding:12px 0;
-        color:#0b332c;
-        font-size:10px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-      "
-    >
-      Collections
-    </a>
+<a href="index.html#collections">
+  Collections
+</a>
 
-    <a
-      href="index.html#story"
-      style="
-        display:block;
-        padding:12px 0;
-        color:#0b332c;
-        font-size:10px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-      "
-    >
-      Our Story
-    </a>
+<a href="index.html#story">
+  Our Story
+</a>
 
-    <a
-      href="index.html#care"
-      style="
-        display:block;
-        padding:12px 0;
-        color:#0b332c;
-        font-size:10px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-      "
+<a href="index.html#care">
+  Jewellery Care
+</a>
+```
+
+  </div>
+
+  <!-- =========================================
+       HERO
+  ========================================= -->
+
+  <section class="shop-hero">
+
+```
+<div class="hero-content">
+
+  <div class="hero-kicker">
+    The ALANKRA Collection
+  </div>
+
+  <h1>
+    Jewellery,<br>
+    Chosen for You.
+  </h1>
+
+  <div class="hero-line"></div>
+
+  <p>
+    Discover timeless pieces designed to bring
+    effortless elegance into every day.
+  </p>
+
+</div>
+
+<div class="hero-scroll">
+  Explore the collection
+</div>
+```
+
+  </section>
+
+  <!-- =========================================
+       INTRO
+  ========================================= -->
+
+  <section class="shop-intro">
+
+```
+<div class="intro-label">
+  Discover ALANKRA
+</div>
+
+<h2>
+  Everyday pieces.<br>
+  Extraordinary details.
+</h2>
+
+<p>
+  Explore our carefully curated collection of necklaces,
+  earrings, bracelets and rings — created for the moments
+  you want to make a little more beautiful.
+</p>
+```
+
+  </section>
+
+  <!-- =========================================
+       SHOP
+  ========================================= -->
+
+  <main
+    class="shop-section"
+    id="products"
+  >
+
+```
+<!-- FILTER -->
+
+<div class="filter-wrap">
+
+  <div class="filter-bar">
+
+    <button
+      class="filter-btn active"
+      data-filter="all"
     >
-      Jewellery Care
-    </a>
+      All Jewellery
+    </button>
+
+    <button
+      class="filter-btn"
+      data-filter="necklaces"
+    >
+      Necklaces
+    </button>
+
+    <button
+      class="filter-btn"
+      data-filter="earrings"
+    >
+      Earrings
+    </button>
+
+    <button
+      class="filter-btn"
+      data-filter="bracelets"
+    >
+      Bracelets
+    </button>
+
+    <button
+      class="filter-btn"
+      data-filter="rings"
+    >
+      Rings
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- META -->
+
+<div class="shop-meta">
+
+  <span>
+    <span id="productCount">20</span> Pieces
+  </span>
+
+  <span>
+    ALANKRA · 2026
+  </span>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<div class="products">
+
+
+  <!-- 01 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">01</span>
+
+      <img
+        src="Pink heart necklace.jpeg"
+        alt="Pink Heart Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Pink Heart Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Pink Heart Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 02 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">02</span>
+
+      <img
+        src="black clover necklace.jpeg"
+        alt="Black Clover Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Black Clover Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Black Clover Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 03 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">03</span>
+
+      <img
+        src="golden rose necklace.png"
+        alt="Golden Rose Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Golden Rose Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Golden Rose Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 04 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">04</span>
+
+      <img
+        src="golden shell necklace.png"
+        alt="Golden Shell Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Golden Shell Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Golden Shell Necklace</h3>
+
+      <div class="product-price">
+        ₹449
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 05 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">05</span>
+
+      <img
+        src="heart mangalsutra.png"
+        alt="Heart Mangalsutra"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Heart Mangalsutra to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Heart Mangalsutra</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 06 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">06</span>
+
+      <img
+        src="lucky clover necklace.jpeg"
+        alt="Lucky Clover Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Lucky Clover Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Lucky Clover Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 07 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">07</span>
+
+      <img
+        src="mini tulip necklace.png"
+        alt="Mini Tulip Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Mini Tulip Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Mini Tulip Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 08 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">08</span>
+
+      <img
+        src="pearl bloom necklace.jpeg"
+        alt="Pearl Bloom Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Pearl Bloom Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Pearl Bloom Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 09 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">09</span>
+
+      <img
+        src="silver swan necklace.jpeg"
+        alt="Silver Swan Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Silver Swan Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Silver Swan Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 10 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">10</span>
+
+      <img
+        src="vintage rose necklace.png"
+        alt="Vintage Rose Necklace"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Vintage Rose Necklace to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace
+      </div>
+
+      <h3>Vintage Rose Necklace</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 11 -->
+
+  <article class="product" data-category="necklaces">
+
+    <div class="product-image">
+
+      <span class="product-number">11</span>
+
+      <img
+        src="white drop necklace set.jpeg"
+        alt="White Drop Necklace Set"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add White Drop Necklace Set to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Necklace Set
+      </div>
+
+      <h3>White Drop Necklace Set</h3>
+
+      <div class="product-price">
+        ₹599
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 12 -->
+
+  <article class="product" data-category="earrings">
+
+    <div class="product-image">
+
+      <span class="product-number">12</span>
+
+      <img
+        src="golden petal earring.jpeg"
+        alt="Golden Petal Earrings"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Golden Petal Earrings to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Earrings
+      </div>
+
+      <h3>Golden Petal Earrings</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 13 -->
+
+  <article class="product" data-category="earrings">
+
+    <div class="product-image">
+
+      <span class="product-number">13</span>
+
+      <img
+        src="purple vintage earrings.jpeg"
+        alt="Purple Vintage Earrings"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Purple Vintage Earrings to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Earrings
+      </div>
+
+      <h3>Purple Vintage Earrings</h3>
+
+      <div class="product-price">
+        ₹449
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 14 -->
+
+  <article class="product" data-category="earrings">
+
+    <div class="product-image">
+
+      <span class="product-number">14</span>
+
+      <img
+        src="vintage butterfly earrings.jpeg"
+        alt="Vintage Butterfly Earrings"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Vintage Butterfly Earrings to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Earrings
+      </div>
+
+      <h3>Vintage Butterfly Earrings</h3>
+
+      <div class="product-price">
+        ₹449
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 15 -->
+
+  <article class="product" data-category="bracelets">
+
+    <div class="product-image">
+
+      <span class="product-number">15</span>
+
+      <img
+        src="golden glow bracelet.png"
+        alt="Golden Glow Bracelet"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Golden Glow Bracelet to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Bracelet
+      </div>
+
+      <h3>Golden Glow Bracelet</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 16 -->
+
+  <article class="product" data-category="bracelets">
+
+    <div class="product-image">
+
+      <span class="product-number">16</span>
+
+      <img
+        src="golden knot bracelet.png"
+        alt="Golden Knot Bracelet"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Golden Knot Bracelet to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Bracelet
+      </div>
+
+      <h3>Golden Knot Bracelet</h3>
+
+      <div class="product-price">
+        ₹499
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 17 -->
+
+  <article class="product" data-category="bracelets">
+
+    <div class="product-image">
+
+      <span class="product-number">17</span>
+
+      <img
+        src="green stone bracelet.png"
+        alt="Green Stone Bracelet"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Green Stone Bracelet to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Bracelet
+      </div>
+
+      <h3>Green Stone Bracelet</h3>
+
+      <div class="product-price">
+        ₹599
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 18 -->
+
+  <article class="product" data-category="bracelets">
+
+    <div class="product-image">
+
+      <span class="product-number">18</span>
+
+      <img
+        src="heart and bow bracelet.png"
+        alt="Heart and Bow Bracelet"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Heart and Bow Bracelet to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Bracelet
+      </div>
+
+      <h3>Heart &amp; Bow Bracelet</h3>
+
+      <div class="product-price">
+        ₹599
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 19 -->
+
+  <article class="product" data-category="bracelets">
+
+    <div class="product-image">
+
+      <span class="product-number">19</span>
+
+      <img
+        src="nail bracelet.jpeg"
+        alt="Nail Bracelet"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Nail Bracelet to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Bracelet
+      </div>
+
+      <h3>Nail Bracelet</h3>
+
+      <div class="product-price">
+        ₹599
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 20 -->
+
+  <article class="product" data-category="rings">
+
+    <div class="product-image">
+
+      <span class="product-number">20</span>
+
+      <img
+        src="crystal cross ring.png"
+        alt="Crystal Cross Ring"
+        loading="lazy"
+      >
+
+      <button
+        class="wishlist"
+        aria-label="Add Crystal Cross Ring to wishlist"
+      >
+        <span class="heart">♡</span>
+      </button>
+
+      <div class="quick-view">
+        View Product
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-category">
+        Ring
+      </div>
+
+      <h3>Crystal Cross Ring</h3>
+
+      <div class="product-price">
+        ₹399
+      </div>
+
+    </div>
+
+  </article>
+
+
+</div>
+
+
+<div
+  class="no-products"
+  id="noProducts"
+>
+  No pieces found in this collection.
+</div>
+```
+
+  </main>
+
+  <!-- =========================================
+       LUXURY STATEMENT
+  ========================================= -->
+
+  <section class="luxury-strip">
+
+```
+<div class="luxury-label">
+  ALANKRA
+</div>
+
+<h2>
+  Luxury in Every Detail.
+</h2>
+
+<p>
+  Jewellery made for the moments worth remembering.
+</p>
+```
+
+  </section>
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+```
+<div class="footer-content">
+
+
+  <div>
+
+    <div class="footer-logo">
+
+      <img
+        src="LOGO.png"
+        alt="ALANKRA"
+      >
+
+    </div>
+
+    <p class="footer-about">
+      Luxury in Every Detail.
+      Discover anti-tarnish jewellery designed
+      to become part of your everyday story.
+    </p>
 
   </div>
 
 
-  <!-- ==============================
-       HERO
-  ============================== -->
+  <div>
 
-  <section class="shop-hero">
+    <h4>Shop</h4>
 
-    <div class="shop-hero-content">
+    <ul>
 
-      <div class="shop-kicker">
-        The ALANKRA Collection
-      </div>
-
-      <h1>
-        Jewellery,<br>
-        Chosen for You.
-      </h1>
-
-      <div class="hero-line"></div>
-
-      <p>
-        Discover timeless pieces designed to bring
-        effortless elegance into every day.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==============================
-       INTRO
-  ============================== -->
-
-  <section class="shop-intro">
-
-    <div class="intro-label">
-      Discover ALANKRA
-    </div>
-
-    <h2>
-      Everyday pieces.<br>
-      Extraordinary details.
-    </h2>
-
-    <p>
-      Explore our carefully curated collection of necklaces,
-      earrings, bracelets and rings — created for the moments
-      you want to make a little more beautiful.
-    </p>
-
-  </section>
-
-
-  <!-- ==============================
-       SHOP
-  ============================== -->
-
-  <main class="shop-section" id="products">
-
-    <div class="filter-wrap">
-
-      <div class="filter-bar">
-
-        <button
-          class="filter-btn active"
-          data-filter="all"
-        >
+      <li>
+        <a href="shop.html">
           All Jewellery
-        </button>
+        </a>
+      </li>
 
-        <button
-          class="filter-btn"
-          data-filter="necklaces"
+      <li>
+        <a
+          href="shop.html"
+          onclick="filterFromLink('necklaces')"
         >
           Necklaces
-        </button>
+        </a>
+      </li>
 
-        <button
-          class="filter-btn"
-          data-filter="earrings"
+      <li>
+        <a
+          href="shop.html"
+          onclick="filterFromLink('earrings')"
         >
           Earrings
-        </button>
+        </a>
+      </li>
 
-        <button
-          class="filter-btn"
-          data-filter="bracelets"
+      <li>
+        <a
+          href="shop.html"
+          onclick="filterFromLink('bracelets')"
         >
           Bracelets
-        </button>
+        </a>
+      </li>
 
-        <button
-          class="filter-btn"
-          data-filter="rings"
+      <li>
+        <a
+          href="shop.html"
+          onclick="filterFromLink('rings')"
         >
           Rings
-        </button>
+        </a>
+      </li>
 
-      </div>
+    </ul>
 
-    </div>
+  </div>
 
 
-    <div class="shop-meta">
+  <div>
 
-      <span>
-        <span id="productCount">20</span> Pieces
-      </span>
+    <h4>Explore</h4>
 
-      <span>
-        ALANKRA · 2026
-      </span>
+    <ul>
 
-    </div>
+      <li>
+        <a href="index.html#story">
+          Our Story
+        </a>
+      </li>
 
+      <li>
+        <a href="index.html#care">
+          Jewellery Care
+        </a>
+      </li>
 
-    <div class="products">
+      <li>
+        <a href="index.html#collections">
+          Collections
+        </a>
+      </li>
 
+      <li>
+        Shipping
+      </li>
 
-      <!-- 01 -->
+      <li>
+        Contact
+      </li>
 
-      <article class="product" data-category="necklaces">
+    </ul>
 
-        <div class="product-image">
+  </div>
 
-          <span class="product-number">01</span>
 
-          <img
-            src="Pink heart necklace.jpeg"
-            alt="Pink Heart Necklace"
-            loading="lazy"
-          >
+</div>
 
-          <button class="wishlist" aria-label="Add Pink Heart Necklace to wishlist">
-            ♡
-          </button>
 
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Pink Heart Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 02 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">02</span>
-
-          <img
-            src="black clover necklace.jpeg"
-            alt="Black Clover Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Black Clover Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Black Clover Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 03 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">03</span>
-
-          <img
-            src="golden rose necklace.png"
-            alt="Golden Rose Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Golden Rose Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Golden Rose Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 04 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">04</span>
-
-          <img
-            src="golden shell necklace.png"
-            alt="Golden Shell Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Golden Shell Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Golden Shell Necklace</h3>
-
-          <div class="product-price">
-            ₹449
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 05 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">05</span>
-
-          <img
-            src="heart mangalsutra.png"
-            alt="Heart Mangalsutra"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Heart Mangalsutra to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Heart Mangalsutra</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 06 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">06</span>
-
-          <img
-            src="lucky clover necklace.jpeg"
-            alt="Lucky Clover Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Lucky Clover Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Lucky Clover Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 07 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">07</span>
-
-          <img
-            src="mini tulip necklace.png"
-            alt="Mini Tulip Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Mini Tulip Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Mini Tulip Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 08 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">08</span>
-
-          <img
-            src="pearl bloom necklace.jpeg"
-            alt="Pearl Bloom Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Pearl Bloom Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Pearl Bloom Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 09 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">09</span>
-
-          <img
-            src="silver swan necklace.jpeg"
-            alt="Silver Swan Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Silver Swan Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Silver Swan Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 10 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">10</span>
-
-          <img
-            src="vintage rose necklace.png"
-            alt="Vintage Rose Necklace"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Vintage Rose Necklace to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace
-          </div>
-
-          <h3>Vintage Rose Necklace</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 11 -->
-
-      <article class="product" data-category="necklaces">
-
-        <div class="product-image">
-
-          <span class="product-number">11</span>
-
-          <img
-            src="white drop necklace set.jpeg"
-            alt="White Drop Necklace Set"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add White Drop Necklace Set to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Necklace Set
-          </div>
-
-          <h3>White Drop Necklace Set</h3>
-
-          <div class="product-price">
-            ₹599
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 12 -->
-
-      <article class="product" data-category="earrings">
-
-        <div class="product-image">
-
-          <span class="product-number">12</span>
-
-          <img
-            src="golden petal earring.jpeg"
-            alt="Golden Petal Earrings"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Golden Petal Earrings to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Earrings
-          </div>
-
-          <h3>Golden Petal Earrings</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 13 -->
-
-      <article class="product" data-category="earrings">
-
-        <div class="product-image">
-
-          <span class="product-number">13</span>
-
-          <img
-            src="purple vintage earrings.jpeg"
-            alt="Purple Vintage Earrings"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Purple Vintage Earrings to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Earrings
-          </div>
-
-          <h3>Purple Vintage Earrings</h3>
-
-          <div class="product-price">
-            ₹449
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 14 -->
-
-      <article class="product" data-category="earrings">
-
-        <div class="product-image">
-
-          <span class="product-number">14</span>
-
-          <img
-            src="vintage butterfly earrings.jpeg"
-            alt="Vintage Butterfly Earrings"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Vintage Butterfly Earrings to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Earrings
-          </div>
-
-          <h3>Vintage Butterfly Earrings</h3>
-
-          <div class="product-price">
-            ₹449
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 15 -->
-
-      <article class="product" data-category="bracelets">
-
-        <div class="product-image">
-
-          <span class="product-number">15</span>
-
-          <img
-            src="golden glow bracelet.png"
-            alt="Golden Glow Bracelet"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Golden Glow Bracelet to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Bracelet
-          </div>
-
-          <h3>Golden Glow Bracelet</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 16 -->
-
-      <article class="product" data-category="bracelets">
-
-        <div class="product-image">
-
-          <span class="product-number">16</span>
-
-          <img
-            src="golden knot bracelet.png"
-            alt="Golden Knot Bracelet"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Golden Knot Bracelet to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Bracelet
-          </div>
-
-          <h3>Golden Knot Bracelet</h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 17 -->
-
-      <article class="product" data-category="bracelets">
-
-        <div class="product-image">
-
-          <span class="product-number">17</span>
-
-          <img
-            src="green stone bracelet.png"
-            alt="Green Stone Bracelet"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Green Stone Bracelet to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Bracelet
-          </div>
-
-          <h3>Green Stone Bracelet</h3>
-
-          <div class="product-price">
-            ₹599
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 18 -->
-
-      <article class="product" data-category="bracelets">
-
-        <div class="product-image">
-
-          <span class="product-number">18</span>
-
-          <img
-            src="heart and bow bracelet.png"
-            alt="Heart and Bow Bracelet"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Heart and Bow Bracelet to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Bracelet
-          </div>
-
-          <h3>Heart &amp; Bow Bracelet</h3>
-
-          <div class="product-price">
-            ₹599
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 19 -->
-
-      <article class="product" data-category="bracelets">
-
-        <div class="product-image">
-
-          <span class="product-number">19</span>
-
-          <img
-            src="nail bracelet.jpeg"
-            alt="Nail Bracelet"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Nail Bracelet to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Bracelet
-          </div>
-
-          <h3>Nail Bracelet</h3>
-
-          <div class="product-price">
-            ₹599
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- 20 -->
-
-      <article class="product" data-category="rings">
-
-        <div class="product-image">
-
-          <span class="product-number">20</span>
-
-          <img
-            src="crystal cross ring.png"
-            alt="Crystal Cross Ring"
-            loading="lazy"
-          >
-
-          <button class="wishlist" aria-label="Add Crystal Cross Ring to wishlist">
-            ♡
-          </button>
-
-          <div class="quick-view">
-            View Product
-          </div>
-
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Ring
-          </div>
-
-          <h3>Crystal Cross Ring</h3>
-
-          <div class="product-price">
-            ₹399
-          </div>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-    <div class="no-products" id="noProducts">
-      No pieces found in this collection.
-    </div>
-
-  </main>
-
-
-  <!-- ==============================
-       LUXURY STATEMENT
-  ============================== -->
-
-  <section class="luxury-strip">
-
-    <div class="luxury-strip-label">
-      ALANKRA
-    </div>
-
-    <h2>
-      Luxury in Every Detail.
-    </h2>
-
-    <p>
-      Jewellery made for the moments worth remembering.
-    </p>
-
-  </section>
-
-
-  <!-- ==============================
-       FOOTER
-  ============================== -->
-
-  <footer>
-
-    <div class="footer-content">
-
-
-      <div>
-
-        <div class="footer-logo">
-
-          <img
-            src="LOGO.png"
-            alt="ALANKRA"
-          >
-
-        </div>
-
-        <p class="footer-about">
-          Luxury in Every Detail.
-          Discover anti-tarnish jewellery designed
-          to become part of your everyday story.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>Shop</h4>
-
-        <ul>
-
-          <li>
-            <a href="shop.html">
-              All Jewellery
-            </a>
-          </li>
-
-          <li>
-            <a href="shop.html" onclick="filterFromLink('necklaces')">
-              Necklaces
-            </a>
-          </li>
-
-          <li>
-            <a href="shop.html" onclick="filterFromLink('earrings')">
-              Earrings
-            </a>
-          </li>
-
-          <li>
-            <a href="shop.html" onclick="filterFromLink('bracelets')">
-              Bracelets
-            </a>
-          </li>
-
-          <li>
-            <a href="shop.html" onclick="filterFromLink('rings')">
-              Rings
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <div>
-
-        <h4>Explore</h4>
-
-        <ul>
-
-          <li>
-            <a href="index.html#story">
-              Our Story
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#care">
-              Jewellery Care
-            </a>
-          </li>
-
-          <li>
-            <a href="index.html#collections">
-              Collections
-            </a>
-          </li>
-
-          <li>
-            Shipping
-          </li>
-
-          <li>
-            Contact
-          </li>
-
-        </ul>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="copyright">
-      © 2026 ALANKRA · LUXURY IN EVERY DETAIL
-    </div>
+<div class="copyright">
+  © 2026 ALANKRA · LUXURY IN EVERY DETAIL
+</div>
+```
 
   </footer>
 
-
-  <!-- ==============================
+  <!-- =========================================
        JAVASCRIPT
-  ============================== -->
+  ========================================= -->
 
   <script>
 
-    /* ==============================
-       FILTER PRODUCTS
-    ============================== */
+    /* =========================================
+       ELEMENTS
+    ========================================= */
 
     const filterButtons =
       document.querySelectorAll(".filter-btn");
@@ -2485,6 +2692,58 @@
       document.getElementById("noProducts");
 
 
+    /* =========================================
+       FILTER
+    ========================================= */
+
+    function applyFilter(filter) {
+
+      let visibleCount = 0;
+
+      products.forEach(product => {
+
+        const category =
+          product.getAttribute("data-category");
+
+        const show =
+          filter === "all" ||
+          category === filter;
+
+        if (show) {
+
+          product.classList.remove("hidden");
+
+          visibleCount++;
+
+        } else {
+
+          product.classList.add("hidden");
+
+        }
+
+      });
+
+
+      filterButtons.forEach(button => {
+
+        button.classList.toggle(
+          "active",
+          button.getAttribute("data-filter") === filter
+        );
+
+      });
+
+
+      productCount.textContent = visibleCount;
+
+      noProducts.style.display =
+        visibleCount === 0
+          ? "block"
+          : "none";
+
+    }
+
+
     filterButtons.forEach(button => {
 
       button.addEventListener("click", () => {
@@ -2492,55 +2751,18 @@
         const filter =
           button.getAttribute("data-filter");
 
+        applyFilter(filter);
 
-        filterButtons.forEach(btn => {
-          btn.classList.remove("active");
-        });
-
-
-        button.classList.add("active");
-
-
-        let visibleCount = 0;
-
-
-        products.forEach(product => {
-
-          const category =
-            product.getAttribute("data-category");
-
-
-          if (
-            filter === "all" ||
-            category === filter
-          ) {
-
-            product.classList.remove("hidden");
-
-            visibleCount++;
-
-          } else {
-
-            product.classList.add("hidden");
-
-          }
-
-        });
-
-
-        productCount.textContent = visibleCount;
-
-        noProducts.style.display =
-          visibleCount === 0 ? "block" : "none";
+        localStorage.removeItem("alankraFilter");
 
       });
 
     });
 
 
-    /* ==============================
+    /* =========================================
        WISHLIST
-    ============================== */
+    ========================================= */
 
     document
       .querySelectorAll(".wishlist")
@@ -2549,10 +2771,14 @@
         button.addEventListener("click", function(event) {
 
           event.preventDefault();
+          event.stopPropagation();
 
           this.classList.toggle("liked");
 
-          this.textContent =
+          const heart =
+            this.querySelector(".heart");
+
+          heart.textContent =
             this.classList.contains("liked")
               ? "♥"
               : "♡";
@@ -2562,46 +2788,84 @@
       });
 
 
-    /* ==============================
+    /* =========================================
        SCROLL TO PRODUCTS
-    ============================== */
+    ========================================= */
 
     function scrollToProducts() {
 
       document
         .getElementById("products")
         .scrollIntoView({
-          behavior: "smooth"
+          behavior: "smooth",
+          block: "start"
         });
 
     }
 
 
-    /* ==============================
+    /* =========================================
        MOBILE MENU
-    ============================== */
+    ========================================= */
 
     function toggleMobileMenu() {
 
       const menu =
         document.getElementById("mobileNav");
 
-      if (menu.style.display === "block") {
+      const button =
+        document.querySelector(".mobile-menu");
 
-        menu.style.display = "none";
+      const icon =
+        document.getElementById("menuIcon");
 
-      } else {
+      const isOpen =
+        menu.classList.toggle("open");
 
-        menu.style.display = "block";
+      button.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
 
-      }
+      icon.textContent =
+        isOpen ? "×" : "☰";
 
     }
 
 
-    /* ==============================
+    /* =========================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ========================================= */
+
+    document
+      .querySelectorAll(".mobile-nav a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          document
+            .getElementById("mobileNav")
+            .classList.remove("open");
+
+          document
+            .querySelector(".mobile-menu")
+            .setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          document
+            .getElementById("menuIcon")
+            .textContent = "☰";
+
+        });
+
+      });
+
+
+    /* =========================================
        FOOTER FILTER LINKS
-    ============================== */
+    ========================================= */
 
     function filterFromLink(category) {
 
@@ -2613,15 +2877,14 @@
     }
 
 
-    /* ==============================
-       RESTORE FILTER
-    ============================== */
+    /* =========================================
+       RESTORE SAVED FILTER
+    ========================================= */
 
     window.addEventListener("load", () => {
 
       const savedFilter =
         localStorage.getItem("alankraFilter");
-
 
       if (savedFilter) {
 
@@ -2630,11 +2893,11 @@
             `[data-filter="${savedFilter}"]`
           );
 
-
         if (button) {
-          button.click();
-        }
 
+          applyFilter(savedFilter);
+
+        }
 
         localStorage.removeItem(
           "alankraFilter"
@@ -2644,9 +2907,37 @@
 
     });
 
+
+    /* =========================================
+       ESCAPE KEY — CLOSE MOBILE MENU
+    ========================================= */
+
+    document.addEventListener("keydown", event => {
+
+      if (event.key === "Escape") {
+
+        const menu =
+          document.getElementById("mobileNav");
+
+        menu.classList.remove("open");
+
+        document
+          .querySelector(".mobile-menu")
+          .setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        document
+          .getElementById("menuIcon")
+          .textContent = "☰";
+
+      }
+
+    });
+
   </script>
 
-
 </body>
+
 </html>
-```
