@@ -6,21 +6,24 @@
 
   <title>ALANKRA | Luxury in Every Detail</title>
 
-  <meta name="description" content="Discover ALANKRA — elegant, timeless jewellery designed to make every detail unforgettable.">
+  <meta name="description"
+        content="ALANKRA — Anti-tarnish jewellery designed for everyday elegance. Luxury in Every Detail.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
     :root {
-      --emerald: #123c35;
-      --deep-emerald: #092c27;
-      --ivory: #f8f5ee;
-      --gold: #b99a62;
-      --dark: #22201d;
+      --emerald: #0b332c;
+      --dark-emerald: #061f1b;
+      --ivory: #f8f5ed;
+      --cream: #eee8dc;
+      --gold: #c5a15a;
+      --dark: #25231f;
       --white: #ffffff;
-      --light-gold: #d8c39a;
     }
 
     * {
@@ -35,8 +38,8 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      color: var(--dark);
       background: var(--ivory);
+      color: var(--dark);
       line-height: 1.6;
     }
 
@@ -46,80 +49,75 @@
     }
 
     img {
-      width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     /* =========================
-       ANNOUNCEMENT BAR
+       TOP BAR
     ========================= */
 
-    .announcement {
-      background: var(--deep-emerald);
-      color: var(--white);
+    .top-bar {
+      background: var(--dark-emerald);
+      color: white;
       text-align: center;
       padding: 9px 15px;
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
 
     /* =========================
-       NAVIGATION
+       HEADER
     ========================= */
 
     header {
       background: var(--ivory);
+      border-bottom: 1px solid rgba(197,161,90,.25);
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(185,154,98,0.25);
     }
 
     nav {
       max-width: 1250px;
+      height: 92px;
       margin: auto;
-      height: 82px;
+      padding: 0 30px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 30px;
     }
 
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 38px;
-      letter-spacing: 5px;
-      color: var(--emerald);
-      font-weight: 500;
+    .brand {
+      display: flex;
+      align-items: center;
     }
 
-    .tagline {
-      font-size: 8px;
-      letter-spacing: 3px;
-      text-align: center;
-      color: var(--gold);
-      margin-top: -7px;
+    .brand img {
+      width: 125px;
+      height: auto;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
       list-style: none;
-      font-size: 12px;
-      letter-spacing: 1.5px;
+      gap: 35px;
+      font-size: 11px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
     .nav-links a {
-      transition: color .3s ease;
+      transition: .3s;
     }
 
     .nav-links a:hover {
       color: var(--gold);
     }
 
-    .nav-icons {
+    .nav-actions {
       display: flex;
       gap: 18px;
       font-size: 20px;
@@ -130,78 +128,80 @@
     ========================= */
 
     .hero {
-      min-height: 680px;
+      min-height: 720px;
+
       background:
         linear-gradient(
-          rgba(9,44,39,0.25),
-          rgba(9,44,39,0.35)
+          rgba(6,31,27,.25),
+          rgba(6,31,27,.48)
         ),
-        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1800&q=85")
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=90")
         center/cover;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
       color: white;
-      position: relative;
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 750px;
       padding: 30px;
     }
 
-    .hero-small {
-      text-transform: uppercase;
-      letter-spacing: 5px;
+    .hero-kicker {
       font-size: 11px;
-      margin-bottom: 20px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
     }
 
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(55px, 8vw, 100px);
       font-weight: 400;
-      line-height: .95;
-      letter-spacing: 3px;
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: .9;
+      letter-spacing: 2px;
       margin-bottom: 25px;
     }
 
     .hero p {
       font-size: 14px;
+      font-weight: 300;
       letter-spacing: 1px;
       margin-bottom: 35px;
     }
 
-    .button {
+    .hero-button {
       display: inline-block;
-      padding: 15px 34px;
+      padding: 15px 36px;
       border: 1px solid white;
-      color: white;
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      transition: all .3s ease;
+      transition: .3s;
     }
 
-    .button:hover {
+    .hero-button:hover {
       background: white;
       color: var(--emerald);
     }
 
     /* =========================
-       SECTION
+       SECTIONS
     ========================= */
 
     .section {
       max-width: 1250px;
       margin: auto;
-      padding: 90px 30px;
+      padding: 95px 30px;
     }
 
     .section-heading {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
     .section-heading span {
@@ -213,14 +213,14 @@
 
     .section-heading h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 400;
       color: var(--emerald);
-      margin-top: 8px;
+      margin-top: 7px;
     }
 
     /* =========================
-       COLLECTION CARDS
+       COLLECTIONS
     ========================= */
 
     .collections {
@@ -229,32 +229,38 @@
       gap: 20px;
     }
 
-    .collection-card {
-      height: 450px;
+    .collection {
+      height: 500px;
       position: relative;
       overflow: hidden;
+      background: #ddd;
     }
 
-    .collection-card img {
+    .collection img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform .7s ease;
     }
 
-    .collection-card:hover img {
+    .collection:hover img {
       transform: scale(1.05);
     }
 
     .collection-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        transparent 45%,
-        rgba(0,0,0,.65)
-      );
+
+      background:
+        linear-gradient(
+          transparent 45%,
+          rgba(0,0,0,.7)
+        );
+
       display: flex;
       align-items: flex-end;
       justify-content: center;
+
       padding: 35px;
       color: white;
       text-align: center;
@@ -262,8 +268,15 @@
 
     .collection-overlay h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 400;
+    }
+
+    .collection-overlay p {
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      text-transform: uppercase;
     }
 
     /* =========================
@@ -273,48 +286,49 @@
     .products {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: 18px;
     }
 
-    .product-card {
+    .product {
       background: white;
-      position: relative;
+      overflow: hidden;
     }
 
     .product-image {
       aspect-ratio: 1 / 1.1;
       overflow: hidden;
-      background: #eee;
+      background: #e9e5dc;
     }
 
     .product-image img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform .6s ease;
     }
 
-    .product-card:hover .product-image img {
+    .product:hover img {
       transform: scale(1.04);
     }
 
     .product-info {
-      padding: 18px;
       text-align: center;
+      padding: 18px 10px 22px;
     }
 
     .product-info h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 500;
     }
 
     .product-info p {
-      font-size: 12px;
+      font-size: 11px;
       color: #777;
-      margin-top: 5px;
+      margin-top: 4px;
     }
 
-    .price {
+    .product-price {
       color: var(--emerald) !important;
       font-weight: 600;
       margin-top: 8px !important;
@@ -329,33 +343,35 @@
       color: white;
     }
 
-    .story-inner {
-      max-width: 1000px;
+    .story-content {
+      max-width: 850px;
       margin: auto;
+      padding: 110px 30px;
       text-align: center;
-      padding: 100px 30px;
     }
 
-    .story-inner span {
-      color: var(--light-gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
+    .story-content span {
+      color: #d9bf86;
       font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
 
-    .story-inner h2 {
+    .story-content h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 52px;
+      font-size: 58px;
       font-weight: 400;
-      margin: 20px 0;
+      line-height: 1;
+      margin: 20px 0 25px;
     }
 
-    .story-inner p {
+    .story-content p {
       max-width: 650px;
       margin: auto;
       font-size: 14px;
       font-weight: 300;
       line-height: 2;
+      color: #eee;
     }
 
     /* =========================
@@ -365,23 +381,23 @@
     .features {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 25px;
       text-align: center;
     }
 
     .feature {
-      padding: 20px;
+      padding: 25px 15px;
     }
 
-    .feature-icon {
-      font-size: 28px;
+    .feature-symbol {
       color: var(--gold);
+      font-size: 26px;
       margin-bottom: 15px;
     }
 
     .feature h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
+      font-size: 25px;
       font-weight: 500;
       color: var(--emerald);
     }
@@ -397,20 +413,20 @@
     ========================= */
 
     .newsletter {
-      background: #eee9dd;
+      background: var(--cream);
       text-align: center;
-      padding: 90px 30px;
+      padding: 100px 30px;
     }
 
     .newsletter h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 48px;
+      font-size: 50px;
       font-weight: 400;
       color: var(--emerald);
     }
 
     .newsletter p {
-      font-size: 13px;
+      font-size: 12px;
       margin: 12px 0 25px;
     }
 
@@ -433,10 +449,10 @@
     .newsletter-form button {
       border: none;
       background: none;
-      color: var(--emerald);
-      font-size: 11px;
-      letter-spacing: 2px;
       cursor: pointer;
+      color: var(--emerald);
+      font-size: 10px;
+      letter-spacing: 2px;
     }
 
     /* =========================
@@ -444,39 +460,38 @@
     ========================= */
 
     footer {
-      background: var(--deep-emerald);
+      background: var(--dark-emerald);
       color: white;
-      padding: 65px 30px 25px;
+      padding: 70px 30px 25px;
     }
 
-    .footer-inner {
+    .footer-content {
       max-width: 1100px;
       margin: auto;
+
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
-      gap: 60px;
+      gap: 70px;
     }
 
-    .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 40px;
-      letter-spacing: 5px;
+    .footer-logo img {
+      width: 150px;
     }
 
     .footer-about {
-      font-size: 12px;
-      line-height: 2;
-      color: #ccc;
       max-width: 350px;
+      color: #ccc;
+      font-size: 11px;
+      line-height: 2;
       margin-top: 15px;
     }
 
     footer h4 {
-      font-size: 11px;
+      color: #d9bf86;
+      font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 20px;
-      color: var(--light-gold);
     }
 
     footer ul {
@@ -484,9 +499,9 @@
     }
 
     footer li {
-      font-size: 12px;
-      margin-bottom: 10px;
+      font-size: 11px;
       color: #ddd;
+      margin-bottom: 10px;
     }
 
     .copyright {
@@ -495,24 +510,24 @@
       padding-top: 20px;
       border-top: 1px solid rgba(255,255,255,.15);
       text-align: center;
-      font-size: 10px;
-      color: #aaa;
+      font-size: 9px;
       letter-spacing: 1px;
+      color: #aaa;
     }
 
     /* =========================
        MOBILE
     ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
 
       nav {
-        height: 70px;
+        height: 75px;
         padding: 0 18px;
       }
 
-      .logo {
-        font-size: 30px;
+      .brand img {
+        width: 100px;
       }
 
       .nav-links {
@@ -520,7 +535,7 @@
       }
 
       .hero {
-        min-height: 580px;
+        min-height: 600px;
       }
 
       .hero h1 {
@@ -531,8 +546,8 @@
         grid-template-columns: 1fr;
       }
 
-      .collection-card {
-        height: 420px;
+      .collection {
+        height: 430px;
       }
 
       .products {
@@ -540,65 +555,81 @@
         gap: 10px;
       }
 
-      .product-info {
-        padding: 12px 8px;
-      }
-
-      .product-info h3 {
-        font-size: 18px;
-      }
-
       .features {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .footer-inner {
+      .footer-content {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 40px;
       }
 
       .section {
-        padding: 65px 18px;
+        padding: 70px 18px;
       }
 
       .section-heading h2 {
-        font-size: 40px;
+        font-size: 43px;
       }
+
+      .story-content h2 {
+        font-size: 46px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- ANNOUNCEMENT -->
+  <!-- TOP BAR -->
 
-  <div class="announcement">
-    Luxury in Every Detail · Discover ALANKRA
+  <div class="top-bar">
+    Anti-Tarnish Jewellery · Luxury in Every Detail
   </div>
 
-  <!-- NAVIGATION -->
+
+  <!-- HEADER -->
 
   <header>
+
     <nav>
 
-      <div>
-        <a href="#" class="logo">ALANKRA</a>
-        <div class="tagline">LUXURY IN EVERY DETAIL</div>
-      </div>
+      <a href="#" class="brand">
+        <img src="LOGO.png" alt="ALANKRA">
+      </a>
 
       <ul class="nav-links">
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#care">Jewellery Care</a></li>
+
+        <li>
+          <a href="#shop">Shop</a>
+        </li>
+
+        <li>
+          <a href="#collections">Collections</a>
+        </li>
+
+        <li>
+          <a href="#story">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#care">Jewellery Care</a>
+        </li>
+
       </ul>
 
-      <div class="nav-icons">
+      <div class="nav-actions">
+
         <span>♡</span>
         <span>🛍</span>
+
       </div>
 
     </nav>
+
   </header>
 
 
@@ -608,8 +639,8 @@
 
     <div class="hero-content">
 
-      <div class="hero-small">
-        THE ALANKRA COLLECTION
+      <div class="hero-kicker">
+        The ALANKRA Collection
       </div>
 
       <h1>
@@ -618,10 +649,10 @@
       </h1>
 
       <p>
-        Timeless pieces. Modern elegance. Made to be worn your way.
+        Timeless pieces. Modern elegance. Made for every version of you.
       </p>
 
-      <a href="#shop" class="button">
+      <a href="#shop" class="hero-button">
         Shop Collection
       </a>
 
@@ -635,49 +666,77 @@
   <section class="section" id="collections">
 
     <div class="section-heading">
+
       <span>Explore</span>
+
       <h2>Our Collections</h2>
+
     </div>
+
 
     <div class="collections">
 
-      <a href="#shop" class="collection-card">
+      <a href="#shop" class="collection">
 
         <img
-          src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85"
+          src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=90"
           alt="ALANKRA necklaces"
         >
 
         <div class="collection-overlay">
-          <h3>Necklaces</h3>
+
+          <div>
+
+            <h3>Necklaces</h3>
+
+            <p>Discover the collection</p>
+
+          </div>
+
         </div>
 
       </a>
 
 
-      <a href="#shop" class="collection-card">
+      <a href="#shop" class="collection">
 
         <img
-          src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=900&q=85"
+          src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=90"
           alt="ALANKRA earrings"
         >
 
         <div class="collection-overlay">
-          <h3>Earrings</h3>
+
+          <div>
+
+            <h3>Earrings</h3>
+
+            <p>Discover the collection</p>
+
+          </div>
+
         </div>
 
       </a>
 
 
-      <a href="#shop" class="collection-card">
+      <a href="#shop" class="collection">
 
         <img
-          src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85"
+          src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=90"
           alt="ALANKRA rings"
         >
 
         <div class="collection-overlay">
-          <h3>Rings</h3>
+
+          <div>
+
+            <h3>Rings</h3>
+
+            <p>Discover the collection</p>
+
+          </div>
+
         </div>
 
       </a>
@@ -703,12 +762,12 @@
     <div class="products">
 
 
-      <div class="product-card">
+      <div class="product">
 
         <div class="product-image">
 
           <img
-            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=85"
+            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=90"
             alt="ALANKRA necklace"
           >
 
@@ -718,21 +777,21 @@
 
           <h3>Signature Necklace</h3>
 
-          <p>Elegant everyday luxury</p>
+          <p>Everyday elegance</p>
 
-          <p class="price">₹799</p>
+          <p class="product-price">₹799</p>
 
         </div>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
         <div class="product-image">
 
           <img
-            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=85"
+            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=90"
             alt="ALANKRA ring"
           >
 
@@ -742,21 +801,21 @@
 
           <h3>Crystal Ring</h3>
 
-          <p>Delicate statement piece</p>
+          <p>Delicate statement</p>
 
-          <p class="price">₹399</p>
+          <p class="product-price">₹399</p>
 
         </div>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
         <div class="product-image">
 
           <img
-            src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=700&q=85"
+            src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=90"
             alt="ALANKRA earrings"
           >
 
@@ -768,19 +827,19 @@
 
           <p>Made to be noticed</p>
 
-          <p class="price">₹449</p>
+          <p class="product-price">₹449</p>
 
         </div>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
         <div class="product-image">
 
           <img
-            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=700&q=85"
+            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=800&q=90"
             alt="ALANKRA bracelet"
           >
 
@@ -790,9 +849,9 @@
 
           <h3>Gold Knot Bracelet</h3>
 
-          <p>Minimal. Timeless. Yours.</p>
+          <p>Minimal & timeless</p>
 
-          <p class="price">₹599</p>
+          <p class="product-price">₹599</p>
 
         </div>
 
@@ -807,17 +866,19 @@
 
   <section class="story" id="story">
 
-    <div class="story-inner">
+    <div class="story-content">
 
       <span>The ALANKRA Story</span>
 
-      <h2>Luxury doesn't have to be loud.</h2>
+      <h2>
+        Luxury doesn't have to be loud.
+      </h2>
 
       <p>
-        ALANKRA was created for those who believe that the smallest details
-        can make the biggest statement. From everyday essentials to pieces
-        made for unforgettable moments, every piece is chosen to add a little
-        more beauty to the way you express yourself.
+        ALANKRA was created for those who believe that jewellery is more
+        than an accessory. It is a detail, a memory, a mood and a reflection
+        of who you are. Each piece is chosen to bring effortless elegance
+        into your everyday.
       </p>
 
     </div>
@@ -840,14 +901,15 @@
 
     <div class="features">
 
+
       <div class="feature">
 
-        <div class="feature-icon">✦</div>
+        <div class="feature-symbol">✦</div>
 
         <h3>Anti-Tarnish</h3>
 
         <p>
-          Designed to keep its beautiful finish for longer.
+          Designed to maintain its beautiful finish for longer.
         </p>
 
       </div>
@@ -855,12 +917,12 @@
 
       <div class="feature">
 
-        <div class="feature-icon">◇</div>
+        <div class="feature-symbol">◇</div>
 
         <h3>Water-Resistant</h3>
 
         <p>
-          Made for everyday moments and effortless styling.
+          Designed for effortless everyday wear.
         </p>
 
       </div>
@@ -868,12 +930,12 @@
 
       <div class="feature">
 
-        <div class="feature-icon">♡</div>
+        <div class="feature-symbol">♡</div>
 
         <h3>Thoughtfully Chosen</h3>
 
         <p>
-          Every piece is selected with detail and intention.
+          Every detail is selected with intention.
         </p>
 
       </div>
@@ -881,7 +943,7 @@
 
       <div class="feature">
 
-        <div class="feature-icon">✧</div>
+        <div class="feature-symbol">✧</div>
 
         <h3>Beautifully Packed</h3>
 
@@ -890,6 +952,7 @@
         </p>
 
       </div>
+
 
     </div>
 
@@ -900,10 +963,12 @@
 
   <section class="newsletter">
 
-    <h2>Stay in the ALANKRA circle.</h2>
+    <h2>
+      Stay in the ALANKRA circle.
+    </h2>
 
     <p>
-      Be the first to discover new launches, special drops and stories.
+      Discover new launches, special drops and everything beautiful.
     </p>
 
     <form class="newsletter-form">
@@ -927,17 +992,24 @@
 
   <footer>
 
-    <div class="footer-inner">
+    <div class="footer-content">
+
 
       <div>
 
         <div class="footer-logo">
-          ALANKRA
+
+          <img src="LOGO.png" alt="ALANKRA">
+
         </div>
 
         <p class="footer-about">
+
           Luxury in Every Detail.
-          Discover jewellery designed to become part of your everyday story.
+
+          Discover anti-tarnish jewellery designed
+          for your everyday moments.
+
         </p>
 
       </div>
@@ -948,11 +1020,13 @@
         <h4>Shop</h4>
 
         <ul>
+
           <li>New Arrivals</li>
           <li>Necklaces</li>
           <li>Earrings</li>
           <li>Rings</li>
           <li>Bracelets</li>
+
         </ul>
 
       </div>
@@ -963,14 +1037,17 @@
         <h4>Help</h4>
 
         <ul>
+
           <li>Jewellery Care</li>
           <li>Shipping</li>
           <li>Returns</li>
           <li>FAQ</li>
           <li>Contact</li>
+
         </ul>
 
       </div>
+
 
     </div>
 
