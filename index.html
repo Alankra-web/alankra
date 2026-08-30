@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,10 +8,11 @@
 
   <title>ALANKRA | Luxury in Every Detail</title>
 
-  <meta
-    name="description"
-    content="ALANKRA — Anti-tarnish jewellery designed for everyday elegance. Luxury in Every Detail."
-  >
+<meta
+name="description"
+content="ALANKRA — Anti-tarnish jewellery designed for everyday elegance. Luxury in Every Detail."
+
+>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,15 +68,19 @@
 
     .top-bar {
       height: 30px;
+
       display: flex;
       align-items: center;
       justify-content: center;
 
       background: var(--dark-emerald);
+
       color: white;
 
       font-size: 9px;
+
       letter-spacing: 3px;
+
       text-transform: uppercase;
     }
 
@@ -91,33 +97,42 @@
       border-bottom: 1px solid rgba(197, 161, 90, 0.22);
 
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
     }
 
     nav {
       max-width: 1400px;
+
       height: 100%;
 
       margin: auto;
+
       padding: 0 35px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
     }
 
 
     /* ================================
-       ALANKRA WEBSITE LOGO
+       ALANKRA LOGO
     ================================= */
 
     .brand {
       width: 285px;
+
       height: 92px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: flex-start;
 
       overflow: hidden;
@@ -127,6 +142,7 @@
 
     .brand img {
       width: 330px;
+
       height: auto;
 
       max-width: none;
@@ -149,6 +165,7 @@
 
     .nav-links {
       display: flex;
+
       align-items: center;
 
       gap: 42px;
@@ -156,6 +173,7 @@
       list-style: none;
 
       font-size: 10px;
+
       letter-spacing: 2.4px;
 
       text-transform: uppercase;
@@ -163,6 +181,7 @@
 
     .nav-links a {
       position: relative;
+
       transition: 0.3s ease;
     }
 
@@ -172,9 +191,11 @@
       position: absolute;
 
       left: 0;
+
       bottom: -8px;
 
       width: 0;
+
       height: 1px;
 
       background: var(--gold);
@@ -199,7 +220,9 @@
       width: 285px;
 
       display: flex;
+
       justify-content: flex-end;
+
       align-items: center;
 
       gap: 22px;
@@ -209,6 +232,7 @@
 
     .nav-icon {
       font-size: 19px;
+
       cursor: pointer;
 
       transition: 0.3s ease;
@@ -239,6 +263,7 @@
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       text-align: center;
@@ -248,11 +273,13 @@
 
     .hero-content {
       max-width: 850px;
+
       padding: 40px 25px;
     }
 
     .hero-kicker {
       font-size: 10px;
+
       letter-spacing: 5px;
 
       text-transform: uppercase;
@@ -302,6 +329,7 @@
 
     .hero-button:hover {
       background: white;
+
       color: var(--emerald);
     }
 
@@ -373,6 +401,7 @@
 
     .collection img {
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
@@ -461,6 +490,7 @@
 
     .product-image img {
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
@@ -800,11 +830,13 @@
 
       .brand {
         width: 190px;
+
         height: 78px;
       }
 
       .brand img {
         width: 225px;
+
         transform: scale(1.08);
       }
 
@@ -814,6 +846,7 @@
 
       .nav-actions {
         width: auto;
+
         gap: 17px;
       }
 
@@ -835,6 +868,7 @@
 
       .products {
         grid-template-columns: repeat(2, 1fr);
+
         gap: 10px;
       }
 
@@ -844,6 +878,7 @@
 
       .footer-content {
         grid-template-columns: 1fr;
+
         gap: 40px;
       }
 
@@ -878,6 +913,7 @@
 
       .top-bar {
         font-size: 7px;
+
         letter-spacing: 1.5px;
       }
 
@@ -887,6 +923,7 @@
 
       .brand {
         width: 155px;
+
         height: 70px;
       }
 
@@ -920,501 +957,721 @@
 
 </head>
 
-
 <body>
 
-
-  <!-- TOP BAR -->
+  <!-- ================================
+       TOP BAR
+  ================================= -->
 
   <div class="top-bar">
     Anti-Tarnish Jewellery · Luxury in Every Detail
   </div>
 
-
-  <!-- HEADER -->
+  <!-- ================================
+       HEADER
+  ================================= -->
 
   <header>
 
-    <nav>
+```
+<nav>
 
-      <a href="#" class="brand">
 
-        <img
-          src="WEBSITE LOGO.png"
-          alt="ALANKRA — Luxury in Every Detail"
-        >
+  <!-- LOGO -->
 
+  <a href="index.html" class="brand">
+
+    <img
+      src="WEBSITE LOGO.png"
+      alt="ALANKRA — Luxury in Every Detail"
+    >
+
+  </a>
+
+
+  <!-- NAVIGATION -->
+
+  <ul class="nav-links">
+
+    <li>
+      <a href="index.html">
+        Home
       </a>
+    </li>
+
+    <li>
+      <a href="shop.html">
+        Shop
+      </a>
+    </li>
+
+    <li>
+      <a href="#collections">
+        Collections
+      </a>
+    </li>
+
+    <li>
+      <a href="#story">
+        Our Story
+      </a>
+    </li>
+
+    <li>
+      <a href="#care">
+        Jewellery Care
+      </a>
+    </li>
+
+  </ul>
 
 
-      <ul class="nav-links">
+  <!-- ICONS -->
 
-        <li>
-          <a href="#shop">Shop</a>
-        </li>
+  <div class="nav-actions">
 
-        <li>
-          <a href="#collections">Collections</a>
-        </li>
+    <span class="nav-icon">
+      ♡
+    </span>
 
-        <li>
-          <a href="#story">Our Story</a>
-        </li>
+    <span class="nav-icon">
+      🛍
+    </span>
 
-        <li>
-          <a href="#care">Jewellery Care</a>
-        </li>
+  </div>
 
-      </ul>
-
-
-      <div class="nav-actions">
-
-        <span class="nav-icon">♡</span>
-
-        <span class="nav-icon">🛍</span>
-
-      </div>
-
-    </nav>
+</nav>
+```
 
   </header>
 
-
-  <!-- HERO -->
+  <!-- ================================
+       HERO
+  ================================= -->
 
   <section class="hero">
 
-    <div class="hero-content">
+```
+<div class="hero-content">
 
-      <div class="hero-kicker">
-        The ALANKRA Collection
+  <div class="hero-kicker">
+    The ALANKRA Collection
+  </div>
+
+  <h1>
+    Jewellery<br>
+    That Feels Like You.
+  </h1>
+
+  <p>
+    Timeless pieces. Modern elegance.
+    Made for every version of you.
+  </p>
+
+  <a
+    href="shop.html"
+    class="hero-button"
+  >
+    Shop Collection
+  </a>
+
+</div>
+```
+
+  </section>
+
+  <!-- ================================
+       COLLECTIONS
+  ================================= -->
+
+  <section
+    class="section"
+    id="collections"
+  >
+
+```
+<div class="section-heading">
+
+  <span>
+    Explore
+  </span>
+
+  <h2>
+    Our Collections
+  </h2>
+
+</div>
+
+
+<div class="collections">
+
+
+  <!-- NECKLACES -->
+
+  <a
+    href="shop.html"
+    class="collection"
+  >
+
+    <img
+      src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=90"
+      alt="ALANKRA necklaces"
+    >
+
+    <div class="collection-overlay">
+
+      <div>
+
+        <h3>
+          Necklaces
+        </h3>
+
+        <p>
+          Discover the collection
+        </p>
+
       </div>
 
-      <h1>
-        Jewellery<br>
-        That Feels Like You.
-      </h1>
+    </div>
+
+  </a>
+
+
+  <!-- EARRINGS -->
+
+  <a
+    href="shop.html"
+    class="collection"
+  >
+
+    <img
+      src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=90"
+      alt="ALANKRA earrings"
+    >
+
+    <div class="collection-overlay">
+
+      <div>
+
+        <h3>
+          Earrings
+        </h3>
+
+        <p>
+          Discover the collection
+        </p>
+
+      </div>
+
+    </div>
+
+  </a>
+
+
+  <!-- RINGS -->
+
+  <a
+    href="shop.html"
+    class="collection"
+  >
+
+    <img
+      src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=90"
+      alt="ALANKRA rings"
+    >
+
+    <div class="collection-overlay">
+
+      <div>
+
+        <h3>
+          Rings
+        </h3>
+
+        <p>
+          Discover the collection
+        </p>
+
+      </div>
+
+    </div>
+
+  </a>
+
+
+</div>
+```
+
+  </section>
+
+  <!-- ================================
+       BESTSELLERS
+  ================================= -->
+
+  <section
+    class="section"
+    id="shop"
+  >
+
+```
+<div class="section-heading">
+
+  <span>
+    Curated for you
+  </span>
+
+  <h2>
+    Bestsellers
+  </h2>
+
+</div>
+
+
+<div class="products">
+
+
+  <!-- SIGNATURE NECKLACE -->
+
+  <a
+    href="shop.html"
+    class="product"
+  >
+
+    <div class="product-image">
+
+      <img
+        src="white drop necklace set.jpeg"
+        alt="ALANKRA White Drop Necklace Set"
+      >
+
+    </div>
+
+    <div class="product-info">
+
+      <h3>
+        White Drop Necklace Set
+      </h3>
 
       <p>
-        Timeless pieces. Modern elegance.
-        Made for every version of you.
+        Elegant & timeless
       </p>
 
-      <a href="#shop" class="hero-button">
-        Shop Collection
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- COLLECTIONS -->
-
-  <section class="section" id="collections">
-
-    <div class="section-heading">
-
-      <span>Explore</span>
-
-      <h2>Our Collections</h2>
-
-    </div>
-
-
-    <div class="collections">
-
-
-      <a href="#shop" class="collection">
-
-        <img
-          src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=90"
-          alt="ALANKRA necklaces"
-        >
-
-        <div class="collection-overlay">
-
-          <div>
-
-            <h3>Necklaces</h3>
-
-            <p>Discover the collection</p>
-
-          </div>
-
-        </div>
-
-      </a>
-
-
-      <a href="#shop" class="collection">
-
-        <img
-          src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=90"
-          alt="ALANKRA earrings"
-        >
-
-        <div class="collection-overlay">
-
-          <div>
-
-            <h3>Earrings</h3>
-
-            <p>Discover the collection</p>
-
-          </div>
-
-        </div>
-
-      </a>
-
-
-      <a href="#shop" class="collection">
-
-        <img
-          src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=90"
-          alt="ALANKRA rings"
-        >
-
-        <div class="collection-overlay">
-
-          <div>
-
-            <h3>Rings</h3>
-
-            <p>Discover the collection</p>
-
-          </div>
-
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- BESTSELLERS -->
-
-  <section class="section" id="shop">
-
-    <div class="section-heading">
-
-      <span>Curated for you</span>
-
-      <h2>Bestsellers</h2>
-
-    </div>
-
-
-    <div class="products">
-
-
-      <div class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA Signature Necklace"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h3>Signature Necklace</h3>
-
-          <p>Everyday elegance</p>
-
-          <p class="product-price">₹799</p>
-
-        </div>
-
-      </div>
-
-
-      <div class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA Crystal Ring"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h3>Crystal Ring</h3>
-
-          <p>Delicate statement</p>
-
-          <p class="product-price">₹399</p>
-
-        </div>
-
-      </div>
-
-
-      <div class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA Vintage Earrings"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h3>Vintage Earrings</h3>
-
-          <p>Made to be noticed</p>
-
-          <p class="product-price">₹449</p>
-
-        </div>
-
-      </div>
-
-
-      <div class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=800&q=90"
-            alt="ALANKRA Gold Knot Bracelet"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <h3>Gold Knot Bracelet</h3>
-
-          <p>Minimal & timeless</p>
-
-          <p class="product-price">₹599</p>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- STORY -->
-
-  <section class="story" id="story">
-
-    <div class="story-content">
-
-      <span>The ALANKRA Story</span>
-
-      <h2>
-        Luxury doesn't have to be loud.
-      </h2>
-
-      <p>
-        ALANKRA was created for those who believe that jewellery
-        is more than an accessory. It is a detail, a memory,
-        a mood and a reflection of who you are.
-        Each piece is chosen to bring effortless elegance
-        into your everyday.
+      <p class="product-price">
+        ₹599
       </p>
 
     </div>
 
-  </section>
+  </a>
 
 
-  <!-- WHY ALANKRA -->
+  <!-- CRYSTAL RING -->
 
-  <section class="section" id="care">
+  <a
+    href="shop.html"
+    class="product"
+  >
 
-    <div class="section-heading">
+    <div class="product-image">
 
-      <span>Why ALANKRA</span>
-
-      <h2>Made for Your Everyday</h2>
-
-    </div>
-
-
-    <div class="features">
-
-
-      <div class="feature">
-
-        <div class="feature-symbol">✦</div>
-
-        <h3>Anti-Tarnish</h3>
-
-        <p>
-          Designed to maintain its beautiful finish for longer.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-symbol">◇</div>
-
-        <h3>Water-Resistant</h3>
-
-        <p>
-          Designed for effortless everyday wear.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-symbol">♡</div>
-
-        <h3>Thoughtfully Chosen</h3>
-
-        <p>
-          Every detail is selected with intention.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-symbol">✧</div>
-
-        <h3>Beautifully Packed</h3>
-
-        <p>
-          Because opening your ALANKRA order should feel special.
-        </p>
-
-      </div>
-
+      <img
+        src="crystal cross ring.png"
+        alt="ALANKRA Crystal Cross Ring"
+      >
 
     </div>
 
+    <div class="product-info">
+
+      <h3>
+        Crystal Cross Ring
+      </h3>
+
+      <p>
+        Delicate statement
+      </p>
+
+      <p class="product-price">
+        ₹399
+      </p>
+
+    </div>
+
+  </a>
+
+
+  <!-- PURPLE EARRINGS -->
+
+  <a
+    href="shop.html"
+    class="product"
+  >
+
+    <div class="product-image">
+
+      <img
+        src="purple vintage earrings.jpeg"
+        alt="ALANKRA Purple Vintage Earrings"
+      >
+
+    </div>
+
+    <div class="product-info">
+
+      <h3>
+        Purple Vintage Earrings
+      </h3>
+
+      <p>
+        Made to be noticed
+      </p>
+
+      <p class="product-price">
+        ₹449
+      </p>
+
+    </div>
+
+  </a>
+
+
+  <!-- GOLDEN KNOT BRACELET -->
+
+  <a
+    href="shop.html"
+    class="product"
+  >
+
+    <div class="product-image">
+
+      <img
+        src="golden knot bracelet.png"
+        alt="ALANKRA Golden Knot Bracelet"
+      >
+
+    </div>
+
+    <div class="product-info">
+
+      <h3>
+        Golden Knot Bracelet
+      </h3>
+
+      <p>
+        Minimal & timeless
+      </p>
+
+      <p class="product-price">
+        ₹499
+      </p>
+
+    </div>
+
+  </a>
+
+
+</div>
+```
+
   </section>
 
+  <!-- ================================
+       STORY
+  ================================= -->
 
-  <!-- NEWSLETTER -->
+  <section
+    class="story"
+    id="story"
+  >
+
+```
+<div class="story-content">
+
+  <span>
+    The ALANKRA Story
+  </span>
+
+  <h2>
+    Luxury doesn't have to be loud.
+  </h2>
+
+  <p>
+    ALANKRA was created for those who believe
+    that jewellery is more than an accessory.
+    It is a detail, a memory, a mood and a
+    reflection of who you are.
+
+    Each piece is chosen to bring effortless
+    elegance into your everyday.
+  </p>
+
+</div>
+```
+
+  </section>
+
+  <!-- ================================
+       WHY ALANKRA
+  ================================= -->
+
+  <section
+    class="section"
+    id="care"
+  >
+
+```
+<div class="section-heading">
+
+  <span>
+    Why ALANKRA
+  </span>
+
+  <h2>
+    Made for Your Everyday
+  </h2>
+
+</div>
+
+
+<div class="features">
+
+
+  <div class="feature">
+
+    <div class="feature-symbol">
+      ✦
+    </div>
+
+    <h3>
+      Anti-Tarnish
+    </h3>
+
+    <p>
+      Designed to maintain its beautiful
+      finish for longer.
+    </p>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-symbol">
+      ◇
+    </div>
+
+    <h3>
+      Water-Resistant
+    </h3>
+
+    <p>
+      Designed for effortless everyday wear.
+    </p>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-symbol">
+      ♡
+    </div>
+
+    <h3>
+      Thoughtfully Chosen
+    </h3>
+
+    <p>
+      Every detail is selected with intention.
+    </p>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-symbol">
+      ✧
+    </div>
+
+    <h3>
+      Beautifully Packed
+    </h3>
+
+    <p>
+      Because opening your ALANKRA order
+      should feel special.
+    </p>
+
+  </div>
+
+
+</div>
+```
+
+  </section>
+
+  <!-- ================================
+       NEWSLETTER
+  ================================= -->
 
   <section class="newsletter">
 
-    <h2>
-      Stay in the ALANKRA circle.
-    </h2>
+```
+<h2>
+  Stay in the ALANKRA circle.
+</h2>
 
-    <p>
-      Discover new launches, special drops and everything beautiful.
-    </p>
+<p>
+  Discover new launches, special drops
+  and everything beautiful.
+</p>
 
-    <form class="newsletter-form">
+<form class="newsletter-form">
 
-      <input
-        type="email"
-        placeholder="Your email address"
-        required
-      >
+  <input
+    type="email"
+    placeholder="Your email address"
+    required
+  >
 
-      <button type="submit">
-        JOIN
-      </button>
+  <button type="submit">
+    JOIN
+  </button>
 
-    </form>
+</form>
+```
 
   </section>
 
-
-  <!-- FOOTER -->
+  <!-- ================================
+       FOOTER
+  ================================= -->
 
   <footer>
 
-    <div class="footer-content">
+```
+<div class="footer-content">
 
 
-      <div>
+  <!-- BRAND -->
 
-        <div class="footer-logo">
+  <div>
 
-          <img
-            src="LOGO.png"
-            alt="ALANKRA"
-          >
+    <div class="footer-logo">
 
-        </div>
-
-        <p class="footer-about">
-
-          Luxury in Every Detail.
-
-          Discover anti-tarnish jewellery designed
-          for your everyday moments.
-
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>Shop</h4>
-
-        <ul>
-
-          <li>New Arrivals</li>
-          <li>Necklaces</li>
-          <li>Earrings</li>
-          <li>Rings</li>
-          <li>Bracelets</li>
-
-        </ul>
-
-      </div>
-
-
-      <div>
-
-        <h4>Help</h4>
-
-        <ul>
-
-          <li>Jewellery Care</li>
-          <li>Shipping</li>
-          <li>Returns</li>
-          <li>FAQ</li>
-          <li>Contact</li>
-
-        </ul>
-
-      </div>
-
+      <img
+        src="LOGO.png"
+        alt="ALANKRA"
+      >
 
     </div>
 
+    <p class="footer-about">
 
-    <div class="copyright">
+      Luxury in Every Detail.
 
-      © 2026 ALANKRA · LUXURY IN EVERY DETAIL
+      Discover anti-tarnish jewellery designed
+      for your everyday moments.
 
-    </div>
+    </p>
+
+  </div>
+
+
+  <!-- SHOP -->
+
+  <div>
+
+    <h4>
+      Shop
+    </h4>
+
+    <ul>
+
+      <li>
+        <a href="shop.html">
+          New Arrivals
+        </a>
+      </li>
+
+      <li>
+        <a href="shop.html">
+          Necklaces
+        </a>
+      </li>
+
+      <li>
+        <a href="shop.html">
+          Earrings
+        </a>
+      </li>
+
+      <li>
+        <a href="shop.html">
+          Rings
+        </a>
+      </li>
+
+      <li>
+        <a href="shop.html">
+          Bracelets
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <!-- HELP -->
+
+  <div>
+
+    <h4>
+      Help
+    </h4>
+
+    <ul>
+
+      <li>
+        <a href="#care">
+          Jewellery Care
+        </a>
+      </li>
+
+      <li>
+        Shipping
+      </li>
+
+      <li>
+        Returns
+      </li>
+
+      <li>
+        FAQ
+      </li>
+
+      <li>
+        Contact
+      </li>
+
+    </ul>
+
+  </div>
+
+
+</div>
+
+
+<div class="copyright">
+
+  © 2026 ALANKRA · LUXURY IN EVERY DETAIL
+
+</div>
+```
 
   </footer>
-
 
 </body>
 
