@@ -13,7 +13,8 @@
     content="Discover ALANKRA — premium anti-tarnish, water-resistant jewellery designed for everyday elegance. Luxury in Every Detail."
   >
 
-  <meta name="keywords"
+  <meta
+    name="keywords"
     content="ALANKRA jewellery, anti-tarnish jewellery India, everyday jewellery, affordable luxury jewellery, Indian jewellery, water-resistant jewellery"
   >
 
@@ -23,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
@@ -1401,13 +1402,13 @@
         </li>
 
         <li>
-          <a href="#collections">
+          <a href="collections.html">
             Collections
           </a>
         </li>
 
         <li>
-          <a href="#story">
+          <a href="about.html">
             Our Story
           </a>
         </li>
@@ -1436,6 +1437,7 @@
           class="nav-action"
           type="button"
           aria-label="Search"
+          onclick="goToShop()"
         >
           ⌕
         </button>
@@ -1444,6 +1446,7 @@
           class="nav-action"
           type="button"
           aria-label="Wishlist"
+          onclick="goToShop()"
         >
           ♡
         </button>
@@ -1460,6 +1463,8 @@
 
     </nav>
 
+
+    <!-- MOBILE NAV -->
 
     <div
       id="mobileNav"
@@ -1486,7 +1491,7 @@
       </a>
 
       <a
-        href="#collections"
+        href="collections.html"
         style="
           display:block;
           padding:10px;
@@ -1499,7 +1504,7 @@
       </a>
 
       <a
-        href="#story"
+        href="about.html"
         style="
           display:block;
           padding:10px;
@@ -1765,7 +1770,7 @@
         <!-- PRODUCT 4 -->
 
         <a
-          href="green stone bracelet.png"
+          href="shop.html"
           class="product-card"
         >
 
@@ -1822,7 +1827,10 @@
          WHY ALANKRA
     ========================= -->
 
-    <section class="values" id="why-alankra">
+    <section
+      class="values"
+      id="why-alankra"
+    >
 
       <div class="values-image"></div>
 
@@ -2269,14 +2277,26 @@
           </li>
 
           <li>
-            <a href="shop.html">
+            <a href="shop.html?category=necklaces">
               Necklaces
             </a>
           </li>
 
           <li>
-            <a href="shop.html">
+            <a href="shop.html?category=earrings">
               Earrings
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=bracelets">
+              Bracelets
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=rings">
+              Rings
             </a>
           </li>
 
@@ -2312,8 +2332,8 @@
           </li>
 
           <li>
-            <a href="faq.html">
-              FAQs
+            <a href="shop.html">
+              Shop
             </a>
           </li>
 
@@ -2331,32 +2351,33 @@
         <ul>
 
           <li>
-            <a href="contact.html">
+            <a href="shop.html">
               Contact
             </a>
           </li>
 
           <li>
-            <a href="shipping-returns.html">
-              Shipping & Returns
+            <a href="care.html">
+              Jewellery Care
             </a>
           </li>
 
           <li>
-            <a href="privacy.html">
-              Privacy
+            <a href="collections.html">
+              Collections
             </a>
           </li>
 
           <li>
-            <a href="terms.html">
-              Terms
+            <a href="about.html">
+              Our Story
             </a>
           </li>
 
         </ul>
 
       </div>
+
 
     </div>
 
@@ -2381,10 +2402,21 @@
       const menu = document.getElementById("mobileNav");
 
       if (menu.style.display === "block") {
+
         menu.style.display = "none";
+
       } else {
+
         menu.style.display = "block";
+
       }
+
+    }
+
+
+    function goToShop() {
+
+      window.location.href = "shop.html";
 
     }
 
