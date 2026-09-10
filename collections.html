@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,53 +9,44 @@
 
   <meta
     name="description"
-    content="Explore ALANKRA's curated jewellery collections — timeless necklaces, elegant earrings, refined bracelets and statement pieces designed for everyday luxury."
+    content="Explore ALANKRA's curated jewellery collections — timeless necklaces, elegant earrings, refined bracelets and statement rings designed for everyday luxury."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
   <style>
 
-    /* =========================================
-       ALANKRA — COLLECTIONS PAGE
-       LUXURY EMERALD + IVORY + GOLD SYSTEM
-       ========================================= */
-
     :root {
-      --emerald: #0b332c;
-      --deep-emerald: #061f1b;
-      --soft-emerald: #123f36;
+      --emerald: #123f35;
+      --deep-emerald: #082b24;
+      --dark-emerald: #061f1b;
 
       --ivory: #f8f5ee;
-      --warm-white: #fcfaf6;
+      --warm-white: #fdfbf7;
       --cream: #eee8dc;
 
-      --gold: #c6a35d;
-      --soft-gold: #d7bd83;
+      --gold: #b4945d;
+      --soft-gold: #d5bd87;
 
-      --text: #282620;
+      --text: #292823;
       --muted: #77736b;
 
-      --line: rgba(11, 51, 44, 0.13);
+      --line: rgba(18,63,53,.14);
 
-      --white: #ffffff;
+      --white: #fff;
     }
 
 
-    /* =========================================
-       RESET
-       ========================================= */
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
 
@@ -66,9 +56,9 @@
 
 
     body {
-      font-family: 'Montserrat', sans-serif;
       background: var(--ivory);
       color: var(--text);
+      font-family: "Montserrat", sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -76,7 +66,7 @@
 
     img {
       display: block;
-      max-width: 100%;
+      width: 100%;
     }
 
 
@@ -92,123 +82,99 @@
     }
 
 
-    /* =========================================
-       ANNOUNCEMENT BAR
-       ========================================= */
+    button {
+      cursor: pointer;
+    }
+
+
+    /* =====================================
+       ANNOUNCEMENT
+    ===================================== */
 
     .announcement {
       height: 32px;
-
       display: flex;
       align-items: center;
       justify-content: center;
 
-      background: var(--deep-emerald);
+      background: var(--dark-emerald);
       color: #eee7d9;
 
       font-size: 8px;
       letter-spacing: 3px;
       text-transform: uppercase;
-
       text-align: center;
     }
 
 
-    /* =========================================
+    /* =====================================
        HEADER
-       ========================================= */
+    ===================================== */
 
     header {
-      height: 94px;
-
-      background: rgba(248, 245, 238, 0.97);
-
-      border-bottom: 1px solid var(--line);
+      height: 86px;
 
       position: sticky;
       top: 0;
-
       z-index: 1000;
 
-      backdrop-filter: blur(10px);
+      background: rgba(248,245,238,.96);
+      border-bottom: 1px solid var(--line);
+
+      backdrop-filter: blur(12px);
     }
 
 
     .nav {
-      width: min(1440px, calc(100% - 70px));
-
+      width: min(1380px, calc(100% - 60px));
       height: 100%;
-
       margin: auto;
 
       display: grid;
-
       grid-template-columns: 1fr auto 1fr;
-
       align-items: center;
     }
 
 
-    /* =========================================
+    /* =====================================
        LOGO
-       ========================================= */
+    ===================================== */
 
     .brand {
-      width: 300px;
-      height: 80px;
-
-      display: flex;
-      align-items: center;
-
-      overflow: hidden;
-
-      justify-self: start;
+      width: 150px;
+      display: block;
     }
 
 
     .brand img {
-      width: 285px;
+      width: 150px;
       height: auto;
-
-      max-width: none;
-      max-height: 66px;
-
       object-fit: contain;
-
-      transform: scale(1.12);
-      transform-origin: left center;
-
-      mix-blend-mode: multiply;
     }
 
 
-    /* =========================================
-       NAVIGATION
-       ========================================= */
+    /* =====================================
+       DESKTOP NAV
+    ===================================== */
 
     .nav-links {
       display: flex;
-
       align-items: center;
-
       gap: 34px;
 
       list-style: none;
 
       font-size: 9px;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
-
       white-space: nowrap;
     }
 
 
     .nav-links a {
       position: relative;
-
-      transition: color 0.3s ease;
+      padding: 8px 0;
+      transition: color .3s ease;
     }
 
 
@@ -216,66 +182,60 @@
       content: "";
 
       position: absolute;
-
       left: 0;
-      bottom: -9px;
+      bottom: 0;
 
       width: 0;
       height: 1px;
 
       background: var(--gold);
 
-      transition: width 0.3s ease;
+      transition: width .3s ease;
     }
 
 
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-
+    .nav-links a:hover,
     .nav-links a.active {
       color: var(--gold);
     }
 
 
+    .nav-links a:hover::after,
     .nav-links a.active::after {
       width: 100%;
     }
 
 
-    /* =========================================
-       NAV ACTIONS
-       ========================================= */
+    /* =====================================
+       ACTIONS
+    ===================================== */
 
     .nav-actions {
       justify-self: end;
 
       display: flex;
-
       align-items: center;
-
-      gap: 20px;
+      gap: 12px;
     }
 
 
     .nav-action {
-      border: none;
+      width: 38px;
+      height: 38px;
 
+      border: 0;
       background: transparent;
 
       color: var(--emerald);
 
-      cursor: pointer;
+      display: grid;
+      place-items: center;
 
-      font-size: 16px;
+      font-size: 18px;
 
-      transition: 0.3s ease;
+      position: relative;
+
+      transition: color .3s ease;
     }
 
 
@@ -284,27 +244,94 @@
     }
 
 
-    /* =========================================
-       HERO
-       ========================================= */
+    .action-count {
+      position: absolute;
 
-    .collections-hero {
+      top: 1px;
+      right: 0;
+
+      min-width: 15px;
+      height: 15px;
+
+      padding: 0 4px;
+
+      border-radius: 20px;
+
+      background: var(--emerald);
+      color: white;
+
+      font-size: 7px;
+
+      display: grid;
+      place-items: center;
+    }
+
+
+    .menu-button {
+      display: none;
+    }
+
+
+    /* =====================================
+       MOBILE MENU
+    ===================================== */
+
+    .mobile-menu {
+      display: none;
+
+      position: fixed;
+      top: 118px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 900;
+
+      background: var(--ivory);
+
+      padding: 25px;
+    }
+
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 18px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      color: var(--emerald);
+
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .hero {
       min-height: 570px;
 
+      position: relative;
+
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       text-align: center;
 
-      position: relative;
-
       background:
         linear-gradient(
-          rgba(6, 31, 27, 0.63),
-          rgba(6, 31, 27, 0.68)
+          rgba(6,31,27,.62),
+          rgba(6,31,27,.70)
         ),
         url("golden rose necklace.png")
         center / cover no-repeat;
@@ -312,10 +339,7 @@
 
 
     .hero-content {
-      width: min(850px, calc(100% - 40px));
-
-      margin: auto;
-
+      width: min(800px, calc(100% - 40px));
       position: relative;
       z-index: 2;
     }
@@ -327,76 +351,65 @@
       color: var(--soft-gold);
 
       font-size: 8px;
-
       letter-spacing: 4px;
-
       text-transform: uppercase;
 
-      margin-bottom: 17px;
+      margin-bottom: 18px;
     }
 
 
-    .hero-content h1 {
+    .hero h1 {
       color: white;
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
       font-size: clamp(65px, 8vw, 105px);
 
       font-weight: 400;
-
-      line-height: 0.88;
+      line-height: .88;
 
       letter-spacing: -2px;
 
-      margin-bottom: 27px;
+      margin-bottom: 25px;
     }
 
 
-    .hero-content p {
-      max-width: 530px;
-
+    .hero p {
+      max-width: 540px;
       margin: auto;
 
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,.8);
 
       font-size: 11px;
-
       font-weight: 300;
 
       line-height: 1.9;
-
-      letter-spacing: 0.3px;
     }
 
 
-    .hero-scroll {
+    .scroll-label {
       position: absolute;
 
-      bottom: 28px;
-
       left: 50%;
+      bottom: 28px;
 
       transform: translateX(-50%);
 
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,.65);
 
       font-size: 7px;
-
       letter-spacing: 3px;
-
       text-transform: uppercase;
     }
 
 
-    .hero-scroll::after {
+    .scroll-label::after {
       content: "";
 
       display: block;
 
       width: 1px;
-
-      height: 35px;
+      height: 34px;
 
       background: var(--soft-gold);
 
@@ -404,9 +417,9 @@
     }
 
 
-    /* =========================================
+    /* =====================================
        INTRO
-       ========================================= */
+    ===================================== */
 
     .intro {
       padding: 115px 25px 105px;
@@ -417,50 +430,49 @@
     }
 
 
+    .intro .eyebrow {
+      color: var(--gold);
+    }
+
+
     .intro h2 {
       color: var(--emerald);
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
       font-size: clamp(45px, 6vw, 72px);
 
       font-weight: 400;
-
-      line-height: 0.95;
+      line-height: .95;
 
       margin-bottom: 25px;
     }
 
 
     .intro p {
-      max-width: 580px;
-
+      max-width: 600px;
       margin: auto;
 
       color: var(--muted);
 
       font-size: 10px;
+      font-weight: 300;
 
       line-height: 2;
-
-      font-weight: 300;
     }
 
 
-    /* =========================================
+    /* =====================================
        COLLECTION GRID
-       ========================================= */
+    ===================================== */
 
-    .collection-section {
+    .collections {
       padding: 0 30px 125px;
-
-      background: var(--ivory);
     }
 
 
     .collection-container {
       width: min(1250px, 100%);
-
       margin: auto;
     }
 
@@ -474,22 +486,18 @@
     }
 
 
-    /* =========================================
-       COLLECTION CARD
-       ========================================= */
-
     .collection-card {
+      min-height: 590px;
+
       position: relative;
 
       overflow: hidden;
 
       background: var(--cream);
-
-      min-height: 590px;
     }
 
 
-    .collection-card.large {
+    .collection-card.tall {
       min-height: 680px;
     }
 
@@ -502,7 +510,8 @@
 
       object-fit: cover;
 
-      transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+      transition:
+        transform .8s cubic-bezier(.2,.7,.2,1);
     }
 
 
@@ -513,13 +522,10 @@
 
     .collection-overlay {
       position: absolute;
-
       inset: 0;
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: flex-end;
 
       padding: 45px;
@@ -527,8 +533,8 @@
       background:
         linear-gradient(
           to top,
-          rgba(6,31,27,0.78),
-          rgba(6,31,27,0.03) 62%
+          rgba(6,31,27,.82),
+          rgba(6,31,27,.02) 65%
         );
     }
 
@@ -537,35 +543,32 @@
       color: var(--soft-gold);
 
       font-size: 7px;
-
       letter-spacing: 3px;
 
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
 
 
     .collection-overlay h3 {
       color: white;
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
-      font-size: 43px;
+      font-size: 45px;
 
       font-weight: 400;
+      line-height: .95;
 
-      line-height: 1;
-
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
 
     .collection-overlay p {
-      max-width: 330px;
+      max-width: 350px;
 
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,.78);
 
       font-size: 9px;
-
       line-height: 1.8;
 
       margin-bottom: 18px;
@@ -578,7 +581,6 @@
       color: white;
 
       font-size: 7px;
-
       letter-spacing: 2px;
 
       text-transform: uppercase;
@@ -586,17 +588,24 @@
       padding-bottom: 5px;
 
       border-bottom: 1px solid var(--soft-gold);
+
+      transition: color .3s ease;
     }
 
 
-    /* =========================================
-       EDITORIAL SECTION
-       ========================================= */
+    .collection-card:hover .collection-link {
+      color: var(--soft-gold);
+    }
+
+
+    /* =====================================
+       EDITORIAL
+    ===================================== */
 
     .editorial {
       padding: 120px 30px;
 
-      background: var(--deep-emerald);
+      background: var(--dark-emerald);
 
       color: white;
     }
@@ -604,22 +613,20 @@
 
     .editorial-container {
       width: min(1180px, 100%);
-
       margin: auto;
 
       display: grid;
 
-      grid-template-columns: 0.9fr 1.1fr;
-
-      align-items: center;
+      grid-template-columns: .9fr 1.1fr;
 
       gap: 90px;
+
+      align-items: center;
     }
 
 
     .editorial-image {
       min-height: 570px;
-
       overflow: hidden;
     }
 
@@ -632,7 +639,7 @@
 
       object-fit: cover;
 
-      transition: transform 0.8s ease;
+      transition: transform .8s ease;
     }
 
 
@@ -647,13 +654,13 @@
 
 
     .editorial-copy h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
       font-size: clamp(48px, 5vw, 75px);
 
       font-weight: 400;
 
-      line-height: 0.92;
+      line-height: .92;
 
       margin-bottom: 25px;
     }
@@ -662,7 +669,7 @@
     .editorial-copy p {
       max-width: 470px;
 
-      color: rgba(255,255,255,0.66);
+      color: rgba(255,255,255,.66);
 
       font-size: 10px;
 
@@ -675,48 +682,51 @@
     .editorial-button {
       display: inline-block;
 
-      border: 1px solid rgba(215,189,131,0.7);
+      border: 1px solid rgba(215,189,131,.75);
 
       padding: 13px 23px;
 
       color: var(--soft-gold);
 
       font-size: 7px;
-
       letter-spacing: 2px;
 
       text-transform: uppercase;
 
-      transition: all 0.3s ease;
+      transition: .3s ease;
     }
 
 
     .editorial-button:hover {
       background: var(--soft-gold);
-
-      color: var(--deep-emerald);
+      color: var(--dark-emerald);
     }
 
 
-    /* =========================================
+    /* =====================================
        CATEGORY STRIP
-       ========================================= */
+    ===================================== */
 
-    .category-strip {
-      padding: 100px 25px;
-
-      background: var(--warm-white);
+    .category-section {
+      padding: 105px 25px;
 
       text-align: center;
+
+      background: var(--warm-white);
     }
 
 
-    .category-strip h2 {
+    .category-section .eyebrow {
+      color: var(--gold);
+    }
+
+
+    .category-section h2 {
       color: var(--emerald);
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
-      font-size: 52px;
+      font-size: 55px;
 
       font-weight: 400;
 
@@ -726,7 +736,6 @@
 
     .category-links {
       width: min(1000px, 100%);
-
       margin: auto;
 
       display: grid;
@@ -734,7 +743,6 @@
       grid-template-columns: repeat(4, 1fr);
 
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
     }
 
@@ -742,20 +750,20 @@
     .category-link {
       padding: 30px 15px;
 
-      border-right: 1px solid var(--line);
-
       color: var(--emerald);
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
-      font-size: 25px;
+      font-size: 27px;
 
-      transition: all 0.3s ease;
+      border-right: 1px solid var(--line);
+
+      transition: .3s ease;
     }
 
 
     .category-link:last-child {
-      border-right: none;
+      border-right: 0;
     }
 
 
@@ -766,10 +774,9 @@
 
       color: var(--muted);
 
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
 
       font-size: 6px;
-
       letter-spacing: 2px;
 
       text-transform: uppercase;
@@ -778,7 +785,6 @@
 
     .category-link:hover {
       background: var(--emerald);
-
       color: white;
     }
 
@@ -788,20 +794,19 @@
     }
 
 
-    /* =========================================
+    /* =====================================
        MARQUEE
-       ========================================= */
+    ===================================== */
 
     .marquee {
       overflow: hidden;
 
       background: var(--cream);
 
-      padding: 17px 0;
-
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
+
+      padding: 18px 0;
     }
 
 
@@ -817,7 +822,7 @@
     .marquee-item {
       color: var(--emerald);
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
       font-size: 22px;
 
@@ -829,7 +834,6 @@
 
     .marquee-item span {
       color: var(--gold);
-
       margin-left: 30px;
     }
 
@@ -847,9 +851,9 @@
     }
 
 
-    /* =========================================
+    /* =====================================
        NEWSLETTER
-       ========================================= */
+    ===================================== */
 
     .newsletter {
       padding: 110px 25px;
@@ -860,16 +864,21 @@
     }
 
 
+    .newsletter .eyebrow {
+      color: var(--gold);
+    }
+
+
     .newsletter h2 {
       color: var(--emerald);
 
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Cormorant Garamond", serif;
 
-      font-size: clamp(43px, 5vw, 62px);
+      font-size: clamp(45px, 5vw, 65px);
 
       font-weight: 400;
 
-      line-height: 1;
+      line-height: .95;
     }
 
 
@@ -896,43 +905,42 @@
     .newsletter-form input {
       flex: 1;
 
-      border: none;
-
-      outline: none;
+      border: 0;
+      outline: 0;
 
       background: transparent;
 
       padding: 13px 5px;
 
-      font-size: 10px;
-
       color: var(--text);
+
+      font-size: 10px;
     }
 
 
     .newsletter-form button {
-      border: none;
+      border: 0;
 
-      background: none;
+      background: transparent;
 
       color: var(--emerald);
 
-      cursor: pointer;
+      padding: 0 5px;
 
       font-size: 8px;
 
       letter-spacing: 2px;
 
-      padding: 0 5px;
+      text-transform: uppercase;
     }
 
 
-    /* =========================================
+    /* =====================================
        FOOTER
-       ========================================= */
+    ===================================== */
 
     footer {
-      background: var(--deep-emerald);
+      background: var(--dark-emerald);
 
       color: white;
 
@@ -942,7 +950,6 @@
 
     .footer-grid {
       width: min(1150px, 100%);
-
       margin: auto;
 
       display: grid;
@@ -958,14 +965,14 @@
 
       filter: brightness(0) invert(1);
 
-      opacity: 0.95;
+      opacity: .95;
     }
 
 
     .footer-about {
       max-width: 310px;
 
-      color: rgba(255,255,255,0.62);
+      color: rgba(255,255,255,.62);
 
       font-size: 9px;
 
@@ -994,13 +1001,13 @@
 
 
     .footer-column li {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,.7);
 
       font-size: 9px;
 
-      margin-bottom: 10px;
+      margin-bottom: 11px;
 
-      transition: color 0.25s ease;
+      transition: color .25s ease;
     }
 
 
@@ -1016,11 +1023,11 @@
 
       padding-top: 20px;
 
-      border-top: 1px solid rgba(255,255,255,0.12);
+      border-top: 1px solid rgba(255,255,255,.12);
 
       text-align: center;
 
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,.4);
 
       font-size: 7px;
 
@@ -1028,24 +1035,98 @@
     }
 
 
-    /* =========================================
-       TABLET
-       ========================================= */
+    /* =====================================
+       SEARCH OVERLAY
+    ===================================== */
 
-    @media (max-width: 1150px) {
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+
+      z-index: 3000;
+
+      display: none;
+
+      background: rgba(6,31,27,.97);
+
+      padding: 90px 25px;
+    }
+
+
+    .search-overlay.open {
+      display: block;
+    }
+
+
+    .search-inner {
+      width: min(800px, 100%);
+      margin: auto;
+    }
+
+
+    .close-search {
+      position: fixed;
+
+      top: 25px;
+      right: 30px;
+
+      border: 0;
+      background: transparent;
+
+      color: white;
+
+      font-size: 30px;
+    }
+
+
+    .search-overlay h2 {
+      color: white;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 52px;
+
+      font-weight: 400;
+
+      line-height: 1;
+      margin-bottom: 35px;
+    }
+
+
+    .search-input {
+      width: 100%;
+
+      border: 0;
+
+      border-bottom: 1px solid rgba(255,255,255,.4);
+
+      background: transparent;
+
+      outline: none;
+
+      color: white;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 30px;
+
+      padding: 15px 0;
+    }
+
+
+    .search-input::placeholder {
+      color: rgba(255,255,255,.4);
+    }
+
+
+    /* =====================================
+       RESPONSIVE
+    ===================================== */
+
+    @media (max-width: 1050px) {
 
       .nav {
         width: calc(100% - 40px);
-      }
-
-
-      .brand {
-        width: 250px;
-      }
-
-
-      .brand img {
-        width: 245px;
       }
 
 
@@ -1055,13 +1136,13 @@
 
 
       .collection-card,
-      .collection-card.large {
-        min-height: 560px;
+      .collection-card.tall {
+        min-height: 550px;
       }
 
 
       .editorial-container {
-        gap: 55px;
+        gap: 50px;
       }
 
 
@@ -1072,18 +1153,13 @@
     }
 
 
-    /* =========================================
-       MOBILE
-       ========================================= */
-
     @media (max-width: 850px) {
 
       .announcement {
         height: 28px;
 
         font-size: 6px;
-
-        letter-spacing: 1.8px;
+        letter-spacing: 2px;
       }
 
 
@@ -1102,18 +1178,12 @@
 
 
       .brand {
-        width: 190px;
-
-        height: 70px;
+        width: 125px;
       }
 
 
       .brand img {
-        width: 185px;
-
-        max-height: 58px;
-
-        transform: scale(1.12);
+        width: 125px;
       }
 
 
@@ -1123,29 +1193,28 @@
 
 
       .nav-actions {
-        gap: 14px;
+        gap: 4px;
       }
 
 
-      .nav-action {
-        font-size: 15px;
+      .menu-button {
+        display: grid;
+        order: -1;
       }
 
 
-      .collections-hero {
+      .mobile-menu {
+        top: 104px;
+      }
+
+
+      .hero {
         min-height: 500px;
       }
 
 
-      .hero-content h1 {
+      .hero h1 {
         font-size: 65px;
-
-        letter-spacing: -1px;
-      }
-
-
-      .hero-content p {
-        font-size: 10px;
       }
 
 
@@ -1155,35 +1224,29 @@
 
 
       .intro h2 {
-        font-size: 48px;
+        font-size: 50px;
       }
 
 
-      .collection-section {
+      .collections {
         padding: 0 18px 90px;
       }
 
 
       .collection-grid {
         grid-template-columns: 1fr;
-
         gap: 12px;
       }
 
 
       .collection-card,
-      .collection-card.large {
+      .collection-card.tall {
         min-height: 520px;
       }
 
 
       .collection-overlay {
         padding: 30px;
-      }
-
-
-      .collection-overlay h3 {
-        font-size: 38px;
       }
 
 
@@ -1194,16 +1257,11 @@
 
       .editorial-container {
         grid-template-columns: 1fr;
-
         gap: 45px;
       }
 
 
-      .editorial-image {
-        min-height: 500px;
-      }
-
-
+      .editorial-image,
       .editorial-image img {
         min-height: 500px;
       }
@@ -1220,15 +1278,13 @@
       }
 
 
-      .category-strip {
+      .category-section {
         padding: 80px 18px;
       }
 
 
-      .category-strip h2 {
-        font-size: 45px;
-
-        margin-bottom: 35px;
+      .category-section h2 {
+        font-size: 47px;
       }
 
 
@@ -1239,30 +1295,23 @@
 
       .category-link {
         border-bottom: 1px solid var(--line);
-
-        font-size: 23px;
       }
 
 
-      .category-link:nth-child(2) {
-        border-right: none;
+      .category-link:nth-child(2),
+      .category-link:nth-child(4) {
+        border-right: 0;
       }
 
 
       .category-link:nth-child(3),
       .category-link:nth-child(4) {
-        border-bottom: none;
-      }
-
-
-      .category-link:nth-child(4) {
-        border-right: none;
+        border-bottom: 0;
       }
 
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
-
         gap: 45px;
       }
 
@@ -1274,56 +1323,42 @@
     }
 
 
-    /* =========================================
-       SMALL PHONES
-       ========================================= */
-
     @media (max-width: 480px) {
 
       .brand {
-        width: 155px;
-
-        height: 66px;
+        width: 115px;
       }
 
 
       .brand img {
-        width: 155px;
-
-        max-height: 52px;
-
-        transform: scale(1.08);
-      }
-
-
-      .nav-actions {
-        gap: 10px;
+        width: 115px;
       }
 
 
       .nav-action {
-        font-size: 14px;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
       }
 
 
-      .collections-hero {
-        min-height: 430px;
+      .hero {
+        min-height: 440px;
       }
 
 
-      .hero-content h1 {
-        font-size: 51px;
+      .hero h1 {
+        font-size: 52px;
+        letter-spacing: -1px;
       }
 
 
-      .hero-content p {
+      .hero p {
         font-size: 9px;
-
-        line-height: 1.8;
       }
 
 
-      .hero-scroll {
+      .scroll-label {
         display: none;
       }
 
@@ -1334,7 +1369,7 @@
 
 
       .intro h2 {
-        font-size: 42px;
+        font-size: 43px;
       }
 
 
@@ -1344,7 +1379,7 @@
 
 
       .collection-card,
-      .collection-card.large {
+      .collection-card.tall {
         min-height: 440px;
       }
 
@@ -1355,17 +1390,12 @@
 
 
       .collection-overlay h3 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
 
       .collection-overlay p {
         font-size: 8px;
-      }
-
-
-      .editorial {
-        padding: 70px 18px;
       }
 
 
@@ -1376,19 +1406,18 @@
 
 
       .editorial-copy h2 {
-        font-size: 48px;
+        font-size: 50px;
       }
 
 
-      .category-strip h2 {
+      .category-section h2 {
         font-size: 40px;
       }
 
 
       .category-link {
-        padding: 24px 10px;
-
-        font-size: 21px;
+        padding: 25px 10px;
+        font-size: 22px;
       }
 
 
@@ -1399,7 +1428,6 @@
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
-
         gap: 35px;
       }
 
@@ -1413,33 +1441,38 @@
 <body>
 
 
-  <!-- =========================================
+  <!-- =====================================
        ANNOUNCEMENT
-       ========================================= -->
+  ====================================== -->
 
   <div class="announcement">
-
     Anti-Tarnish · Water-Resistant · Everyday Luxury
-
   </div>
 
 
-  <!-- =========================================
+  <!-- =====================================
        HEADER
-       ========================================= -->
+  ====================================== -->
 
   <header>
 
-    <nav class="nav">
+    <div class="nav">
+
+
+      <button
+        class="nav-action menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
 
       <a href="index.html" class="brand">
-
         <img
           src="WEBSITE LOGO.png"
           alt="ALANKRA — Luxury in Every Detail"
         >
-
       </a>
 
 
@@ -1476,476 +1509,537 @@
 
         <button
           class="nav-action"
+          id="searchButton"
           aria-label="Search"
         >
           ⌕
         </button>
 
-        <button
-          class="nav-action"
-          aria-label="Wishlist"
-        >
-          ♡
-        </button>
 
         <button
           class="nav-action"
+          id="wishlistButton"
+          aria-label="Wishlist"
+        >
+          ♡
+          <span
+            class="action-count"
+            id="wishlistCount"
+          >
+            0
+          </span>
+        </button>
+
+
+        <button
+          class="nav-action"
+          id="bagButton"
           aria-label="Shopping bag"
         >
-          ◇
+          ♡
+          <span
+            class="action-count"
+            id="bagCount"
+          >
+            0
+          </span>
         </button>
 
       </div>
 
-
-    </nav>
+    </div>
 
   </header>
 
 
-  <!-- =========================================
-       MAIN
-       ========================================= -->
+  <!-- =====================================
+       MOBILE MENU
+  ====================================== -->
 
-  <main>
+  <div class="mobile-menu" id="mobileMenu">
+
+    <a href="shop.html">
+      Shop All
+    </a>
+
+    <a href="shop.html?category=necklaces">
+      Necklaces
+    </a>
+
+    <a href="shop.html?category=earrings">
+      Earrings
+    </a>
+
+    <a href="shop.html?category=bracelets">
+      Bracelets
+    </a>
+
+    <a href="shop.html?category=rings">
+      Rings
+    </a>
+
+    <a href="collections.html">
+      Collections
+    </a>
+
+    <a href="index.html#story">
+      Our Story
+    </a>
+
+    <a href="index.html#why-alankra">
+      Why ALANKRA
+    </a>
+
+    <a href="care.html">
+      Jewellery Care
+    </a>
+
+  </div>
 
 
-    <!-- =======================================
-         HERO
-         ======================================= -->
+  <!-- =====================================
+       HERO
+  ====================================== -->
 
-    <section class="collections-hero">
+  <section class="hero">
 
-      <div class="hero-content">
-
-        <span class="eyebrow">
-          The World of ALANKRA
-        </span>
-
-        <h1>
-          Our Collections.
-        </h1>
-
-        <p>
-          Curated expressions of elegance, designed to become
-          part of your everyday story.
-        </p>
-
-      </div>
-
-
-      <div class="hero-scroll">
-        Explore
-      </div>
-
-    </section>
-
-
-    <!-- =======================================
-         INTRO
-         ======================================= -->
-
-    <section class="intro">
+    <div class="hero-content">
 
       <span class="eyebrow">
-        Discover ALANKRA
+        The World of ALANKRA
       </span>
 
-      <h2>
-        Jewellery for<br>
-        every version of you.
-      </h2>
+      <h1>
+        Our<br>
+        Collections.
+      </h1>
 
       <p>
-        From delicate everyday pieces to statement silhouettes,
-        every ALANKRA collection is created with one thought in mind —
-        effortless luxury that feels unmistakably yours.
+        Curated expressions of elegance, designed to become
+        part of your everyday story.
       </p>
 
-    </section>
+    </div>
 
 
-    <!-- =======================================
-         COLLECTIONS
-         ======================================= -->
+    <div class="scroll-label">
+      Explore
+    </div>
 
-    <section class="collection-section">
-
-      <div class="collection-container">
-
-        <div class="collection-grid">
+  </section>
 
 
-          <!-- COLLECTION 01 -->
+  <!-- =====================================
+       INTRO
+  ====================================== -->
 
-          <a
-            href="shop.html"
-            class="collection-card large"
-          >
+  <section class="intro">
 
-            <img
-              src="golden rose necklace.png"
-              alt="ALANKRA Signature Necklaces"
-            >
+    <span class="eyebrow">
+      Discover ALANKRA
+    </span>
 
-            <div class="collection-overlay">
+    <h2>
+      Jewellery for<br>
+      every version of you.
+    </h2>
 
-              <span class="collection-number">
-                COLLECTION 01
-              </span>
+    <p>
+      From delicate everyday pieces to statement silhouettes,
+      every ALANKRA collection is created with one thought in mind —
+      effortless luxury that feels unmistakably yours.
+    </p>
 
-              <h3>
-                Signature<br>
-                Necklaces
-              </h3>
-
-              <p>
-                Delicate silhouettes and timeless pendants
-                designed to sit effortlessly at the heart of your look.
-              </p>
-
-              <span class="collection-link">
-                Explore Necklaces
-              </span>
-
-            </div>
-
-          </a>
+  </section>
 
 
-          <!-- COLLECTION 02 -->
+  <!-- =====================================
+       COLLECTIONS
+  ====================================== -->
 
-          <a
-            href="shop.html"
-            class="collection-card"
-          >
+  <section class="collections">
 
-            <img
-              src="golden petal earring.jpeg"
-              alt="ALANKRA Earrings Collection"
-            >
+    <div class="collection-container">
 
-            <div class="collection-overlay">
-
-              <span class="collection-number">
-                COLLECTION 02
-              </span>
-
-              <h3>
-                Earrings
-              </h3>
-
-              <p>
-                Elegant details that frame every moment
-                with effortless sophistication.
-              </p>
-
-              <span class="collection-link">
-                Explore Earrings
-              </span>
-
-            </div>
-
-          </a>
+      <div class="collection-grid">
 
 
-          <!-- COLLECTION 03 -->
+        <!-- COLLECTION 01 -->
 
-          <a
-            href="shop.html"
-            class="collection-card"
-          >
-
-            <img
-              src="golden knot bracelet.png"
-              alt="ALANKRA Bracelets Collection"
-            >
-
-            <div class="collection-overlay">
-
-              <span class="collection-number">
-                COLLECTION 03
-              </span>
-
-              <h3>
-                Bracelets
-              </h3>
-
-              <p>
-                Refined wristwear created for stacking,
-                gifting and everyday elegance.
-              </p>
-
-              <span class="collection-link">
-                Explore Bracelets
-              </span>
-
-            </div>
-
-          </a>
-
-
-          <!-- COLLECTION 04 -->
-
-          <a
-            href="shop.html"
-            class="collection-card large"
-          >
-
-            <img
-              src="crystal cross ring.png"
-              alt="ALANKRA Rings Collection"
-            >
-
-            <div class="collection-overlay">
-
-              <span class="collection-number">
-                COLLECTION 04
-              </span>
-
-              <h3>
-                Rings
-              </h3>
-
-              <p>
-                Small statements with a lasting impression —
-                designed to make every gesture feel special.
-              </p>
-
-              <span class="collection-link">
-                Explore Rings
-              </span>
-
-            </div>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================
-         EDITORIAL
-         ======================================= -->
-
-    <section class="editorial">
-
-      <div class="editorial-container">
-
-
-        <div class="editorial-image">
+        <a
+          href="shop.html?category=necklaces"
+          class="collection-card tall"
+        >
 
           <img
-            src="white drop necklace set.jpeg"
-            alt="ALANKRA Jewellery Set"
+            src="golden rose necklace.png"
+            alt="ALANKRA Necklace Collection"
+            loading="lazy"
           >
 
-        </div>
+          <div class="collection-overlay">
+
+            <span class="collection-number">
+              COLLECTION 01
+            </span>
+
+            <h3>
+              Signature<br>
+              Necklaces
+            </h3>
+
+            <p>
+              Delicate silhouettes and timeless pendants
+              designed to sit effortlessly at the heart of your look.
+            </p>
+
+            <span class="collection-link">
+              Explore Necklaces
+            </span>
+
+          </div>
+
+        </a>
 
 
-        <div class="editorial-copy">
+        <!-- COLLECTION 02 -->
 
-          <span class="eyebrow">
-            The Art of Everyday Luxury
-          </span>
+        <a
+          href="shop.html?category=earrings"
+          class="collection-card"
+        >
 
-          <h2>
-            Made to be<br>
-            worn. Made<br>
-            to be remembered.
-          </h2>
-
-          <p>
-            ALANKRA brings together modern silhouettes,
-            graceful details and everyday versatility.
-            Each piece is chosen to complement your style —
-            whether you're dressing quietly or making a statement.
-          </p>
-
-          <a
-            href="shop.html"
-            class="editorial-button"
+          <img
+            src="golden petal earring.jpeg"
+            alt="ALANKRA Earrings Collection"
+            loading="lazy"
           >
-            Shop The Collection
-          </a>
 
-        </div>
+          <div class="collection-overlay">
 
+            <span class="collection-number">
+              COLLECTION 02
+            </span>
 
-      </div>
+            <h3>
+              Earrings
+            </h3>
 
-    </section>
+            <p>
+              Elegant details that frame every moment
+              with effortless sophistication.
+            </p>
 
+            <span class="collection-link">
+              Explore Earrings
+            </span>
 
-    <!-- =======================================
-         CATEGORY LINKS
-         ======================================= -->
+          </div>
 
-    <section class="category-strip">
-
-      <span class="eyebrow">
-        Find Your Signature
-      </span>
-
-      <h2>
-        Explore by style.
-      </h2>
-
-
-      <div class="category-links">
-
-
-        <a
-          href="shop.html"
-          class="category-link"
-        >
-          Necklaces
-
-          <span>
-            Timeless Layers
-          </span>
         </a>
 
 
-        <a
-          href="shop.html"
-          class="category-link"
-        >
-          Earrings
+        <!-- COLLECTION 03 -->
 
-          <span>
-            Effortless Sparkle
-          </span>
+        <a
+          href="shop.html?category=bracelets"
+          class="collection-card"
+        >
+
+          <img
+            src="golden knot bracelet.png"
+            alt="ALANKRA Bracelet Collection"
+            loading="lazy"
+          >
+
+          <div class="collection-overlay">
+
+            <span class="collection-number">
+              COLLECTION 03
+            </span>
+
+            <h3>
+              Bracelets
+            </h3>
+
+            <p>
+              Refined wristwear created for stacking,
+              gifting and everyday elegance.
+            </p>
+
+            <span class="collection-link">
+              Explore Bracelets
+            </span>
+
+          </div>
+
         </a>
 
 
-        <a
-          href="shop.html"
-          class="category-link"
-        >
-          Bracelets
-
-          <span>
-            Everyday Details
-          </span>
-        </a>
-
+        <!-- COLLECTION 04 -->
 
         <a
-          href="shop.html"
-          class="category-link"
+          href="shop.html?category=rings"
+          class="collection-card tall"
         >
-          Rings
 
-          <span>
-            Little Statements
-          </span>
+          <img
+            src="crystal cross ring.png"
+            alt="ALANKRA Rings Collection"
+            loading="lazy"
+          >
+
+          <div class="collection-overlay">
+
+            <span class="collection-number">
+              COLLECTION 04
+            </span>
+
+            <h3>
+              Rings
+            </h3>
+
+            <p>
+              Small statements with a lasting impression —
+              designed to make every gesture feel special.
+            </p>
+
+            <span class="collection-link">
+              Explore Rings
+            </span>
+
+          </div>
+
         </a>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================
-         MARQUEE
-         ======================================= -->
-
-    <div class="marquee">
-
-      <div class="marquee-track">
-
-
-        <div class="marquee-item">
-          LUXURY IN EVERY DETAIL
-          <span>✦</span>
-        </div>
-
-
-        <div class="marquee-item">
-          MADE FOR YOUR EVERYDAY
-          <span>✦</span>
-        </div>
-
-
-        <div class="marquee-item">
-          EFFORTLESSLY ALANKRA
-          <span>✦</span>
-        </div>
-
-
-        <div class="marquee-item">
-          LUXURY IN EVERY DETAIL
-          <span>✦</span>
-        </div>
-
-
-        <div class="marquee-item">
-          MADE FOR YOUR EVERYDAY
-          <span>✦</span>
-        </div>
-
-
-        <div class="marquee-item">
-          EFFORTLESSLY ALANKRA
-          <span>✦</span>
-        </div>
 
 
       </div>
 
     </div>
 
-
-    <!-- =======================================
-         NEWSLETTER
-         ======================================= -->
-
-    <section class="newsletter">
-
-      <span class="eyebrow">
-        Stay Connected
-      </span>
-
-      <h2>
-        Stay in the<br>
-        ALANKRA circle.
-      </h2>
-
-      <p>
-        Discover new launches, special drops and everything beautiful.
-      </p>
+  </section>
 
 
-      <form class="newsletter-form">
+  <!-- =====================================
+       EDITORIAL
+  ====================================== -->
 
-        <input
-          type="email"
-          placeholder="Your email address"
-          aria-label="Email address"
-          required
+  <section class="editorial">
+
+    <div class="editorial-container">
+
+
+      <div class="editorial-image">
+
+        <img
+          src="white drop necklace set.jpeg"
+          alt="ALANKRA White Drop Necklace"
+          loading="lazy"
         >
 
-        <button type="submit">
-          JOIN
-        </button>
-
-      </form>
-
-    </section>
+      </div>
 
 
-  </main>
+      <div class="editorial-copy">
+
+        <span class="eyebrow">
+          The Art of Everyday Luxury
+        </span>
+
+        <h2>
+          Made to be<br>
+          worn. Made<br>
+          to be remembered.
+        </h2>
+
+        <p>
+          ALANKRA brings together modern silhouettes,
+          graceful details and everyday versatility.
+          Each piece is chosen to complement your style —
+          whether you're dressing quietly or making a statement.
+        </p>
+
+        <a
+          href="shop.html"
+          class="editorial-button"
+        >
+          Shop The Collection
+        </a>
+
+      </div>
 
 
-  <!-- =========================================
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       CATEGORY SECTION
+  ====================================== -->
+
+  <section class="category-section">
+
+    <span class="eyebrow">
+      Find Your Signature
+    </span>
+
+    <h2>
+      Explore by style.
+    </h2>
+
+
+    <div class="category-links">
+
+
+      <a
+        href="shop.html?category=necklaces"
+        class="category-link"
+      >
+
+        Necklaces
+
+        <span>
+          Timeless Layers
+        </span>
+
+      </a>
+
+
+      <a
+        href="shop.html?category=earrings"
+        class="category-link"
+      >
+
+        Earrings
+
+        <span>
+          Effortless Sparkle
+        </span>
+
+      </a>
+
+
+      <a
+        href="shop.html?category=bracelets"
+        class="category-link"
+      >
+
+        Bracelets
+
+        <span>
+          Everyday Details
+        </span>
+
+      </a>
+
+
+      <a
+        href="shop.html?category=rings"
+        class="category-link"
+      >
+
+        Rings
+
+        <span>
+          Little Statements
+        </span>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       MARQUEE
+  ====================================== -->
+
+  <div class="marquee">
+
+    <div class="marquee-track">
+
+      <div class="marquee-item">
+        LUXURY IN EVERY DETAIL
+        <span>✦</span>
+      </div>
+
+      <div class="marquee-item">
+        MADE FOR YOUR EVERYDAY
+        <span>✦</span>
+      </div>
+
+      <div class="marquee-item">
+        EFFORTLESSLY ALANKRA
+        <span>✦</span>
+      </div>
+
+      <div class="marquee-item">
+        LUXURY IN EVERY DETAIL
+        <span>✦</span>
+      </div>
+
+      <div class="marquee-item">
+        MADE FOR YOUR EVERYDAY
+        <span>✦</span>
+      </div>
+
+      <div class="marquee-item">
+        EFFORTLESSLY ALANKRA
+        <span>✦</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       NEWSLETTER
+  ====================================== -->
+
+  <section class="newsletter">
+
+    <span class="eyebrow">
+      Stay Connected
+    </span>
+
+    <h2>
+      Stay in the<br>
+      ALANKRA circle.
+    </h2>
+
+    <p>
+      Discover new launches, special drops and everything beautiful.
+    </p>
+
+
+    <form
+      class="newsletter-form"
+      id="newsletterForm"
+    >
+
+      <input
+        type="email"
+        placeholder="Your email address"
+        aria-label="Email address"
+        required
+      >
+
+      <button type="submit">
+        Join
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- =====================================
        FOOTER
-       ========================================= -->
+  ====================================== -->
 
   <footer>
 
@@ -1964,12 +2058,10 @@
         </div>
 
         <p class="footer-about">
-
           Luxury in Every Detail.
-
-          Discover anti-tarnish, water-resistant
-          jewellery designed for your everyday moments.
-
+          Discover elegant anti-tarnish,
+          water-resistant jewellery designed
+          for your everyday moments.
         </p>
 
       </div>
@@ -1990,25 +2082,25 @@
           </li>
 
           <li>
-            <a href="shop.html">
+            <a href="shop.html?category=necklaces">
               Necklaces
             </a>
           </li>
 
           <li>
-            <a href="shop.html">
+            <a href="shop.html?category=earrings">
               Earrings
             </a>
           </li>
 
           <li>
-            <a href="shop.html">
+            <a href="shop.html?category=bracelets">
               Bracelets
             </a>
           </li>
 
           <li>
-            <a href="shop.html">
+            <a href="shop.html?category=rings">
               Rings
             </a>
           </li>
@@ -2045,7 +2137,7 @@
           </li>
 
           <li>
-            <a href="index.html#why-alankra">
+            <a href="care.html">
               Jewellery Care
             </a>
           </li>
@@ -2096,43 +2188,331 @@
 
 
     <div class="footer-bottom">
-
       © 2026 ALANKRA · LUXURY IN EVERY DETAIL
-
     </div>
 
   </footer>
 
 
-  <!-- =========================================
-       NEWSLETTER SCRIPT
-       ========================================= -->
+  <!-- =====================================
+       SEARCH OVERLAY
+  ====================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+  >
+
+    <button
+      class="close-search"
+      id="closeSearch"
+      aria-label="Close search"
+    >
+      ×
+    </button>
+
+
+    <div class="search-inner">
+
+      <span class="eyebrow">
+        Search ALANKRA
+      </span>
+
+      <h2>
+        Find your next favourite piece.
+      </h2>
+
+      <input
+        type="search"
+        class="search-input"
+        id="searchInput"
+        placeholder="Search jewellery..."
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
 
   <script>
 
-    const newsletterForm =
-      document.querySelector('.newsletter-form');
+    /* =====================================
+       MOBILE MENU
+    ===================================== */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
 
 
-    newsletterForm.addEventListener(
-      'submit',
+    menuButton.addEventListener(
+      "click",
+      function() {
+
+        mobileMenu.classList.toggle("open");
+
+        this.textContent =
+          mobileMenu.classList.contains("open")
+            ? "×"
+            : "☰";
+
+      }
+    );
+
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            mobileMenu.classList.remove("open");
+
+            menuButton.textContent = "☰";
+
+          }
+        );
+
+      });
+
+
+    /* =====================================
+       SEARCH
+    ===================================== */
+
+    const searchButton =
+      document.getElementById("searchButton");
+
+    const searchOverlay =
+      document.getElementById("searchOverlay");
+
+    const closeSearch =
+      document.getElementById("closeSearch");
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+
+    searchButton.addEventListener(
+      "click",
+      function() {
+
+        searchOverlay.classList.add("open");
+
+        setTimeout(
+          () => searchInput.focus(),
+          100
+        );
+
+      }
+    );
+
+
+    closeSearch.addEventListener(
+      "click",
+      function() {
+
+        searchOverlay.classList.remove("open");
+
+      }
+    );
+
+
+    searchOverlay.addEventListener(
+      "click",
+      function(event) {
+
+        if (event.target === searchOverlay) {
+
+          searchOverlay.classList.remove("open");
+
+        }
+
+      }
+    );
+
+
+    searchInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key !== "Enter") return;
+
+        const query =
+          this.value.trim();
+
+        if (!query) return;
+
+        window.location.href =
+          "shop.html?search="
+          + encodeURIComponent(query);
+
+      }
+    );
+
+
+    /* =====================================
+       ESC KEY
+    ===================================== */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          searchOverlay.classList.remove("open");
+
+          mobileMenu.classList.remove("open");
+
+          menuButton.textContent = "☰";
+
+        }
+
+      }
+    );
+
+
+    /* =====================================
+       WISHLIST COUNT
+    ===================================== */
+
+    function updateWishlistCount() {
+
+      try {
+
+        const wishlist =
+          JSON.parse(
+            localStorage.getItem(
+              "alankraWishlist"
+            ) || "[]"
+          );
+
+        document.getElementById(
+          "wishlistCount"
+        ).textContent =
+          wishlist.length;
+
+      } catch {
+
+        document.getElementById(
+          "wishlistCount"
+        ).textContent = "0";
+
+      }
+
+    }
+
+
+    updateWishlistCount();
+
+
+    /* =====================================
+       BAG COUNT
+    ===================================== */
+
+    function updateBagCount() {
+
+      try {
+
+        const cart =
+          JSON.parse(
+            localStorage.getItem(
+              "alankraCart"
+            ) || "[]"
+          );
+
+        const count =
+          cart.reduce(
+            function(total, item) {
+              return total +
+                (Number(item.quantity) || 0);
+            },
+            0
+          );
+
+        document.getElementById(
+          "bagCount"
+        ).textContent = count;
+
+      } catch {
+
+        document.getElementById(
+          "bagCount"
+        ).textContent = "0";
+
+      }
+
+    }
+
+
+    updateBagCount();
+
+
+    /* =====================================
+       WISHLIST BUTTON
+    ===================================== */
+
+    document.getElementById(
+      "wishlistButton"
+    ).addEventListener(
+      "click",
+      function() {
+
+        window.location.href =
+          "shop.html";
+
+      }
+    );
+
+
+    /* =====================================
+       BAG BUTTON
+    ===================================== */
+
+    document.getElementById(
+      "bagButton"
+    ).addEventListener(
+      "click",
+      function() {
+
+        window.location.href =
+          "shop.html";
+
+      }
+    );
+
+
+    /* =====================================
+       NEWSLETTER
+    ===================================== */
+
+    document.getElementById(
+      "newsletterForm"
+    ).addEventListener(
+      "submit",
       function(event) {
 
         event.preventDefault();
 
         const email =
-          this.querySelector('input').value.trim();
+          this.querySelector("input").value.trim();
 
+        if (!email) return;
 
-        if (email) {
+        alert(
+          "Thank you for joining the ALANKRA circle. ✦"
+        );
 
-          alert(
-            'Thank you for joining the ALANKRA circle.'
-          );
-
-          this.reset();
-
-        }
+        this.reset();
 
       }
     );
@@ -2143,4 +2523,3 @@
 </body>
 
 </html>
-```
