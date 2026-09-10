@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Shop Jewellery | ALANKRA — Luxury in Every Detail</title>
+  <title>ALANKRA | Luxury in Every Detail</title>
 
-<meta
-name="description"
-content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewellery. Discover necklaces, earrings, bracelets and rings designed for everyday elegance."
+  <meta
+    name="description"
+    content="Discover ALANKRA — premium anti-tarnish, water-resistant jewellery designed for everyday elegance. Luxury in Every Detail."
+  >
 
->
+  <meta name="keywords"
+    content="ALANKRA jewellery, anti-tarnish jewellery India, everyday jewellery, affordable luxury jewellery, Indian jewellery, water-resistant jewellery"
+  >
+
+  <meta name="author" content="ALANKRA">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;500;600&display=swap"
     rel="stylesheet"
   >
 
   <style>
+
     :root {
       --emerald: #0b332c;
       --deep-emerald: #061f1b;
-      --soft-emerald: #123f36;
+      --soft-emerald: #17483d;
 
       --ivory: #f8f5ee;
-      --warm-white: #fcfaf6;
       --cream: #eee8dc;
+      --warm-white: #fcfaf6;
 
-      --gold: #c6a35d;
-      --soft-gold: #d7bd83;
+      --gold: #b99755;
+      --soft-gold: #d6bd82;
 
       --text: #282620;
       --muted: #77736b;
@@ -41,7 +47,15 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       --line: rgba(11, 51, 44, 0.13);
 
       --white: #ffffff;
+
+      --serif: "Cormorant Garamond", serif;
+      --sans: "Montserrat", sans-serif;
     }
+
+
+    /* =========================
+       RESET
+    ========================= */
 
     * {
       margin: 0;
@@ -54,16 +68,16 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
     }
 
     body {
-      font-family: "Montserrat", sans-serif;
       background: var(--ivory);
       color: var(--text);
+      font-family: var(--sans);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
     img {
       display: block;
-      max-width: 100%;
+      width: 100%;
     }
 
     a {
@@ -71,20 +85,23 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       text-decoration: none;
     }
 
-    button,
-    input {
+    button {
       font-family: inherit;
     }
 
-    /* ================================
-       ANNOUNCEMENT BAR
-    ================================= */
+
+    /* =========================
+       ANNOUNCEMENT
+    ========================= */
 
     .announcement {
-      height: 32px;
+      min-height: 31px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
+      padding: 7px 15px;
 
       background: var(--deep-emerald);
       color: #eee7d9;
@@ -95,81 +112,66 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       text-align: center;
     }
 
-    /* ================================
+
+    /* =========================
        HEADER
-    ================================= */
+    ========================= */
 
     header {
-      height: 94px;
-
-      background: rgba(248, 245, 238, 0.97);
-
-      border-bottom: 1px solid var(--line);
-
       position: sticky;
       top: 0;
       z-index: 1000;
 
-      backdrop-filter: blur(10px);
+      background: rgba(248, 245, 238, 0.96);
+
+      border-bottom: 1px solid var(--line);
+
+      backdrop-filter: blur(12px);
     }
 
     .nav {
-      width: min(1440px, calc(100% - 70px));
-      height: 100%;
+      width: min(1320px, calc(100% - 60px));
+      min-height: 88px;
+
       margin: auto;
 
       display: grid;
       grid-template-columns: 1fr auto 1fr;
+
       align-items: center;
     }
 
-    /* ================================
-       LOGO
-       ================================ */
-
     .brand {
-      width: 330px;
-      height: 88px;
+      width: 210px;
 
       display: flex;
       align-items: center;
-
-      overflow: hidden;
 
       justify-self: start;
     }
 
     .brand img {
-      width: 315px;
+      width: 190px;
       height: auto;
-
-      max-width: none;
-      max-height: 78px;
-
       object-fit: contain;
-
-      transform: scale(1.04);
-      transform-origin: left center;
-
-      mix-blend-mode: multiply;
     }
 
-    /* ================================
+
+    /* =========================
        NAVIGATION
-    ================================= */
+    ========================= */
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 34px;
+
+      gap: 32px;
 
       list-style: none;
 
-      font-size: 9px;
+      font-size: 8px;
       letter-spacing: 2px;
       text-transform: uppercase;
-
-      white-space: nowrap;
     }
 
     .nav-links a {
@@ -181,9 +183,8 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       content: "";
 
       position: absolute;
-
       left: 0;
-      bottom: -9px;
+      bottom: -8px;
 
       width: 0;
       height: 1px;
@@ -201,24 +202,18 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       width: 100%;
     }
 
-    .nav-links a.active {
-      color: var(--gold);
-    }
 
-    .nav-links a.active::after {
-      width: 100%;
-    }
-
-    /* ================================
+    /* =========================
        NAV ACTIONS
-    ================================= */
+    ========================= */
 
     .nav-actions {
       justify-self: end;
 
       display: flex;
       align-items: center;
-      gap: 20px;
+
+      gap: 17px;
     }
 
     .nav-action {
@@ -229,215 +224,288 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
 
       cursor: pointer;
 
-      font-size: 16px;
+      font-size: 18px;
 
-      transition: 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     .nav-action:hover {
       color: var(--gold);
     }
 
-    /* ================================
-       SHOP HERO
-    ================================= */
 
-    .shop-hero {
-      min-height: 390px;
+    /* =========================
+       MOBILE MENU BUTTON
+    ========================= */
+
+    .mobile-menu {
+      display: none;
+
+      border: none;
+      background: none;
+
+      color: var(--emerald);
+
+      font-size: 22px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+
+      position: relative;
 
       display: flex;
       align-items: center;
-      justify-content: center;
 
-      text-align: center;
+      overflow: hidden;
 
       background:
         linear-gradient(
-          rgba(6, 31, 27, 0.72),
-          rgba(6, 31, 27, 0.72)
+          90deg,
+          rgba(6, 31, 27, 0.72) 0%,
+          rgba(6, 31, 27, 0.38) 48%,
+          rgba(6, 31, 27, 0.12) 100%
         ),
         url("golden rose necklace.png")
         center / cover no-repeat;
     }
 
-    .shop-hero-content {
-      width: min(800px, calc(100% - 40px));
+    .hero-content {
+      width: min(1250px, calc(100% - 60px));
+
       margin: auto;
-    }
 
-    .shop-hero .eyebrow {
-      color: var(--soft-gold);
-      margin-bottom: 17px;
-    }
-
-    .shop-hero h1 {
       color: white;
+    }
 
-      font-family: "Cormorant Garamond", serif;
+    .hero-copy {
+      max-width: 610px;
+    }
 
-      font-size: clamp(58px, 7vw, 90px);
+    .eyebrow {
+      display: block;
+
+      margin-bottom: 17px;
+
+      color: var(--soft-gold);
+
+      font-size: 8px;
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 22px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(64px, 8vw, 112px);
 
       font-weight: 400;
 
-      line-height: 0.9;
+      line-height: 0.87;
 
-      letter-spacing: -1px;
-
-      margin-bottom: 22px;
+      letter-spacing: -2px;
     }
 
-    .shop-hero p {
-      max-width: 510px;
-      margin: auto;
+    .hero p {
+      max-width: 460px;
 
-      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 32px;
+
+      color: rgba(255,255,255,0.82);
 
       font-size: 11px;
-
       font-weight: 300;
 
       line-height: 1.9;
 
-      letter-spacing: 0.3px;
+      letter-spacing: 0.4px;
     }
 
-    /* ================================
-       SHOP SECTION
-    ================================= */
-
-    .shop-section {
-      padding: 90px 30px 120px;
-      background: var(--ivory);
-    }
-
-    .section-container {
-      width: min(1250px, 100%);
-      margin: auto;
-    }
-
-    .shop-top {
-      display: flex;
-
-      align-items: flex-end;
-      justify-content: space-between;
-
-      margin-bottom: 42px;
-
-      border-bottom: 1px solid var(--line);
-
-      padding-bottom: 25px;
-    }
-
-    .shop-heading .eyebrow {
-      margin-bottom: 10px;
-    }
-
-    .shop-heading h2 {
-      color: var(--emerald);
-
-      font-family: "Cormorant Garamond", serif;
-
-      font-size: 48px;
-
-      font-weight: 400;
-
-      line-height: 1;
-    }
-
-    .product-count {
-      color: var(--muted);
-
-      font-size: 8px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-    }
-
-    /* ================================
-       FILTERS
-    ================================= */
-
-    .filters {
-      display: flex;
+    .primary-button {
+      display: inline-flex;
 
       align-items: center;
       justify-content: center;
 
-      gap: 10px;
+      min-width: 160px;
 
-      flex-wrap: wrap;
+      padding: 14px 24px;
 
-      margin-bottom: 45px;
+      background: white;
+      color: var(--emerald);
+
+      font-size: 8px;
+      font-weight: 500;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
     }
 
-    .filter-btn {
-      border: 1px solid rgba(11, 51, 44, 0.25);
+    .primary-button:hover {
+      background: var(--soft-gold);
+      color: var(--deep-emerald);
 
-      background: transparent;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .intro {
+      padding: 125px 25px;
+
+      text-align: center;
+
+      background: var(--warm-white);
+    }
+
+    .intro-inner {
+      width: min(720px, 100%);
+
+      margin: auto;
+    }
+
+    .intro h2 {
+      margin-bottom: 22px;
 
       color: var(--emerald);
 
-      padding: 11px 20px;
+      font-family: var(--serif);
 
-      cursor: pointer;
+      font-size: clamp(45px, 6vw, 68px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+    }
+
+    .intro p {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 2;
+
+      font-weight: 300;
+    }
+
+    .text-link {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding-bottom: 5px;
+
+      border-bottom: 1px solid var(--gold);
+
+      color: var(--emerald);
 
       font-size: 8px;
 
       letter-spacing: 2px;
 
       text-transform: uppercase;
-
-      transition: all 0.3s ease;
     }
 
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--emerald);
 
-      border-color: var(--emerald);
+    /* =========================
+       FEATURED COLLECTION
+    ========================= */
 
-      color: white;
+    .featured {
+      padding: 110px 30px 125px;
+
+      background: var(--ivory);
     }
 
-    /* ================================
-       PRODUCT GRID
-    ================================= */
+    .section-header {
+      width: min(1250px, 100%);
+
+      margin: 0 auto 48px;
+
+      display: flex;
+
+      align-items: end;
+      justify-content: space-between;
+    }
+
+    .section-header h2 {
+      color: var(--emerald);
+
+      font-family: var(--serif);
+
+      font-size: 55px;
+
+      font-weight: 400;
+
+      line-height: 0.95;
+    }
+
+    .section-description {
+      max-width: 280px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      line-height: 1.9;
+    }
 
     .product-grid {
+      width: min(1250px, 100%);
+
+      margin: auto;
+
       display: grid;
 
       grid-template-columns: repeat(4, 1fr);
 
-      gap: 18px;
+      gap: 17px;
     }
 
     .product-card {
-      position: relative;
-
       background: var(--white);
 
       overflow: hidden;
 
       transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
 
-      box-shadow: 0 12px 35px rgba(6, 31, 27, 0.07);
+      box-shadow:
+        0 18px 45px rgba(6, 31, 27, 0.08);
     }
 
     .product-image {
-      aspect-ratio: 0.88 / 1;
+      position: relative;
 
-      background: #eee9df;
+      aspect-ratio: 0.86 / 1;
 
       overflow: hidden;
 
-      position: relative;
+      background: var(--cream);
     }
 
     .product-image img {
@@ -453,29 +521,8 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       transform: scale(1.035);
     }
 
-    .product-tag {
-      position: absolute;
-
-      top: 14px;
-      left: 14px;
-
-      padding: 6px 9px;
-
-      background: rgba(255, 255, 255, 0.9);
-
-      color: var(--emerald);
-
-      font-size: 7px;
-
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-
-      z-index: 2;
-    }
-
     .product-info {
-      padding: 18px 15px 21px;
+      padding: 19px 12px 23px;
 
       text-align: center;
     }
@@ -491,39 +538,37 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
     }
 
     .product-info h3 {
-      margin-top: 5px;
+      margin-top: 6px;
+
+      font-family: var(--serif);
 
       color: var(--text);
 
-      font-family: "Cormorant Garamond", serif;
-
-      font-size: 23px;
+      font-size: 24px;
 
       font-weight: 500;
 
-      line-height: 1.1;
+      line-height: 1;
     }
 
-    .product-price {
-      margin-top: 8px;
+    .price {
+      margin-top: 9px;
 
       color: var(--emerald);
 
       font-size: 10px;
 
       font-weight: 600;
-
-      letter-spacing: 0.5px;
     }
 
-    .product-button {
+    .view-piece {
       display: inline-block;
 
       margin-top: 13px;
 
-      border-bottom: 1px solid var(--gold);
-
       padding-bottom: 4px;
+
+      border-bottom: 1px solid var(--gold);
 
       color: var(--emerald);
 
@@ -532,120 +577,406 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       letter-spacing: 2px;
 
       text-transform: uppercase;
-
-      opacity: 0;
-
-      transform: translateY(5px);
-
-      transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
     }
 
-    .product-card:hover .product-button {
-      opacity: 1;
-      transform: translateY(0);
+
+    /* =========================
+       BRAND VALUES
+    ========================= */
+
+    .values {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      min-height: 620px;
+
+      background: var(--deep-emerald);
+
+      color: white;
     }
 
-    .hidden {
-      display: none !important;
+    .values-image {
+      min-height: 620px;
+
+      background:
+        url("pearl bloom necklace.jpeg")
+        center / cover no-repeat;
     }
 
-    /* ================================
-       MARQUEE
-    ================================= */
+    .values-content {
+      display: flex;
 
-    .marquee {
+      align-items: center;
+
+      padding: 80px 11vw 80px 8vw;
+    }
+
+    .values-inner {
+      max-width: 520px;
+    }
+
+    .values h2 {
+      margin-bottom: 25px;
+
+      font-family: var(--serif);
+
+      font-size: clamp(50px, 5vw, 72px);
+
+      font-weight: 400;
+
+      line-height: 0.9;
+    }
+
+    .values p {
+      margin-bottom: 35px;
+
+      color: rgba(255,255,255,0.68);
+
+      font-size: 10px;
+
+      line-height: 2;
+    }
+
+    .value-list {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px 40px;
+
+      padding-top: 28px;
+
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .value-item strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--soft-gold);
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .value-item span {
+      color: rgba(255,255,255,0.58);
+
+      font-size: 8px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       EDITORIAL
+    ========================= */
+
+    .editorial {
+      padding: 130px 30px;
+
+      background: var(--warm-white);
+    }
+
+    .editorial-grid {
+      width: min(1180px, 100%);
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 65px;
+
+      align-items: center;
+    }
+
+    .editorial-image {
+      aspect-ratio: 0.78 / 1;
+
       overflow: hidden;
 
       background: var(--cream);
-
-      padding: 17px 0;
-
-      border-top: 1px solid var(--line);
-
-      border-bottom: 1px solid var(--line);
     }
 
-    .marquee-track {
-      display: flex;
+    .editorial-image img {
+      width: 100%;
+      height: 100%;
 
-      width: max-content;
-
-      animation: marquee 28s linear infinite;
+      object-fit: cover;
     }
 
-    .marquee-item {
+    .editorial-copy {
+      max-width: 510px;
+    }
+
+    .editorial-copy h2 {
+      margin-bottom: 20px;
+
       color: var(--emerald);
 
-      font-family: "Cormorant Garamond", serif;
+      font-family: var(--serif);
 
-      font-size: 22px;
+      font-size: clamp(55px, 6vw, 82px);
 
-      white-space: nowrap;
+      font-weight: 400;
 
-      padding: 0 30px;
+      line-height: 0.88;
     }
 
-    .marquee-item span {
-      color: var(--gold);
-      margin-left: 30px;
+    .editorial-copy p {
+      margin-bottom: 28px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 2;
     }
 
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
+    .outline-button {
+      display: inline-flex;
 
-      to {
-        transform: translateX(-50%);
-      }
+      padding: 13px 23px;
+
+      border: 1px solid var(--emerald);
+
+      color: var(--emerald);
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      transition: all 0.3s ease;
     }
 
-    /* ================================
-       NEWSLETTER
-    ================================= */
+    .outline-button:hover {
+      background: var(--emerald);
+      color: white;
+    }
 
-    .newsletter {
-      padding: 110px 25px;
 
-      text-align: center;
+    /* =========================
+       SHOP BY MOOD
+    ========================= */
+
+    .moods {
+      padding: 110px 30px 125px;
 
       background: var(--ivory);
     }
 
-    .eyebrow {
-      display: block;
+    .mood-grid {
+      width: min(1250px, 100%);
 
-      color: var(--gold);
+      margin: 45px auto 0;
 
-      font-size: 8px;
+      display: grid;
 
-      letter-spacing: 4px;
+      grid-template-columns: repeat(3, 1fr);
 
-      text-transform: uppercase;
-
-      margin-bottom: 15px;
+      gap: 15px;
     }
 
-    .newsletter h2 {
-      color: var(--emerald);
+    .mood-card {
+      position: relative;
 
-      font-family: "Cormorant Garamond", serif;
+      min-height: 440px;
 
-      font-size: clamp(43px, 5vw, 62px);
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: end;
+
+      background: var(--cream);
+    }
+
+    .mood-card img {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.7s ease;
+    }
+
+    .mood-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .mood-overlay {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      padding: 55px 25px 28px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(6,31,27,0.82)
+        );
+    }
+
+    .mood-overlay h3 {
+      font-family: var(--serif);
+
+      font-size: 38px;
 
       font-weight: 400;
 
       line-height: 1;
     }
 
-    .newsletter p {
+    .mood-overlay span {
+      display: inline-block;
+
+      margin-top: 9px;
+
+      font-size: 7px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       ALANKRA EXPERIENCE
+    ========================= */
+
+    .experience {
+      padding: 125px 25px;
+
+      text-align: center;
+
+      background: var(--cream);
+    }
+
+    .experience-inner {
+      width: min(730px, 100%);
+
+      margin: auto;
+    }
+
+    .experience h2 {
+      margin-bottom: 20px;
+
+      color: var(--emerald);
+
+      font-family: var(--serif);
+
+      font-size: clamp(50px, 6vw, 76px);
+
+      font-weight: 400;
+
+      line-height: 0.9;
+    }
+
+    .experience p {
       color: var(--muted);
 
       font-size: 10px;
 
-      margin: 15px 0 28px;
+      line-height: 2;
+    }
+
+    .experience-items {
+      width: min(1000px, 100%);
+
+      margin: 60px auto 0;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 40px;
+    }
+
+    .experience-item {
+      padding: 20px;
+    }
+
+    .experience-number {
+      color: var(--gold);
+
+      font-family: var(--serif);
+
+      font-size: 34px;
+    }
+
+    .experience-item h3 {
+      margin: 7px 0;
+
+      color: var(--emerald);
+
+      font-family: var(--serif);
+
+      font-size: 24px;
+
+      font-weight: 500;
+    }
+
+    .experience-item p {
+      color: var(--muted);
+
+      font-size: 8px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      padding: 115px 25px;
+
+      text-align: center;
+
+      background: var(--warm-white);
+    }
+
+    .newsletter h2 {
+      color: var(--emerald);
+
+      font-family: var(--serif);
+
+      font-size: clamp(45px, 6vw, 68px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+    }
+
+    .newsletter p {
+      margin: 17px auto 30px;
+
+      max-width: 440px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      line-height: 1.8;
     }
 
     .newsletter-form {
@@ -662,48 +993,49 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       flex: 1;
 
       border: none;
-
       outline: none;
 
       background: transparent;
 
       padding: 13px 5px;
 
-      font-size: 10px;
-
       color: var(--text);
+
+      font-family: var(--sans);
+
+      font-size: 9px;
     }
 
     .newsletter-form button {
       border: none;
-
-      background: none;
+      background: transparent;
 
       color: var(--emerald);
 
       cursor: pointer;
 
-      font-size: 8px;
+      font-size: 7px;
 
       letter-spacing: 2px;
 
-      padding: 0 5px;
+      text-transform: uppercase;
     }
 
-    /* ================================
+
+    /* =========================
        FOOTER
-    ================================= */
+    ========================= */
 
     footer {
+      padding: 75px 30px 25px;
+
       background: var(--deep-emerald);
 
       color: white;
-
-      padding: 75px 30px 25px;
     }
 
     .footer-grid {
-      width: min(1150px, 100%);
+      width: min(1180px, 100%);
 
       margin: auto;
 
@@ -711,30 +1043,32 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
 
       grid-template-columns: 2fr 1fr 1fr 1fr;
 
-      gap: 65px;
+      gap: 60px;
     }
 
     .footer-logo img {
-      width: 150px;
+      width: 145px;
 
       filter: brightness(0) invert(1);
 
-      opacity: 0.95;
+      opacity: 0.94;
     }
 
     .footer-about {
       max-width: 310px;
 
-      color: rgba(255, 255, 255, 0.62);
+      margin-top: 18px;
 
-      font-size: 9px;
+      color: rgba(255,255,255,0.57);
+
+      font-size: 8px;
 
       line-height: 2;
-
-      margin-top: 18px;
     }
 
     .footer-column h4 {
+      margin-bottom: 18px;
+
       color: var(--soft-gold);
 
       font-size: 8px;
@@ -742,8 +1076,6 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       letter-spacing: 2px;
 
       text-transform: uppercase;
-
-      margin-bottom: 18px;
     }
 
     .footer-column ul {
@@ -751,13 +1083,13 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
     }
 
     .footer-column li {
-      color: rgba(255, 255, 255, 0.7);
-
-      font-size: 9px;
-
       margin-bottom: 10px;
 
-      transition: color 0.25s ease;
+      color: rgba(255,255,255,0.62);
+
+      font-size: 8px;
+
+      transition: color 0.3s ease;
     }
 
     .footer-column li:hover {
@@ -765,78 +1097,41 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
     }
 
     .footer-bottom {
-      width: min(1150px, 100%);
+      width: min(1180px, 100%);
 
       margin: 60px auto 0;
 
       padding-top: 20px;
 
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255,255,255,0.12);
 
       text-align: center;
 
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255,255,255,0.35);
 
       font-size: 7px;
 
       letter-spacing: 1.5px;
+
+      text-transform: uppercase;
     }
 
-    /* ================================
-       TABLET
-    ================================= */
 
-    @media (max-width: 1150px) {
-
-      .nav {
-        width: calc(100% - 40px);
-      }
-
-      .brand {
-        width: 260px;
-      }
-
-      .brand img {
-        width: 250px;
-      }
-
-      .nav-links {
-        gap: 20px;
-      }
-
-      .nav-action {
-        font-size: 15px;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
-      }
-    }
-
-    /* ================================
+    /* =========================
        MOBILE
-    ================================= */
+    ========================= */
 
     @media (max-width: 850px) {
 
       .announcement {
-        height: 28px;
-
         font-size: 6px;
-
         letter-spacing: 1.8px;
       }
 
-      header {
-        height: 76px;
-      }
-
       .nav {
-        width: calc(100% - 30px);
+        width: calc(100% - 28px);
+
+        min-height: 72px;
 
         display: flex;
 
@@ -844,76 +1139,77 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       }
 
       .brand {
-        width: 205px;
-
-        height: 70px;
+        width: 165px;
       }
 
       .brand img {
-        width: 200px;
-
-        max-height: 62px;
-
-        transform: scale(1.02);
+        width: 155px;
       }
 
       .nav-links {
         display: none;
       }
 
+      .mobile-menu {
+        display: block;
+      }
+
       .nav-actions {
-        gap: 14px;
+        gap: 10px;
       }
 
       .nav-action {
-        font-size: 15px;
+        font-size: 16px;
       }
 
-      .shop-hero {
-        min-height: 430px;
+      .hero {
+        min-height: 650px;
+
+        background-position: 62% center;
+
+        background:
+          linear-gradient(
+            rgba(6,31,27,0.63),
+            rgba(6,31,27,0.54)
+          ),
+          url("golden rose necklace.png")
+          center / cover no-repeat;
       }
 
-      .shop-hero h1 {
-        font-size: 58px;
+      .hero-content {
+        width: calc(100% - 38px);
       }
 
-      .shop-section {
-        padding-left: 18px;
-        padding-right: 18px;
-        padding-top: 75px;
-        padding-bottom: 90px;
+      .hero h1 {
+        font-size: 67px;
+
+        letter-spacing: -1px;
       }
 
-      .shop-top {
+      .hero p {
+        max-width: 340px;
+      }
+
+      .intro {
+        padding: 90px 25px;
+      }
+
+      .featured {
+        padding: 85px 18px 95px;
+      }
+
+      .section-header {
         display: block;
 
         text-align: center;
-
-        padding-bottom: 22px;
       }
 
-      .shop-heading h2 {
-        font-size: 43px;
+      .section-header h2 {
+        font-size: 46px;
       }
 
-      .product-count {
-        display: block;
-
-        margin-top: 12px;
-      }
-
-      .filters {
-        gap: 7px;
-
-        margin-bottom: 35px;
-      }
-
-      .filter-btn {
-        padding: 10px 13px;
-
-        font-size: 7px;
-
-        letter-spacing: 1.5px;
+      .section-description {
+        margin: 17px auto 0;
       }
 
       .product-grid {
@@ -922,20 +1218,76 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
         gap: 10px;
       }
 
+      .product-info {
+        padding: 15px 7px 20px;
+      }
+
       .product-info h3 {
         font-size: 20px;
       }
 
-      .product-button {
-        opacity: 1;
+      .values {
+        grid-template-columns: 1fr;
+      }
 
-        transform: none;
+      .values-image {
+        min-height: 420px;
+      }
+
+      .values-content {
+        padding: 75px 30px;
+      }
+
+      .editorial {
+        padding: 90px 20px;
+      }
+
+      .editorial-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+      .editorial-image {
+        max-width: 600px;
+
+        margin: auto;
+      }
+
+      .editorial-copy {
+        text-align: center;
+
+        margin: auto;
+      }
+
+      .moods {
+        padding: 85px 18px 95px;
+      }
+
+      .mood-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+      }
+
+      .mood-card {
+        min-height: 470px;
+      }
+
+      .experience {
+        padding: 90px 25px;
+      }
+
+      .experience-items {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
       }
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
 
-        gap: 45px;
+        gap: 40px;
       }
 
       .footer-brand {
@@ -943,1347 +1295,1112 @@ content="Shop ALANKRA's collection of premium anti-tarnish, water-resistant jewe
       }
     }
 
-    /* ================================
+
+    /* =========================
        SMALL PHONES
-    ================================= */
+    ========================= */
 
     @media (max-width: 480px) {
 
       .brand {
-        width: 165px;
-
-        height: 66px;
+        width: 145px;
       }
 
       .brand img {
-        width: 160px;
-
-        max-height: 55px;
-
-        transform: scale(1.02);
+        width: 140px;
       }
 
       .nav-actions {
-        gap: 10px;
+        gap: 7px;
       }
 
-      .shop-hero {
-        min-height: 390px;
+      .nav-action {
+        font-size: 15px;
       }
 
-      .shop-hero h1 {
-        font-size: 49px;
+      .hero {
+        min-height: 600px;
       }
 
-      .shop-hero p {
-        font-size: 10px;
+      .hero h1 {
+        font-size: 58px;
       }
 
-      .shop-section {
-        padding-top: 65px;
+      .hero p {
+        font-size: 9px;
       }
 
-      .shop-heading h2 {
-        font-size: 40px;
-      }
-
-      .filters {
-        margin-bottom: 30px;
-      }
-
-      .filter-btn {
-        padding: 9px 11px;
-
-        font-size: 6.5px;
-      }
-
-      .product-info {
-        padding: 14px 7px 18px;
+      .primary-button {
+        width: 145px;
+        min-width: 145px;
       }
 
       .product-info h3 {
         font-size: 18px;
       }
 
-      .product-price {
+      .product-category {
+        font-size: 6px;
+      }
+
+      .price {
         font-size: 9px;
       }
 
-      .product-button {
-        font-size: 6px;
-
-        letter-spacing: 1.5px;
+      .value-list {
+        grid-template-columns: 1fr;
       }
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
-
-        gap: 35px;
       }
+
     }
+
   </style>
 
 </head>
 
+
 <body>
 
-  <!-- ANNOUNCEMENT -->
+
+  <!-- =========================
+       ANNOUNCEMENT
+  ========================= -->
 
   <div class="announcement">
     Anti-Tarnish · Water-Resistant · Everyday Luxury
   </div>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
-```
-<nav class="nav">
+    <nav class="nav">
 
-  <a href="index.html" class="brand">
+      <a href="index.html" class="brand">
 
-    <img
-      src="WEBSITE LOGO.png"
-      alt="ALANKRA — Luxury in Every Detail"
-    >
+        <img
+          src="WEBSITE LOGO.png"
+          alt="ALANKRA — Luxury in Every Detail"
+        >
 
-  </a>
-
-  <ul class="nav-links">
-
-    <li>
-      <a href="shop.html" class="active">
-        Shop
       </a>
-    </li>
 
-    <li>
-      <a href="index.html#collections">
-        Collections
-      </a>
-    </li>
 
-    <li>
-      <a href="index.html#story">
-        Our Story
-      </a>
-    </li>
+      <ul class="nav-links">
 
-    <li>
-      <a href="index.html#why-alankra">
-        Why ALANKRA
-      </a>
-    </li>
+        <li>
+          <a href="shop.html">
+            Shop
+          </a>
+        </li>
 
-  </ul>
+        <li>
+          <a href="#collections">
+            Collections
+          </a>
+        </li>
 
-  <div class="nav-actions">
+        <li>
+          <a href="#story">
+            Our Story
+          </a>
+        </li>
 
-    <button
-      class="nav-action"
-      aria-label="Search"
-      type="button"
-    >
-      ⌕
-    </button>
+        <li>
+          <a href="#experience">
+            Experience
+          </a>
+        </li>
 
-    <button
-      class="nav-action"
-      aria-label="Wishlist"
-      type="button"
-    >
-      ♡
-    </button>
+      </ul>
 
-    <button
-      class="nav-action"
-      aria-label="Shopping bag"
-      type="button"
-    >
-      ◇
-    </button>
 
-  </div>
+      <div class="nav-actions">
 
-</nav>
-```
+        <button
+          class="mobile-menu"
+          type="button"
+          aria-label="Menu"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </button>
 
-  </header>
+        <button
+          class="nav-action"
+          type="button"
+          aria-label="Search"
+        >
+          ⌕
+        </button>
 
-  <main>
+        <button
+          class="nav-action"
+          type="button"
+          aria-label="Wishlist"
+        >
+          ♡
+        </button>
 
-```
-<!-- SHOP HERO -->
-
-<section class="shop-hero">
-
-  <div class="shop-hero-content">
-
-    <span class="eyebrow">
-      The ALANKRA Collection
-    </span>
-
-    <h1>
-      Shop Jewellery.
-    </h1>
-
-    <p>
-      Discover timeless pieces designed to bring
-      effortless elegance into your everyday.
-    </p>
-
-  </div>
-
-</section>
-
-<!-- SHOP -->
-
-<section class="shop-section">
-
-  <div class="section-container">
-
-    <div class="shop-top">
-
-      <div class="shop-heading">
-
-        <span class="eyebrow">
-          Curated For You
-        </span>
-
-        <h2>
-          All Jewellery
-        </h2>
+        <a
+          href="shop.html"
+          class="nav-action"
+          aria-label="Shopping bag"
+        >
+          ◇
+        </a>
 
       </div>
 
-      <span class="product-count" id="productCount">
-        20 Pieces
-      </span>
+    </nav>
+
+
+    <div
+      id="mobileNav"
+      style="
+        display:none;
+        background:#f8f5ee;
+        border-top:1px solid rgba(11,51,44,.1);
+        padding:20px;
+        text-align:center;
+      "
+    >
+
+      <a
+        href="shop.html"
+        style="
+          display:block;
+          padding:10px;
+          font-size:9px;
+          letter-spacing:2px;
+          text-transform:uppercase;
+        "
+      >
+        Shop
+      </a>
+
+      <a
+        href="#collections"
+        style="
+          display:block;
+          padding:10px;
+          font-size:9px;
+          letter-spacing:2px;
+          text-transform:uppercase;
+        "
+      >
+        Collections
+      </a>
+
+      <a
+        href="#story"
+        style="
+          display:block;
+          padding:10px;
+          font-size:9px;
+          letter-spacing:2px;
+          text-transform:uppercase;
+        "
+      >
+        Our Story
+      </a>
+
+      <a
+        href="#experience"
+        style="
+          display:block;
+          padding:10px;
+          font-size:9px;
+          letter-spacing:2px;
+          text-transform:uppercase;
+        "
+      >
+        Experience
+      </a>
 
     </div>
 
-    <!-- FILTERS -->
+  </header>
 
-    <div class="filters">
 
-      <button
-        class="filter-btn active"
-        data-filter="all"
-        type="button"
-      >
-        All Jewellery
-      </button>
+  <main>
 
-      <button
-        class="filter-btn"
-        data-filter="necklace"
-        type="button"
-      >
-        Necklaces
-      </button>
 
-      <button
-        class="filter-btn"
-        data-filter="earrings"
-        type="button"
-      >
-        Earrings
-      </button>
+    <!-- =========================
+         HERO
+    ========================= -->
 
-      <button
-        class="filter-btn"
-        data-filter="bracelet"
-        type="button"
-      >
-        Bracelets
-      </button>
+    <section class="hero">
 
-      <button
-        class="filter-btn"
-        data-filter="ring"
-        type="button"
-      >
-        Rings
-      </button>
+      <div class="hero-content">
 
-    </div>
+        <div class="hero-copy">
 
-    <!-- PRODUCT GRID -->
-
-    <div class="product-grid" id="productGrid">
-
-      <!-- 01 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            New
+          <span class="eyebrow">
+            ALANKRA — Luxury in Every Detail
           </span>
+
+          <h1>
+            Everyday<br>
+            Jewellery,<br>
+            Elevated.
+          </h1>
+
+          <p>
+            Thoughtfully chosen pieces designed to bring
+            a little more beauty to the moments you live in
+            every day.
+          </p>
+
+          <a
+            href="shop.html"
+            class="primary-button"
+          >
+            Shop The Collection
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro" id="story">
+
+      <div class="intro-inner">
+
+        <span class="eyebrow">
+          The ALANKRA Philosophy
+        </span>
+
+        <h2>
+          Luxury,<br>
+          made everyday.
+        </h2>
+
+        <p>
+          ALANKRA was created for jewellery that doesn't
+          wait for a special occasion. Pieces you can reach
+          for in the morning, wear through your day and
+          carry into the moments that matter.
+        </p>
+
+        <a
+          href="about.html"
+          class="text-link"
+        >
+          Discover Our Story
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED COLLECTION
+    ========================= -->
+
+    <section
+      class="featured"
+      id="collections"
+    >
+
+      <div class="section-header">
+
+        <div>
+
+          <span class="eyebrow">
+            Curated For You
+          </span>
+
+          <h2>
+            The Edit
+          </h2>
+
+        </div>
+
+        <p class="section-description">
+          A considered selection of pieces made to
+          become part of your everyday.
+        </p>
+
+      </div>
+
+
+      <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <a
+          href="shop.html"
+          class="product-card"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="golden rose necklace.png"
+              alt="Golden Rose Necklace by ALANKRA"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="product-category">
+              Necklace
+            </span>
+
+            <h3>
+              Golden Rose Necklace
+            </h3>
+
+            <div class="price">
+              ₹499
+            </div>
+
+            <span class="view-piece">
+              View Piece
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- PRODUCT 2 -->
+
+        <a
+          href="shop.html"
+          class="product-card"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="golden petal earring.jpeg"
+              alt="Golden Petal Earrings by ALANKRA"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="product-category">
+              Earrings
+            </span>
+
+            <h3>
+              Golden Petal Earrings
+            </h3>
+
+            <div class="price">
+              ₹499
+            </div>
+
+            <span class="view-piece">
+              View Piece
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- PRODUCT 3 -->
+
+        <a
+          href="shop.html"
+          class="product-card"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="black clover necklace.jpeg"
+              alt="Black Clover Necklace by ALANKRA"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="product-category">
+              Necklace
+            </span>
+
+            <h3>
+              Black Clover Necklace
+            </h3>
+
+            <div class="price">
+              ₹499
+            </div>
+
+            <span class="view-piece">
+              View Piece
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- PRODUCT 4 -->
+
+        <a
+          href="green stone bracelet.png"
+          class="product-card"
+        >
+
+          <div class="product-image">
+
+            <img
+              src="green stone bracelet.png"
+              alt="Green Stone Bracelet by ALANKRA"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="product-category">
+              Bracelet
+            </span>
+
+            <h3>
+              Green Stone Bracelet
+            </h3>
+
+            <div class="price">
+              ₹499
+            </div>
+
+            <span class="view-piece">
+              View Piece
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <div style="text-align:center; margin-top:45px;">
+
+        <a
+          href="shop.html"
+          class="outline-button"
+        >
+          Explore All Jewellery
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY ALANKRA
+    ========================= -->
+
+    <section class="values" id="why-alankra">
+
+      <div class="values-image"></div>
+
+
+      <div class="values-content">
+
+        <div class="values-inner">
+
+          <span class="eyebrow">
+            Why ALANKRA
+          </span>
+
+          <h2>
+            Made for<br>
+            the way you live.
+          </h2>
+
+          <p>
+            Beautiful jewellery should feel effortless.
+            ALANKRA brings together an elevated aesthetic
+            with thoughtful everyday practicality.
+          </p>
+
+
+          <div class="value-list">
+
+            <div class="value-item">
+
+              <strong>
+                Anti-Tarnish
+              </strong>
+
+              <span>
+                Designed with an anti-tarnish finish
+                for lasting beauty with proper care.
+              </span>
+
+            </div>
+
+
+            <div class="value-item">
+
+              <strong>
+                Water-Resistant
+              </strong>
+
+              <span>
+                Created for everyday wear, with care
+                guidance to help preserve its finish.
+              </span>
+
+            </div>
+
+
+            <div class="value-item">
+
+              <strong>
+                Everyday Luxury
+              </strong>
+
+              <span>
+                Premium-looking pieces designed
+                to fit beautifully into your wardrobe.
+              </span>
+
+            </div>
+
+
+            <div class="value-item">
+
+              <strong>
+                Thoughtful Details
+              </strong>
+
+              <span>
+                From the jewellery itself to the way
+                your order arrives at your door.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDITORIAL
+    ========================= -->
+
+    <section class="editorial">
+
+      <div class="editorial-grid">
+
+
+        <div class="editorial-image">
 
           <img
             src="Pink heart necklace.jpeg"
-            alt="Pink Heart Necklace"
+            alt="Pink Heart Necklace styled by ALANKRA"
             loading="lazy"
           >
 
         </div>
 
-        <div class="product-info">
 
-          <span class="product-category">
-            Necklace
+        <div class="editorial-copy">
+
+          <span class="eyebrow">
+            Designed To Be Worn
           </span>
 
-          <h3>
-            Pink Heart Necklace
-          </h3>
+          <h2>
+            A little<br>
+            luxury,<br>
+            every day.
+          </h2>
 
-          <div class="product-price">
-            ₹499
-          </div>
+          <p>
+            Your everyday outfit doesn't need much.
+            Sometimes, it's just one beautiful detail —
+            a necklace, a bracelet, a pair of earrings —
+            that makes everything feel a little more like you.
+          </p>
 
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 02 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            Bestseller
-          </span>
-
-          <img
-            src="black clover necklace.jpeg"
-            alt="Black Clover Necklace"
-            loading="lazy"
+          <a
+            href="shop.html"
+            class="outline-button"
           >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace
-          </span>
-
-          <h3>
-            Black Clover Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
+            Find Your Piece
           </a>
 
         </div>
 
-      </article>
+      </div>
 
-      <!-- 03 -->
+    </section>
 
-      <article class="product-card" data-category="necklace">
 
-        <div class="product-image">
+    <!-- =========================
+         SHOP BY MOOD
+    ========================= -->
 
-          <img
-            src="golden rose necklace.png"
-            alt="Golden Rose Necklace"
-            loading="lazy"
-          >
+    <section class="moods">
 
-        </div>
+      <div class="section-header">
 
-        <div class="product-info">
+        <div>
 
-          <span class="product-category">
-            Necklace
+          <span class="eyebrow">
+            Find Your Style
           </span>
 
-          <h3>
-            Golden Rose Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
+          <h2>
+            Shop By Mood
+          </h2>
 
         </div>
 
-      </article>
+      </div>
 
-      <!-- 04 -->
 
-      <article class="product-card" data-category="necklace">
+      <div class="mood-grid">
 
-        <div class="product-image">
 
-          <span class="product-tag">
-            Set
-          </span>
-
-          <img
-            src="white drop necklace set.jpeg"
-            alt="White Drop Necklace Set"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace Set
-          </span>
-
-          <h3>
-            White Drop Necklace Set
-          </h3>
-
-          <div class="product-price">
-            ₹599
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 05 -->
-
-      <article class="product-card" data-category="ring">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            New
-          </span>
-
-          <img
-            src="crystal cross ring.png"
-            alt="Crystal Cross Ring"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Ring
-          </span>
-
-          <h3>
-            Crystal Cross Ring
-          </h3>
-
-          <div class="product-price">
-            ₹399
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 06 -->
-
-      <article class="product-card" data-category="bracelet">
-
-        <div class="product-image">
-
-          <img
-            src="golden knot bracelet.png"
-            alt="Golden Knot Bracelet"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Bracelet
-          </span>
-
-          <h3>
-            Golden Knot Bracelet
-          </h3>
-
-          <div class="product-price">
-            ₹399
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 07 -->
-
-      <article class="product-card" data-category="bracelet">
-
-        <div class="product-image">
-
-          <img
-            src="golden glow bracelet.png"
-            alt="Golden Glow Bracelet"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Bracelet
-          </span>
-
-          <h3>
-            Golden Glow Bracelet
-          </h3>
-
-          <div class="product-price">
-            ₹399
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 08 -->
-
-      <article class="product-card" data-category="bracelet">
-
-        <div class="product-image">
-
-          <img
-            src="green stone bracelet.png"
-            alt="Green Stone Bracelet"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Bracelet
-          </span>
-
-          <h3>
-            Green Stone Bracelet
-          </h3>
-
-          <div class="product-price">
-            ₹399
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 09 -->
-
-      <article class="product-card" data-category="bracelet">
-
-        <div class="product-image">
-
-          <img
-            src="heart and bow bracelet.png"
-            alt="Heart and Bow Bracelet"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Bracelet
-          </span>
-
-          <h3>
-            Heart &amp; Bow Bracelet
-          </h3>
-
-          <div class="product-price">
-            ₹399
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 10 -->
-
-      <article class="product-card" data-category="bracelet">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            Bestseller
-          </span>
-
-          <img
-            src="nail bracelet.jpeg"
-            alt="Nail Bracelet"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Bracelet
-          </span>
-
-          <h3>
-            Nail Bracelet
-          </h3>
-
-          <div class="product-price">
-            ₹449
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 11 -->
-
-      <article class="product-card" data-category="earrings">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            New
-          </span>
+        <a
+          href="shop.html"
+          class="mood-card"
+        >
 
           <img
             src="golden petal earring.jpeg"
-            alt="Golden Petal Earrings"
+            alt="Everyday jewellery by ALANKRA"
             loading="lazy"
           >
 
-        </div>
+          <div class="mood-overlay">
 
-        <div class="product-info">
+            <h3>
+              Everyday
+            </h3>
 
-          <span class="product-category">
-            Earrings
-          </span>
+            <span>
+              Effortless pieces for every day
+            </span>
 
-          <h3>
-            Golden Petal Earrings
-          </h3>
-
-          <div class="product-price">
-            ₹449
           </div>
 
-          <a href="#" class="product-button">
-            View Piece
-          </a>
+        </a>
 
-        </div>
 
-      </article>
-
-      <!-- 12 -->
-
-      <article class="product-card" data-category="earrings">
-
-        <div class="product-image">
+        <a
+          href="shop.html"
+          class="mood-card"
+        >
 
           <img
             src="purple vintage earrings.jpeg"
-            alt="Purple Vintage Earrings"
+            alt="Statement earrings by ALANKRA"
             loading="lazy"
           >
 
-        </div>
+          <div class="mood-overlay">
 
-        <div class="product-info">
+            <h3>
+              Occasion
+            </h3>
 
-          <span class="product-category">
-            Earrings
-          </span>
+            <span>
+              Pieces that make an entrance
+            </span>
 
-          <h3>
-            Purple Vintage Earrings
-          </h3>
-
-          <div class="product-price">
-            ₹449
           </div>
 
-          <a href="#" class="product-button">
-            View Piece
-          </a>
+        </a>
 
-        </div>
 
-      </article>
-
-      <!-- 13 -->
-
-      <article class="product-card" data-category="earrings">
-
-        <div class="product-image">
-
-          <img
-            src="vintage butterfly earrings.jpeg"
-            alt="Vintage Butterfly Earrings"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Earrings
-          </span>
-
-          <h3>
-            Vintage Butterfly Earrings
-          </h3>
-
-          <div class="product-price">
-            ₹449
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 14 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            New
-          </span>
-
-          <img
-            src="heart mangalsutra.png"
-            alt="Heart Mangalsutra"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Mangalsutra
-          </span>
-
-          <h3>
-            Heart Mangalsutra
-          </h3>
-
-          <div class="product-price">
-            ₹599
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 15 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <img
-            src="lucky clover necklace.jpeg"
-            alt="Lucky Clover Necklace"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace
-          </span>
-
-          <h3>
-            Lucky Clover Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 16 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            New
-          </span>
-
-          <img
-            src="mini tulip necklace.png"
-            alt="Mini Tulip Necklace"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace
-          </span>
-
-          <h3>
-            Mini Tulip Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 17 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <span class="product-tag">
-            Bestseller
-          </span>
+        <a
+          href="shop.html"
+          class="mood-card"
+        >
 
           <img
             src="pearl bloom necklace.jpeg"
-            alt="Pearl Bloom Necklace"
+            alt="Gift jewellery from ALANKRA"
             loading="lazy"
           >
 
-        </div>
+          <div class="mood-overlay">
 
-        <div class="product-info">
+            <h3>
+              Gifting
+            </h3>
 
-          <span class="product-category">
-            Necklace
-          </span>
+            <span>
+              Something beautiful to give
+            </span>
 
-          <h3>
-            Pearl Bloom Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹599
           </div>
 
-          <a href="#" class="product-button">
-            View Piece
-          </a>
+        </a>
 
-        </div>
+      </div>
 
-      </article>
+    </section>
 
-      <!-- 18 -->
 
-      <article class="product-card" data-category="necklace">
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
 
-        <div class="product-image">
-
-          <img
-            src="silver swan necklace.jpeg"
-            alt="Silver Swan Necklace"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace
-          </span>
-
-          <h3>
-            Silver Swan Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 19 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <img
-            src="golden shell necklace.png"
-            alt="Golden Shell Necklace"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace
-          </span>
-
-          <h3>
-            Golden Shell Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-      <!-- 20 -->
-
-      <article class="product-card" data-category="necklace">
-
-        <div class="product-image">
-
-          <img
-            src="vintage rose necklace.png"
-            alt="Vintage Rose Necklace"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Necklace
-          </span>
-
-          <h3>
-            Vintage Rose Necklace
-          </h3>
-
-          <div class="product-price">
-            ₹499
-          </div>
-
-          <a href="#" class="product-button">
-            View Piece
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- MARQUEE -->
-
-<div class="marquee">
-
-  <div class="marquee-track">
-
-    <div class="marquee-item">
-      LUXURY IN EVERY DETAIL
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      MADE FOR YOUR EVERYDAY
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      EFFORTLESSLY ALANKRA
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      LUXURY IN EVERY DETAIL
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      MADE FOR YOUR EVERYDAY
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      EFFORTLESSLY ALANKRA
-      <span>✦</span>
-    </div>
-
-  </div>
-
-</div>
-
-<!-- NEWSLETTER -->
-
-<section class="newsletter">
-
-  <span class="eyebrow">
-    Stay Connected
-  </span>
-
-  <h2>
-    Stay in the<br>
-    ALANKRA circle.
-  </h2>
-
-  <p>
-    Discover new launches, special drops and everything beautiful.
-  </p>
-
-  <form class="newsletter-form">
-
-    <input
-      type="email"
-      placeholder="Your email address"
-      aria-label="Email address"
-      required
+    <section
+      class="experience"
+      id="experience"
     >
 
-    <button type="submit">
-      JOIN
-    </button>
+      <div class="experience-inner">
 
-  </form>
+        <span class="eyebrow">
+          The ALANKRA Experience
+        </span>
 
-</section>
-```
+        <h2>
+          More Than<br>
+          Jewellery.
+        </h2>
+
+        <p>
+          From the piece you choose to the moment your
+          package arrives, every detail is designed to
+          make receiving ALANKRA feel special.
+        </p>
+
+      </div>
+
+
+      <div class="experience-items">
+
+
+        <div class="experience-item">
+
+          <div class="experience-number">
+            01
+          </div>
+
+          <h3>
+            Choose
+          </h3>
+
+          <p>
+            Discover pieces designed to become
+            part of your everyday.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div class="experience-number">
+            02
+          </div>
+
+          <h3>
+            Unwrap
+          </h3>
+
+          <p>
+            Thoughtful packaging turns your order
+            into an experience, not just a delivery.
+          </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div class="experience-number">
+            03
+          </div>
+
+          <h3>
+            Wear
+          </h3>
+
+          <p>
+            Put it on, make it yours and let
+            everyday moments become beautiful ones.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <a
+        href="care.html"
+        class="text-link"
+      >
+        Discover Jewellery Care
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         NEWSLETTER
+    ========================= -->
+
+    <section class="newsletter">
+
+      <span class="eyebrow">
+        Stay Close
+      </span>
+
+      <h2>
+        A little ALANKRA,<br>
+        in your inbox.
+      </h2>
+
+      <p>
+        Be the first to discover new pieces,
+        thoughtful edits and special moments from ALANKRA.
+      </p>
+
+      <form
+        class="newsletter-form"
+        onsubmit="return subscribeMessage()"
+      >
+
+        <input
+          type="email"
+          placeholder="Your email address"
+          aria-label="Email address"
+          required
+        >
+
+        <button type="submit">
+          Subscribe
+        </button>
+
+      </form>
+
+    </section>
+
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
-```
-<div class="footer-grid">
+    <div class="footer-grid">
 
-  <div class="footer-brand">
 
-    <div class="footer-logo">
+      <div class="footer-brand">
 
-      <img
-        src="LOGO.png"
-        alt="ALANKRA"
-      >
+        <a
+          href="index.html"
+          class="footer-logo"
+        >
+
+          <img
+            src="WEBSITE LOGO.png"
+            alt="ALANKRA"
+          >
+
+        </a>
+
+        <p class="footer-about">
+          Everyday jewellery, elevated.
+          Thoughtfully designed pieces for
+          moments both ordinary and unforgettable.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="shop.html">
+              Shop All
+            </a>
+          </li>
+
+          <li>
+            <a href="collections.html">
+              Collections
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html">
+              Necklaces
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html">
+              Earrings
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          About
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="about.html">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="care.html">
+              Jewellery Care
+            </a>
+          </li>
+
+          <li>
+            <a href="#experience">
+              ALANKRA Experience
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQs
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="shipping-returns.html">
+              Shipping & Returns
+            </a>
+          </li>
+
+          <li>
+            <a href="privacy.html">
+              Privacy
+            </a>
+          </li>
+
+          <li>
+            <a href="terms.html">
+              Terms
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
 
     </div>
 
-    <p class="footer-about">
-      Luxury in Every Detail.
-      Discover anti-tarnish, water-resistant
-      jewellery designed for your everyday moments.
-    </p>
 
-  </div>
+    <div class="footer-bottom">
 
-  <div class="footer-column">
+      © 2026 ALANKRA · Luxury in Every Detail
 
-    <h4>
-      Shop
-    </h4>
-
-    <ul>
-
-      <li>
-        <a href="shop.html">
-          All Jewellery
-        </a>
-      </li>
-
-      <li>
-        <a href="shop.html">
-          Necklaces
-        </a>
-      </li>
-
-      <li>
-        <a href="shop.html">
-          Earrings
-        </a>
-      </li>
-
-      <li>
-        <a href="shop.html">
-          Bracelets
-        </a>
-      </li>
-
-      <li>
-        <a href="shop.html">
-          New Arrivals
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-  <div class="footer-column">
-
-    <h4>
-      About
-    </h4>
-
-    <ul>
-
-      <li>
-        <a href="index.html#story">
-          Our Story
-        </a>
-      </li>
-
-      <li>
-        <a href="index.html#why-alankra">
-          Why ALANKRA
-        </a>
-      </li>
-
-      <li>
-        <a href="index.html#why-alankra">
-          Jewellery Care
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-  <div class="footer-column">
-
-    <h4>
-      Help
-    </h4>
-
-    <ul>
-
-      <li>
-        Shipping
-      </li>
-
-      <li>
-        Returns
-      </li>
-
-      <li>
-        FAQ
-      </li>
-
-      <li>
-        Contact
-      </li>
-
-    </ul>
-
-  </div>
-
-</div>
-
-<div class="footer-bottom">
-  © 2026 ALANKRA · LUXURY IN EVERY DETAIL
-</div>
-```
+    </div>
 
   </footer>
 
-  <!-- FILTER + NEWSLETTER SCRIPT -->
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
   <script>
 
-    const filterButtons =
-      document.querySelectorAll(".filter-btn");
+    function toggleMenu() {
 
-    const products =
-      document.querySelectorAll(".product-card");
+      const menu = document.getElementById("mobileNav");
 
-    const productCount =
-      document.getElementById("productCount");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
 
-
-    function updateCount() {
-
-      const visibleProducts =
-        document.querySelectorAll(
-          ".product-card:not(.hidden)"
-        ).length;
-
-      productCount.textContent =
-        visibleProducts +
-        (visibleProducts === 1 ? " Piece" : " Pieces");
     }
 
 
-    filterButtons.forEach(button => {
+    function subscribeMessage() {
 
-      button.addEventListener("click", () => {
+      alert(
+        "Thank you for joining ALANKRA. ✨"
+      );
 
-        const filter =
-          button.getAttribute("data-filter");
+      return false;
 
-        filterButtons.forEach(btn => {
-          btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        products.forEach(product => {
-
-          const category =
-            product.getAttribute("data-category");
-
-          if (
-            filter === "all" ||
-            category === filter
-          ) {
-
-            product.classList.remove("hidden");
-
-          } else {
-
-            product.classList.add("hidden");
-
-          }
-
-        });
-
-        updateCount();
-
-      });
-
-    });
-
-
-    updateCount();
-
-
-    /* Newsletter */
-
-    const newsletterForm =
-      document.querySelector(".newsletter-form");
-
-    newsletterForm.addEventListener(
-      "submit",
-      function (event) {
-
-        event.preventDefault();
-
-        const email =
-          this.querySelector("input").value.trim();
-
-        if (email) {
-
-          alert(
-            "Thank you for joining the ALANKRA circle."
-          );
-
-          this.reset();
-
-        }
-
-      }
-    );
+    }
 
   </script>
+
 
 </body>
 
