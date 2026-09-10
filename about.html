@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Story | ALANKRA — Luxury in Every Detail</title>
+  <meta name="description" content="Discover the story behind ALANKRA — everyday jewellery designed to feel elegant, effortless and special.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #f8f5ef;
+      --cream: #f1eadf;
+      --emerald: #123f35;
+      --deep-green: #0c3029;
+      --gold: #b89a62;
+      --text: #25332e;
+      --muted: #77766f;
+      --white: #ffffff;
+      --border: rgba(18,63,53,.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* ANNOUNCEMENT */
+
+    .announcement {
+      background: var(--emerald);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248,245,239,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      height: 82px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      width: 125px;
+      max-height: 55px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      font-size: 11px;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-action {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--text);
+    }
+
+    .bag {
+      position: relative;
+    }
+
+    .count {
+      position: absolute;
+      top: -10px;
+      right: -12px;
+      background: var(--emerald);
+      color: white;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 640px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(.73);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(8,30,25,.18),
+        rgba(8,30,25,.48)
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 760px;
+      padding: 40px 25px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: .9;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 14px;
+      letter-spacing: .4px;
+      max-width: 550px;
+      margin: auto;
+      font-weight: 300;
+    }
+
+    /* INTRO */
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      padding: 105px 25px 95px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    .intro h2,
+    .story h2,
+    .belief h2,
+    .closing h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      color: var(--emerald);
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .intro p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    /* STORY */
+
+    .story {
+      background: var(--cream);
+      padding: 100px 25px;
+    }
+
+    .story-grid {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .story-image {
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .story-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-copy {
+      padding: 15px 10px;
+    }
+
+    .story-copy h2 {
+      text-align: left;
+    }
+
+    .story-copy p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      margin-top: 30px;
+      color: var(--emerald);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-style: italic;
+    }
+
+    /* VALUES */
+
+    .values {
+      padding: 105px 25px;
+      background: var(--ivory);
+      text-align: center;
+    }
+
+    .values-intro {
+      max-width: 650px;
+      margin: 0 auto 55px;
+    }
+
+    .values-intro p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .value-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .value {
+      padding: 45px 30px;
+      border-right: 1px solid var(--border);
+    }
+
+    .value:last-child {
+      border-right: 0;
+    }
+
+    .value-number {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      margin-bottom: 13px;
+    }
+
+    .value h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .value p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    /* BRAND PILLARS */
+
+    .pillars {
+      background: var(--emerald);
+      color: white;
+      padding: 95px 25px;
+    }
+
+    .pillars-inner {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .pillars .section-label {
+      color: #d0b57c;
+    }
+
+    .pillars h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5vw, 62px);
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 55px;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pillar {
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 38px 25px;
+    }
+
+    .pillar h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .pillar p {
+      font-size: 11px;
+      line-height: 1.8;
+      opacity: .78;
+    }
+
+    /* BELIEF */
+
+    .belief {
+      max-width: 1050px;
+      margin: auto;
+      padding: 110px 25px;
+      text-align: center;
+    }
+
+    .belief p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .quote {
+      margin: 55px auto 0;
+      max-width: 850px;
+      color: var(--emerald);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+    }
+
+    /* EDITORIAL */
+
+    .editorial {
+      position: relative;
+      min-height: 500px;
+      overflow: hidden;
+    }
+
+    .editorial img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .editorial-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,30,25,.4);
+    }
+
+    .editorial-content {
+      position: relative;
+      z-index: 2;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px 25px;
+    }
+
+    .editorial-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(45px, 6vw, 75px);
+      line-height: .95;
+      font-weight: 500;
+      max-width: 750px;
+    }
+
+    /* CLOSING */
+
+    .closing {
+      padding: 105px 25px;
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .closing p {
+      color: var(--muted);
+      max-width: 550px;
+      margin: 0 auto 35px;
+      font-size: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--emerald);
+      color: white;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--deep-green);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: transparent;
+      border: 1px solid var(--emerald);
+      color: var(--emerald);
+      margin-left: 8px;
+    }
+
+    .btn-light:hover {
+      background: var(--emerald);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #092a24;
+      color: white;
+      padding: 75px 25px 30px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    .footer-brand img {
+      width: 120px;
+      background: white;
+      padding: 7px;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      max-width: 280px;
+      color: rgba(255,255,255,.65);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .footer-col h4 {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,.65);
+      font-size: 11px;
+      margin-bottom: 10px;
+      transition: .25s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1150px;
+      margin: 55px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255,255,255,.45);
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        height: 70px;
+        padding: 0 18px;
+      }
+
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--ivory);
+        border-top: 1px solid var(--border);
+        padding: 25px;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .intro {
+        padding: 75px 22px;
+      }
+
+      .story {
+        padding: 70px 20px;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .story-image {
+        height: 440px;
+      }
+
+      .story-copy h2 {
+        text-align: center;
+      }
+
+      .story-copy p {
+        text-align: center;
+      }
+
+      .signature {
+        text-align: center;
+      }
+
+      .values {
+        padding: 75px 20px;
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .value:last-child {
+        border-bottom: 0;
+      }
+
+      .pillars {
+        padding: 75px 20px;
+      }
+
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .belief {
+        padding: 75px 20px;
+      }
+
+      .editorial,
+      .editorial-content {
+        min-height: 430px;
+      }
+
+      .closing {
+        padding: 75px 20px;
+      }
+
+      .btn-light {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT -->
+  <div class="announcement">
+    Anti-Tarnish · Water-Resistant · Everyday Luxury
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+        <img src="WEBSITE LOGO.png" alt="ALANKRA">
+      </a>
+
+      <div class="nav-links">
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Collections</a>
+        <a href="about.html">Our Story</a>
+        <a href="care.html">Jewellery Care</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="shop.html" class="nav-action">Search</a>
+        <a href="shop.html" class="nav-action bag">
+          Bag
+          <span class="count" id="bagCount">0</span>
+        </a>
+      </div>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="shop.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">Our Story</a>
+      <a href="care.html">Jewellery Care</a>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <img src="golden rose necklace.png" alt="ALANKRA jewellery">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        The Story Behind ALANKRA
+      </div>
+
+      <h1>
+        Jewellery,<br>
+        reimagined.
+      </h1>
+
+      <p>
+        Because everyday moments deserve a little luxury too.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="section-label">
+      Our Philosophy
+    </div>
+
+    <h2>
+      Luxury should<br>
+      feel effortless.
+    </h2>
+
+    <p>
+      ALANKRA was created from a simple belief:
+      everyday jewellery can feel elevated.
+      The pieces you reach for most often should not
+      have to wait for a special occasion.
+    </p>
+
+  </section>
+
+
+  <!-- STORY -->
+
+  <section class="story">
+
+    <div class="story-grid">
+
+      <div class="story-image">
+        <img src="pearl bloom necklace.jpeg" alt="ALANKRA Pearl Bloom Necklace">
+      </div>
+
+      <div class="story-copy">
+
+        <div class="section-label">
+          The Beginning
+        </div>
+
+        <h2>
+          Made for the<br>
+          moments in between.
+        </h2>
+
+        <p>
+          We wanted to create jewellery that could become
+          part of real life — not pieces that only come out
+          for celebrations.
+        </p>
+
+        <p>
+          Something delicate enough for your everyday
+          routine, beautiful enough to make an outfit feel
+          complete, and special enough to make you smile
+          when you catch your reflection.
+        </p>
+
+        <p>
+          That idea became ALANKRA.
+        </p>
+
+        <div class="signature">
+          Luxury in Every Detail.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VALUES -->
+
+  <section class="values">
+
+    <div class="values-intro">
+
+      <div class="section-label">
+        What We Believe
+      </div>
+
+      <h2>
+        More than a piece.
+      </h2>
+
+      <p>
+        Every ALANKRA piece is chosen with the idea
+        that jewellery should feel beautiful, wearable
+        and easy to make your own.
+      </p>
+
+    </div>
+
+    <div class="value-grid">
+
+      <div class="value">
+        <div class="value-number">01</div>
+        <h3>Everyday Luxury</h3>
+        <p>
+          Elevated designs made to become part
+          of your everyday wardrobe.
+        </p>
+      </div>
+
+      <div class="value">
+        <div class="value-number">02</div>
+        <h3>Effortless Style</h3>
+        <p>
+          Feminine details and timeless silhouettes
+          that make styling feel easy.
+        </p>
+      </div>
+
+      <div class="value">
+        <div class="value-number">03</div>
+        <h3>Thoughtful Details</h3>
+        <p>
+          From the jewellery you choose to the way
+          it arrives, every detail matters.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BRAND PILLARS -->
+
+  <section class="pillars">
+
+    <div class="pillars-inner">
+
+      <div class="section-label">
+        Designed For Real Life
+      </div>
+
+      <h2>
+        Beautiful enough<br>
+        to wear every day.
+      </h2>
+
+      <div class="pillar-grid">
+
+        <div class="pillar">
+          <h3>Anti-Tarnish</h3>
+          <p>
+            Designed to help your favourite pieces
+            stay beautiful for longer with proper care.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>Water-Resistant</h3>
+          <p>
+            Made with everyday wear in mind,
+            while still recommending thoughtful care.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>Everyday Wear</h3>
+          <p>
+            Jewellery created to move effortlessly
+            from everyday plans to special moments.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BELIEF -->
+
+  <section class="belief">
+
+    <div class="section-label">
+      Our Perspective
+    </div>
+
+    <h2>
+      You don't need<br>
+      an occasion.
+    </h2>
+
+    <p>
+      Wear the necklace because you feel like it.
+      Put on the earrings before heading to work.
+      Stack your bracelets on an ordinary morning.
+      Choose the piece that makes a simple outfit
+      feel like yours.
+    </p>
+
+    <div class="quote">
+      "The best jewellery isn't saved<br>
+      for special days. It makes ordinary days special."
+    </div>
+
+  </section>
+
+
+  <!-- EDITORIAL -->
+
+  <section class="editorial">
+
+    <img src="white drop necklace set.jpeg" alt="ALANKRA jewellery collection">
+
+    <div class="editorial-overlay"></div>
+
+    <div class="editorial-content">
+
+      <div>
+
+        <div class="eyebrow">
+          ALANKRA
+        </div>
+
+        <h2>
+          Made to be worn.<br>
+          Made to be remembered.
+        </h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING -->
+
+  <section class="closing">
+
+    <div class="section-label">
+      Your ALANKRA Story
+    </div>
+
+    <h2>
+      Find a piece<br>
+      that feels like you.
+    </h2>
+
+    <p>
+      Explore jewellery designed to add a little
+      elegance to every version of your everyday.
+    </p>
+
+    <a href="shop.html" class="btn">
+      Shop Jewellery
+    </a>
+
+    <a href="collections.html" class="btn btn-light">
+      Explore Collections
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <img src="WEBSITE LOGO.png" alt="ALANKRA">
+
+        <p>
+          Everyday jewellery, elevated.
+          Thoughtfully designed for women
+          who believe ordinary days deserve
+          beautiful details.
+        </p>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>Shop</h4>
+
+        <a href="shop.html">All Jewellery</a>
+        <a href="shop.html?category=necklaces">Necklaces</a>
+        <a href="shop.html?category=earrings">Earrings</a>
+        <a href="shop.html?category=bracelets">Bracelets</a>
+        <a href="shop.html?category=rings">Rings</a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>Discover</h4>
+
+        <a href="about.html">Our Story</a>
+        <a href="collections.html">Collections</a>
+        <a href="care.html">Jewellery Care</a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>ALANKRA</h4>
+
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="collections.html">Explore</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>© 2026 ALANKRA. ALL RIGHTS RESERVED.</span>
+
+      <span>LUXURY IN EVERY DETAIL.</span>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
+    }
+
+    function updateBagCount() {
+
+      try {
+
+        const cart =
+          JSON.parse(localStorage.getItem("alankraCart")) || [];
+
+        let total = 0;
+
+        cart.forEach(item => {
+          total += Number(item.qty || 1);
+        });
+
+        document.getElementById("bagCount").textContent = total;
+
+      } catch (error) {
+
+        document.getElementById("bagCount").textContent = "0";
+
+      }
+
+    }
+
+    updateBagCount();
+
+  </script>
+
+</body>
+</html>
