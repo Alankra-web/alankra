@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Jewellery Care | ALANKRA — Luxury in Every Detail</title>
 
-<meta
-name="description"
-content="Discover how to care for your ALANKRA jewellery and keep every piece looking beautiful for longer."
-
->
+  <meta name="description"
+        content="Learn how to care for your ALANKRA jewellery and preserve its shine, finish and beauty for longer.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
   <style>
-
-    /* =========================================
-       ALANKRA — JEWELLERY CARE
-       HOMEPAGE-MATCHED LUXURY DESIGN
-       ========================================= */
 
     :root {
       --emerald: #0b332c;
@@ -82,13 +70,12 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
-       ANNOUNCEMENT BAR
-       ========================================= */
+    /* =========================
+       ANNOUNCEMENT
+       ========================= */
 
     .announcement {
       height: 32px;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,20 +89,18 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        HEADER
-       ========================================= */
+       ========================= */
 
     header {
       height: 94px;
 
       background: rgba(248, 245, 238, 0.97);
-
       border-bottom: 1px solid var(--line);
 
       position: sticky;
       top: 0;
-
       z-index: 1000;
 
       backdrop-filter: blur(10px);
@@ -123,22 +108,18 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
     .nav {
       width: min(1440px, calc(100% - 70px));
-
       height: 100%;
-
       margin: auto;
 
       display: grid;
-
       grid-template-columns: 1fr auto 1fr;
-
       align-items: center;
     }
 
 
-    /* =========================================
+    /* =========================
        LOGO
-       ========================================= */
+       ========================= */
 
     .brand {
       width: 300px;
@@ -148,7 +129,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       align-items: center;
 
       overflow: hidden;
-
       justify-self: start;
     }
 
@@ -168,23 +148,19 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        NAVIGATION
-       ========================================= */
+       ========================= */
 
     .nav-links {
       display: flex;
-
       align-items: center;
 
       gap: 34px;
-
       list-style: none;
 
       font-size: 9px;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
 
       white-space: nowrap;
@@ -192,7 +168,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
     .nav-links a {
       position: relative;
-
       transition: color 0.3s ease;
     }
 
@@ -200,7 +175,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       content: "";
 
       position: absolute;
-
       left: 0;
       bottom: -9px;
 
@@ -221,30 +195,30 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        NAV ACTIONS
-       ========================================= */
+       ========================= */
 
     .nav-actions {
       justify-self: end;
 
       display: flex;
-
       align-items: center;
 
-      gap: 20px;
+      gap: 18px;
     }
 
     .nav-action {
-      border: none;
+      position: relative;
 
+      border: none;
       background: transparent;
 
       color: var(--emerald);
 
       cursor: pointer;
 
-      font-size: 16px;
+      font-size: 17px;
 
       transition: 0.3s ease;
     }
@@ -253,18 +227,99 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       color: var(--gold);
     }
 
+    .bag-count {
+      position: absolute;
 
-    /* =========================================
-       CARE HERO
-       ========================================= */
+      top: -7px;
+      right: -8px;
+
+      min-width: 14px;
+      height: 14px;
+
+      padding: 0 3px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--gold);
+      color: white;
+
+      border-radius: 50%;
+
+      font-size: 7px;
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       MOBILE MENU BUTTON
+       ========================= */
+
+    .menu-btn {
+      display: none;
+
+      border: none;
+      background: transparent;
+
+      color: var(--emerald);
+
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+       ========================= */
+
+    .mobile-menu {
+      display: none;
+
+      position: fixed;
+      top: 126px;
+      left: 0;
+
+      width: 100%;
+
+      background: var(--warm-white);
+
+      border-bottom: 1px solid var(--line);
+
+      z-index: 999;
+
+      padding: 25px;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 15px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      color: var(--emerald);
+
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
 
     .care-hero {
-      min-height: 570px;
+      min-height: 590px;
 
       position: relative;
 
       display: flex;
-
       align-items: center;
 
       overflow: hidden;
@@ -272,9 +327,9 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       background:
         linear-gradient(
           90deg,
-          rgba(6, 31, 27, 0.82) 0%,
-          rgba(6, 31, 27, 0.58) 45%,
-          rgba(6, 31, 27, 0.18) 100%
+          rgba(6,31,27,0.84) 0%,
+          rgba(6,31,27,0.60) 45%,
+          rgba(6,31,27,0.18) 100%
         ),
         url("golden rose necklace.png")
         center / cover no-repeat;
@@ -292,7 +347,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       color: var(--soft-gold);
 
       font-size: 9px;
-
       letter-spacing: 5px;
 
       text-transform: uppercase;
@@ -310,32 +364,29 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       font-size: clamp(58px, 7vw, 100px);
 
       font-weight: 400;
-
-      line-height: 0.9;
+      line-height: 0.88;
 
       letter-spacing: -1px;
 
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     .care-hero p {
       max-width: 500px;
 
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.84);
 
       font-size: 12px;
-
       font-weight: 300;
 
       line-height: 1.9;
-
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
     }
 
 
-    /* =========================================
+    /* =========================
        INTRO
-       ========================================= */
+       ========================= */
 
     .care-intro {
       padding: 110px 25px 95px;
@@ -351,7 +402,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       color: var(--gold);
 
       font-size: 8px;
-
       letter-spacing: 4px;
 
       text-transform: uppercase;
@@ -364,35 +414,33 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       margin: auto;
 
-      font-family: 'Cormorant Garamond', serif;
-
       color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
 
       font-size: clamp(42px, 5vw, 65px);
 
       font-weight: 400;
-
       line-height: 1;
     }
 
     .care-intro p {
-      max-width: 600px;
+      max-width: 620px;
 
       margin: 25px auto 0;
 
       color: var(--muted);
 
       font-size: 11px;
+      font-weight: 300;
 
       line-height: 2;
-
-      font-weight: 300;
     }
 
 
-    /* =========================================
-       CARE GUIDE
-       ========================================= */
+    /* =========================
+       ESSENTIALS
+       ========================= */
 
     .care-guide {
       padding: 30px 30px 110px;
@@ -402,13 +450,11 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
     .section-container {
       width: min(1250px, 100%);
-
       margin: auto;
     }
 
     .section-header {
       text-align: center;
-
       margin-bottom: 50px;
     }
 
@@ -417,17 +463,11 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       font-family: 'Cormorant Garamond', serif;
 
-      font-size: 48px;
-
+      font-size: 50px;
       font-weight: 400;
 
       line-height: 1;
     }
-
-
-    /* =========================================
-       CARE CARDS
-       ========================================= */
 
     .care-grid {
       display: grid;
@@ -438,15 +478,15 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
     .care-card {
-      background: var(--ivory);
-
-      border: 1px solid var(--line);
+      min-height: 290px;
 
       padding: 48px 34px;
 
-      min-height: 285px;
-
       text-align: center;
+
+      background: var(--ivory);
+
+      border: 1px solid var(--line);
 
       transition:
         transform 0.35s ease,
@@ -454,16 +494,15 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
     .care-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
 
-      box-shadow: 0 15px 35px rgba(6,31,27,0.07);
+      box-shadow: 0 18px 40px rgba(6,31,27,0.07);
     }
 
     .care-number {
       color: var(--gold);
 
       font-size: 8px;
-
       letter-spacing: 3px;
 
       margin-bottom: 17px;
@@ -474,7 +513,7 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       font-family: 'Cormorant Garamond', serif;
 
-      font-size: 32px;
+      font-size: 30px;
 
       margin-bottom: 14px;
     }
@@ -485,46 +524,44 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       font-family: 'Cormorant Garamond', serif;
 
       font-size: 29px;
-
       font-weight: 500;
 
       line-height: 1.05;
 
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .care-card p {
-      max-width: 280px;
+      max-width: 285px;
 
       margin: auto;
 
       color: var(--muted);
 
       font-size: 9px;
+      font-weight: 300;
 
       line-height: 1.9;
-
-      font-weight: 300;
     }
 
 
-    /* =========================================
-       FEATURED CARE MESSAGE
-       ========================================= */
+    /* =========================
+       FEATURED MESSAGE
+       ========================= */
 
     .care-message {
       display: grid;
 
       grid-template-columns: 1fr 1fr;
 
-      min-height: 570px;
+      min-height: 580px;
     }
 
     .care-message-image {
       background:
         linear-gradient(
-          rgba(6,31,27,0.10),
-          rgba(6,31,27,0.10)
+          rgba(6,31,27,0.08),
+          rgba(6,31,27,0.08)
         ),
         url("pearl bloom necklace.jpeg")
         center / cover no-repeat;
@@ -534,7 +571,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       display: flex;
 
       align-items: center;
-
       justify-content: center;
 
       padding: 80px;
@@ -565,32 +601,93 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
     .care-message-inner p {
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,0.76);
 
       font-size: 11px;
-
       font-weight: 300;
 
       line-height: 2;
 
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .care-message-inner strong {
       color: var(--soft-gold);
-
       font-weight: 500;
     }
 
 
-    /* =========================================
+    /* =========================
+       WATER & MOISTURE
+       ========================= */
+
+    .water-section {
+      padding: 110px 30px;
+
+      background: var(--ivory);
+    }
+
+    .water-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+    }
+
+    .water-card {
+      padding: 55px 45px;
+
+      background: var(--warm-white);
+
+      border: 1px solid var(--line);
+    }
+
+    .water-card h3 {
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 38px;
+      font-weight: 400;
+
+      margin-bottom: 18px;
+    }
+
+    .water-card p {
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 300;
+
+      line-height: 1.9;
+
+      max-width: 480px;
+    }
+
+    .water-note {
+      margin-top: 22px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--emerald);
+
+      font-size: 9px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================
        DO / DON'T
-       ========================================= */
+       ========================= */
 
     .dos-donts {
       padding: 110px 30px;
 
-      background: var(--ivory);
+      background: var(--warm-white);
     }
 
     .dos-donts-grid {
@@ -607,26 +704,19 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       border: 1px solid var(--line);
 
-      background: var(--warm-white);
+      background: var(--ivory);
     }
 
     .dos h3,
     .donts h3 {
+      color: var(--emerald);
+
       font-family: 'Cormorant Garamond', serif;
 
-      font-size: 38px;
-
+      font-size: 40px;
       font-weight: 400;
 
       margin-bottom: 30px;
-    }
-
-    .dos h3 {
-      color: var(--emerald);
-    }
-
-    .donts h3 {
-      color: var(--emerald);
     }
 
     .care-list {
@@ -651,7 +741,8 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       border-bottom: 1px solid var(--line);
     }
 
-    .care-list li::before {
+    .dos .care-list li::before,
+    .donts .care-list li::before {
       position: absolute;
 
       left: 0;
@@ -672,9 +763,9 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        FINAL NOTE
-       ========================================= */
+       ========================= */
 
     .final-note {
       padding: 115px 25px;
@@ -689,21 +780,22 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       font-family: 'Cormorant Garamond', serif;
 
-      font-size: clamp(43px, 5vw, 62px);
+      font-size: clamp(43px, 5vw, 65px);
 
       font-weight: 400;
 
-      line-height: 1;
+      line-height: 0.95;
     }
 
     .final-note p {
       max-width: 540px;
 
-      margin: 18px auto 30px;
+      margin: 20px auto 30px;
 
       color: var(--muted);
 
       font-size: 10px;
+      font-weight: 300;
 
       line-height: 1.9;
     }
@@ -711,14 +803,13 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     .outline-button {
       display: inline-block;
 
-      border: 1px solid var(--emerald);
-
       padding: 14px 30px;
+
+      border: 1px solid var(--emerald);
 
       color: var(--emerald);
 
       font-size: 8px;
-
       letter-spacing: 2.5px;
 
       text-transform: uppercase;
@@ -728,14 +819,13 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
     .outline-button:hover {
       background: var(--emerald);
-
       color: white;
     }
 
 
-    /* =========================================
+    /* =========================
        MARQUEE
-       ========================================= */
+       ========================= */
 
     .marquee {
       overflow: hidden;
@@ -745,7 +835,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       padding: 17px 0;
 
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
     }
 
@@ -771,7 +860,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
     .marquee-item span {
       color: var(--gold);
-
       margin-left: 30px;
     }
 
@@ -788,9 +876,9 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        FOOTER
-       ========================================= */
+       ========================= */
 
     footer {
       background: var(--deep-emerald);
@@ -836,7 +924,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       color: var(--soft-gold);
 
       font-size: 8px;
-
       letter-spacing: 2px;
 
       text-transform: uppercase;
@@ -876,14 +963,13 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       color: rgba(255,255,255,0.4);
 
       font-size: 7px;
-
       letter-spacing: 1.5px;
     }
 
 
-    /* =========================================
+    /* =========================
        TABLET
-       ========================================= */
+       ========================= */
 
     @media (max-width: 1150px) {
 
@@ -903,10 +989,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
         gap: 20px;
       }
 
-      .nav-action {
-        font-size: 15px;
-      }
-
       .care-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -918,9 +1000,9 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        MOBILE
-       ========================================= */
+       ========================= */
 
     @media (max-width: 850px) {
 
@@ -928,7 +1010,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
         height: 28px;
 
         font-size: 6px;
-
         letter-spacing: 1.8px;
       }
 
@@ -945,17 +1026,16 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       }
 
       .brand {
-        width: 190px;
-
+        width: 180px;
         height: 70px;
       }
 
       .brand img {
-        width: 185px;
+        width: 175px;
 
         max-height: 58px;
 
-        transform: scale(1.12);
+        transform: scale(1.1);
       }
 
       .nav-links {
@@ -963,11 +1043,19 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       }
 
       .nav-actions {
-        gap: 14px;
+        gap: 13px;
       }
 
       .nav-action {
         font-size: 15px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .mobile-menu {
+        top: 104px;
       }
 
       .care-hero {
@@ -976,7 +1064,7 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
         background:
           linear-gradient(
             rgba(6,31,27,0.60),
-            rgba(6,31,27,0.76)
+            rgba(6,31,27,0.78)
           ),
           url("golden rose necklace.png")
           center / cover no-repeat;
@@ -1003,6 +1091,7 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
       }
 
       .care-guide,
+      .water-section,
       .dos-donts {
         padding-left: 18px;
         padding-right: 18px;
@@ -1028,6 +1117,10 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
         padding: 75px 28px;
       }
 
+      .water-grid {
+        grid-template-columns: 1fr;
+      }
+
       .dos-donts-grid {
         grid-template-columns: 1fr;
       }
@@ -1050,28 +1143,31 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
     }
 
 
-    /* =========================================
+    /* =========================
        SMALL PHONES
-       ========================================= */
+       ========================= */
 
     @media (max-width: 480px) {
 
       .brand {
-        width: 155px;
-
+        width: 150px;
         height: 66px;
       }
 
       .brand img {
-        width: 155px;
+        width: 150px;
 
         max-height: 52px;
 
-        transform: scale(1.08);
+        transform: scale(1.06);
       }
 
       .nav-actions {
-        gap: 10px;
+        gap: 9px;
+      }
+
+      .nav-action {
+        font-size: 14px;
       }
 
       .care-hero {
@@ -1084,7 +1180,6 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       .hero-kicker {
         font-size: 7px;
-
         letter-spacing: 3px;
       }
 
@@ -1112,6 +1207,14 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
         font-size: 46px;
       }
 
+      .water-card {
+        padding: 40px 25px;
+      }
+
+      .water-card h3 {
+        font-size: 34px;
+      }
+
       .dos,
       .donts {
         padding: 38px 22px;
@@ -1124,693 +1227,896 @@ content="Discover how to care for your ALANKRA jewellery and keep every piece lo
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
-
         gap: 35px;
       }
 
     }
 
   </style>
-
 </head>
+
 
 <body>
 
-  <!-- =========================================
+
+  <!-- =========================
        ANNOUNCEMENT
-       ========================================= -->
+       ========================= -->
 
   <div class="announcement">
     Anti-Tarnish · Water-Resistant · Everyday Luxury
   </div>
 
-  <!-- =========================================
+
+  <!-- =========================
        HEADER
-       ========================================= -->
+       ========================= -->
 
   <header>
 
-```
-<nav class="nav">
+    <nav class="nav">
 
-  <a href="index.html" class="brand">
+      <a href="index.html" class="brand">
 
-    <img
-      src="WEBSITE LOGO.png"
-      alt="ALANKRA — Luxury in Every Detail"
-    >
+        <img
+          src="WEBSITE LOGO.png"
+          alt="ALANKRA — Luxury in Every Detail"
+        >
 
-  </a>
-
-
-  <ul class="nav-links">
-
-    <li>
-      <a href="shop.html">Shop</a>
-    </li>
-
-    <li>
-      <a href="index.html#collections">Collections</a>
-    </li>
-
-    <li>
-      <a href="index.html#story">Our Story</a>
-    </li>
-
-    <li>
-      <a href="index.html#why-alankra">Why ALANKRA</a>
-    </li>
-
-  </ul>
+      </a>
 
 
-  <div class="nav-actions">
+      <ul class="nav-links">
 
-    <button class="nav-action" aria-label="Search">
-      ⌕
-    </button>
+        <li>
+          <a href="shop.html">Shop</a>
+        </li>
 
-    <button class="nav-action" aria-label="Wishlist">
-      ♡
-    </button>
+        <li>
+          <a href="collections.html">Collections</a>
+        </li>
 
-    <button class="nav-action" aria-label="Shopping bag">
-      ◇
-    </button>
+        <li>
+          <a href="about.html">Our Story</a>
+        </li>
 
-  </div>
+        <li>
+          <a href="index.html#experience">Experience</a>
+        </li>
 
-</nav>
-```
+      </ul>
+
+
+      <div class="nav-actions">
+
+        <button
+          class="nav-action"
+          onclick="window.location.href='shop.html'"
+          aria-label="Search">
+          ⌕
+        </button>
+
+        <button
+          class="nav-action"
+          onclick="window.location.href='shop.html'"
+          aria-label="Wishlist">
+          ♡
+        </button>
+
+        <button
+          class="nav-action"
+          onclick="window.location.href='shop.html'"
+          aria-label="Shopping bag">
+
+          ◇
+
+          <span
+            class="bag-count"
+            id="bagCount">
+            0
+          </span>
+
+        </button>
+
+        <button
+          class="menu-btn"
+          onclick="toggleMenu()"
+          aria-label="Open menu">
+          ☰
+        </button>
+
+      </div>
+
+    </nav>
 
   </header>
 
+
+  <!-- =========================
+       MOBILE MENU
+       ========================= -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <a href="index.html">Home</a>
+
+    <a href="shop.html">Shop</a>
+
+    <a href="collections.html">Collections</a>
+
+    <a href="about.html">Our Story</a>
+
+    <a href="index.html#experience">Experience</a>
+
+    <a href="care.html">Jewellery Care</a>
+
+  </div>
+
+
   <main>
 
-```
-<!-- =========================================
-     HERO
-     ========================================= -->
 
-<section class="care-hero">
+    <!-- =========================
+         HERO
+         ========================= -->
 
-  <div class="care-hero-content">
+    <section class="care-hero">
 
-    <div class="hero-kicker">
-      The ALANKRA Jewellery Guide
-    </div>
+      <div class="care-hero-content">
 
-    <h1>
-      Care for<br>
-      What You<br>
-      Love.
-    </h1>
+        <div class="hero-kicker">
+          The ALANKRA Jewellery Guide
+        </div>
 
-    <p>
-      A little care goes a long way.
-      Follow these simple rituals to keep
-      your ALANKRA pieces looking beautiful
-      for longer.
-    </p>
+        <h1>
+          Care for<br>
+          What You<br>
+          Love.
+        </h1>
 
-  </div>
+        <p>
+          A little care goes a long way.
+          Follow these simple rituals to help
+          keep your ALANKRA pieces looking
+          beautiful for longer.
+        </p>
 
-</section>
+      </div>
 
-
-<!-- =========================================
-     INTRO
-     ========================================= -->
-
-<section class="care-intro">
-
-  <span class="eyebrow">
-    Jewellery Care
-  </span>
-
-  <h2>
-    Beautiful pieces<br>
-    deserve beautiful care.
-  </h2>
-
-  <p>
-    Your jewellery becomes part of your everyday
-    moments. With a few simple habits, you can
-    help preserve its finish, shine and beauty
-    for longer.
-  </p>
-
-</section>
+    </section>
 
 
-<!-- =========================================
-     CARE GUIDE
-     ========================================= -->
+    <!-- =========================
+         INTRO
+         ========================= -->
 
-<section class="care-guide">
-
-  <div class="section-container">
-
-    <div class="section-header">
+    <section class="care-intro">
 
       <span class="eyebrow">
-        The Essentials
-      </span>
-
-      <h2 class="section-title">
-        Simple Care Rituals
-      </h2>
-
-    </div>
-
-
-    <div class="care-grid">
-
-
-      <!-- 01 -->
-
-      <div class="care-card">
-
-        <div class="care-number">
-          01
-        </div>
-
-        <div class="care-symbol">
-          ✦
-        </div>
-
-        <h3>
-          Store With Care
-        </h3>
-
-        <p>
-          Store each piece separately in a
-          clean, dry pouch or jewellery box
-          to reduce scratches and tangling.
-        </p>
-
-      </div>
-
-
-      <!-- 02 -->
-
-      <div class="care-card">
-
-        <div class="care-number">
-          02
-        </div>
-
-        <div class="care-symbol">
-          ◇
-        </div>
-
-        <h3>
-          Wear Mindfully
-        </h3>
-
-        <p>
-          Although ALANKRA pieces are designed
-          for everyday wear, treating them gently
-          helps preserve their finish.
-        </p>
-
-      </div>
-
-
-      <!-- 03 -->
-
-      <div class="care-card">
-
-        <div class="care-number">
-          03
-        </div>
-
-        <div class="care-symbol">
-          ♡
-        </div>
-
-        <h3>
-          Keep Them Clean
-        </h3>
-
-        <p>
-          Gently wipe your jewellery with a soft
-          clean cloth after wearing to remove
-          everyday residue and fingerprints.
-        </p>
-
-      </div>
-
-
-      <!-- 04 -->
-
-      <div class="care-card">
-
-        <div class="care-number">
-          04
-        </div>
-
-        <div class="care-symbol">
-          ✧
-        </div>
-
-        <h3>
-          Avoid Harsh Chemicals
-        </h3>
-
-        <p>
-          Keep jewellery away from perfumes,
-          sprays, creams, lotions and harsh
-          household chemicals whenever possible.
-        </p>
-
-      </div>
-
-
-      <!-- 05 -->
-
-      <div class="care-card">
-
-        <div class="care-number">
-          05
-        </div>
-
-        <div class="care-symbol">
-          ✦
-        </div>
-
-        <h3>
-          Give It a Rest
-        </h3>
-
-        <p>
-          When you're not wearing your favourite
-          pieces, store them safely rather than
-          leaving them exposed on surfaces.
-        </p>
-
-      </div>
-
-
-      <!-- 06 -->
-
-      <div class="care-card">
-
-        <div class="care-number">
-          06
-        </div>
-
-        <div class="care-symbol">
-          ◇
-        </div>
-
-        <h3>
-          Handle Gently
-        </h3>
-
-        <p>
-          Put jewellery on after getting ready
-          and remove it carefully to avoid
-          unnecessary pulling, bending or impact.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     EDITORIAL CARE MESSAGE
-     ========================================= -->
-
-<section class="care-message">
-
-  <div class="care-message-image">
-  </div>
-
-
-  <div class="care-message-content">
-
-    <div class="care-message-inner">
-
-      <span class="eyebrow">
-        A Little Reminder
+        Jewellery Care
       </span>
 
       <h2>
-        Everyday luxury,
-        thoughtfully cared for.
+        Beautiful pieces<br>
+        deserve beautiful care.
       </h2>
 
       <p>
-        ALANKRA jewellery is designed to be part
-        of your everyday style. While our pieces
-        are made with durability in mind, proper
-        care can help maintain their beautiful
-        appearance for longer.
+        Your jewellery becomes part of your everyday
+        moments. A few simple habits can help preserve
+        its finish, shine and beauty for longer.
       </p>
 
-      <p>
-        <strong>
-          Your jewellery should fit into your life —
-          and a little care keeps it looking its best.
-        </strong>
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================
-     DO / DON'T
-     ========================================= -->
+    <!-- =========================
+         ESSENTIALS
+         ========================= -->
 
-<section class="dos-donts">
+    <section class="care-guide">
 
-  <div class="section-container">
+      <div class="section-container">
 
-    <div class="section-header">
+        <div class="section-header">
+
+          <span class="eyebrow">
+            The Essentials
+          </span>
+
+          <h2 class="section-title">
+            Simple Care Rituals
+          </h2>
+
+        </div>
+
+
+        <div class="care-grid">
+
+
+          <div class="care-card">
+
+            <div class="care-number">
+              01
+            </div>
+
+            <div class="care-symbol">
+              ✦
+            </div>
+
+            <h3>
+              Store With Care
+            </h3>
+
+            <p>
+              Store each piece separately in a
+              clean, dry pouch or jewellery box
+              to reduce scratches, tangling and
+              unnecessary exposure to humidity.
+            </p>
+
+          </div>
+
+
+          <div class="care-card">
+
+            <div class="care-number">
+              02
+            </div>
+
+            <div class="care-symbol">
+              ◇
+            </div>
+
+            <h3>
+              Wear Mindfully
+            </h3>
+
+            <p>
+              ALANKRA pieces are designed for
+              everyday styling, but gentle handling
+              helps preserve their finish and
+              appearance.
+            </p>
+
+          </div>
+
+
+          <div class="care-card">
+
+            <div class="care-number">
+              03
+            </div>
+
+            <div class="care-symbol">
+              ♡
+            </div>
+
+            <h3>
+              Keep Them Clean
+            </h3>
+
+            <p>
+              After wearing, gently wipe your
+              jewellery with a soft, clean cloth
+              to remove everyday residue,
+              oils and fingerprints.
+            </p>
+
+          </div>
+
+
+          <div class="care-card">
+
+            <div class="care-number">
+              04
+            </div>
+
+            <div class="care-symbol">
+              ✧
+            </div>
+
+            <h3>
+              Avoid Chemicals
+            </h3>
+
+            <p>
+              Keep jewellery away from perfumes,
+              sprays, lotions, creams, sanitizers
+              and harsh household chemicals
+              whenever possible.
+            </p>
+
+          </div>
+
+
+          <div class="care-card">
+
+            <div class="care-number">
+              05
+            </div>
+
+            <div class="care-symbol">
+              ✦
+            </div>
+
+            <h3>
+              Give It a Rest
+            </h3>
+
+            <p>
+              When you're not wearing your
+              favourite pieces, keep them safely
+              stored instead of leaving them
+              exposed on surfaces.
+            </p>
+
+          </div>
+
+
+          <div class="care-card">
+
+            <div class="care-number">
+              06
+            </div>
+
+            <div class="care-symbol">
+              ◇
+            </div>
+
+            <h3>
+              Handle Gently
+            </h3>
+
+            <p>
+              Put jewellery on after getting ready
+              and remove it carefully to avoid
+              unnecessary pulling, bending or
+              impact.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDITORIAL
+         ========================= -->
+
+    <section class="care-message">
+
+      <div class="care-message-image">
+      </div>
+
+
+      <div class="care-message-content">
+
+        <div class="care-message-inner">
+
+          <span class="eyebrow">
+            A Little Reminder
+          </span>
+
+          <h2>
+            Everyday luxury,
+            thoughtfully cared for.
+          </h2>
+
+          <p>
+            ALANKRA jewellery is designed to
+            complement your everyday style.
+            While our pieces are made with
+            everyday wear in mind, proper care
+            can help maintain their beautiful
+            appearance for longer.
+          </p>
+
+          <p>
+            <strong>
+              Your jewellery should fit into your life —
+              a little care simply helps it stay beautiful.
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WATER & MOISTURE
+         ========================= -->
+
+    <section class="water-section">
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            Water & Moisture
+          </span>
+
+          <h2 class="section-title">
+            A little extra care
+          </h2>
+
+        </div>
+
+
+        <div class="water-grid">
+
+
+          <div class="water-card">
+
+            <h3>
+              Water-Resistant
+            </h3>
+
+            <p>
+              ALANKRA jewellery is positioned as
+              water-resistant for everyday use.
+              However, water-resistant does not
+              mean waterproof.
+            </p>
+
+            <div class="water-note">
+              For best longevity, avoid prolonged
+              or unnecessary exposure to water.
+            </div>
+
+          </div>
+
+
+          <div class="water-card">
+
+            <h3>
+              When To Remove It
+            </h3>
+
+            <p>
+              We recommend removing your jewellery
+              before showering, swimming, exercising
+              or entering situations where it may be
+              exposed to prolonged moisture.
+            </p>
+
+            <div class="water-note">
+              If your jewellery becomes wet,
+              gently dry it with a soft cloth
+              before storing it.
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DO / DON'T
+         ========================= -->
+
+    <section class="dos-donts">
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            Keep In Mind
+          </span>
+
+          <h2 class="section-title">
+            The ALANKRA Guide
+          </h2>
+
+        </div>
+
+
+        <div class="dos-donts-grid">
+
+
+          <div class="dos">
+
+            <h3>
+              Do
+            </h3>
+
+            <ul class="care-list">
+
+              <li>
+                Store your jewellery in its pouch or box.
+              </li>
+
+              <li>
+                Wipe pieces gently with a soft cloth.
+              </li>
+
+              <li>
+                Keep individual pieces separated when stored.
+              </li>
+
+              <li>
+                Put jewellery on after applying beauty products.
+              </li>
+
+              <li>
+                Remove jewellery before swimming or exercising.
+              </li>
+
+              <li>
+                Make sure pieces are dry before storing them.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <div class="donts">
+
+            <h3>
+              Don't
+            </h3>
+
+            <ul class="care-list">
+
+              <li>
+                Expose jewellery unnecessarily to perfumes or chemicals.
+              </li>
+
+              <li>
+                Wear jewellery for prolonged water exposure.
+              </li>
+
+              <li>
+                Pull, bend or force delicate jewellery.
+              </li>
+
+              <li>
+                Use abrasive cleaners or rough cloths.
+              </li>
+
+              <li>
+                Leave pieces scattered on hard surfaces.
+              </li>
+
+              <li>
+                Store jewellery while it is dirty or damp.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL NOTE
+         ========================= -->
+
+    <section class="final-note">
 
       <span class="eyebrow">
-        Keep In Mind
+        Luxury in Every Detail
       </span>
 
-      <h2 class="section-title">
-        The ALANKRA Guide
+      <h2>
+        Wear it.<br>
+        Love it.<br>
+        Care for it.
       </h2>
 
-    </div>
+      <p>
+        Explore the ALANKRA collection and discover
+        jewellery designed to become part of your
+        everyday moments.
+      </p>
+
+      <a
+        href="shop.html"
+        class="outline-button">
+        Explore Jewellery
+      </a>
+
+    </section>
 
 
-    <div class="dos-donts-grid">
+    <!-- =========================
+         MARQUEE
+         ========================= -->
 
+    <div class="marquee">
 
-      <!-- DO -->
+      <div class="marquee-track">
 
-      <div class="dos">
+        <div class="marquee-item">
+          LUXURY IN EVERY DETAIL
+          <span>✦</span>
+        </div>
 
-        <h3>
-          Do
-        </h3>
+        <div class="marquee-item">
+          MADE FOR YOUR EVERYDAY
+          <span>✦</span>
+        </div>
 
-        <ul class="care-list">
+        <div class="marquee-item">
+          CAREFULLY CHOSEN
+          <span>✦</span>
+        </div>
 
-          <li>
-            Store your jewellery in its pouch or box.
-          </li>
+        <div class="marquee-item">
+          LUXURY IN EVERY DETAIL
+          <span>✦</span>
+        </div>
 
-          <li>
-            Wipe pieces gently with a soft cloth.
-          </li>
+        <div class="marquee-item">
+          MADE FOR YOUR EVERYDAY
+          <span>✦</span>
+        </div>
 
-          <li>
-            Handle delicate chains and clasps carefully.
-          </li>
-
-          <li>
-            Keep individual pieces separated when stored.
-          </li>
-
-          <li>
-            Put jewellery on after applying beauty products.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- DON'T -->
-
-      <div class="donts">
-
-        <h3>
-          Don't
-        </h3>
-
-        <ul class="care-list">
-
-          <li>
-            Expose jewellery unnecessarily to perfumes or chemicals.
-          </li>
-
-          <li>
-            Pull, bend or force delicate jewellery.
-          </li>
-
-          <li>
-            Leave pieces scattered on hard surfaces.
-          </li>
-
-          <li>
-            Use abrasive cleaners or rough cloths.
-          </li>
-
-          <li>
-            Store jewellery while it is dirty or damp.
-          </li>
-
-        </ul>
+        <div class="marquee-item">
+          CAREFULLY CHOSEN
+          <span>✦</span>
+        </div>
 
       </div>
 
-
     </div>
 
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     FINAL NOTE
-     ========================================= -->
-
-<section class="final-note">
-
-  <span class="eyebrow">
-    Luxury in Every Detail
-  </span>
-
-  <h2>
-    Wear it.<br>
-    Love it.<br>
-    Care for it.
-  </h2>
-
-  <p>
-    Explore the ALANKRA collection and find
-    pieces made to become part of your everyday.
-  </p>
-
-  <a href="shop.html" class="outline-button">
-    Explore Jewellery
-  </a>
-
-</section>
-
-
-<!-- =========================================
-     MARQUEE
-     ========================================= -->
-
-<div class="marquee">
-
-  <div class="marquee-track">
-
-    <div class="marquee-item">
-      LUXURY IN EVERY DETAIL
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      MADE FOR YOUR EVERYDAY
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      CAREFULLY CHOSEN
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      LUXURY IN EVERY DETAIL
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      MADE FOR YOUR EVERYDAY
-      <span>✦</span>
-    </div>
-
-    <div class="marquee-item">
-      CAREFULLY CHOSEN
-      <span>✦</span>
-    </div>
-
-  </div>
-
-</div>
-```
 
   </main>
 
-  <!-- =========================================
+
+  <!-- =========================
        FOOTER
-       ========================================= -->
+       ========================= -->
 
   <footer>
 
-```
-<div class="footer-grid">
+    <div class="footer-grid">
 
 
-  <div class="footer-brand">
+      <div class="footer-brand">
 
-    <div class="footer-logo">
+        <div class="footer-logo">
 
-      <img
-        src="LOGO.png"
-        alt="ALANKRA"
-      >
+          <img
+            src="LOGO.png"
+            alt="ALANKRA"
+          >
+
+        </div>
+
+        <p class="footer-about">
+          Luxury in Every Detail.<br>
+          Discover anti-tarnish, water-resistant
+          jewellery designed for your everyday moments.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="shop.html">
+              All Jewellery
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=necklaces">
+              Necklaces
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=earrings">
+              Earrings
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=bracelets">
+              Bracelets
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=rings">
+              Rings
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          About
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="about.html">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#why-alankra">
+              Why ALANKRA
+            </a>
+          </li>
+
+          <li>
+            <a href="care.html">
+              Jewellery Care
+            </a>
+          </li>
+
+          <li>
+            <a href="collections.html">
+              Collections
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="#">
+              Shipping
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Returns
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
 
     </div>
 
-    <p class="footer-about">
 
-      Luxury in Every Detail.
+    <div class="footer-bottom">
 
-      Discover anti-tarnish, water-resistant
-      jewellery designed for your everyday moments.
+      © 2026 ALANKRA · LUXURY IN EVERY DETAIL
 
-    </p>
-
-  </div>
-
-
-  <div class="footer-column">
-
-    <h4>
-      Shop
-    </h4>
-
-    <ul>
-
-      <li>
-        <a href="shop.html">
-          All Jewellery
-        </a>
-      </li>
-
-      <li>
-        <a href="index.html#collections">
-          Necklaces
-        </a>
-      </li>
-
-      <li>
-        <a href="index.html#collections">
-          Earrings
-        </a>
-      </li>
-
-      <li>
-        <a href="index.html#collections">
-          Bracelets
-        </a>
-      </li>
-
-      <li>
-        <a href="shop.html">
-          New Arrivals
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-
-  <div class="footer-column">
-
-    <h4>
-      About
-    </h4>
-
-    <ul>
-
-      <li>
-        <a href="index.html#story">
-          Our Story
-        </a>
-      </li>
-
-      <li>
-        <a href="index.html#why-alankra">
-          Why ALANKRA
-        </a>
-      </li>
-
-      <li>
-        <a href="care.html">
-          Jewellery Care
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-
-  <div class="footer-column">
-
-    <h4>
-      Help
-    </h4>
-
-    <ul>
-
-      <li>
-        Shipping
-      </li>
-
-      <li>
-        Returns
-      </li>
-
-      <li>
-        FAQ
-      </li>
-
-      <li>
-        Contact
-      </li>
-
-    </ul>
-
-  </div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-  © 2026 ALANKRA · LUXURY IN EVERY DETAIL
-
-</div>
-```
+    </div>
 
   </footer>
 
-</body>
 
+  <script>
+
+    /* =========================
+       MOBILE MENU
+       ========================= */
+
+    function toggleMenu() {
+
+      const menu = document.getElementById("mobileMenu");
+
+      menu.classList.toggle("open");
+
+    }
+
+
+    /* =========================
+       BAG COUNT
+       ========================= */
+
+    function updateBagCount() {
+
+      const bagCount =
+        document.getElementById("bagCount");
+
+      try {
+
+        const cart =
+          JSON.parse(
+            localStorage.getItem("alankraCart")
+          ) || [];
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+          total += Number(item.quantity || 1);
+
+        });
+
+        bagCount.textContent = total;
+
+      } catch {
+
+        bagCount.textContent = "0";
+
+      }
+
+    }
+
+    updateBagCount();
+
+
+    /* =========================
+       CLOSE MOBILE MENU
+       ========================= */
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.remove("open");
+
+        });
+
+      });
+
+  </script>
+
+
+</body>
 </html>
