@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shipping & Delivery | ALANKRA — Luxury in Every Detail</title>
+
+  <meta
+    name="description"
+    content="Learn about ALANKRA shipping, order processing, delivery, tracking and receiving your jewellery."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --emerald: #0b332c;
+      --deep-emerald: #061f1b;
+      --soft-emerald: #123f36;
+
+      --ivory: #f8f5ee;
+      --warm-white: #fcfaf6;
+      --cream: #eee8dc;
+
+      --gold: #c6a35d;
+      --soft-gold: #d7bd83;
+
+      --text: #282620;
+      --muted: #77736b;
+      --line: rgba(11, 51, 44, 0.13);
+
+      --white: #ffffff;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button {
+      font-family: inherit;
+    }
+
+
+    /* =========================
+       ANNOUNCEMENT
+       ========================= */
+
+    .announcement {
+      height: 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--deep-emerald);
+      color: #eee7d9;
+
+      font-size: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+      height: 94px;
+
+      background: rgba(248, 245, 238, 0.97);
+
+      border-bottom: 1px solid var(--line);
+
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      backdrop-filter: blur(10px);
+    }
+
+
+    .nav {
+      width: min(1440px, calc(100% - 70px));
+
+      height: 100%;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr auto 1fr;
+
+      align-items: center;
+    }
+
+
+    /* =========================
+       LOGO
+       ========================= */
+
+    .brand {
+      width: 300px;
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      justify-self: start;
+    }
+
+
+    .brand img {
+      width: 285px;
+
+      height: auto;
+
+      max-width: none;
+      max-height: 66px;
+
+      object-fit: contain;
+
+      transform: scale(1.12);
+
+      transform-origin: left center;
+
+      mix-blend-mode: multiply;
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 34px;
+
+      list-style: none;
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+    }
+
+
+    .nav-links a {
+      position: relative;
+
+      transition: color 0.3s ease;
+    }
+
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -9px;
+
+      width: 0;
+
+      height: 1px;
+
+      background: var(--gold);
+
+      transition: width 0.3s ease;
+    }
+
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+
+    /* =========================
+       NAV ACTIONS
+       ========================= */
+
+    .nav-actions {
+      justify-self: end;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 18px;
+    }
+
+
+    .nav-action {
+      position: relative;
+
+      border: none;
+
+      background: transparent;
+
+      color: var(--emerald);
+
+      cursor: pointer;
+
+      font-size: 17px;
+
+      transition: 0.3s ease;
+    }
+
+
+    .nav-action:hover {
+      color: var(--gold);
+    }
+
+
+    .bag-count {
+      position: absolute;
+
+      top: -7px;
+      right: -8px;
+
+      min-width: 14px;
+      height: 14px;
+
+      padding: 0 3px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--gold);
+
+      color: white;
+
+      border-radius: 50%;
+
+      font-size: 7px;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+       ========================= */
+
+    .menu-btn {
+      display: none;
+
+      border: none;
+
+      background: transparent;
+
+      color: var(--emerald);
+
+      font-size: 22px;
+
+      cursor: pointer;
+    }
+
+
+    .mobile-menu {
+      display: none;
+
+      position: fixed;
+
+      top: 126px;
+
+      left: 0;
+
+      width: 100%;
+
+      background: var(--warm-white);
+
+      border-bottom: 1px solid var(--line);
+
+      z-index: 999;
+
+      padding: 25px;
+    }
+
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 15px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      color: var(--emerald);
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .shipping-hero {
+      min-height: 560px;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6,31,27,0.84) 0%,
+          rgba(6,31,27,0.62) 45%,
+          rgba(6,31,27,0.18) 100%
+        ),
+        url("white drop necklace set.jpeg")
+        center / cover no-repeat;
+    }
+
+
+    .hero-content {
+      width: min(1250px, calc(100% - 60px));
+
+      margin: auto;
+
+      padding: 90px 0;
+    }
+
+
+    .hero-kicker {
+      color: var(--soft-gold);
+
+      font-size: 9px;
+
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 22px;
+    }
+
+
+    .shipping-hero h1 {
+      max-width: 720px;
+
+      color: white;
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: clamp(60px, 7vw, 100px);
+
+      font-weight: 400;
+
+      line-height: 0.88;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 30px;
+    }
+
+
+    .shipping-hero p {
+      max-width: 510px;
+
+      color: rgba(255,255,255,0.84);
+
+      font-size: 12px;
+
+      font-weight: 300;
+
+      line-height: 1.9;
+    }
+
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .intro {
+      padding: 110px 25px 95px;
+
+      text-align: center;
+
+      background: var(--warm-white);
+    }
+
+
+    .eyebrow {
+      display: block;
+
+      color: var(--gold);
+
+      font-size: 8px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 15px;
+    }
+
+
+    .intro h2 {
+      max-width: 800px;
+
+      margin: auto;
+
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: clamp(42px, 5vw, 65px);
+
+      font-weight: 400;
+
+      line-height: 1;
+    }
+
+
+    .intro p {
+      max-width: 630px;
+
+      margin: 25px auto 0;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      font-weight: 300;
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       SHIPPING STEPS
+       ========================= */
+
+    .shipping-guide {
+      padding: 30px 30px 110px;
+
+      background: var(--warm-white);
+    }
+
+
+    .container {
+      width: min(1200px, 100%);
+
+      margin: auto;
+    }
+
+
+    .section-header {
+      text-align: center;
+
+      margin-bottom: 50px;
+    }
+
+
+    .section-title {
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 50px;
+
+      font-weight: 400;
+
+      line-height: 1;
+    }
+
+
+    .steps {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .step {
+      min-height: 260px;
+
+      padding: 45px 30px;
+
+      text-align: center;
+
+      background: var(--ivory);
+
+      border: 1px solid var(--line);
+
+      transition: 0.35s ease;
+    }
+
+
+    .step:hover {
+      transform: translateY(-5px);
+
+      box-shadow: 0 18px 40px rgba(6,31,27,0.07);
+    }
+
+
+    .step-number {
+      color: var(--gold);
+
+      font-size: 8px;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 20px;
+    }
+
+
+    .step-icon {
+      color: var(--gold);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 32px;
+
+      margin-bottom: 15px;
+    }
+
+
+    .step h3 {
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 29px;
+
+      font-weight: 500;
+
+      line-height: 1;
+
+      margin-bottom: 14px;
+    }
+
+
+    .step p {
+      color: var(--muted);
+
+      font-size: 9px;
+
+      font-weight: 300;
+
+      line-height: 1.9;
+    }
+
+
+    /* =========================
+       POLICY DETAILS
+       ========================= */
+
+    .details {
+      padding: 110px 30px;
+
+      background: var(--ivory);
+    }
+
+
+    .details-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+    }
+
+
+    .detail-card {
+      padding: 50px 45px;
+
+      background: var(--warm-white);
+
+      border: 1px solid var(--line);
+    }
+
+
+    .detail-card h3 {
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 38px;
+
+      font-weight: 400;
+
+      margin-bottom: 18px;
+    }
+
+
+    .detail-card p {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 300;
+
+      line-height: 2;
+    }
+
+
+    .detail-card strong {
+      color: var(--emerald);
+
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       IMPORTANT NOTE
+       ========================= */
+
+    .important {
+      margin-top: 18px;
+
+      padding: 45px;
+
+      background: var(--emerald);
+
+      color: white;
+
+      border: 1px solid var(--emerald);
+    }
+
+
+    .important .eyebrow {
+      color: var(--soft-gold);
+    }
+
+
+    .important h3 {
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 40px;
+
+      font-weight: 400;
+
+      margin-bottom: 15px;
+    }
+
+
+    .important p {
+      max-width: 760px;
+
+      color: rgba(255,255,255,0.76);
+
+      font-size: 10px;
+
+      font-weight: 300;
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       RECEIVING ORDER
+       ========================= */
+
+    .receiving {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      min-height: 560px;
+    }
+
+
+    .receiving-image {
+      background:
+        linear-gradient(
+          rgba(6,31,27,0.08),
+          rgba(6,31,27,0.08)
+        ),
+        url("silver swan necklace.jpeg")
+        center / cover no-repeat;
+    }
+
+
+    .receiving-content {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 80px;
+
+      background: var(--deep-emerald);
+
+      color: white;
+    }
+
+
+    .receiving-inner {
+      max-width: 470px;
+    }
+
+
+    .receiving-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: clamp(45px, 5vw, 67px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+
+      margin-bottom: 28px;
+    }
+
+
+    .receiving-inner p {
+      color: rgba(255,255,255,0.75);
+
+      font-size: 11px;
+
+      font-weight: 300;
+
+      line-height: 2;
+
+      margin-bottom: 20px;
+    }
+
+
+    .receiving-inner strong {
+      color: var(--soft-gold);
+
+      font-weight: 500;
+    }
+
+
+    /* =========================
+       FAQ TEASER
+       ========================= */
+
+    .faq-teaser {
+      padding: 110px 25px;
+
+      text-align: center;
+
+      background: var(--warm-white);
+    }
+
+
+    .faq-teaser h2 {
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: clamp(44px, 5vw, 62px);
+
+      font-weight: 400;
+
+      line-height: 1;
+    }
+
+
+    .faq-teaser p {
+      max-width: 560px;
+
+      margin: 20px auto 30px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 300;
+
+      line-height: 1.9;
+    }
+
+
+    .button {
+      display: inline-block;
+
+      padding: 14px 30px;
+
+      border: 1px solid var(--emerald);
+
+      color: var(--emerald);
+
+      font-size: 8px;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+      transition: 0.3s ease;
+    }
+
+
+    .button:hover {
+      background: var(--emerald);
+
+      color: white;
+    }
+
+
+    /* =========================
+       MARQUEE
+       ========================= */
+
+    .marquee {
+      overflow: hidden;
+
+      background: var(--cream);
+
+      padding: 17px 0;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .marquee-track {
+      display: flex;
+
+      width: max-content;
+
+      animation: marquee 28s linear infinite;
+    }
+
+
+    .marquee-item {
+      color: var(--emerald);
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 22px;
+
+      white-space: nowrap;
+
+      padding: 0 30px;
+    }
+
+
+    .marquee-item span {
+      color: var(--gold);
+
+      margin-left: 30px;
+    }
+
+
+    @keyframes marquee {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      background: var(--deep-emerald);
+
+      color: white;
+
+      padding: 75px 30px 25px;
+    }
+
+
+    .footer-grid {
+      width: min(1150px, 100%);
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+
+      gap: 65px;
+    }
+
+
+    .footer-logo img {
+      width: 150px;
+
+      filter: brightness(0) invert(1);
+
+      opacity: 0.95;
+    }
+
+
+    .footer-about {
+      max-width: 310px;
+
+      color: rgba(255,255,255,0.62);
+
+      font-size: 9px;
+
+      line-height: 2;
+
+      margin-top: 18px;
+    }
+
+
+    .footer-column h4 {
+      color: var(--soft-gold);
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+
+    .footer-column li {
+      color: rgba(255,255,255,0.7);
+
+      font-size: 9px;
+
+      margin-bottom: 10px;
+
+      transition: color 0.25s ease;
+    }
+
+
+    .footer-column li:hover {
+      color: white;
+    }
+
+
+    .footer-bottom {
+      width: min(1150px, 100%);
+
+      margin: 60px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,0.12);
+
+      text-align: center;
+
+      color: rgba(255,255,255,0.4);
+
+      font-size: 7px;
+
+      letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 1100px) {
+
+      .nav {
+        width: calc(100% - 40px);
+      }
+
+      .brand {
+        width: 250px;
+      }
+
+      .brand img {
+        width: 245px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 850px) {
+
+      .announcement {
+        height: 28px;
+
+        font-size: 6px;
+
+        letter-spacing: 1.8px;
+      }
+
+
+      header {
+        height: 76px;
+      }
+
+
+      .nav {
+        width: calc(100% - 30px);
+
+        display: flex;
+
+        justify-content: space-between;
+      }
+
+
+      .brand {
+        width: 180px;
+
+        height: 70px;
+      }
+
+
+      .brand img {
+        width: 175px;
+
+        max-height: 58px;
+
+        transform: scale(1.1);
+      }
+
+
+      .nav-links {
+        display: none;
+      }
+
+
+      .nav-actions {
+        gap: 13px;
+      }
+
+
+      .nav-action {
+        font-size: 15px;
+      }
+
+
+      .menu-btn {
+        display: block;
+      }
+
+
+      .mobile-menu {
+        top: 104px;
+      }
+
+
+      .shipping-hero {
+        min-height: 600px;
+
+        background:
+          linear-gradient(
+            rgba(6,31,27,0.62),
+            rgba(6,31,27,0.78)
+          ),
+          url("white drop necklace set.jpeg")
+          center / cover no-repeat;
+      }
+
+
+      .hero-content {
+        width: calc(100% - 40px);
+
+        text-align: center;
+
+        padding: 60px 0;
+      }
+
+
+      .shipping-hero h1 {
+        font-size: 58px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+      }
+
+
+      .shipping-hero p {
+        margin-left: auto;
+
+        margin-right: auto;
+      }
+
+
+      .shipping-guide,
+      .details {
+        padding-left: 18px;
+
+        padding-right: 18px;
+      }
+
+
+      .section-title {
+        font-size: 43px;
+      }
+
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .detail-card {
+        padding: 42px 28px;
+      }
+
+
+      .important {
+        padding: 40px 28px;
+      }
+
+
+      .receiving {
+        grid-template-columns: 1fr;
+      }
+
+
+      .receiving-image {
+        min-height: 420px;
+      }
+
+
+      .receiving-content {
+        padding: 75px 28px;
+      }
+
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px;
+      }
+
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+    }
+
+
+    /* =========================
+       SMALL PHONES
+       ========================= */
+
+    @media (max-width: 480px) {
+
+      .brand {
+        width: 150px;
+
+        height: 66px;
+      }
+
+
+      .brand img {
+        width: 150px;
+
+        max-height: 52px;
+
+        transform: scale(1.06);
+      }
+
+
+      .nav-actions {
+        gap: 9px;
+      }
+
+
+      .nav-action {
+        font-size: 14px;
+      }
+
+
+      .shipping-hero {
+        min-height: 570px;
+      }
+
+
+      .shipping-hero h1 {
+        font-size: 49px;
+      }
+
+
+      .hero-kicker {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+      }
+
+
+      .shipping-hero p {
+        font-size: 10px;
+      }
+
+
+      .intro {
+        padding: 80px 20px;
+      }
+
+
+      .intro h2 {
+        font-size: 40px;
+      }
+
+
+      .step {
+        padding: 40px 24px;
+      }
+
+
+      .detail-card h3 {
+        font-size: 34px;
+      }
+
+
+      .receiving-image {
+        min-height: 390px;
+      }
+
+
+      .receiving-inner h2 {
+        font-size: 46px;
+      }
+
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       ANNOUNCEMENT
+       ========================= -->
+
+  <div class="announcement">
+    Anti-Tarnish · Water-Resistant · Everyday Luxury
+  </div>
+
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+
+  <header>
+
+    <nav class="nav">
+
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="WEBSITE LOGO.png"
+          alt="ALANKRA — Luxury in Every Detail"
+        >
+
+      </a>
+
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="shop.html">
+            Shop
+          </a>
+        </li>
+
+        <li>
+          <a href="collections.html">
+            Collections
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            Our Story
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#experience">
+            Experience
+          </a>
+        </li>
+
+      </ul>
+
+
+      <div class="nav-actions">
+
+
+        <button
+          class="nav-action"
+          onclick="window.location.href='shop.html'"
+          aria-label="Search">
+          ⌕
+        </button>
+
+
+        <button
+          class="nav-action"
+          onclick="window.location.href='shop.html'"
+          aria-label="Wishlist">
+          ♡
+        </button>
+
+
+        <button
+          class="nav-action"
+          onclick="window.location.href='shop.html'"
+          aria-label="Shopping bag">
+
+          ◇
+
+          <span
+            class="bag-count"
+            id="bagCount">
+            0
+          </span>
+
+        </button>
+
+
+        <button
+          class="menu-btn"
+          onclick="toggleMenu()"
+          aria-label="Open menu">
+          ☰
+        </button>
+
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       MOBILE MENU
+       ========================= -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="shop.html">
+      Shop
+    </a>
+
+    <a href="collections.html">
+      Collections
+    </a>
+
+    <a href="about.html">
+      Our Story
+    </a>
+
+    <a href="index.html#experience">
+      Experience
+    </a>
+
+    <a href="care.html">
+      Jewellery Care
+    </a>
+
+    <a href="shipping.html">
+      Shipping
+    </a>
+
+  </div>
+
+
+  <main>
+
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="shipping-hero">
+
+      <div class="hero-content">
+
+        <div class="hero-kicker">
+          ALANKRA Delivery
+        </div>
+
+        <h1>
+          From us,<br>
+          to you.
+        </h1>
+
+        <p>
+          Every ALANKRA order is prepared with care
+          and sent on its way to you. Here's everything
+          you need to know about processing, shipping
+          and receiving your jewellery.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+         ========================= -->
+
+    <section class="intro">
+
+      <span class="eyebrow">
+        Shipping & Delivery
+      </span>
+
+      <h2>
+        Your order,<br>
+        thoughtfully on its way.
+      </h2>
+
+      <p>
+        From the moment your order is placed to the
+        moment it reaches your door, we aim to make
+        your ALANKRA experience simple, clear and
+        carefully considered.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         SHIPPING JOURNEY
+         ========================= -->
+
+    <section class="shipping-guide">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            The Journey
+          </span>
+
+          <h2 class="section-title">
+            How Your Order Travels
+          </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+
+          <div class="step">
+
+            <div class="step-number">
+              01
+            </div>
+
+            <div class="step-icon">
+              ♡
+            </div>
+
+            <h3>
+              Order Placed
+            </h3>
+
+            <p>
+              Your order is received and carefully
+              reviewed so we can prepare the right
+              pieces for you.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              02
+            </div>
+
+            <div class="step-icon">
+              ✦
+            </div>
+
+            <h3>
+              Packed With Care
+            </h3>
+
+            <p>
+              Your jewellery is prepared and packed
+              securely before it leaves us.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              03
+            </div>
+
+            <div class="step-icon">
+              ◇
+            </div>
+
+            <h3>
+              On Its Way
+            </h3>
+
+            <p>
+              Once dispatched, your order begins its
+              journey to the delivery address provided
+              at checkout.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              04
+            </div>
+
+            <div class="step-icon">
+              ✧
+            </div>
+
+            <h3>
+              Delivered
+            </h3>
+
+            <p>
+              Your ALANKRA pieces arrive ready to
+              become part of your everyday moments.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DETAILS
+         ========================= -->
+
+    <section class="details">
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            Good To Know
+          </span>
+
+          <h2 class="section-title">
+            Shipping Details
+          </h2>
+
+        </div>
+
+
+        <div class="details-grid">
+
+
+          <div class="detail-card">
+
+            <h3>
+              Processing
+            </h3>
+
+            <p>
+              Orders are prepared for dispatch after
+              they are placed. The exact processing
+              timeline may vary depending on order
+              volume and product availability.
+            </p>
+
+            <p style="margin-top:18px;">
+              <strong>
+                Your dispatch confirmation will provide
+                the relevant shipment information.
+              </strong>
+            </p>
+
+          </div>
+
+
+          <div class="detail-card">
+
+            <h3>
+              Delivery
+            </h3>
+
+            <p>
+              Delivery timelines can vary depending
+              on the destination, courier network,
+              weekends, holidays and circumstances
+              outside our control.
+            </p>
+
+            <p style="margin-top:18px;">
+              <strong>
+                Please allow the expected delivery
+                window shown for your order.
+              </strong>
+            </p>
+
+          </div>
+
+
+          <div class="detail-card">
+
+            <h3>
+              Shipping Charges
+            </h3>
+
+            <p>
+              Applicable shipping charges, if any,
+              will be communicated clearly during
+              the ordering process before you complete
+              your purchase.
+            </p>
+
+            <p style="margin-top:18px;">
+              <strong>
+                No unexpected shipping charge should
+                appear after your order is confirmed.
+              </strong>
+            </p>
+
+          </div>
+
+
+          <div class="detail-card">
+
+            <h3>
+              Order Tracking
+            </h3>
+
+            <p>
+              Once your order has been dispatched,
+              tracking information may be provided
+              where available so you can follow its
+              journey.
+            </p>
+
+            <p style="margin-top:18px;">
+              <strong>
+                Please keep your tracking details handy
+                until your order has arrived safely.
+              </strong>
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="important">
+
+          <span class="eyebrow">
+            Please Note
+          </span>
+
+          <h3>
+            Delivery addresses matter.
+          </h3>
+
+          <p>
+            Please carefully check your name, phone number,
+            complete address, PIN code and other delivery
+            details before placing your order. Incorrect or
+            incomplete information may cause delivery
+            delays or failed delivery attempts.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RECEIVING ORDER
+         ========================= -->
+
+    <section class="receiving">
+
+      <div class="receiving-image">
+      </div>
+
+
+      <div class="receiving-content">
+
+        <div class="receiving-inner">
+
+          <span class="eyebrow">
+            When It Arrives
+          </span>
+
+          <h2>
+            A little care<br>
+            at your doorstep.
+          </h2>
+
+          <p>
+            When your package arrives, we recommend
+            checking the outer packaging before opening.
+            If anything appears damaged, keep the packaging
+            and contact us as soon as possible.
+          </p>
+
+          <p>
+            <strong>
+              Your order should reach you safely,
+              beautifully packed and ready to wear.
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ CTA
+         ========================= -->
+
+    <section class="faq-teaser">
+
+      <span class="eyebrow">
+        Still Have Questions?
+      </span>
+
+      <h2>
+        We're here to help.
+      </h2>
+
+      <p>
+        For questions about your order, delivery,
+        returns or anything else, please reach out
+        to ALANKRA.
+      </p>
+
+      <a
+        href="#"
+        class="button"
+        onclick="contactMessage(event)">
+        Contact ALANKRA
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         MARQUEE
+         ========================= -->
+
+    <div class="marquee">
+
+      <div class="marquee-track">
+
+        <div class="marquee-item">
+          LUXURY IN EVERY DETAIL
+          <span>✦</span>
+        </div>
+
+        <div class="marquee-item">
+          MADE FOR YOUR EVERYDAY
+          <span>✦</span>
+        </div>
+
+        <div class="marquee-item">
+          PACKED WITH CARE
+          <span>✦</span>
+        </div>
+
+        <div class="marquee-item">
+          LUXURY IN EVERY DETAIL
+          <span>✦</span>
+        </div>
+
+        <div class="marquee-item">
+          MADE FOR YOUR EVERYDAY
+          <span>✦</span>
+        </div>
+
+        <div class="marquee-item">
+          PACKED WITH CARE
+          <span>✦</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <img
+            src="LOGO.png"
+            alt="ALANKRA"
+          >
+
+        </div>
+
+        <p class="footer-about">
+          Luxury in Every Detail.<br>
+          Discover anti-tarnish, water-resistant
+          jewellery designed for your everyday moments.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="shop.html">
+              All Jewellery
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=necklaces">
+              Necklaces
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=earrings">
+              Earrings
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=bracelets">
+              Bracelets
+            </a>
+          </li>
+
+          <li>
+            <a href="shop.html?category=rings">
+              Rings
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          About
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="about.html">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#why-alankra">
+              Why ALANKRA
+            </a>
+          </li>
+
+          <li>
+            <a href="care.html">
+              Jewellery Care
+            </a>
+          </li>
+
+          <li>
+            <a href="collections.html">
+              Collections
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <ul>
+
+          <li>
+            <a href="shipping.html">
+              Shipping
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Returns
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+               onclick="contactMessage(event)">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 ALANKRA · LUXURY IN EVERY DETAIL
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+
+    /* =========================
+       MOBILE MENU
+       ========================= */
+
+    function toggleMenu() {
+
+      const menu =
+        document.getElementById("mobileMenu");
+
+      menu.classList.toggle("open");
+
+    }
+
+
+    /* =========================
+       BAG COUNT
+       ========================= */
+
+    function updateBagCount() {
+
+      const bagCount =
+        document.getElementById("bagCount");
+
+      try {
+
+        const cart =
+          JSON.parse(
+            localStorage.getItem("alankraCart")
+          ) || [];
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+          total += Number(
+            item.quantity || 1
+          );
+
+        });
+
+        bagCount.textContent = total;
+
+      } catch {
+
+        bagCount.textContent = "0";
+
+      }
+
+    }
+
+
+    updateBagCount();
+
+
+    /* =========================
+       CLOSE MOBILE MENU
+       ========================= */
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.remove("open");
+
+        });
+
+      });
+
+
+    /* =========================
+       CONTACT PLACEHOLDER
+       ========================= */
+
+    function contactMessage(event) {
+
+      event.preventDefault();
+
+      alert(
+        "ALANKRA contact details will be added here soon. ♡"
+      );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
