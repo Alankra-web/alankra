@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>ALANKRA | Luxury in Every Detail</title>
+
   <meta name="description" content="Discover ALANKRA — elegant everyday jewellery designed to make every detail feel luxurious. Explore necklaces, earrings, bracelets and rings.">
-  <meta name="keywords" content="ALANKRA jewellery, anti tarnish jewellery, everyday jewellery, waterproof jewellery, jewellery India, luxury jewellery, necklaces, earrings, bracelets, rings">
+
+  <meta name="keywords" content="ALANKRA jewellery, anti tarnish jewellery, everyday jewellery, water resistant jewellery, jewellery India, luxury jewellery, necklaces, earrings, bracelets, rings">
 
   <meta property="og:title" content="ALANKRA | Luxury in Every Detail">
   <meta property="og:description" content="Everyday jewellery, elevated. Discover ALANKRA.">
@@ -15,7 +17,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
@@ -57,9 +62,14 @@
       text-decoration: none;
     }
 
-    button {
+    button,
+    input {
       font: inherit;
     }
+
+    /* =========================
+       ANNOUNCEMENT
+    ========================= */
 
     .announcement {
       background: var(--emerald);
@@ -71,7 +81,9 @@
       text-transform: uppercase;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
@@ -85,7 +97,7 @@
     .nav {
       max-width: 1250px;
       margin: auto;
-      height: 78px;
+      min-height: 78px;
       padding: 0 30px;
       display: flex;
       align-items: center;
@@ -100,6 +112,7 @@
       letter-spacing: 6px;
       color: var(--emerald);
       white-space: nowrap;
+      line-height: 1;
     }
 
     .tagline-mini {
@@ -108,7 +121,7 @@
       font-size: 7px;
       letter-spacing: 3px;
       text-align: center;
-      margin-top: -5px;
+      margin-top: 5px;
       color: var(--gold);
       text-transform: uppercase;
     }
@@ -152,15 +165,18 @@
       border: 0;
       background: transparent;
       cursor: pointer;
-      font-size: 17px;
+      font-size: 19px;
       color: var(--emerald);
       position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .count {
       position: absolute;
-      top: -7px;
-      right: -8px;
+      top: -8px;
+      right: -9px;
       width: 16px;
       height: 16px;
       background: var(--emerald);
@@ -176,12 +192,14 @@
       display: none;
       border: 0;
       background: transparent;
-      font-size: 24px;
+      font-size: 25px;
       color: var(--emerald);
       cursor: pointer;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 680px;
@@ -270,7 +288,9 @@
       object-fit: cover;
     }
 
-    /* INTRO */
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro {
       text-align: center;
@@ -301,7 +321,9 @@
       margin: 28px auto;
     }
 
-    /* FEATURED */
+    /* =========================
+       FEATURED
+    ========================= */
 
     .section {
       padding: 85px 30px;
@@ -348,7 +370,6 @@
       height: 320px;
       background: #f1ede5;
       overflow: hidden;
-      position: relative;
     }
 
     .product-image img {
@@ -379,7 +400,9 @@
       margin-top: 9px !important;
     }
 
-    /* WHY */
+    /* =========================
+       WHY ALANKRA
+    ========================= */
 
     .why {
       background: var(--emerald);
@@ -432,7 +455,9 @@
       line-height: 1.9;
     }
 
-    /* COLLECTIONS */
+    /* =========================
+       COLLECTIONS
+    ========================= */
 
     .collections {
       padding: 100px 30px;
@@ -457,7 +482,11 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.6), transparent 55%);
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.6),
+        transparent 55%
+      );
       z-index: 1;
     }
 
@@ -494,7 +523,9 @@
       padding-bottom: 4px;
     }
 
-    /* STORY */
+    /* =========================
+       STORY
+    ========================= */
 
     .story {
       background: var(--white);
@@ -532,7 +563,9 @@
       margin-bottom: 20px;
     }
 
-    /* EXPERIENCE */
+    /* =========================
+       EXPERIENCE
+    ========================= */
 
     .experience {
       padding: 105px 30px;
@@ -584,7 +617,9 @@
       line-height: 1.8;
     }
 
-    /* NEWSLETTER */
+    /* =========================
+       NEWSLETTER
+    ========================= */
 
     .newsletter {
       background: var(--cream);
@@ -630,7 +665,9 @@
       cursor: pointer;
     }
 
-    /* MARQUEE */
+    /* =========================
+       MARQUEE
+    ========================= */
 
     .marquee {
       background: var(--emerald-dark);
@@ -642,7 +679,9 @@
       text-transform: uppercase;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #102f29;
@@ -674,7 +713,7 @@
       font-size: 8px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      margin-top: -3px;
+      margin-top: 4px;
     }
 
     .footer-brand p {
@@ -723,9 +762,12 @@
     .legal-links {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
-    /* MOBILE MENU */
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
     .mobile-menu {
       position: fixed;
@@ -735,6 +777,7 @@
       transform: translateX(100%);
       transition: .35s;
       padding: 25px;
+      overflow-y: auto;
     }
 
     .mobile-menu.open {
@@ -745,13 +788,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 55px;
+      margin-bottom: 45px;
     }
 
     .mobile-close {
       border: 0;
       background: transparent;
-      font-size: 28px;
+      font-size: 30px;
       cursor: pointer;
       color: var(--emerald);
     }
@@ -765,9 +808,12 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* RESPONSIVE */
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
     @media (max-width: 1000px) {
+
       .nav-links {
         gap: 18px;
       }
@@ -790,7 +836,7 @@
       }
 
       .nav {
-        height: 68px;
+        min-height: 68px;
         padding: 0 18px;
       }
 
@@ -941,12 +987,12 @@
       }
 
       .legal-links {
-        flex-wrap: wrap;
         gap: 10px 18px;
       }
     }
 
     @media (max-width: 430px) {
+
       .product-grid,
       .collection-grid {
         grid-template-columns: 1fr 1fr;
@@ -969,73 +1015,173 @@
 
 <body>
 
+  <!-- =========================
+       ANNOUNCEMENT
+  ========================= -->
+
   <div class="announcement">
     Everyday luxury, thoughtfully designed · ALANKRA
   </div>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
     <nav class="nav">
 
-      <button class="menu-btn" onclick="openMenu()" aria-label="Open menu">
+      <button
+        class="menu-btn"
+        type="button"
+        onclick="openMenu()"
+        aria-label="Open menu"
+      >
         ☰
       </button>
 
-      <a href="index.html">
+      <a href="./index.html" aria-label="ALANKRA Home">
         <div class="logo">
           ALANKRA
-          <span class="tagline-mini">Luxury in Every Detail</span>
+          <span class="tagline-mini">
+            Luxury in Every Detail
+          </span>
         </div>
       </a>
 
       <div class="nav-links">
-        <a href="shop.html">Shop</a>
-        <a href="collections.html">Collections</a>
-        <a href="about.html">Our Story</a>
-        <a href="#experience">Experience</a>
+
+        <a href="./shop.html">
+          Shop
+        </a>
+
+        <a href="./collections.html">
+          Collections
+        </a>
+
+        <a href="./about.html">
+          Our Story
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
       </div>
 
       <div class="nav-icons">
-        <a class="icon-btn" href="shop.html" aria-label="Search">⌕</a>
-        <a class="icon-btn" href="shop.html" aria-label="Wishlist">♡</a>
-        <a class="icon-btn" href="shop.html" aria-label="Shopping bag">
+
+        <a
+          class="icon-btn"
+          href="./shop.html"
+          aria-label="Search"
+        >
+          ⌕
+        </a>
+
+        <a
+          class="icon-btn"
+          href="./shop.html"
+          aria-label="Wishlist"
+        >
           ♡
+        </a>
+
+        <a
+          class="icon-btn"
+          href="./shop.html"
+          aria-label="Shopping bag"
+        >
+          🛍
           <span class="count" id="bagCount">0</span>
         </a>
+
       </div>
 
     </nav>
   </header>
 
-  <!-- MOBILE MENU -->
 
-  <div class="mobile-menu" id="mobileMenu">
+  <!-- =========================
+       MOBILE MENU
+  ========================= -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+  >
 
     <div class="mobile-menu-header">
+
       <div class="logo">
         ALANKRA
-        <span class="tagline-mini">Luxury in Every Detail</span>
+        <span class="tagline-mini">
+          Luxury in Every Detail
+        </span>
       </div>
 
-      <button class="mobile-close" onclick="closeMenu()">×</button>
+      <button
+        class="mobile-close"
+        type="button"
+        onclick="closeMenu()"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+
     </div>
 
     <div class="mobile-links">
-      <a href="shop.html">Shop</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">Our Story</a>
-      <a href="#experience" onclick="closeMenu()">Experience</a>
-      <a href="care.html">Jewellery Care</a>
-      <a href="shipping.html">Shipping & Delivery</a>
-      <a href="returns.html">Returns & Exchange</a>
-      <a href="faq.html">FAQs</a>
-      <a href="contact.html">Contact Us</a>
+
+      <a href="./index.html" onclick="closeMenu()">
+        Home
+      </a>
+
+      <a href="./shop.html" onclick="closeMenu()">
+        Shop
+      </a>
+
+      <a href="./collections.html" onclick="closeMenu()">
+        Collections
+      </a>
+
+      <a href="./about.html" onclick="closeMenu()">
+        Our Story
+      </a>
+
+      <a href="#experience" onclick="closeMenu()">
+        Experience
+      </a>
+
+      <a href="./care.html" onclick="closeMenu()">
+        Jewellery Care
+      </a>
+
+      <a href="./shipping.html" onclick="closeMenu()">
+        Shipping & Delivery
+      </a>
+
+      <a href="./returns.html" onclick="closeMenu()">
+        Returns & Exchange
+      </a>
+
+      <a href="./faq.html" onclick="closeMenu()">
+        FAQs
+      </a>
+
+      <a href="./contact.html" onclick="closeMenu()">
+        Contact Us
+      </a>
+
     </div>
 
   </div>
 
-  <!-- HERO -->
+
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero">
 
@@ -1043,7 +1189,9 @@
 
       <div>
 
-        <div class="eyebrow">Everyday luxury</div>
+        <div class="eyebrow">
+          Everyday luxury
+        </div>
 
         <h1>
           Luxury<br>
@@ -1056,24 +1204,45 @@
           delicate, elegant and made to become part of your everyday.
         </p>
 
-        <a href="shop.html" class="btn">Shop Jewellery</a>
-        <a href="collections.html" class="btn btn-outline">Explore</a>
+        <a
+          href="./shop.html"
+          class="btn"
+        >
+          Shop Jewellery
+        </a>
+
+        <a
+          href="./collections.html"
+          class="btn btn-outline"
+        >
+          Explore
+        </a>
 
       </div>
 
     </div>
 
     <div class="hero-image">
-      <img src="golden rose necklace.png" alt="ALANKRA Golden Rose Necklace">
+
+      <img
+        src="golden rose necklace.png"
+        alt="ALANKRA Golden Rose Necklace"
+      >
+
     </div>
 
   </section>
 
-  <!-- INTRO -->
+
+  <!-- =========================
+       INTRO
+  ========================= -->
 
   <section class="intro">
 
-    <div class="eyebrow">Welcome to ALANKRA</div>
+    <div class="eyebrow">
+      Welcome to ALANKRA
+    </div>
 
     <h2>
       Jewellery that feels<br>
@@ -1092,111 +1261,267 @@
 
   </section>
 
-  <!-- FEATURED -->
+
+  <!-- =========================
+       FEATURED PRODUCTS
+  ========================= -->
 
   <section class="section">
 
     <div class="section-heading">
-      <div class="eyebrow">A few favourites</div>
-      <h2>Discover ALANKRA</h2>
-      <p>Pieces designed to be worn, loved and reached for again.</p>
+
+      <div class="eyebrow">
+        A few favourites
+      </div>
+
+      <h2>
+        Discover ALANKRA
+      </h2>
+
+      <p>
+        Pieces designed to be worn, loved and reached for again.
+      </p>
+
     </div>
+
 
     <div class="product-grid">
 
-      <a href="shop.html" class="product-card">
+
+      <!-- PRODUCT 1 -->
+
+      <a
+        href="./shop.html"
+        class="product-card"
+      >
+
         <div class="product-image">
-          <img src="golden rose necklace.png" alt="Golden Rose Necklace">
+
+          <img
+            src="golden rose necklace.png"
+            alt="Golden Rose Necklace"
+          >
+
         </div>
+
         <div class="product-info">
-          <h3>Golden Rose Necklace</h3>
-          <p>Elegant everyday detail</p>
-          <p class="product-price">₹499</p>
+
+          <h3>
+            Golden Rose Necklace
+          </h3>
+
+          <p>
+            Elegant everyday detail
+          </p>
+
+          <p class="product-price">
+            ₹499
+          </p>
+
         </div>
+
       </a>
 
-      <a href="shop.html" class="product-card">
+
+      <!-- PRODUCT 2 -->
+
+      <a
+        href="./shop.html"
+        class="product-card"
+      >
+
         <div class="product-image">
-          <img src="lucky clover necklace.jpeg" alt="Lucky Clover Necklace">
+
+          <img
+            src="lucky clover necklace.jpeg"
+            alt="Lucky Clover Necklace"
+          >
+
         </div>
+
         <div class="product-info">
-          <h3>Lucky Clover Necklace</h3>
-          <p>Delicate everyday elegance</p>
-          <p class="product-price">₹499</p>
+
+          <h3>
+            Lucky Clover Necklace
+          </h3>
+
+          <p>
+            Delicate everyday elegance
+          </p>
+
+          <p class="product-price">
+            ₹499
+          </p>
+
         </div>
+
       </a>
 
-      <a href="shop.html" class="product-card">
+
+      <!-- PRODUCT 3 -->
+
+      <a
+        href="./shop.html"
+        class="product-card"
+      >
+
         <div class="product-image">
-          <img src="silver swan necklace.jpeg" alt="Silver Swan Necklace">
+
+          <img
+            src="silver swan necklace.jpeg"
+            alt="Silver Swan Necklace"
+          >
+
         </div>
+
         <div class="product-info">
-          <h3>Silver Swan Necklace</h3>
-          <p>Graceful minimalism</p>
-          <p class="product-price">₹499</p>
+
+          <h3>
+            Silver Swan Necklace
+          </h3>
+
+          <p>
+            Graceful minimalism
+          </p>
+
+          <p class="product-price">
+            ₹499
+          </p>
+
         </div>
+
       </a>
 
-      <a href="shop.html" class="product-card">
+
+      <!-- PRODUCT 4 -->
+
+      <a
+        href="./shop.html"
+        class="product-card"
+      >
+
         <div class="product-image">
-          <img src="golden knot bracelet.png" alt="Golden Knot Bracelet">
+
+          <img
+            src="golden knot bracelet.png"
+            alt="Golden Knot Bracelet"
+          >
+
         </div>
+
         <div class="product-info">
-          <h3>Golden Knot Bracelet</h3>
-          <p>Effortless everyday luxury</p>
-          <p class="product-price">₹499</p>
+
+          <h3>
+            Golden Knot Bracelet
+          </h3>
+
+          <p>
+            Effortless everyday luxury
+          </p>
+
+          <p class="product-price">
+            ₹499
+          </p>
+
         </div>
+
       </a>
 
     </div>
 
+
     <div style="text-align:center;margin-top:40px;">
-      <a href="shop.html" class="btn btn-outline">View All Jewellery</a>
+
+      <a
+        href="./shop.html"
+        class="btn btn-outline"
+      >
+        View All Jewellery
+      </a>
+
     </div>
 
   </section>
 
-  <!-- WHY ALANKRA -->
+
+  <!-- =========================
+       WHY ALANKRA
+  ========================= -->
 
   <section class="why">
 
     <div class="why-inner">
 
       <div class="why-heading">
-        <div class="eyebrow">The ALANKRA promise</div>
-        <h2>Made for everyday moments.</h2>
+
+        <div class="eyebrow">
+          The ALANKRA promise
+        </div>
+
+        <h2>
+          Made for everyday moments.
+        </h2>
+
       </div>
+
 
       <div class="why-grid">
 
+
         <div class="why-item">
-          <div class="why-icon">✦</div>
-          <h3>Anti-Tarnish</h3>
+
+          <div class="why-icon">
+            ✦
+          </div>
+
+          <h3>
+            Anti-Tarnish
+          </h3>
+
           <p>
             Thoughtfully selected pieces designed
             to help retain their beautiful finish
             with the right care.
           </p>
+
         </div>
 
+
         <div class="why-item">
-          <div class="why-icon">◌</div>
-          <h3>Water-Resistant</h3>
+
+          <div class="why-icon">
+            ◌
+          </div>
+
+          <h3>
+            Water-Resistant
+          </h3>
+
           <p>
             Designed with everyday life in mind.
             Water-resistant does not mean waterproof,
             so a little care still goes a long way.
           </p>
+
         </div>
 
+
         <div class="why-item">
-          <div class="why-icon">♡</div>
-          <h3>Everyday Wear</h3>
+
+          <div class="why-icon">
+            ♡
+          </div>
+
+          <h3>
+            Everyday Wear
+          </h3>
+
           <p>
             Feminine details and versatile silhouettes
             created to move effortlessly from one
             moment to the next.
           </p>
+
         </div>
 
       </div>
@@ -1205,78 +1530,166 @@
 
   </section>
 
-  <!-- COLLECTIONS -->
+
+  <!-- =========================
+       COLLECTIONS
+  ========================= -->
 
   <section class="collections">
 
     <div class="section-heading">
-      <div class="eyebrow">Explore the collection</div>
-      <h2>Find your detail.</h2>
-      <p>Something for every mood, moment and outfit.</p>
+
+      <div class="eyebrow">
+        Explore the collection
+      </div>
+
+      <h2>
+        Find your detail.
+      </h2>
+
+      <p>
+        Something for every mood, moment and outfit.
+      </p>
+
     </div>
+
 
     <div class="collection-grid">
 
+
+      <!-- NECKLACES -->
+
       <div class="collection-card">
-        <img src="white drop necklace set.jpeg" alt="ALANKRA Necklaces">
+
+        <img
+          src="white drop necklace set.jpeg"
+          alt="ALANKRA Necklaces"
+        >
 
         <div class="collection-content">
-          <h3>Necklaces</h3>
-          <a href="shop.html?category=necklaces">Explore</a>
+
+          <h3>
+            Necklaces
+          </h3>
+
+          <a href="./shop.html?category=necklaces">
+            Explore
+          </a>
+
         </div>
+
       </div>
 
+
+      <!-- EARRINGS -->
+
       <div class="collection-card">
-        <img src="golden petal earring.jpeg" alt="ALANKRA Earrings">
+
+        <img
+          src="golden petal earring.jpeg"
+          alt="ALANKRA Earrings"
+        >
 
         <div class="collection-content">
-          <h3>Earrings</h3>
-          <a href="shop.html?category=earrings">Explore</a>
+
+          <h3>
+            Earrings
+          </h3>
+
+          <a href="./shop.html?category=earrings">
+            Explore
+          </a>
+
         </div>
+
       </div>
 
+
+      <!-- BRACELETS -->
+
       <div class="collection-card">
-        <img src="green stone bracelet.png" alt="ALANKRA Bracelets">
+
+        <img
+          src="green stone bracelet.png"
+          alt="ALANKRA Bracelets"
+        >
 
         <div class="collection-content">
-          <h3>Bracelets</h3>
-          <a href="shop.html?category=bracelets">Explore</a>
+
+          <h3>
+            Bracelets
+          </h3>
+
+          <a href="./shop.html?category=bracelets">
+            Explore
+          </a>
+
         </div>
+
       </div>
 
+
+      <!-- RINGS -->
+
       <div class="collection-card">
-        <img src="crystal cross ring.png" alt="ALANKRA Rings">
+
+        <img
+          src="crystal cross ring.png"
+          alt="ALANKRA Rings"
+        >
 
         <div class="collection-content">
-          <h3>Rings</h3>
-          <a href="shop.html?category=rings">Explore</a>
+
+          <h3>
+            Rings
+          </h3>
+
+          <a href="./shop.html?category=rings">
+            Explore
+          </a>
+
         </div>
+
       </div>
 
     </div>
 
   </section>
 
-  <!-- STORY -->
+
+  <!-- =========================
+       OUR STORY
+  ========================= -->
 
   <section class="story">
 
     <div class="story-image">
-      <img src="pearl bloom necklace.jpeg" alt="ALANKRA Pearl Bloom Necklace">
+
+      <img
+        src="pearl bloom necklace.jpeg"
+        alt="ALANKRA Pearl Bloom Necklace"
+      >
+
     </div>
+
 
     <div class="story-content">
 
       <div>
 
-        <div class="eyebrow">Our story</div>
+        <div class="eyebrow">
+          Our story
+        </div>
 
         <h2>
           Adorn<br>
           your everyday.
         </h2>
 
-        <div class="gold-line" style="margin-left:0;"></div>
+        <div
+          class="gold-line"
+          style="margin-left:0;"
+        ></div>
 
         <p>
           ALANKRA reflects the timeless idea of adornment —
@@ -1289,7 +1702,12 @@
           should never have to wait for a special occasion.
         </p>
 
-        <a href="about.html" class="btn">Discover Our Story</a>
+        <a
+          href="./about.html"
+          class="btn"
+        >
+          Discover Our Story
+        </a>
 
       </div>
 
@@ -1297,13 +1715,23 @@
 
   </section>
 
-  <!-- EXPERIENCE -->
 
-  <section class="experience" id="experience">
+  <!-- =========================
+       EXPERIENCE
+  ========================= -->
 
-    <div class="eyebrow">The ALANKRA experience</div>
+  <section
+    class="experience"
+    id="experience"
+  >
 
-    <h2>Luxury should feel effortless.</h2>
+    <div class="eyebrow">
+      The ALANKRA experience
+    </div>
+
+    <h2>
+      Luxury should feel effortless.
+    </h2>
 
     <p>
       From choosing your piece to caring for it afterwards,
@@ -1311,71 +1739,121 @@
       to feel considered and simple.
     </p>
 
+
     <div class="experience-grid">
 
+
       <div class="experience-card">
-        <span>01</span>
-        <h3>Choose</h3>
+
+        <span>
+          01
+        </span>
+
+        <h3>
+          Choose
+        </h3>
+
         <p>
           Discover jewellery designed to complement
           your everyday style.
         </p>
+
       </div>
 
+
       <div class="experience-card">
-        <span>02</span>
-        <h3>Unbox</h3>
+
+        <span>
+          02
+        </span>
+
+        <h3>
+          Unbox
+        </h3>
+
         <p>
           A thoughtfully presented order designed
           to make opening your ALANKRA piece feel special.
         </p>
+
       </div>
 
+
       <div class="experience-card">
-        <span>03</span>
-        <h3>Wear</h3>
+
+        <span>
+          03
+        </span>
+
+        <h3>
+          Wear
+        </h3>
+
         <p>
           Style it, layer it and make it part
           of your own everyday story.
         </p>
+
       </div>
 
     </div>
 
   </section>
 
-  <!-- NEWSLETTER -->
+
+  <!-- =========================
+       NEWSLETTER
+  ========================= -->
 
   <section class="newsletter">
 
-    <div class="eyebrow">Stay close to ALANKRA</div>
+    <div class="eyebrow">
+      Stay close to ALANKRA
+    </div>
 
-    <h2>Something beautiful is coming.</h2>
+    <h2>
+      Something beautiful is coming.
+    </h2>
 
     <p>
       Join our list for new arrivals, special edits and
       little moments from ALANKRA.
     </p>
 
-    <form class="newsletter-form" onsubmit="subscribe(event)">
+
+    <form
+      class="newsletter-form"
+      onsubmit="subscribe(event)"
+    >
+
       <input
         type="email"
         placeholder="Your email address"
         required
         aria-label="Email address"
       >
-      <button type="submit">Join Us</button>
+
+      <button type="submit">
+        Join Us
+      </button>
+
     </form>
 
   </section>
 
-  <!-- MARQUEE -->
+
+  <!-- =========================
+       MARQUEE
+  ========================= -->
 
   <div class="marquee">
     ALANKRA · LUXURY IN EVERY DETAIL · EVERYDAY JEWELLERY · ALANKRA
   </div>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -1383,11 +1861,14 @@
 
       <div class="footer-top">
 
+
         <!-- BRAND -->
 
         <div class="footer-brand">
 
-          <div class="footer-logo">ALANKRA</div>
+          <div class="footer-logo">
+            ALANKRA
+          </div>
 
           <div class="footer-tagline">
             Luxury in Every Detail
@@ -1401,50 +1882,95 @@
 
         </div>
 
+
         <!-- SHOP -->
 
         <div class="footer-col">
 
-          <h4>Shop</h4>
+          <h4>
+            Shop
+          </h4>
 
-          <a href="shop.html">Shop All</a>
-          <a href="shop.html?category=necklaces">Necklaces</a>
-          <a href="shop.html?category=earrings">Earrings</a>
-          <a href="shop.html?category=bracelets">Bracelets</a>
-          <a href="shop.html?category=rings">Rings</a>
+          <a href="./shop.html">
+            Shop All
+          </a>
+
+          <a href="./shop.html?category=necklaces">
+            Necklaces
+          </a>
+
+          <a href="./shop.html?category=earrings">
+            Earrings
+          </a>
+
+          <a href="./shop.html?category=bracelets">
+            Bracelets
+          </a>
+
+          <a href="./shop.html?category=rings">
+            Rings
+          </a>
 
         </div>
+
 
         <!-- ABOUT -->
 
         <div class="footer-col">
 
-          <h4>About ALANKRA</h4>
+          <h4>
+            About ALANKRA
+          </h4>
 
-          <a href="about.html">Our Story</a>
-          <a href="care.html">Jewellery Care</a>
-          <a href="collections.html">Collections</a>
+          <a href="./about.html">
+            Our Story
+          </a>
+
+          <a href="./care.html">
+            Jewellery Care
+          </a>
+
+          <a href="./collections.html">
+            Collections
+          </a>
 
         </div>
+
 
         <!-- CUSTOMER CARE -->
 
         <div class="footer-col">
 
-          <h4>Customer Care</h4>
+          <h4>
+            Customer Care
+          </h4>
 
-          <a href="shipping.html">Shipping & Delivery</a>
+          <a href="./shipping.html">
+            Shipping & Delivery
+          </a>
 
-          <!-- RETURNS LINK FIXED -->
-          <a href="returns.html">Returns & Exchange</a>
+          <a href="./returns.html">
+            Returns & Exchange
+          </a>
 
-          <a href="faq.html">FAQs</a>
+          <a href="./faq.html">
+            FAQs
+          </a>
 
-          <a href="contact.html">Contact Us</a>
+          <a href="./contact.html">
+            Contact Us
+          </a>
+
+          <a href="mailto:alankra.jewels@gmail.com">
+            Email Us
+          </a>
 
         </div>
 
       </div>
+
+
+      <!-- FOOTER BOTTOM -->
 
       <div class="footer-bottom">
 
@@ -1453,11 +1979,23 @@
         </p>
 
         <div class="legal-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms & Conditions</a>
-          <a href="https://www.instagram.com/alankra.jewels/" target="_blank" rel="noopener">
+
+          <a href="./privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="./terms.html">
+            Terms & Conditions
+          </a>
+
+          <a
+            href="https://www.instagram.com/alankra.jewels/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Instagram
           </a>
+
         </div>
 
       </div>
@@ -1466,50 +2004,96 @@
 
   </footer>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
   <script>
 
-    /* MOBILE MENU */
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
     function openMenu() {
-      document.getElementById("mobileMenu").classList.add("open");
-      document.body.style.overflow = "hidden";
+
+      const menu = document.getElementById("mobileMenu");
+
+      if (menu) {
+        menu.classList.add("open");
+        menu.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
     }
+
 
     function closeMenu() {
-      document.getElementById("mobileMenu").classList.remove("open");
-      document.body.style.overflow = "";
+
+      const menu = document.getElementById("mobileMenu");
+
+      if (menu) {
+        menu.classList.remove("open");
+        menu.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
     }
 
-    /* BAG COUNT */
+
+    /* =========================
+       BAG COUNT
+    ========================= */
 
     function updateBagCount() {
 
       let bag = [];
 
       try {
-        bag = JSON.parse(localStorage.getItem("alankraCart")) || [];
-      } catch(e) {
+
+        bag = JSON.parse(
+          localStorage.getItem("alankraCart")
+        ) || [];
+
+      } catch (error) {
+
         bag = [];
+
       }
+
 
       let count = 0;
 
+
       if (Array.isArray(bag)) {
-        bag.forEach(item => {
-          count += Number(item.quantity || 1);
+
+        bag.forEach(function(item) {
+
+          count += Number(
+            item.quantity || 1
+          );
+
         });
+
       }
 
-      const el = document.getElementById("bagCount");
 
-      if (el) {
-        el.textContent = count;
+      const bagCount =
+        document.getElementById("bagCount");
+
+
+      if (bagCount) {
+
+        bagCount.textContent = count;
+
       }
+
     }
 
-    updateBagCount();
 
-    /* NEWSLETTER */
+    /* =========================
+       NEWSLETTER
+    ========================= */
 
     function subscribe(event) {
 
@@ -1521,7 +2105,26 @@
       );
 
       event.target.reset();
+
     }
+
+
+    /* =========================
+       INITIALIZE
+    ========================= */
+
+    updateBagCount();
+
+
+    /* =========================
+       UPDATE BAG COUNT IF
+       USER RETURNS TO PAGE
+    ========================= */
+
+    window.addEventListener(
+      "storage",
+      updateBagCount
+    );
 
   </script>
 
