@@ -5,7 +5,10 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <meta
   name="description"
@@ -15,7 +18,11 @@
 <title>Shop | ALANKRA — Luxury in Every Detail</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
 
 <link
   href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
@@ -25,7 +32,7 @@
 <style>
 
 /* =========================================================
-   ALANKRA — SHOP
+   ALANKRA SHOP
    ========================================================= */
 
 :root{
@@ -38,7 +45,6 @@
   --muted:#777;
   --border:#e5dfd2;
   --soft:#f5f1e9;
-  --shadow:0 14px 35px rgba(35,55,45,.08);
 }
 
 *{
@@ -64,13 +70,14 @@ body.no-scroll{
 }
 
 a{
-  text-decoration:none;
   color:inherit;
+  text-decoration:none;
 }
 
 button,
 input,
-select{
+select,
+textarea{
   font:inherit;
 }
 
@@ -79,8 +86,8 @@ button{
 }
 
 img{
-  max-width:100%;
   display:block;
+  max-width:100%;
 }
 
 
@@ -90,7 +97,7 @@ img{
 
 .announcement{
   background:var(--green);
-  color:#fff;
+  color:white;
   text-align:center;
   padding:9px 15px;
   font-size:10px;
@@ -107,15 +114,15 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,253,248,.96);
+  background:rgba(255,253,248,.97);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
 }
 
 .nav{
-  max-width:1250px;
-  margin:auto;
+  width:min(1250px,100%);
   min-height:82px;
+  margin:auto;
   padding:0 28px;
   display:flex;
   align-items:center;
@@ -165,13 +172,13 @@ header{
 }
 
 .icon-btn{
-  background:none;
-  border:0;
-  color:var(--green);
-  font-size:20px;
   position:relative;
   width:28px;
   height:32px;
+  border:0;
+  background:none;
+  color:var(--green);
+  font-size:20px;
 }
 
 .count{
@@ -182,7 +189,7 @@ header{
   height:15px;
   border-radius:50%;
   background:var(--green);
-  color:#fff;
+  color:white;
   font-size:8px;
   display:flex;
   align-items:center;
@@ -275,20 +282,20 @@ header{
    ========================================================= */
 
 .shop-wrap{
-  max-width:1250px;
+  width:min(1250px,100%);
   margin:auto;
   padding:70px 28px 100px;
 }
 
 .shop-head{
-  text-align:center;
   max-width:700px;
   margin:0 auto 45px;
+  text-align:center;
 }
 
 .shop-head h2{
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:52px;
   font-weight:500;
   line-height:1;
@@ -318,8 +325,8 @@ header{
 .filter{
   border:1px solid var(--border);
   background:transparent;
-  padding:9px 17px;
   color:var(--green);
+  padding:9px 17px;
   font-size:10px;
   text-transform:uppercase;
   letter-spacing:1px;
@@ -336,8 +343,8 @@ header{
 .sort{
   border:1px solid var(--border);
   background:white;
-  padding:9px 12px;
   color:var(--green);
+  padding:9px 12px;
   font-size:10px;
 }
 
@@ -363,9 +370,9 @@ header{
 
 .product-image{
   position:relative;
-  background:var(--ivory);
   aspect-ratio:1/1.08;
   overflow:hidden;
+  background:var(--ivory);
   margin-bottom:17px;
 }
 
@@ -387,7 +394,6 @@ header{
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  color:#aaa;
   text-align:center;
 
   background:
@@ -400,12 +406,13 @@ header{
 }
 
 .placeholder span:first-child{
+  color:var(--green);
   font-family:"Cormorant Garamond",serif;
   font-size:28px;
-  color:var(--green);
 }
 
 .placeholder span:last-child{
+  color:#aaa;
   font-size:9px;
   letter-spacing:2px;
   text-transform:uppercase;
@@ -428,6 +435,7 @@ header{
   position:absolute;
   top:10px;
   right:10px;
+  z-index:3;
   width:36px;
   height:36px;
   border:0;
@@ -435,15 +443,10 @@ header{
   background:rgba(255,255,255,.94);
   color:var(--green);
   font-size:20px;
-  z-index:3;
 }
 
 .wishlist-btn.active{
   color:#9b624e;
-}
-
-.product-info{
-  padding-right:3px;
 }
 
 .product-category{
@@ -455,12 +458,11 @@ header{
 }
 
 .product-name{
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:24px;
   line-height:1.05;
   font-weight:600;
-  transition:.25s;
 }
 
 .product-link:hover .product-name{
@@ -507,7 +509,7 @@ header{
   width:100%;
   border:1px solid var(--green);
   background:var(--green);
-  color:#fff;
+  color:white;
   padding:11px;
   margin-top:12px;
   font-size:9px;
@@ -529,10 +531,10 @@ header{
 
 .empty{
   display:none;
+  grid-column:1/-1;
   text-align:center;
   padding:70px 20px;
   color:#777;
-  grid-column:1/-1;
 }
 
 
@@ -543,12 +545,12 @@ header{
 .search-overlay{
   position:fixed;
   inset:0;
-  background:rgba(248,244,236,.98);
   z-index:2000;
   display:none;
   align-items:center;
   justify-content:center;
   padding:30px;
+  background:rgba(248,244,236,.98);
 }
 
 .search-overlay.open{
@@ -565,8 +567,8 @@ header{
   right:30px;
   border:0;
   background:none;
-  font-size:28px;
   color:var(--green);
+  font-size:28px;
 }
 
 .search-box label{
@@ -583,23 +585,23 @@ header{
   border:0;
   border-bottom:1px solid var(--green);
   background:transparent;
-  padding:15px 0;
   outline:none;
+  padding:15px 0;
+  color:var(--green);
   font-family:"Cormorant Garamond",serif;
   font-size:38px;
-  color:var(--green);
 }
 
 
 /* =========================================================
-   BAG OVERLAY
+   BAG
    ========================================================= */
 
 .cart-overlay{
   position:fixed;
   inset:0;
-  background:rgba(15,35,30,.28);
   z-index:3000;
+  background:rgba(15,35,30,.28);
   opacity:0;
   visibility:hidden;
   transition:.3s ease;
@@ -628,23 +630,17 @@ header{
   transform:translateX(0);
 }
 
-
-/* =========================================================
-   BAG HEADER
-   ========================================================= */
-
 .cart-head{
   padding:23px 24px 20px;
   border-bottom:1px solid var(--border);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(255,253,248,.98);
 }
 
 .cart-head h3{
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:34px;
   font-weight:500;
   line-height:1;
@@ -653,7 +649,6 @@ header{
 .cart-head small{
   display:block;
   color:#999;
-  font-family:Montserrat,sans-serif;
   font-size:8px;
   letter-spacing:1.5px;
   text-transform:uppercase;
@@ -661,18 +656,13 @@ header{
 }
 
 .cart-close{
-  border:0;
-  background:none;
-  font-size:27px;
-  color:var(--green);
   width:35px;
   height:35px;
+  border:0;
+  background:none;
+  color:var(--green);
+  font-size:27px;
 }
-
-
-/* =========================================================
-   BAG ITEMS
-   ========================================================= */
 
 .cart-items{
   flex:1;
@@ -687,8 +677,8 @@ header{
 }
 
 .cart-empty-title{
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:32px;
   margin-bottom:8px;
 }
@@ -702,7 +692,7 @@ header{
 .empty-shop-btn{
   display:inline-block;
   background:var(--green);
-  color:#fff;
+  color:white;
   padding:12px 22px;
   font-size:9px;
   text-transform:uppercase;
@@ -713,7 +703,6 @@ header{
   display:grid;
   grid-template-columns:82px 1fr;
   gap:14px;
-  align-items:start;
   padding:17px 0;
   border-bottom:1px solid var(--border);
 }
@@ -730,41 +719,31 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:22px;
 }
 
-.cart-item-content{
-  min-width:0;
-}
-
 .cart-item h4{
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:22px;
   line-height:1.05;
 }
 
 .cart-item-category{
-  font-size:8px;
   color:var(--gold);
+  font-size:8px;
   text-transform:uppercase;
   letter-spacing:1.5px;
   margin-top:5px;
 }
 
 .cart-item-price{
-  color:var(--text);
   font-size:12px;
   font-weight:600;
   margin-top:5px;
 }
-
-
-/* =========================================================
-   QUANTITY
-   ========================================================= */
 
 .qty{
   display:flex;
@@ -777,7 +756,7 @@ header{
   width:26px;
   height:26px;
   border:1px solid var(--border);
-  background:#fff;
+  background:white;
   color:var(--green);
   font-size:15px;
 }
@@ -787,11 +766,6 @@ header{
   text-align:center;
   font-size:11px;
 }
-
-
-/* =========================================================
-   BAG ACTIONS
-   ========================================================= */
 
 .cart-actions{
   display:flex;
@@ -818,11 +792,6 @@ header{
   color:#999;
 }
 
-
-/* =========================================================
-   BAG BENEFITS
-   ========================================================= */
-
 .cart-benefits{
   margin:0 22px 15px;
   padding:13px 10px;
@@ -835,8 +804,8 @@ header{
 }
 
 .cart-benefit{
-  font-size:7px;
   color:#777;
+  font-size:7px;
   text-transform:uppercase;
   letter-spacing:.7px;
   line-height:1.4;
@@ -849,15 +818,9 @@ header{
   margin-bottom:2px;
 }
 
-
-/* =========================================================
-   BAG FOOTER
-   ========================================================= */
-
 .cart-footer{
   border-top:1px solid var(--border);
   padding:18px 22px 22px;
-  background:var(--cream);
 }
 
 .total-row{
@@ -877,12 +840,11 @@ header{
   width:100%;
   border:0;
   background:var(--green);
-  color:#fff;
+  color:white;
   padding:15px;
   font-size:9px;
   text-transform:uppercase;
   letter-spacing:1.6px;
-  transition:.25s;
 }
 
 .checkout:hover{
@@ -900,7 +862,172 @@ header{
   font-size:8px;
   color:#999;
   margin-top:9px;
+}
+
+
+/* =========================================================
+   CHECKOUT OVERLAY
+   ========================================================= */
+
+.checkout-overlay{
+  position:fixed;
+  inset:0;
+  z-index:4500;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+  background:rgba(23,63,53,.45);
+  backdrop-filter:blur(8px);
+}
+
+.checkout-overlay.open{
+  display:flex;
+}
+
+.checkout-modal{
+  width:min(620px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:var(--cream);
+  box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+
+.checkout-head{
+  padding:28px 30px 22px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.checkout-head .eyebrow{
+  margin-bottom:7px;
+}
+
+.checkout-head h2{
+  color:var(--green);
+  font-family:"Cormorant Garamond",serif;
+  font-size:42px;
+  font-weight:500;
+  line-height:1;
+}
+
+.checkout-close{
+  border:0;
+  background:none;
+  color:var(--green);
+  font-size:28px;
+}
+
+.checkout-body{
+  padding:25px 30px 30px;
+}
+
+.order-summary{
+  padding:17px;
+  margin-bottom:25px;
+  border:1px solid var(--border);
+  background:#faf7f0;
+}
+
+.order-summary-title{
+  color:var(--green);
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.summary-item{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:7px 0;
+  border-bottom:1px solid #e9e3d8;
+  font-size:11px;
+}
+
+.summary-item:last-child{
+  border-bottom:0;
+}
+
+.summary-total{
+  display:flex;
+  justify-content:space-between;
+  margin-top:13px;
+  color:var(--green);
+  font-size:14px;
+  font-weight:600;
+}
+
+.checkout-form{
+  display:grid;
+  gap:15px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.form-field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.form-field label{
+  color:var(--green);
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.form-field input,
+.form-field textarea{
+  width:100%;
+  border:1px solid var(--border);
+  background:white;
+  outline:none;
+  padding:12px;
+  color:var(--text);
+  font-size:12px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus{
+  border-color:var(--green);
+}
+
+.form-field textarea{
+  min-height:85px;
+  resize:vertical;
+}
+
+.checkout-submit{
+  width:100%;
+  border:0;
+  background:var(--green);
+  color:white;
+  padding:16px;
+  margin-top:5px;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:1.7px;
+}
+
+.checkout-submit:hover{
+  background:var(--green2);
+}
+
+.checkout-info{
+  text-align:center;
+  color:#999;
+  font-size:8px;
   line-height:1.5;
+  margin-top:10px;
 }
 
 
@@ -915,8 +1042,8 @@ header{
 }
 
 .newsletter h2{
-  font-family:"Cormorant Garamond",serif;
   color:var(--green);
+  font-family:"Cormorant Garamond",serif;
   font-size:45px;
   font-weight:500;
 }
@@ -937,8 +1064,8 @@ header{
   flex:1;
   border:0;
   background:transparent;
-  padding:13px 0;
   outline:none;
+  padding:13px 0;
 }
 
 .newsletter button{
@@ -978,12 +1105,12 @@ header{
 
 footer{
   background:#102f28;
-  color:#fff;
+  color:white;
   padding:65px 28px 30px;
 }
 
 .footer-grid{
-  max-width:1250px;
+  width:min(1250px,100%);
   margin:auto;
   display:grid;
   grid-template-columns:1.5fr repeat(3,1fr);
@@ -992,7 +1119,7 @@ footer{
 
 .footer-brand img{
   width:145px;
-  background:#fff;
+  background:white;
   padding:8px;
   margin-bottom:18px;
 }
@@ -1019,11 +1146,11 @@ footer{
 }
 
 .footer-col a:hover{
-  color:#fff;
+  color:white;
 }
 
 .footer-bottom{
-  max-width:1250px;
+  width:min(1250px,100%);
   margin:45px auto 0;
   padding-top:20px;
   border-top:1px solid rgba(255,255,255,.15);
@@ -1043,15 +1170,15 @@ footer{
   position:fixed;
   left:50%;
   bottom:25px;
+  z-index:6000;
   transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
   background:var(--green);
   color:white;
   padding:12px 20px;
   font-size:10px;
   letter-spacing:.5px;
-  z-index:5000;
-  opacity:0;
-  pointer-events:none;
   transition:.3s;
 }
 
@@ -1164,6 +1291,22 @@ footer{
     flex-direction:column;
   }
 
+  .checkout-modal{
+    max-height:95vh;
+  }
+
+  .checkout-head{
+    padding:22px 20px 18px;
+  }
+
+  .checkout-head h2{
+    font-size:36px;
+  }
+
+  .checkout-body{
+    padding:20px;
+  }
+
 }
 
 
@@ -1212,6 +1355,14 @@ footer{
     padding-right:18px;
   }
 
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .checkout-head h2{
+    font-size:32px;
+  }
+
 }
 
 </style>
@@ -1237,155 +1388,151 @@ footer{
 
 <header>
 
-  <nav class="nav">
+<nav class="nav">
 
-    <a
-      class="logo"
-      href="index.html"
-      aria-label="ALANKRA Home"
-    >
-      <img
-        src="WEBSITE LOGO.png"
-        alt="ALANKRA"
-      >
-    </a>
-
-
-    <div class="nav-links">
-
-      <a href="shop.html">
-        Shop
-      </a>
-
-      <a href="collections.html">
-        Collections
-      </a>
-
-      <a href="about.html">
-        Our Story
-      </a>
-
-      <a href="care.html">
-        Jewellery Care
-      </a>
-
-    </div>
-
-
-    <div class="nav-actions">
-
-      <button
-        class="icon-btn"
-        id="searchBtn"
-        aria-label="Search"
-      >
-        ⌕
-      </button>
-
-
-      <button
-        class="icon-btn"
-        id="wishlistNav"
-        aria-label="Wishlist"
-      >
-        ♡
-
-        <span
-          class="count"
-          id="wishlistCount"
-        >
-          0
-        </span>
-
-      </button>
-
-
-      <button
-        class="icon-btn"
-        id="bagBtn"
-        aria-label="Shopping bag"
-      >
-        ♧
-
-        <span
-          class="count"
-          id="bagCount"
-        >
-          0
-        </span>
-
-      </button>
-
-
-      <button
-        class="icon-btn menu-btn"
-        id="menuBtn"
-        aria-label="Menu"
-      >
-        ☰
-      </button>
-
-    </div>
-
-  </nav>
-
-
-  <!-- MOBILE MENU -->
-
-  <div
-    class="mobile-menu"
-    id="mobileMenu"
+<a
+  class="logo"
+  href="index.html"
+  aria-label="ALANKRA Home"
+>
+  <img
+    src="WEBSITE LOGO.png"
+    alt="ALANKRA"
   >
+</a>
 
-    <a href="shop.html">
-      Shop All
-    </a>
 
-    <a href="shop.html?category=necklaces">
-      Necklaces
-    </a>
+<div class="nav-links">
 
-    <a href="shop.html?category=earrings">
-      Earrings
-    </a>
+<a href="shop.html">
+  Shop
+</a>
 
-    <a href="shop.html?category=bracelets">
-      Bracelets
-    </a>
+<a href="collections.html">
+  Collections
+</a>
 
-    <a href="shop.html?category=rings">
-      Rings
-    </a>
+<a href="about.html">
+  Our Story
+</a>
 
-    <a href="collections.html">
-      Collections
-    </a>
+<a href="care.html">
+  Jewellery Care
+</a>
 
-    <a href="about.html">
-      Our Story
-    </a>
+</div>
 
-    <a href="care.html">
-      Jewellery Care
-    </a>
 
-    <a href="shipping.html">
-      Shipping & Delivery
-    </a>
+<div class="nav-actions">
 
-    <a href="returns.html">
-      Returns & Exchange
-    </a>
+<button
+  class="icon-btn"
+  id="searchBtn"
+  aria-label="Search"
+>
+  ⌕
+</button>
 
-    <a href="faq.html">
-      FAQs
-    </a>
 
-    <a href="contact.html">
-      Contact Us
-    </a>
+<button
+  class="icon-btn"
+  id="wishlistNav"
+  aria-label="Wishlist"
+>
+  ♡
+  <span
+    class="count"
+    id="wishlistCount"
+  >
+    0
+  </span>
+</button>
 
-  </div>
+
+<button
+  class="icon-btn"
+  id="bagBtn"
+  aria-label="Shopping bag"
+>
+  ♧
+  <span
+    class="count"
+    id="bagCount"
+  >
+    0
+  </span>
+</button>
+
+
+<button
+  class="icon-btn menu-btn"
+  id="menuBtn"
+  aria-label="Menu"
+>
+  ☰
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- MOBILE MENU -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+<a href="shop.html">
+  Shop All
+</a>
+
+<a href="shop.html?category=necklaces">
+  Necklaces
+</a>
+
+<a href="shop.html?category=earrings">
+  Earrings
+</a>
+
+<a href="shop.html?category=bracelets">
+  Bracelets
+</a>
+
+<a href="shop.html?category=rings">
+  Rings
+</a>
+
+<a href="collections.html">
+  Collections
+</a>
+
+<a href="about.html">
+  Our Story
+</a>
+
+<a href="care.html">
+  Jewellery Care
+</a>
+
+<a href="shipping.html">
+  Shipping & Delivery
+</a>
+
+<a href="returns.html">
+  Returns & Exchange
+</a>
+
+<a href="faq.html">
+  FAQs
+</a>
+
+<a href="contact.html">
+  Contact Us
+</a>
+
+</div>
 
 </header>
 
@@ -1396,23 +1543,23 @@ footer{
 
 <section class="hero">
 
-  <div class="hero-inner">
+<div class="hero-inner">
 
-    <div class="eyebrow">
-      The ALANKRA Edit
-    </div>
+<div class="eyebrow">
+  The ALANKRA Edit
+</div>
 
-    <h1>
-      Jewellery for every version of you.
-    </h1>
+<h1>
+  Jewellery for every version of you.
+</h1>
 
-    <p>
-      Discover delicate details, timeless silhouettes and
-      everyday pieces designed to make even the simplest
-      moments feel a little more special.
-    </p>
+<p>
+  Discover delicate details, timeless silhouettes and
+  everyday pieces designed to make even the simplest
+  moments feel a little more special.
+</p>
 
-  </div>
+</div>
 
 </section>
 
@@ -1423,105 +1570,105 @@ footer{
 
 <main class="shop-wrap">
 
-  <div class="shop-head">
+<div class="shop-head">
 
-    <div class="eyebrow">
-      Shop ALANKRA
-    </div>
+<div class="eyebrow">
+  Shop ALANKRA
+</div>
 
-    <h2>
-      Find your everyday favourite.
-    </h2>
+<h2>
+  Find your everyday favourite.
+</h2>
 
-    <p>
-      From delicate necklaces to statement bracelets,
-      explore pieces designed to become part of your everyday.
-    </p>
+<p>
+  From delicate necklaces to statement bracelets,
+  explore pieces designed to become part of your everyday.
+</p>
 
-  </div>
-
-
-  <div class="toolbar">
-
-    <div class="filters">
-
-      <button
-        class="filter active"
-        data-filter="all"
-      >
-        All
-      </button>
-
-      <button
-        class="filter"
-        data-filter="necklaces"
-      >
-        Necklaces
-      </button>
-
-      <button
-        class="filter"
-        data-filter="earrings"
-      >
-        Earrings
-      </button>
-
-      <button
-        class="filter"
-        data-filter="bracelets"
-      >
-        Bracelets
-      </button>
-
-      <button
-        class="filter"
-        data-filter="rings"
-      >
-        Rings
-      </button>
-
-    </div>
+</div>
 
 
-    <select
-      class="sort"
-      id="sortSelect"
-      aria-label="Sort products"
-    >
+<div class="toolbar">
 
-      <option value="default">
-        Sort: Featured
-      </option>
+<div class="filters">
 
-      <option value="low">
-        Price: Low to High
-      </option>
+<button
+  class="filter active"
+  data-filter="all"
+>
+  All
+</button>
 
-      <option value="high">
-        Price: High to Low
-      </option>
+<button
+  class="filter"
+  data-filter="necklaces"
+>
+  Necklaces
+</button>
 
-      <option value="az">
-        Name: A to Z
-      </option>
+<button
+  class="filter"
+  data-filter="earrings"
+>
+  Earrings
+</button>
 
-    </select>
+<button
+  class="filter"
+  data-filter="bracelets"
+>
+  Bracelets
+</button>
 
-  </div>
+<button
+  class="filter"
+  data-filter="rings"
+>
+  Rings
+</button>
+
+</div>
 
 
-  <div
-    class="product-grid"
-    id="productGrid"
-  ></div>
+<select
+  class="sort"
+  id="sortSelect"
+  aria-label="Sort products"
+>
+
+<option value="default">
+  Sort: Featured
+</option>
+
+<option value="low">
+  Price: Low to High
+</option>
+
+<option value="high">
+  Price: High to Low
+</option>
+
+<option value="az">
+  Name: A to Z
+</option>
+
+</select>
+
+</div>
 
 
-  <div
-    class="empty"
-    id="emptyState"
-  >
-    No pieces found. Try another category or search.
-  </div>
+<div
+  class="product-grid"
+  id="productGrid"
+></div>
+
+
+<div
+  class="empty"
+  id="emptyState"
+>
+  No pieces found. Try another category or search.
+</div>
 
 </main>
 
@@ -1532,32 +1679,32 @@ footer{
 
 <section class="newsletter">
 
-  <div class="eyebrow">
-    Stay in the ALANKRA circle
-  </div>
+<div class="eyebrow">
+  Stay in the ALANKRA circle
+</div>
 
-  <h2>
-    A little luxury, in your inbox.
-  </h2>
+<h2>
+  A little luxury, in your inbox.
+</h2>
 
-  <p>
-    Be the first to discover new drops, styling inspiration
-    and special updates.
-  </p>
+<p>
+  Be the first to discover new drops, styling inspiration
+  and special updates.
+</p>
 
-  <form id="newsletterForm">
+<form id="newsletterForm">
 
-    <input
-      type="email"
-      placeholder="Your email address"
-      required
-    >
+<input
+  type="email"
+  placeholder="Your email address"
+  required
+>
 
-    <button type="submit">
-      Join Us
-    </button>
+<button type="submit">
+  Join Us
+</button>
 
-  </form>
+</form>
 
 </section>
 
@@ -1568,13 +1715,13 @@ footer{
 
 <div class="marquee">
 
-  <span>Anti-Tarnish</span>
-  <span>Water-Resistant</span>
-  <span>Skin-Friendly</span>
-  <span>Everyday Luxury</span>
-  <span>Thoughtfully Designed</span>
-  <span>Anti-Tarnish</span>
-  <span>Water-Resistant</span>
+<span>Anti-Tarnish</span>
+<span>Water-Resistant</span>
+<span>Skin-Friendly</span>
+<span>Everyday Luxury</span>
+<span>Thoughtfully Designed</span>
+<span>Anti-Tarnish</span>
+<span>Water-Resistant</span>
 
 </div>
 
@@ -1585,134 +1732,135 @@ footer{
 
 <footer>
 
-  <div class="footer-grid">
+<div class="footer-grid">
 
 
-    <div class="footer-brand">
+<div class="footer-brand">
 
-      <img
-        src="WEBSITE LOGO.png"
-        alt="ALANKRA"
-      >
+<img
+  src="WEBSITE LOGO.png"
+  alt="ALANKRA"
+>
 
-      <p>
-        Luxury in Every Detail. Jewellery designed to bring
-        a little more beauty to your everyday.
-      </p>
+<p>
+  Luxury in Every Detail. Jewellery designed to bring
+  a little more beauty to your everyday.
+</p>
 
-    </div>
-
-
-    <div class="footer-col">
-
-      <h4>
-        Shop
-      </h4>
-
-      <a href="shop.html">
-        Shop All
-      </a>
-
-      <a href="shop.html?category=necklaces">
-        Necklaces
-      </a>
-
-      <a href="shop.html?category=earrings">
-        Earrings
-      </a>
-
-      <a href="shop.html?category=bracelets">
-        Bracelets
-      </a>
-
-      <a href="shop.html?category=rings">
-        Rings
-      </a>
-
-    </div>
+</div>
 
 
-    <div class="footer-col">
+<div class="footer-col">
 
-      <h4>
-        About ALANKRA
-      </h4>
+<h4>
+  Shop
+</h4>
 
-      <a href="about.html">
-        Our Story
-      </a>
+<a href="shop.html">
+  Shop All
+</a>
 
-      <a href="care.html">
-        Jewellery Care
-      </a>
+<a href="shop.html?category=necklaces">
+  Necklaces
+</a>
 
-      <a href="collections.html">
-        Collections
-      </a>
+<a href="shop.html?category=earrings">
+  Earrings
+</a>
 
-    </div>
+<a href="shop.html?category=bracelets">
+  Bracelets
+</a>
 
+<a href="shop.html?category=rings">
+  Rings
+</a>
 
-    <div class="footer-col">
-
-      <h4>
-        Customer Care
-      </h4>
-
-      <a href="shipping.html">
-        Shipping & Delivery
-      </a>
-
-      <a href="returns.html">
-        Returns & Exchange
-      </a>
-
-      <a href="faq.html">
-        FAQs
-      </a>
-
-      <a href="contact.html">
-        Contact Us
-      </a>
-
-      <a href="mailto:alankra.jewels@gmail.com">
-        Email Us
-      </a>
-
-      <a
-        href="https://www.instagram.com/alankra.jewels/"
-        target="_blank"
-        rel="noopener"
-      >
-        Instagram
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 
-  <div class="footer-bottom">
+<div class="footer-col">
 
-    <span>
-      © 2026 ALANKRA. All rights reserved.
-    </span>
+<h4>
+  About ALANKRA
+</h4>
 
-    <span>
+<a href="about.html">
+  Our Story
+</a>
 
-      <a href="privacy.html">
-        Privacy Policy
-      </a>
+<a href="care.html">
+  Jewellery Care
+</a>
 
-      &nbsp; • &nbsp;
+<a href="collections.html">
+  Collections
+</a>
 
-      <a href="terms.html">
-        Terms & Conditions
-      </a>
+</div>
 
-    </span>
 
-  </div>
+<div class="footer-col">
+
+<h4>
+  Customer Care
+</h4>
+
+<a href="shipping.html">
+  Shipping & Delivery
+</a>
+
+<a href="returns.html">
+  Returns & Exchange
+</a>
+
+<a href="faq.html">
+  FAQs
+</a>
+
+<a href="contact.html">
+  Contact Us
+</a>
+
+<a href="mailto:alankra.jewels@gmail.com">
+  Email Us
+</a>
+
+<a
+  href="https://www.instagram.com/alankra.jewels/"
+  target="_blank"
+  rel="noopener"
+>
+  Instagram
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+  © 2026 ALANKRA. All rights reserved.
+</span>
+
+<span>
+
+<a href="privacy.html">
+  Privacy Policy
+</a>
+
+&nbsp; • &nbsp;
+
+<a href="terms.html">
+  Terms & Conditions
+</a>
+
+</span>
+
+</div>
 
 </footer>
 
@@ -1726,28 +1874,28 @@ footer{
   id="searchOverlay"
 >
 
-  <button
-    class="search-close"
-    id="searchClose"
-    aria-label="Close search"
-  >
-    ×
-  </button>
+<button
+  class="search-close"
+  id="searchClose"
+  aria-label="Close search"
+>
+  ×
+</button>
 
-  <div class="search-box">
+<div class="search-box">
 
-    <label>
-      Search ALANKRA
-    </label>
+<label>
+  Search ALANKRA
+</label>
 
-    <input
-      id="searchInput"
-      type="search"
-      placeholder="Search jewellery..."
-      autocomplete="off"
-    >
+<input
+  id="searchInput"
+  type="search"
+  placeholder="Search jewellery..."
+  autocomplete="off"
+>
 
-  </div>
+</div>
 
 </div>
 
@@ -1761,112 +1909,307 @@ footer{
   id="cartOverlay"
 >
 
-  <aside class="cart">
+<aside class="cart">
 
 
-    <div class="cart-head">
+<div class="cart-head">
 
-      <div>
+<div>
 
-        <h3>
-          Your Bag
-        </h3>
+<h3>
+  Your Bag
+</h3>
 
-        <small>
-          Curated pieces, chosen by you
-        </small>
+<small>
+  Curated pieces, chosen by you
+</small>
 
-      </div>
+</div>
 
+<button
+  class="cart-close"
+  id="cartClose"
+  aria-label="Close bag"
+>
+  ×
+</button>
 
-      <button
-        class="cart-close"
-        id="cartClose"
-        aria-label="Close bag"
-      >
-        ×
-      </button>
-
-    </div>
-
-
-    <div
-      class="cart-items"
-      id="cartItems"
-    ></div>
+</div>
 
 
-    <!-- BAG BENEFITS -->
-
-    <div class="cart-benefits">
-
-      <div class="cart-benefit">
-
-        <strong>
-          ✦ Anti-Tarnish
-        </strong>
-
-        Everyday shine
-
-      </div>
+<div
+  class="cart-items"
+  id="cartItems"
+></div>
 
 
-      <div class="cart-benefit">
+<div class="cart-benefits">
 
-        <strong>
-          ✦ Water-Resistant
-        </strong>
+<div class="cart-benefit">
 
-        Made for moments
+<strong>
+  ✦ Anti-Tarnish
+</strong>
 
-      </div>
+Everyday shine
 
-
-      <div class="cart-benefit">
-
-        <strong>
-          ✦ Everyday Wear
-        </strong>
-
-        Made to love
-
-      </div>
-
-    </div>
+</div>
 
 
-    <!-- BAG FOOTER -->
+<div class="cart-benefit">
 
-    <div class="cart-footer">
+<strong>
+  ✦ Water-Resistant
+</strong>
 
-      <div class="total-row">
+Made for moments
 
-        <span>
-          Subtotal
-        </span>
-
-        <strong id="cartTotal">
-          ₹0
-        </strong>
-
-      </div>
+</div>
 
 
-      <button
-        class="checkout"
-        id="checkoutBtn"
-      >
-        Order via WhatsApp
-      </button>
+<div class="cart-benefit">
+
+<strong>
+  ✦ Everyday Wear
+</strong>
+
+Made to love
+
+</div>
+
+</div>
 
 
-      <div class="note">
-        Your order will be confirmed personally through WhatsApp.
-      </div>
+<div class="cart-footer">
 
-    </div>
+<div class="total-row">
 
-  </aside>
+<span>
+  Subtotal
+</span>
+
+<strong id="cartTotal">
+  ₹0
+</strong>
+
+</div>
+
+
+<button
+  class="checkout"
+  id="checkoutBtn"
+>
+  Continue to Checkout
+</button>
+
+
+<div class="note">
+  Enter your details before sending your order through WhatsApp.
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+
+<!-- =====================================================
+     CHECKOUT MODAL
+     ===================================================== -->
+
+<div
+  class="checkout-overlay"
+  id="checkoutOverlay"
+>
+
+<div class="checkout-modal">
+
+
+<div class="checkout-head">
+
+<div>
+
+<div class="eyebrow">
+  ALANKRA Order
+</div>
+
+<h2>
+  Almost yours.
+</h2>
+
+</div>
+
+
+<button
+  class="checkout-close"
+  id="checkoutClose"
+  aria-label="Close checkout"
+>
+  ×
+</button>
+
+</div>
+
+
+<div class="checkout-body">
+
+
+<div class="order-summary">
+
+<div class="order-summary-title">
+  Your Selection
+</div>
+
+<div id="checkoutSummary"></div>
+
+<div class="summary-total">
+
+<span>
+  Total
+</span>
+
+<strong id="checkoutTotal">
+  ₹0
+</strong>
+
+</div>
+
+</div>
+
+
+<form
+  class="checkout-form"
+  id="checkoutForm"
+>
+
+
+<div class="form-row">
+
+<div class="form-field">
+
+<label for="customerName">
+  Full Name *
+</label>
+
+<input
+  id="customerName"
+  name="name"
+  type="text"
+  placeholder="Your full name"
+  required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="customerPhone">
+  WhatsApp Number *
+</label>
+
+<input
+  id="customerPhone"
+  name="phone"
+  type="tel"
+  placeholder="Your WhatsApp number"
+  required
+>
+
+</div>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="customerAddress">
+  Delivery Address *
+</label>
+
+<textarea
+  id="customerAddress"
+  name="address"
+  placeholder="House / Flat No., Street, Area, City, State, PIN"
+  required
+></textarea>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-field">
+
+<label for="customerCity">
+  City *
+</label>
+
+<input
+  id="customerCity"
+  name="city"
+  type="text"
+  placeholder="Your city"
+  required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="customerPincode">
+  PIN Code *
+</label>
+
+<input
+  id="customerPincode"
+  name="pincode"
+  type="text"
+  inputmode="numeric"
+  placeholder="6-digit PIN"
+  required
+>
+
+</div>
+
+</div>
+
+
+<div class="form-field">
+
+<label for="customerNote">
+  Order Note
+</label>
+
+<textarea
+  id="customerNote"
+  name="note"
+  placeholder="Any special request? (Optional)"
+></textarea>
+
+</div>
+
+
+<button
+  type="submit"
+  class="checkout-submit"
+>
+  Send Order on WhatsApp
+</button>
+
+
+<div class="checkout-info">
+  Your details will be added to the WhatsApp order message
+  so ALANKRA can confirm the order with you personally.
+</div>
+
+</form>
+
+</div>
+
+</div>
 
 </div>
 
@@ -2085,27 +2428,24 @@ const products = [
    STATE
    ========================================================= */
 
+let activeFilter = "all";
+let searchTerm = "";
+let sortValue = "default";
+
+let cart = JSON.parse(
+  localStorage.getItem("alankraCart") || "[]"
+);
+
+let wishlist = JSON.parse(
+  localStorage.getItem("alankraWishlist") || "[]"
+);
+
+
 const grid =
   document.getElementById("productGrid");
 
 const emptyState =
   document.getElementById("emptyState");
-
-let activeFilter = "all";
-
-let searchTerm = "";
-
-let sortValue = "default";
-
-let cart =
-  JSON.parse(
-    localStorage.getItem("alankraCart") || "[]"
-  );
-
-let wishlist =
-  JSON.parse(
-    localStorage.getItem("alankraWishlist") || "[]"
-  );
 
 
 /* =========================================================
@@ -2115,15 +2455,10 @@ let wishlist =
 function escapeHTML(value){
 
   return String(value)
-
     .replaceAll("&","&amp;")
-
     .replaceAll("<","&lt;")
-
     .replaceAll(">","&gt;")
-
     .replaceAll('"',"&quot;")
-
     .replaceAll("'","&#039;");
 
 }
@@ -2146,7 +2481,7 @@ function categoryName(category){
 
 
 /* =========================================================
-   SAVE
+   STORAGE
    ========================================================= */
 
 function saveCart(){
@@ -2181,7 +2516,7 @@ function updateCounts(){
 
   const cartCount =
     cart.reduce(
-      (sum,item)=>
+      (sum,item) =>
         sum + Number(item.quantity || 1),
       0
     );
@@ -2211,7 +2546,7 @@ function showToast(message){
   clearTimeout(window.toastTimer);
 
   window.toastTimer =
-    setTimeout(()=>{
+    setTimeout(() => {
 
       toast.classList.remove("show");
 
@@ -2231,10 +2566,9 @@ function renderProducts(){
 
   if(activeFilter !== "all"){
 
-    list =
-      list.filter(
-        p => p.category === activeFilter
-      );
+    list = list.filter(
+      p => p.category === activeFilter
+    );
 
   }
 
@@ -2244,23 +2578,15 @@ function renderProducts(){
     const term =
       searchTerm.toLowerCase();
 
-    list =
-      list.filter(p =>
+    list = list.filter(p =>
 
-        p.name.toLowerCase()
-          .includes(term)
+      p.name.toLowerCase().includes(term) ||
 
-        ||
+      p.code.toLowerCase().includes(term) ||
 
-        p.code.toLowerCase()
-          .includes(term)
+      p.category.toLowerCase().includes(term)
 
-        ||
-
-        p.category.toLowerCase()
-          .includes(term)
-
-      );
+    );
 
   }
 
@@ -2268,7 +2594,7 @@ function renderProducts(){
   if(sortValue === "low"){
 
     list.sort(
-      (a,b)=>a.price-b.price
+      (a,b) => a.price - b.price
     );
 
   }
@@ -2277,7 +2603,7 @@ function renderProducts(){
   if(sortValue === "high"){
 
     list.sort(
-      (a,b)=>b.price-a.price
+      (a,b) => b.price - a.price
     );
 
   }
@@ -2286,7 +2612,7 @@ function renderProducts(){
   if(sortValue === "az"){
 
     list.sort(
-      (a,b)=>
+      (a,b) =>
         a.name.localeCompare(b.name)
     );
 
@@ -2315,30 +2641,26 @@ function renderProducts(){
     const imageHTML =
       product.image
 
-        ?
-
-        `<img
-          src="${escapeHTML(product.image)}"
-          alt="${escapeHTML(product.name)}"
-          loading="lazy"
-        >`
-
-        :
-
+        ? `
+          <img
+            src="${escapeHTML(product.image)}"
+            alt="${escapeHTML(product.name)}"
+            loading="lazy"
+          >
         `
 
-        <div class="placeholder">
+        : `
+          <div class="placeholder">
 
-          <span>
-            ALANKRA
-          </span>
+            <span>
+              ALANKRA
+            </span>
 
-          <span>
-            Coming Soon
-          </span>
+            <span>
+              Coming Soon
+            </span>
 
-        </div>
-
+          </div>
         `;
 
 
@@ -2347,7 +2669,6 @@ function renderProducts(){
       <a
         href="product.html?product=${encodeURIComponent(product.code)}"
         class="product-link"
-        aria-label="View ${escapeHTML(product.name)}"
       >
 
         <div class="product-image">
@@ -2356,62 +2677,56 @@ function renderProducts(){
 
           ${
             product.comingSoon
-
               ?
-
-              `<div class="product-badge">
-                Coming Soon
-              </div>`
-
+              `
+                <div class="product-badge">
+                  Coming Soon
+                </div>
+              `
               :
-
               ""
           }
 
         </div>
 
 
-        <div class="product-info">
+        <div class="product-category">
+          ${categoryName(product.category)}
+        </div>
 
-          <div class="product-category">
-            ${categoryName(product.category)}
+
+        <h3 class="product-name">
+          ${escapeHTML(product.name)}
+        </h3>
+
+
+        <div class="product-code">
+          ${escapeHTML(product.code)}
+        </div>
+
+
+        <div class="product-bottom">
+
+          <div class="price">
+            ${money(product.price)}
           </div>
 
-
-          <h3 class="product-name">
-            ${escapeHTML(product.name)}
-          </h3>
+        </div>
 
 
-          <div class="product-code">
-            ${escapeHTML(product.code)}
-          </div>
+        <div class="features">
 
+          <span class="feature">
+            Anti-Tarnish
+          </span>
 
-          <div class="product-bottom">
+          <span class="feature">
+            Water-Resistant
+          </span>
 
-            <div class="price">
-              ${money(product.price)}
-            </div>
-
-          </div>
-
-
-          <div class="features">
-
-            <span class="feature">
-              Anti-Tarnish
-            </span>
-
-            <span class="feature">
-              Water-Resistant
-            </span>
-
-            <span class="feature">
-              Everyday Wear
-            </span>
-
-          </div>
+          <span class="feature">
+            Everyday Wear
+          </span>
 
         </div>
 
@@ -2421,7 +2736,7 @@ function renderProducts(){
       <button
         class="wishlist-btn ${wished ? "active" : ""}"
         data-wishlist="${escapeHTML(product.code)}"
-        aria-label="Wishlist ${escapeHTML(product.name)}"
+        aria-label="Wishlist"
       >
         ${wished ? "♥" : "♡"}
       </button>
@@ -2431,29 +2746,23 @@ function renderProducts(){
         product.comingSoon
 
           ?
-
           `
-
-          <button
-            class="add-btn"
-            disabled
-          >
-            Coming Soon
-          </button>
-
+            <button
+              class="add-btn"
+              disabled
+            >
+              Coming Soon
+            </button>
           `
 
           :
-
           `
-
-          <button
-            class="add-btn"
-            data-add="${escapeHTML(product.code)}"
-          >
-            Add to Bag
-          </button>
-
+            <button
+              class="add-btn"
+              data-add="${escapeHTML(product.code)}"
+            >
+              Add to Bag
+            </button>
           `
       }
 
@@ -2501,11 +2810,8 @@ function addToCart(code){
   }else{
 
     cart.push({
-
       code:product.code,
-
       quantity:1
-
     });
 
   }
@@ -2581,8 +2887,6 @@ function renderCart(){
     document.getElementById("checkoutBtn");
 
 
-  /* EMPTY BAG */
-
   if(!cart.length){
 
     box.innerHTML = `
@@ -2611,7 +2915,6 @@ function renderCart(){
 
     document.getElementById("cartTotal")
       .textContent = "₹0";
-
 
     checkoutBtn.disabled = true;
 
@@ -2654,22 +2957,18 @@ function renderCart(){
           ?
 
           `
-
-          <img
-            src="${escapeHTML(product.image)}"
-            alt="${escapeHTML(product.name)}"
-          >
-
+            <img
+              src="${escapeHTML(product.image)}"
+              alt="${escapeHTML(product.name)}"
+            >
           `
 
           :
 
           `
-
-          <div class="cart-item-placeholder">
-            A
-          </div>
-
+            <div class="cart-item-placeholder">
+              A
+            </div>
           `;
 
 
@@ -2681,22 +2980,18 @@ function renderCart(){
 
         <div class="cart-item">
 
-
           ${image}
 
 
-          <div class="cart-item-content">
-
+          <div>
 
             <h4>
               ${escapeHTML(product.name)}
             </h4>
 
-
             <div class="cart-item-category">
               ${categoryName(product.category)}
             </div>
-
 
             <div class="cart-item-price">
               ${money(product.price)}
@@ -2705,7 +3000,6 @@ function renderCart(){
 
             <div class="qty">
 
-
               <button
                 data-minus="${escapeHTML(product.code)}"
                 aria-label="Decrease quantity"
@@ -2713,11 +3007,9 @@ function renderCart(){
                 −
               </button>
 
-
               <span>
                 ${quantity}
               </span>
-
 
               <button
                 data-plus="${escapeHTML(product.code)}"
@@ -2726,26 +3018,21 @@ function renderCart(){
                 +
               </button>
 
-
             </div>
 
 
             <div class="cart-actions">
 
-
               <button
                 class="move-wishlist"
                 data-move-wishlist="${escapeHTML(product.code)}"
               >
-
                 ${
                   isWished
                     ? "♥ Wishlisted"
                     : "♡ Save to Wishlist"
                 }
-
               </button>
-
 
               <button
                 class="remove"
@@ -2754,12 +3041,9 @@ function renderCart(){
                 Remove
               </button>
 
-
             </div>
 
-
           </div>
-
 
         </div>
 
@@ -2775,7 +3059,7 @@ function renderCart(){
 
 
 /* =========================================================
-   CHANGE QUANTITY
+   QUANTITY
    ========================================================= */
 
 function changeQuantity(code,direction){
@@ -2814,6 +3098,267 @@ function changeQuantity(code,direction){
 
 
 /* =========================================================
+   CHECKOUT SUMMARY
+   ========================================================= */
+
+function renderCheckoutSummary(){
+
+  const summary =
+    document.getElementById("checkoutSummary");
+
+  let total = 0;
+
+
+  summary.innerHTML =
+    cart.map(item => {
+
+      const product =
+        products.find(
+          p => p.code === item.code
+        );
+
+
+      if(!product){
+        return "";
+      }
+
+
+      const quantity =
+        Number(item.quantity || 1);
+
+
+      const subtotal =
+        product.price * quantity;
+
+
+      total += subtotal;
+
+
+      return `
+
+        <div class="summary-item">
+
+          <span>
+            ${escapeHTML(product.name)}
+            × ${quantity}
+          </span>
+
+          <strong>
+            ${money(subtotal)}
+          </strong>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+
+  document.getElementById("checkoutTotal")
+    .textContent = money(total);
+
+}
+
+
+/* =========================================================
+   OPEN CHECKOUT
+   ========================================================= */
+
+function openCheckout(){
+
+  if(!cart.length){
+
+    showToast(
+      "Your bag is empty."
+    );
+
+    return;
+
+  }
+
+
+  renderCheckoutSummary();
+
+
+  document
+    .getElementById("checkoutOverlay")
+    .classList.add("open");
+
+
+  document.body
+    .classList.add("no-scroll");
+
+}
+
+
+/* =========================================================
+   CLOSE CHECKOUT
+   ========================================================= */
+
+function closeCheckout(){
+
+  document
+    .getElementById("checkoutOverlay")
+    .classList.remove("open");
+
+
+  document.body
+    .classList.remove("no-scroll");
+
+}
+
+
+/* =========================================================
+   SEND WHATSAPP ORDER
+   ========================================================= */
+
+function sendWhatsAppOrder(event){
+
+  event.preventDefault();
+
+
+  if(!cart.length){
+
+    showToast(
+      "Your bag is empty."
+    );
+
+    return;
+
+  }
+
+
+  const name =
+    document.getElementById("customerName")
+      .value.trim();
+
+
+  const phone =
+    document.getElementById("customerPhone")
+      .value.trim();
+
+
+  const address =
+    document.getElementById("customerAddress")
+      .value.trim();
+
+
+  const city =
+    document.getElementById("customerCity")
+      .value.trim();
+
+
+  const pincode =
+    document.getElementById("customerPincode")
+      .value.trim();
+
+
+  const note =
+    document.getElementById("customerNote")
+      .value.trim();
+
+
+  let total = 0;
+
+
+  let message =
+`Hello ALANKRA! 🤍
+
+I would like to place an order.
+
+CUSTOMER DETAILS
+Name: ${name}
+WhatsApp: ${phone}
+
+DELIVERY ADDRESS
+${address}
+${city} - ${pincode}
+
+ORDER DETAILS
+`;
+
+
+  cart.forEach(item => {
+
+    const product =
+      products.find(
+        p => p.code === item.code
+      );
+
+
+    if(!product){
+      return;
+    }
+
+
+    const quantity =
+      Number(item.quantity || 1);
+
+
+    const subtotal =
+      product.price * quantity;
+
+
+    total += subtotal;
+
+
+    message +=
+`${product.name} (${product.code}) × ${quantity} — ${money(subtotal)}
+`;
+
+  });
+
+
+  message +=
+`
+TOTAL: ${money(total)}
+`;
+
+
+  if(note){
+
+    message +=
+`
+ORDER NOTE:
+${note}
+`;
+
+  }
+
+
+  message +=
+`
+Please confirm my order and share the next steps. 🤍
+
+Thank you!
+`;
+
+
+  /*
+    IMPORTANT:
+    Verify the WhatsApp number before launch.
+  */
+
+  const whatsappNumber =
+    "919311690960";
+
+
+  const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+}
+
+
+/* =========================================================
    GLOBAL CLICK HANDLER
    ========================================================= */
 
@@ -2821,8 +3366,6 @@ document.addEventListener(
   "click",
   event => {
 
-
-    /* ADD TO BAG */
 
     const add =
       event.target.closest("[data-add]");
@@ -2841,8 +3384,6 @@ document.addEventListener(
     }
 
 
-    /* PRODUCT WISHLIST */
-
     const wish =
       event.target.closest("[data-wishlist]");
 
@@ -2860,8 +3401,6 @@ document.addEventListener(
     }
 
 
-    /* SAVE BAG ITEM TO WISHLIST */
-
     const moveWish =
       event.target.closest(
         "[data-move-wishlist]"
@@ -2874,14 +3413,11 @@ document.addEventListener(
         moveWish.dataset.moveWishlist;
 
 
-      if(
-        !wishlist.includes(code)
-      ){
+      if(!wishlist.includes(code)){
 
         wishlist.push(code);
 
         saveWishlist();
-
 
         const product =
           products.find(
@@ -2915,8 +3451,6 @@ document.addEventListener(
     }
 
 
-    /* PLUS */
-
     const plus =
       event.target.closest("[data-plus]");
 
@@ -2933,8 +3467,6 @@ document.addEventListener(
     }
 
 
-    /* MINUS */
-
     const minus =
       event.target.closest("[data-minus]");
 
@@ -2950,8 +3482,6 @@ document.addEventListener(
 
     }
 
-
-    /* REMOVE */
 
     const remove =
       event.target.closest("[data-remove]");
@@ -2987,11 +3517,9 @@ document
   .querySelectorAll(".filter")
   .forEach(button => {
 
-
     button.addEventListener(
       "click",
       () => {
-
 
         document
           .querySelectorAll(".filter")
@@ -3016,9 +3544,7 @@ document
           );
 
 
-        if(
-          activeFilter === "all"
-        ){
+        if(activeFilter === "all"){
 
           url.searchParams.delete(
             "category"
@@ -3090,6 +3616,7 @@ document
       searchOverlay
         .classList.add("open");
 
+
       document.body
         .classList.add("no-scroll");
 
@@ -3113,6 +3640,7 @@ document
 
       searchOverlay
         .classList.remove("open");
+
 
       document.body
         .classList.remove("no-scroll");
@@ -3148,8 +3676,10 @@ document
         .getElementById("cartOverlay")
         .classList.add("open");
 
+
       document.body
         .classList.add("no-scroll");
+
 
       renderCart();
 
@@ -3170,6 +3700,7 @@ document
       document
         .getElementById("cartOverlay")
         .classList.remove("open");
+
 
       document.body
         .classList.remove("no-scroll");
@@ -3192,12 +3723,77 @@ document
         event.currentTarget
           .classList.remove("open");
 
+
         document.body
           .classList.remove("no-scroll");
 
       }
 
     }
+  );
+
+
+/* =========================================================
+   CHECKOUT BUTTON
+   ========================================================= */
+
+/*
+   THIS IS THE ONLY ACTION ATTACHED
+   TO THE BAG CHECKOUT BUTTON.
+*/
+
+document
+  .getElementById("checkoutBtn")
+  .addEventListener(
+    "click",
+    openCheckout
+  );
+
+
+/* =========================================================
+   CHECKOUT CLOSE
+   ========================================================= */
+
+document
+  .getElementById("checkoutClose")
+  .addEventListener(
+    "click",
+    closeCheckout
+  );
+
+
+document
+  .getElementById("checkoutOverlay")
+  .addEventListener(
+    "click",
+    event => {
+
+      if(
+        event.target.id ===
+        "checkoutOverlay"
+      ){
+
+        closeCheckout();
+
+      }
+
+    }
+  );
+
+
+/* =========================================================
+   CHECKOUT FORM
+   ========================================================= */
+
+/*
+   THIS IS THE ONLY WHATSAPP ACTION.
+*/
+
+document
+  .getElementById("checkoutForm")
+  .addEventListener(
+    "submit",
+    sendWhatsAppOrder
   );
 
 
@@ -3210,7 +3806,6 @@ document
   .addEventListener(
     "click",
     () => {
-
 
       if(!wishlist.length){
 
@@ -3226,6 +3821,11 @@ document
       activeFilter = "all";
 
       searchTerm = "";
+
+
+      document
+        .getElementById("searchInput")
+        .value = "";
 
 
       document
@@ -3306,97 +3906,6 @@ document
 
 
 /* =========================================================
-   WHATSAPP ORDER
-   ========================================================= */
-
-document
-  .getElementById("checkoutBtn")
-  .addEventListener(
-    "click",
-    () => {
-
-
-      if(!cart.length){
-
-        showToast(
-          "Your bag is empty."
-        );
-
-        return;
-
-      }
-
-
-      let message =
-        "Hello ALANKRA! I would like to place an order:%0A%0A";
-
-
-      let total = 0;
-
-
-      cart.forEach(item => {
-
-
-        const product =
-          products.find(
-            p => p.code === item.code
-          );
-
-
-        if(!product){
-          return;
-        }
-
-
-        const quantity =
-          Number(item.quantity || 1);
-
-
-        const subtotal =
-          product.price * quantity;
-
-
-        total += subtotal;
-
-
-        message +=
-          `${product.name} (${product.code}) x ${quantity} — ${money(subtotal)}%0A`;
-
-      });
-
-
-      message +=
-        `%0ATotal: ${money(total)}%0A%0A`
-        +
-        "Please share the next steps for my order.";
-
-
-      /*
-        IMPORTANT:
-        Verify this WhatsApp number before launch.
-      */
-
-      const whatsappURL =
-        "https://wa.me/919311690960?text="
-        +
-        encodeURIComponent(
-          message.replaceAll(
-            "%0A",
-            "\n"
-          )
-        );
-
-
-      window.open(
-        whatsappURL,
-        "_blank"
-      );
-
-    }
-  );
-
-
-/* =========================================================
    URL CATEGORY
    ========================================================= */
 
@@ -3412,9 +3921,7 @@ const categoryFromURL =
 
 if(
 
-  categoryFromURL
-
-  &&
+  categoryFromURL &&
 
   [
     "necklaces",
@@ -3461,5 +3968,4 @@ renderCart();
 
 
 </body>
-
 </html>
