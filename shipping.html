@@ -4,7 +4,6 @@
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Shipping & Delivery | ALANKRA — Luxury in Every Detail</title>
@@ -13,6 +12,8 @@
     name="description"
     content="Learn about ALANKRA shipping, order processing, delivery, tracking and receiving your jewellery."
   >
+
+  <meta name="robots" content="index, follow">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -800,7 +801,7 @@
 
 
     /* =========================
-       FAQ TEASER
+       FAQ CTA
        ========================= */
 
     .faq-teaser {
@@ -939,7 +940,7 @@
 
 
     .footer-grid {
-      width: min(1150px, 100%);
+      width: min(1200px, 100%);
 
       margin: auto;
 
@@ -1003,6 +1004,16 @@
 
 
     .footer-column li:hover {
+      color: white;
+    }
+
+
+    .footer-column a {
+      transition: color 0.25s ease;
+    }
+
+
+    .footer-column a:hover {
       color: white;
     }
 
@@ -1469,7 +1480,27 @@
     </a>
 
     <a href="shipping.html">
-      Shipping
+      Shipping & Delivery
+    </a>
+
+    <a href="returns.html">
+      Returns & Exchange
+    </a>
+
+    <a href="faq.html">
+      FAQs
+    </a>
+
+    <a href="contact.html">
+      Contact Us
+    </a>
+
+    <a href="privacy.html">
+      Privacy Policy
+    </a>
+
+    <a href="terms.html">
+      Terms & Conditions
     </a>
 
   </div>
@@ -1692,10 +1723,12 @@
             </p>
 
             <p style="margin-top:18px;">
+
               <strong>
                 Your dispatch confirmation will provide
                 the relevant shipment information.
               </strong>
+
             </p>
 
           </div>
@@ -1715,10 +1748,12 @@
             </p>
 
             <p style="margin-top:18px;">
+
               <strong>
                 Please allow the expected delivery
                 window shown for your order.
               </strong>
+
             </p>
 
           </div>
@@ -1738,10 +1773,12 @@
             </p>
 
             <p style="margin-top:18px;">
+
               <strong>
                 No unexpected shipping charge should
                 appear after your order is confirmed.
               </strong>
+
             </p>
 
           </div>
@@ -1761,10 +1798,12 @@
             </p>
 
             <p style="margin-top:18px;">
+
               <strong>
                 Please keep your tracking details handy
                 until your order has arrived safely.
               </strong>
+
             </p>
 
           </div>
@@ -1830,10 +1869,12 @@
           </p>
 
           <p>
+
             <strong>
               Your order should reach you safely,
               beautifully packed and ready to wear.
             </strong>
+
           </p>
 
         </div>
@@ -1864,9 +1905,8 @@
       </p>
 
       <a
-        href="#"
-        class="button"
-        onclick="contactMessage(event)">
+        href="contact.html"
+        class="button">
         Contact ALANKRA
       </a>
 
@@ -1928,16 +1968,20 @@
     <div class="footer-grid">
 
 
+      <!-- BRAND -->
+
       <div class="footer-brand">
 
-        <div class="footer-logo">
+        <a
+          href="index.html"
+          class="footer-logo">
 
           <img
             src="LOGO.png"
             alt="ALANKRA"
           >
 
-        </div>
+        </a>
 
         <p class="footer-about">
           Luxury in Every Detail.<br>
@@ -1947,6 +1991,8 @@
 
       </div>
 
+
+      <!-- SHOP -->
 
       <div class="footer-column">
 
@@ -1958,7 +2004,7 @@
 
           <li>
             <a href="shop.html">
-              All Jewellery
+              Shop All
             </a>
           </li>
 
@@ -1991,10 +2037,12 @@
       </div>
 
 
+      <!-- ABOUT -->
+
       <div class="footer-column">
 
         <h4>
-          About
+          About ALANKRA
         </h4>
 
         <ul>
@@ -2028,36 +2076,43 @@
       </div>
 
 
+      <!-- CUSTOMER CARE -->
+
       <div class="footer-column">
 
         <h4>
-          Help
+          Customer Care
         </h4>
 
         <ul>
 
           <li>
             <a href="shipping.html">
-              Shipping
+              Shipping & Delivery
             </a>
           </li>
 
           <li>
-            <a href="#">
-              Returns
+            <a href="returns.html">
+              Returns & Exchange
             </a>
           </li>
 
           <li>
-            <a href="#">
-              FAQ
+            <a href="faq.html">
+              FAQs
             </a>
           </li>
 
           <li>
-            <a href="#"
-               onclick="contactMessage(event)">
-              Contact
+            <a href="contact.html">
+              Contact Us
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:alankra.jewels@gmail.com">
+              Email Us
             </a>
           </li>
 
@@ -2069,11 +2124,70 @@
     </div>
 
 
+    <!-- LEGAL LINKS -->
+
+    <div
+      style="
+        width:min(1150px,100%);
+        margin:45px auto 0;
+        padding-top:22px;
+        border-top:1px solid rgba(255,255,255,0.10);
+        text-align:center;
+      "
+    >
+
+      <a
+        href="privacy.html"
+        style="
+          color:rgba(255,255,255,0.55);
+          font-size:8px;
+          letter-spacing:1.5px;
+          text-transform:uppercase;
+          margin:0 12px;
+        "
+      >
+        Privacy Policy
+      </a>
+
+
+      <a
+        href="terms.html"
+        style="
+          color:rgba(255,255,255,0.55);
+          font-size:8px;
+          letter-spacing:1.5px;
+          text-transform:uppercase;
+          margin:0 12px;
+        "
+      >
+        Terms & Conditions
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/alankra.jewels/"
+        target="_blank"
+        rel="noopener"
+        style="
+          color:rgba(255,255,255,0.55);
+          font-size:8px;
+          letter-spacing:1.5px;
+          text-transform:uppercase;
+          margin:0 12px;
+        "
+      >
+        Instagram
+      </a>
+
+    </div>
+
+
     <div class="footer-bottom">
 
       © 2026 ALANKRA · LUXURY IN EVERY DETAIL
 
     </div>
+
 
   </footer>
 
@@ -2116,7 +2230,7 @@
         cart.forEach(item => {
 
           total += Number(
-            item.quantity || 1
+            item.quantity || item.qty || 1
           );
 
         });
@@ -2153,20 +2267,6 @@
 
       });
 
-
-    /* =========================
-       CONTACT PLACEHOLDER
-       ========================= */
-
-    function contactMessage(event) {
-
-      event.preventDefault();
-
-      alert(
-        "ALANKRA contact details will be added here soon. ♡"
-      );
-
-    }
 
   </script>
 
