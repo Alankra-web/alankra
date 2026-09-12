@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ALANKRA | Product</title>
+  <meta name="description" content="Discover elegant everyday jewellery by ALANKRA. Anti-tarnish, water-resistant and made for every moment.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --emerald: #123c32;
+      --emerald-dark: #0b2d25;
+      --ivory: #f8f5ee;
+      --cream: #eee8dc;
+      --gold: #b18a4a;
+      --text: #272522;
+      --muted: #77716a;
+      --white: #ffffff;
+      --border: rgba(18,60,50,.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    /* ANNOUNCEMENT */
+    .announcement {
+      background: var(--emerald);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248,245,238,.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      min-height: 78px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      width: 125px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex: 1;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      position: relative;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 8px;
+    }
+
+    .count {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--emerald);
+      color: white;
+      font-size: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* MOBILE MENU */
+    .mobile-menu {
+      display: none;
+      background: var(--ivory);
+      border-top: 1px solid var(--border);
+      padding: 20px 24px 28px;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb-wrap {
+      max-width: 1250px;
+      margin: auto;
+      padding: 22px 24px 5px;
+    }
+
+    .breadcrumb {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--gold);
+    }
+
+    /* PRODUCT */
+    .product-section {
+      max-width: 1250px;
+      margin: auto;
+      padding: 30px 24px 90px;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    /* GALLERY */
+    .product-image-wrap {
+      position: relative;
+      background: #f0ece4;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1 / 1.08;
+      object-fit: cover;
+    }
+
+    .image-placeholder {
+      aspect-ratio: 1 / 1.08;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(135deg, #eee9df, #f8f5ee);
+      color: var(--muted);
+      text-align: center;
+      padding: 30px;
+    }
+
+    .image-placeholder span {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      color: var(--emerald);
+    }
+
+    .wishlist-product {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(248,245,238,.92);
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .wishlist-product.active {
+      background: var(--emerald);
+      color: white;
+    }
+
+    /* PRODUCT INFO */
+    .product-info {
+      padding-top: 5px;
+    }
+
+    .product-category {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    .product-name {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--emerald);
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: .98;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .product-price {
+      font-size: 19px;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .product-code {
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: -18px;
+      margin-bottom: 28px;
+    }
+
+    .product-description {
+      color: #5f5a54;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      padding: 17px 8px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .feature:last-child {
+      border-right: 0;
+    }
+
+    .feature-icon {
+      display: block;
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--emerald);
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .feature span {
+      display: block;
+      color: var(--muted);
+      font-size: 8px;
+      margin-top: 3px;
+    }
+
+    /* DETAILS */
+    .details {
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+    }
+
+    .detail-row span:first-child {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .detail-row span:last-child {
+      font-weight: 500;
+      text-align: right;
+    }
+
+    /* QUANTITY */
+    .buy-area {
+      margin-top: 28px;
+    }
+
+    .quantity-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 9px;
+    }
+
+    .quantity {
+      display: flex;
+      width: 115px;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .quantity button {
+      width: 35px;
+      height: 40px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      color: var(--emerald);
+    }
+
+    .quantity input {
+      width: 45px;
+      height: 40px;
+      border: 0;
+      background: transparent;
+      text-align: center;
+      outline: none;
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn {
+      min-height: 52px;
+      border: 1px solid var(--emerald);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 10px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--emerald);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--emerald-dark);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--emerald);
+    }
+
+    .btn-secondary:hover {
+      background: var(--emerald);
+      color: white;
+    }
+
+    .care-note {
+      margin-top: 18px;
+      padding: 16px;
+      background: #f0ece4;
+      font-size: 10px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .care-note strong {
+      color: var(--emerald);
+    }
+
+    /* YOU MAY ALSO LIKE */
+    .related {
+      max-width: 1250px;
+      margin: auto;
+      padding: 0 24px 100px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--emerald);
+      font-size: 46px;
+      font-weight: 500;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .related-card {
+      cursor: pointer;
+    }
+
+    .related-image {
+      background: #eee9df;
+      aspect-ratio: 1 / 1.1;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .related-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .related-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .related-name {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--emerald);
+      font-size: 22px;
+    }
+
+    .related-price {
+      font-size: 11px;
+      margin-top: 3px;
+    }
+
+    /* MARQUEE */
+    .marquee {
+      overflow: hidden;
+      background: var(--emerald);
+      color: white;
+      padding: 16px 0;
+      white-space: nowrap;
+    }
+
+    .marquee-inner {
+      display: inline-block;
+      animation: scroll 25s linear infinite;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 19px;
+      letter-spacing: 2px;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #102f28;
+      color: white;
+      padding: 65px 24px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3,1fr);
+      gap: 50px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand img {
+      width: 115px;
+      filter: brightness(0) invert(1);
+      margin-bottom: 18px;
+    }
+
+    .footer-brand p {
+      max-width: 280px;
+      color: rgba(255,255,255,.65);
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .footer-title {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+      color: #d9c59a;
+    }
+
+    .footer-links a {
+      display: block;
+      color: rgba(255,255,255,.72);
+      font-size: 10px;
+      margin-bottom: 11px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: rgba(255,255,255,.45);
+      font-size: 9px;
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translate(-50%, 100px);
+      background: var(--emerald);
+      color: white;
+      padding: 13px 22px;
+      font-size: 10px;
+      letter-spacing: .5px;
+      z-index: 5000;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+        order: -1;
+      }
+
+      .nav {
+        justify-content: space-between;
+      }
+
+      .product-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .product-info {
+        padding: 0;
+      }
+
+      .related-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .announcement {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+      }
+
+      .nav {
+        padding: 10px 16px;
+      }
+
+      .logo {
+        width: 100px;
+      }
+
+      .nav-actions {
+        gap: 1px;
+      }
+
+      .icon-btn {
+        font-size: 16px;
+        padding: 6px;
+      }
+
+      .product-section {
+        padding: 20px 16px 65px;
+      }
+
+      .breadcrumb-wrap {
+        padding: 17px 16px 0;
+      }
+
+      .product-name {
+        font-size: 46px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .feature:last-child {
+        border-bottom: 0;
+      }
+
+      .button-row {
+        grid-template-columns: 1fr;
+      }
+
+      .related {
+        padding: 0 16px 70px;
+      }
+
+      .related-grid {
+        gap: 12px;
+      }
+
+      .related-name {
+        font-size: 19px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Anti-Tarnish · Water-Resistant · Everyday Luxury
+  </div>
+
+  <header>
+    <nav class="nav">
+
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+
+      <a href="./index.html">
+        <img src="./WEBSITE LOGO.png" alt="ALANKRA" class="logo">
+      </a>
+
+      <div class="nav-links">
+        <a href="./shop.html">Shop</a>
+        <a href="./collections.html">Collections</a>
+        <a href="./about.html">Our Story</a>
+        <a href="./care.html">Experience</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="goToShop()" aria-label="Search">
+          ⌕
+        </button>
+
+        <button class="icon-btn" onclick="goToWishlist()" aria-label="Wishlist">
+          ♡
+          <span class="count" id="wishlistCount">0</span>
+        </button>
+
+        <button class="icon-btn" onclick="openCart()" aria-label="Shopping bag">
+          🛍
+          <span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="./shop.html">Shop</a>
+      <a href="./collections.html">Collections</a>
+      <a href="./about.html">Our Story</a>
+      <a href="./care.html">Jewellery Care</a>
+      <a href="./shipping.html">Shipping & Delivery</a>
+      <a href="./returns.html">Returns & Exchange</a>
+      <a href="./faq.html">FAQs</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms & Conditions</a>
+    </div>
+  </header>
+
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <div class="breadcrumb">
+      <a href="./index.html">Home</a>
+      &nbsp; / &nbsp;
+      <a href="./shop.html">Shop</a>
+      &nbsp; / &nbsp;
+      <span id="breadcrumbProduct">Product</span>
+    </div>
+  </div>
+
+
+  <!-- PRODUCT -->
+  <main class="product-section">
+
+    <div class="product-layout">
+
+      <!-- IMAGE -->
+      <div class="product-image-wrap">
+
+        <button
+          class="wishlist-product"
+          id="productWishlist"
+          onclick="toggleProductWishlist()"
+          aria-label="Add to wishlist">
+          ♡
+        </button>
+
+        <div id="imageContainer"></div>
+
+      </div>
+
+
+      <!-- INFORMATION -->
+      <div class="product-info">
+
+        <div class="product-category" id="productCategory">
+          Jewellery
+        </div>
+
+        <h1 class="product-name" id="productName">
+          ALANKRA
+        </h1>
+
+        <div class="product-price" id="productPrice">
+          ₹499
+        </div>
+
+        <div class="product-code" id="productCode">
+          Product Code
+        </div>
+
+        <p class="product-description" id="productDescription">
+          Elegant everyday jewellery designed to add a little luxury to every moment.
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="features">
+
+          <div class="feature">
+            <span class="feature-icon">✦</span>
+            <strong>Anti-Tarnish</strong>
+            <span>Everyday elegance</span>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">◇</span>
+            <strong>Water-Resistant</strong>
+            <span>Made for daily wear</span>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">♡</span>
+            <strong>Skin-Friendly</strong>
+            <span>Comfort focused</span>
+          </div>
+
+        </div>
+
+
+        <!-- DETAILS -->
+        <div class="details">
+
+          <div class="detail-row">
+            <span>Material</span>
+            <span>Stainless Steel</span>
+          </div>
+
+          <div class="detail-row">
+            <span>Finish</span>
+            <span>18K Gold Finish</span>
+          </div>
+
+          <div class="detail-row">
+            <span>Wear</span>
+            <span>Everyday</span>
+          </div>
+
+        </div>
+
+
+        <!-- BUY -->
+        <div class="buy-area">
+
+          <div class="quantity-label">
+            Quantity
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(-1)">−</button>
+            <input id="quantity" value="1" min="1" readonly>
+            <button onclick="changeQuantity(1)">+</button>
+          </div>
+
+          <div class="button-row">
+
+            <button
+              class="btn btn-primary"
+              onclick="addToBag()">
+              Add to Bag
+            </button>
+
+            <button
+              class="btn btn-secondary"
+              onclick="orderWhatsApp()">
+              Order via WhatsApp
+            </button>
+
+          </div>
+
+          <div class="care-note">
+            <strong>A little care goes a long way.</strong><br>
+            To keep your jewellery looking beautiful, avoid prolonged
+            contact with water, perfume, lotions and harsh chemicals.
+            Wipe gently with a soft, dry cloth after wearing and store
+            it separately in a dry place.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- RELATED -->
+  <section class="related">
+
+    <div class="section-heading">
+      <div class="eyebrow">Complete Your Look</div>
+      <h2>You May Also Like</h2>
+    </div>
+
+    <div class="related-grid" id="relatedGrid"></div>
+
+  </section>
+
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-inner">
+      ALANKRA · LUXURY IN EVERY DETAIL · ALANKRA · LUXURY IN EVERY DETAIL ·
+      ALANKRA · LUXURY IN EVERY DETAIL · ALANKRA · LUXURY IN EVERY DETAIL ·
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="./WEBSITE LOGO.png" alt="ALANKRA">
+          <p>
+            Everyday jewellery, elevated.
+            Thoughtful details, feminine designs and
+            affordable luxury made for every moment.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">Shop</div>
+          <div class="footer-links">
+            <a href="./shop.html">Shop All</a>
+            <a href="./shop.html?category=necklaces">Necklaces</a>
+            <a href="./shop.html?category=earrings">Earrings</a>
+            <a href="./shop.html?category=bracelets">Bracelets</a>
+            <a href="./shop.html?category=rings">Rings</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">About ALANKRA</div>
+          <div class="footer-links">
+            <a href="./about.html">Our Story</a>
+            <a href="./care.html">Jewellery Care</a>
+            <a href="./collections.html">Collections</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Customer Care</div>
+          <div class="footer-links">
+            <a href="./shipping.html">Shipping & Delivery</a>
+            <a href="./returns.html">Returns & Exchange</a>
+            <a href="./faq.html">FAQs</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="mailto:alankra.jewels@gmail.com">Email Us</a>
+            <a href="https://www.instagram.com/alankra.jewels/" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 ALANKRA. All rights reserved.</span>
+
+        <span>
+          <a href="./privacy.html">Privacy</a>
+          &nbsp; · &nbsp;
+          <a href="./terms.html">Terms</a>
+        </span>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <div class="toast" id="toast">
+    Added to your ALANKRA bag ♡
+  </div>
+
+
+  <script>
+
+    /* ==========================================
+       ALANKRA PRODUCT CATALOGUE
+       ========================================== */
+
+    const products = [
+
+      {
+        code: "ALK-B001",
+        name: "Golden Knot Bracelet",
+        price: 499,
+        category: "Bracelets",
+        image: "golden knot bracelet.png"
+      },
+
+      {
+        code: "ALK-E001",
+        name: "Golden Petal Earrings",
+        price: 499,
+        category: "Earrings",
+        image: "golden petal earring.jpeg"
+      },
+
+      {
+        code: "ALK-E002",
+        name: "Purple Vintage Earrings",
+        price: 449,
+        category: "Earrings",
+        image: "purple vintage earrings.jpeg"
+      },
+
+      {
+        code: "ALK-E003",
+        name: "Crystal Stud Earrings",
+        price: 499,
+        category: "Earrings",
+        image: null
+      },
+
+      {
+        code: "ALK-E004",
+        name: "Vintage Butterfly Earrings",
+        price: 449,
+        category: "Earrings",
+        image: "vintage butterfly earrings.jpeg"
+      },
+
+      {
+        code: "ALK-N001",
+        name: "Pearl Bloom Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "pearl bloom necklace.jpeg"
+      },
+
+      {
+        code: "ALK-N002",
+        name: "Lucky Clover Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "lucky clover necklace.jpeg"
+      },
+
+      {
+        code: "ALK-B002",
+        name: "Green Stone Bracelet",
+        price: 599,
+        category: "Bracelets",
+        image: "green stone bracelet.png"
+      },
+
+      {
+        code: "ALK-N003",
+        name: "Mini Tulip Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "mini tulip necklace.png"
+      },
+
+      {
+        code: "ALK-B003",
+        name: "Golden Glow Bracelet",
+        price: 499,
+        category: "Bracelets",
+        image: "golden glow bracelet.png"
+      },
+
+      {
+        code: "ALK-N004",
+        name: "Black Clover Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "black clover necklace.jpeg"
+      },
+
+      {
+        code: "ALK-N005",
+        name: "White Drop Necklace",
+        price: 599,
+        category: "Necklaces",
+        image: "white drop necklace set.jpeg"
+      },
+
+      {
+        code: "ALK-N006",
+        name: "Silver Swan Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "silver swan necklace.jpeg"
+      },
+
+      {
+        code: "ALK-E005",
+        name: "Vintage Square Earrings",
+        price: 449,
+        category: "Earrings",
+        image: null
+      },
+
+      {
+        code: "ALK-N007",
+        name: "Golden Rose Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "golden rose necklace.png"
+      },
+
+      {
+        code: "ALK-R001",
+        name: "Crystal Cross Ring",
+        price: 399,
+        category: "Rings",
+        image: "crystal cross ring.png"
+      },
+
+      {
+        code: "ALK-R002",
+        name: "Classic V Ring",
+        price: 449,
+        category: "Rings",
+        image: null
+      },
+
+      {
+        code: "ALK-B004",
+        name: "Bow & Heart Bracelet",
+        price: 599,
+        category: "Bracelets",
+        image: "heart and bow bracelet.png"
+      },
+
+      {
+        code: "ALK-B005",
+        name: "Nail Bracelet",
+        price: 599,
+        category: "Bracelets",
+        image: "nail bracelet.jpeg"
+      },
+
+      {
+        code: "ALK-N008",
+        name: "Golden Coin Necklace",
+        price: 449,
+        category: "Necklaces",
+        image: null
+      },
+
+      {
+        code: "ALK-N009",
+        name: "Pink Heart Necklace",
+        price: 499,
+        category: "Necklaces",
+        image: "Pink heart necklace.jpeg"
+      },
+
+      {
+        code: "ALK-N010",
+        name: "Daisy Bloom Necklace",
+        price: 549,
+        category: "Necklaces",
+        image: null
+      },
+
+      {
+        code: "ALK-N011",
+        name: "Heart Mangalsutra",
+        price: 499,
+        category: "Necklaces",
+        image: "heart mangalsutra.png"
+      }
+
+    ];
+
+
+    /* ==========================================
+       GET PRODUCT FROM URL
+       Example:
+       product.html?product=ALK-N002
+       ========================================== */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const productCode = params.get("product");
+
+    let product = products.find(
+      item => item.code === productCode
+    );
+
+    /* Default product if opened without parameter */
+
+    if (!product) {
+      product = products[0];
+    }
+
+
+    /* ==========================================
+       DISPLAY PRODUCT
+       ========================================== */
+
+    function displayProduct() {
+
+      document.title =
+        `${product.name} | ALANKRA`;
+
+      document.getElementById("productName").textContent =
+        product.name;
+
+      document.getElementById("productPrice").textContent =
+        `₹${product.price}`;
+
+      document.getElementById("productCode").textContent =
+        `Product Code · ${product.code}`;
+
+      document.getElementById("productCategory").textContent =
+        product.category;
+
+      document.getElementById("breadcrumbProduct").textContent =
+        product.name;
+
+
+      const description =
+        `A beautifully detailed ${product.name.toLowerCase()} designed to bring effortless elegance to your everyday look. A versatile piece made to be styled, layered and loved for every moment.`;
+
+      document.getElementById("productDescription").textContent =
+        description;
+
+
+      const imageContainer =
+        document.getElementById("imageContainer");
+
+
+      if (product.image) {
+
+        imageContainer.innerHTML = `
+          <img
+            src="./${product.image}"
+            alt="${product.name}"
+            class="product-image"
+            onerror="showPlaceholder()"
+          >
+        `;
+
+      } else {
+
+        showPlaceholder();
+
+      }
+
+      updateWishlistButton();
+
+      renderRelatedProducts();
+
+    }
+
+
+    /* ==========================================
+       IMAGE PLACEHOLDER
+       ========================================== */
+
+    function showPlaceholder() {
+
+      document.getElementById("imageContainer").innerHTML = `
+        <div class="image-placeholder">
+          <span>Image Coming Soon</span>
+        </div>
+      `;
+
+    }
+
+
+    /* ==========================================
+       QUANTITY
+       ========================================== */
+
+    function changeQuantity(amount) {
+
+      const input =
+        document.getElementById("quantity");
+
+      let value =
+        parseInt(input.value) + amount;
+
+      if (value < 1) {
+        value = 1;
+      }
+
+      input.value = value;
+
+    }
+
+
+    /* ==========================================
+       CART
+       Compatible with ALANKRA shop
+       ========================================== */
+
+    function getCart() {
+
+      try {
+        return JSON.parse(
+          localStorage.getItem("alankraCart")
+        ) || [];
+      } catch {
+        return [];
+      }
+
+    }
+
+
+    function saveCart(cart) {
+
+      localStorage.setItem(
+        "alankraCart",
+        JSON.stringify(cart)
+      );
+
+    }
+
+
+    function addToBag() {
+
+      const quantity =
+        parseInt(
+          document.getElementById("quantity").value
+        ) || 1;
+
+      let cart = getCart();
+
+      const existing =
+        cart.find(item =>
+          item.code === product.code
+        );
+
+
+      if (existing) {
+
+        existing.quantity =
+          (existing.quantity || 1) + quantity;
+
+      } else {
+
+        cart.push({
+          code: product.code,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          category: product.category,
+          quantity: quantity
+        });
+
+      }
+
+
+      saveCart(cart);
+
+      updateCounts();
+
+      showToast(
+        `${product.name} added to your bag ♡`
+      );
+
+    }
+
+
+    /* ==========================================
+       WISHLIST
+       ========================================== */
+
+    function getWishlist() {
+
+      try {
+        return JSON.parse(
+          localStorage.getItem("alankraWishlist")
+        ) || [];
+      } catch {
+        return [];
+      }
+
+    }
+
+
+    function saveWishlist(list) {
+
+      localStorage.setItem(
+        "alankraWishlist",
+        JSON.stringify(list)
+      );
+
+    }
+
+
+    function toggleProductWishlist() {
+
+      let wishlist = getWishlist();
+
+      const index =
+        wishlist.indexOf(product.code);
+
+
+      if (index > -1) {
+
+        wishlist.splice(index, 1);
+
+        showToast("Removed from wishlist");
+
+      } else {
+
+        wishlist.push(product.code);
+
+        showToast("Added to your wishlist ♡");
+
+      }
+
+
+      saveWishlist(wishlist);
+
+      updateWishlistButton();
+
+      updateCounts();
+
+    }
+
+
+    function updateWishlistButton() {
+
+      const button =
+        document.getElementById("productWishlist");
+
+      const wishlist =
+        getWishlist();
+
+      if (
+        wishlist.includes(product.code)
+      ) {
+
+        button.classList.add("active");
+
+        button.textContent = "♥";
+
+      } else {
+
+        button.classList.remove("active");
+
+        button.textContent = "♡";
+
+      }
+
+    }
+
+
+    /* ==========================================
+       COUNTS
+       ========================================== */
+
+    function updateCounts() {
+
+      const cart = getCart();
+
+      const wishlist = getWishlist();
+
+
+      const cartCount =
+        cart.reduce(
+          (total, item) =>
+            total + (item.quantity || 1),
+          0
+        );
+
+
+      document.getElementById(
+        "cartCount"
+      ).textContent = cartCount;
+
+
+      document.getElementById(
+        "wishlistCount"
+      ).textContent = wishlist.length;
+
+    }
+
+
+    /* ==========================================
+       RELATED PRODUCTS
+       ========================================== */
+
+    function renderRelatedProducts() {
+
+      const grid =
+        document.getElementById("relatedGrid");
+
+
+      let related =
+        products.filter(item =>
+          item.category === product.category &&
+          item.code !== product.code
+        );
+
+
+      if (related.length < 4) {
+
+        const additional =
+          products.filter(item =>
+            item.code !== product.code &&
+            !related.some(
+              r => r.code === item.code
+            )
+          );
+
+        related =
+          related.concat(additional);
+
+      }
+
+
+      related =
+        related.slice(0,4);
+
+
+      grid.innerHTML =
+        related.map(item => {
+
+          const image =
+            item.image
+              ? `
+                <img
+                  src="./${item.image}"
+                  alt="${item.name}"
+                  onerror="this.style.display='none'"
+                >
+              `
+              : `
+                <div class="image-placeholder">
+                  <span>Coming Soon</span>
+                </div>
+              `;
+
+
+          return `
+            <a
+              class="related-card"
+              href="./product.html?product=${encodeURIComponent(item.code)}"
+            >
+
+              <div class="related-image">
+                ${image}
+              </div>
+
+              <div class="related-name">
+                ${item.name}
+              </div>
+
+              <div class="related-price">
+                ₹${item.price}
+              </div>
+
+            </a>
+          `;
+
+        }).join("");
+
+    }
+
+
+    /* ==========================================
+       WHATSAPP ORDER
+       ========================================== */
+
+    function orderWhatsApp() {
+
+      const quantity =
+        parseInt(
+          document.getElementById("quantity").value
+        ) || 1;
+
+
+      const total =
+        product.price * quantity;
+
+
+      const message =
+`Hi ALANKRA 🤍
+
+I would like to order:
+
+Product: ${product.name}
+Product Code: ${product.code}
+Quantity: ${quantity}
+Price: ₹${total}
+
+Please share the next steps for my order.`;
+
+      const whatsappURL =
+        "https://wa.me/919311690960?text=" +
+        encodeURIComponent(message);
+
+
+      window.open(
+        whatsappURL,
+        "_blank"
+      );
+
+    }
+
+
+    /* ==========================================
+       NAVIGATION
+       ========================================== */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("mobileMenu")
+        .classList.toggle("active");
+
+    }
+
+
+    function goToShop() {
+
+      window.location.href =
+        "./shop.html";
+
+    }
+
+
+    function goToWishlist() {
+
+      /*
+        If you create a separate wishlist page later,
+        this can be changed to wishlist.html.
+      */
+
+      showToast(
+        "Your wishlist is available from the ♡ icon."
+      );
+
+    }
+
+
+    function openCart() {
+
+      /*
+        Your existing Shop page already contains
+        the full cart drawer.
+
+        For now, take the customer back to Shop,
+        where their saved cart will still be available.
+      */
+
+      window.location.href =
+        "./shop.html";
+
+    }
+
+
+    /* ==========================================
+       TOAST
+       ========================================== */
+
+    let toastTimer;
+
+
+    function showToast(message) {
+
+      const toast =
+        document.getElementById("toast");
+
+      toast.textContent = message;
+
+      toast.classList.add("show");
+
+      clearTimeout(toastTimer);
+
+      toastTimer =
+        setTimeout(() => {
+
+          toast.classList.remove("show");
+
+        }, 2500);
+
+    }
+
+
+    /* ==========================================
+       START
+       ========================================== */
+
+    displayProduct();
+
+    updateCounts();
+
+  </script>
+
+</body>
+</html>
