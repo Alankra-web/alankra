@@ -3117,6 +3117,7 @@ cartOverlay.addEventListener(
 
 document
   .getElementById("checkoutBtn")
+checkoutBtn
   .addEventListener(
     "click",
     () => {
@@ -3128,17 +3129,55 @@ document
         );
 
         return;
-
       }
 
+      let message =
+        "Hello ALANKRA! 🤍\n\n" +
+        "I would like to place an order:\n\n";
 
-      alert(
-        "Checkout will be connected to ALANKRA's payment system."
+      let total = 0;
+
+      cart.forEach(item => {
+
+        const product =
+          products.find(
+            p => p.code === item.code
+          );
+
+        if (!product) return;
+
+        const itemTotal =
+          product.price * item.quantity;
+
+        total += itemTotal;
+
+        message +=
+          "• " +
+          product.name +
+          " × " +
+          item.quantity +
+          " — " +
+          formatPrice(itemTotal) +
+          "\n";
+      });
+
+      message +=
+        "\n*Total: " +
+        formatPrice(total) +
+        "*\n\n" +
+        "Please share the payment and delivery details. ✨";
+
+      const whatsappURL =
+        "https://wa.me/919311690960?text=" +
+        encodeURIComponent(message);
+
+      window.open(
+        whatsappURL,
+        "_blank"
       );
 
     }
   );
-
 
 /* =========================================================
    MOBILE MENU
