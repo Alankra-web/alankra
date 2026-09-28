@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shop | ALANKRA — Luxury in Every Detail</title>
 
-<meta name="description" content="Shop ALANKRA's collection of elegant anti-tarnish jewellery. Discover necklaces, earrings, bracelets and rings designed for everyday luxury.">
+<meta
+  name="description"
+  content="Shop ALANKRA jewellery — elegant everyday jewellery designed with a luxurious touch."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+>
+
 
 <style>
 
+/* =========================================================
+   ALANKRA SHOP
+   PREMIUM E-COMMERCE DESIGN
+========================================================= */
+
 :root{
+
   --ivory:#f8f4ec;
   --cream:#eee7da;
+  --cream-dark:#e4dac9;
+
   --white:#fffdf9;
+
   --emerald:#123f35;
-  --deep:#0b2d27;
-  --gold:#b59658;
+  --emerald-dark:#0b2e27;
+
+  --gold:#aa8750;
   --gold-light:#d7c28f;
-  --text:#26231f;
-  --muted:#777066;
-  --line:rgba(181,150,88,.28);
-  --shadow:0 12px 35px rgba(31,26,19,.08);
+
+  --text:#27241f;
+  --muted:#81786b;
+
+  --border:rgba(170,135,80,.24);
+
+  --shadow:0 10px 35px rgba(40,32,22,.08);
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
   box-sizing:border-box;
@@ -47,1185 +74,2190 @@ body{
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 button,
 input{
-  font:inherit;
+  font-family:inherit;
 }
 
 button{
   cursor:pointer;
 }
 
-/* =========================
+
+/* =========================================================
    TOP BAR
-========================= */
+========================================================= */
 
-.topbar{
+.top-bar{
+
+  height:32px;
+
   background:var(--emerald);
-  color:#f8f3e8;
-  text-align:center;
-  padding:9px 15px;
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
 
-/* =========================
-   HEADER
-========================= */
+  color:#f8f2e7;
 
-header{
-  background:rgba(248,244,236,.96);
-  border-bottom:1px solid var(--line);
-  position:sticky;
-  top:0;
-  z-index:1000;
-  backdrop-filter:blur(12px);
-}
-
-.nav{
-  max-width:1380px;
-  margin:auto;
-  min-height:88px;
-  padding:0 34px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:30px;
+  justify-content:center;
+
+  font-size:9px;
+
+  letter-spacing:2.4px;
+
+  text-transform:uppercase;
+
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+  height:82px;
+
+  background:rgba(248,244,236,.97);
+
+  border-bottom:1px solid var(--border);
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  backdrop-filter:blur(14px);
+
+}
+
+
+.header-inner{
+
+  max-width:1440px;
+
+  height:100%;
+
+  margin:auto;
+
+  padding:0 34px;
+
+  display:grid;
+
+  grid-template-columns:1fr auto 1fr;
+
+  align-items:center;
+
+}
+
+
+/* LEFT NAV */
+
+.nav-left{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:32px;
+
+}
+
+
+.nav-left a,
+.nav-right a{
+
+  font-size:10px;
+
+  letter-spacing:1.9px;
+
+  text-transform:uppercase;
+
+  color:#302d28;
+
+  position:relative;
+
+  padding:8px 0;
+
+}
+
+
+.nav-left a::after,
+.nav-right a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:0;
+
+  width:0;
+
+  height:1px;
+
+  background:var(--gold);
+
+  transition:.3s;
+
+}
+
+
+.nav-left a:hover::after,
+.nav-left a.active::after,
+.nav-right a:hover::after{
+
+  width:100%;
+
+}
+
+
+/* LOGO */
 
 .logo{
+
   display:flex;
+
   align-items:center;
+
+  justify-content:center;
+
 }
+
 
 .logo img{
-  width:112px;
+
+  width:145px;
+
   height:auto;
+
   display:block;
+
 }
 
-.nav-links{
+
+/* RIGHT NAV */
+
+.nav-right{
+
   display:flex;
+
+  justify-content:flex-end;
+
   align-items:center;
-  justify-content:center;
-  gap:34px;
-  flex:1;
+
+  gap:28px;
+
 }
 
-.nav-links a{
-  font-size:11px;
-  letter-spacing:1.7px;
-  text-transform:uppercase;
-  color:#39352f;
-  position:relative;
-  padding:7px 0;
-}
 
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:1px;
-  background:var(--gold);
-  transition:.3s;
-}
+.nav-icon{
 
-.nav-links a:hover::after,
-.nav-links a.active::after{
-  width:100%;
-}
-
-.nav-actions{
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-
-.icon-btn{
   border:0;
+
   background:none;
-  color:var(--emerald);
-  font-size:18px;
-  position:relative;
-  padding:4px;
+
+  padding:5px;
+
+  color:#27241f;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
 }
+
+
+.nav-icon svg{
+
+  width:20px;
+
+  height:20px;
+
+  stroke:currentColor;
+
+  fill:none;
+
+  stroke-width:1.4;
+
+}
+
+
+.nav-label{
+
+  font-size:10px;
+
+  letter-spacing:1.7px;
+
+  text-transform:uppercase;
+
+}
+
+
+.bag-wrap{
+
+  position:relative;
+
+}
+
 
 .bag-count{
+
   position:absolute;
-  top:-7px;
-  right:-8px;
-  min-width:17px;
-  height:17px;
+
+  top:-8px;
+
+  right:-10px;
+
+  width:16px;
+
+  height:16px;
+
   border-radius:50%;
-  background:var(--gold);
+
+  background:var(--emerald);
+
   color:white;
-  font-size:9px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
+  font-size:8px;
+
 }
 
-/* =========================
+
+/* =========================================================
    SHOP INTRO
-========================= */
+========================================================= */
 
-.shop-head{
-  max-width:1380px;
-  margin:auto;
-  padding:72px 34px 32px;
+.shop-intro{
+
   text-align:center;
+
+  padding:62px 20px 38px;
+
 }
+
 
 .eyebrow{
-  font-size:10px;
-  letter-spacing:3px;
-  text-transform:uppercase;
+
   color:var(--gold);
-  margin-bottom:14px;
+
+  font-size:9px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  margin-bottom:13px;
+
 }
 
-.shop-head h1{
+
+.shop-intro h1{
+
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(48px,6vw,76px);
+
+  font-size:68px;
+
   line-height:.95;
+
   font-weight:500;
+
   color:var(--emerald);
-  margin-bottom:20px;
+
+  margin-bottom:18px;
+
 }
 
-.shop-head p{
-  max-width:650px;
+
+.shop-intro p{
+
+  max-width:610px;
+
   margin:auto;
+
   color:var(--muted);
-  font-size:13px;
+
+  font-size:11px;
+
   line-height:1.9;
+
 }
 
-/* =========================
-   CATEGORY NAV
-========================= */
 
-.category-wrap{
+/* =========================================================
+   CATEGORY BAR
+========================================================= */
+
+.category-section{
+
   max-width:1380px;
+
   margin:auto;
-  padding:16px 34px 30px;
+
+  padding:0 30px;
+
 }
 
-.categories{
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+
+.category-bar{
+
+  border-top:1px solid var(--border);
+
+  border-bottom:1px solid var(--border);
+
   display:flex;
+
   justify-content:center;
+
   align-items:center;
+
   flex-wrap:wrap;
-  gap:0;
+
 }
+
 
 .category-btn{
+
   border:0;
+
   background:none;
-  padding:18px 25px;
-  color:#615b52;
-  font-size:10px;
-  letter-spacing:1.7px;
+
+  color:#777064;
+
+  padding:18px 24px;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
   text-transform:uppercase;
+
   position:relative;
+
   transition:.25s;
+
 }
 
+
 .category-btn::after{
+
   content:"";
+
   position:absolute;
-  left:25px;
-  right:25px;
+
+  left:24px;
+
+  right:24px;
+
   bottom:8px;
+
   height:1px;
+
   background:var(--gold);
+
   transform:scaleX(0);
+
   transition:.25s;
+
 }
+
 
 .category-btn:hover,
 .category-btn.active{
+
   color:var(--emerald);
+
 }
 
-.category-btn.active::after,
-.category-btn:hover::after{
+
+.category-btn:hover::after,
+.category-btn.active::after{
+
   transform:scaleX(1);
+
 }
 
-/* =========================
+
+/* =========================================================
    TOOLBAR
-========================= */
+========================================================= */
 
 .toolbar{
+
   max-width:1380px;
+
   margin:auto;
-  padding:20px 34px 28px;
+
+  padding:23px 30px 28px;
+
   display:flex;
-  align-items:center;
+
   justify-content:space-between;
-  gap:20px;
+
+  align-items:center;
+
 }
 
-.result-count{
-  font-size:10px;
-  color:var(--muted);
-  letter-spacing:1.5px;
+
+.product-count{
+
+  color:#857b6e;
+
+  font-size:9px;
+
+  letter-spacing:1.7px;
+
   text-transform:uppercase;
+
 }
 
-.search-box{
-  width:260px;
+
+.search{
+
+  width:250px;
+
   position:relative;
+
 }
 
-.search-box input{
+
+.search input{
+
   width:100%;
-  border:0;
-  border-bottom:1px solid #cfc6b6;
+
+  height:35px;
+
   background:transparent;
-  padding:10px 30px 10px 4px;
+
+  border:0;
+
+  border-bottom:1px solid #c9bdab;
+
   outline:none;
+
+  padding:5px 28px 5px 4px;
+
   color:var(--text);
-  font-size:12px;
+
+  font-size:11px;
+
 }
 
-.search-box input:focus{
+
+.search input:focus{
+
   border-color:var(--gold);
+
 }
 
-.search-box span{
+
+.search-icon{
+
   position:absolute;
-  right:5px;
-  top:9px;
+
+  right:3px;
+
+  top:7px;
+
+  font-size:18px;
+
   color:var(--gold);
+
 }
 
-/* =========================
+
+/* =========================================================
    PRODUCT GRID
-========================= */
+========================================================= */
 
 .product-grid{
+
   max-width:1380px;
+
   margin:auto;
-  padding:0 34px 80px;
+
+  padding:0 30px 90px;
+
   display:grid;
+
   grid-template-columns:repeat(3,minmax(0,1fr));
+
   gap:48px 24px;
+
 }
 
-/* =========================
+
+/* =========================================================
    PRODUCT CARD
-========================= */
+========================================================= */
 
 .product-card{
-  position:relative;
+
   min-width:0;
+
 }
 
-.product-image-wrap{
+
+/* IMAGE AREA */
+
+.product-image-box{
+
   position:relative;
-  background:#f1ece3;
-  border:1px solid rgba(181,150,88,.16);
+
+  width:100%;
+
+  aspect-ratio:1 / 1.03;
+
+  background:#ebe3d5;
+
+  border:1px solid var(--border);
+
+  padding:10px;
+
   overflow:hidden;
-  aspect-ratio:1 / 1.08;
+
 }
 
-.product-image-wrap a{
+
+/* INNER IMAGE */
+
+.product-image-link{
+
   display:block;
+
   width:100%;
+
   height:100%;
+
+  background:#f8f3ea;
+
+  border:1px solid rgba(170,135,80,.17);
+
+  overflow:hidden;
+
 }
+
 
 .product-image{
+
   width:100%;
+
   height:100%;
-  object-fit:contain;
+
   display:block;
-  padding:28px;
-  transition:transform .5s ease;
+
+  object-fit:cover;
+
+  transition:transform .65s cubic-bezier(.2,.7,.2,1);
+
 }
+
 
 .product-card:hover .product-image{
-  transform:scale(1.035);
+
+  transform:scale(1.025);
+
 }
 
-.image-placeholder{
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.placeholder{
+
   width:100%;
+
   height:100%;
+
   display:flex;
-  align-items:center;
-  justify-content:center;
+
   flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
   background:
-    radial-gradient(circle at center,rgba(255,255,255,.75),rgba(236,228,215,.8));
+    radial-gradient(
+      circle at center,
+      #fffdf9 0%,
+      #ece4d6 100%
+    );
+
   color:var(--gold);
+
 }
 
-.image-placeholder span:first-child{
+
+.placeholder-title{
+
   font-family:'Cormorant Garamond',serif;
-  font-size:36px;
-  margin-bottom:6px;
+
+  font-size:42px;
+
+  letter-spacing:4px;
+
 }
 
-.image-placeholder span:last-child{
-  font-size:9px;
+
+.placeholder-text{
+
+  margin-top:7px;
+
+  font-size:8px;
+
   letter-spacing:2px;
+
   text-transform:uppercase;
+
 }
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
 
 .wishlist{
+
   position:absolute;
-  top:15px;
-  right:15px;
-  width:38px;
-  height:38px;
+
+  top:21px;
+
+  right:21px;
+
+  width:40px;
+
+  height:40px;
+
   border-radius:50%;
-  border:1px solid rgba(181,150,88,.35);
-  background:rgba(255,253,249,.9);
-  color:var(--emerald);
+
+  border:1px solid rgba(170,135,80,.25);
+
+  background:rgba(255,253,249,.94);
+
+  color:#332f29;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
-  z-index:4;
+
+  font-size:20px;
+
+  z-index:5;
+
   transition:.25s;
+
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+
 }
+
 
 .wishlist:hover,
 .wishlist.active{
+
   background:var(--emerald);
+
+  border-color:var(--emerald);
+
   color:white;
+
 }
 
-.quick-add{
+
+/* =========================================================
+   ADD TO BAG
+========================================================= */
+
+.add-bag{
+
   position:absolute;
-  left:16px;
-  right:16px;
-  bottom:16px;
-  height:46px;
+
+  left:22px;
+
+  right:22px;
+
+  bottom:22px;
+
+  height:44px;
+
   border:1px solid var(--emerald);
-  background:rgba(18,63,53,.96);
+
+  background:rgba(18,63,53,.97);
+
   color:white;
-  font-size:10px;
-  letter-spacing:1.8px;
+
+  font-size:8px;
+
+  letter-spacing:2px;
+
   text-transform:uppercase;
+
   opacity:0;
-  transform:translateY(8px);
+
+  transform:translateY(10px);
+
   transition:.3s;
+
+  z-index:4;
+
 }
 
-.product-card:hover .quick-add{
+
+.product-card:hover .add-bag{
+
   opacity:1;
+
   transform:translateY(0);
+
 }
 
-.product-info{
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-details{
+
   padding:17px 4px 0;
+
 }
+
 
 .product-category{
-  font-size:9px;
+
   color:var(--gold);
-  letter-spacing:2px;
+
+  font-size:8px;
+
+  letter-spacing:2.3px;
+
   text-transform:uppercase;
+
   margin-bottom:7px;
+
 }
+
 
 .product-name{
+
+  display:block;
+
+  color:#2b2823;
+
   font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-  line-height:1.05;
-  color:var(--emerald);
-  margin-bottom:8px;
+
+  font-size:25px;
+
+  line-height:1;
+
+  font-weight:500;
+
+  margin-bottom:10px;
+
+  transition:.2s;
+
 }
 
-.product-bottom{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
+
+.product-name:hover{
+
+  color:var(--emerald);
+
 }
+
+
+.product-meta{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+}
+
 
 .product-price{
-  font-size:12px;
-  letter-spacing:1px;
-  color:#49443d;
+
+  font-size:11px;
+
+  font-weight:600;
+
+  letter-spacing:.5px;
+
+  color:#302c27;
+
 }
 
-.view-link{
-  font-size:9px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
+
+.view-piece{
+
   color:var(--gold);
-  border-bottom:1px solid rgba(181,150,88,.4);
+
+  font-size:8px;
+
+  letter-spacing:1.7px;
+
+  text-transform:uppercase;
+
+  border-bottom:1px solid rgba(170,135,80,.4);
+
   padding-bottom:3px;
+
 }
 
-/* =========================
-   EMPTY STATE
-========================= */
 
-.empty-state{
-  max-width:600px;
-  margin:50px auto 100px;
-  text-align:center;
-  display:none;
-}
-
-.empty-state h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:40px;
-  color:var(--emerald);
-  margin-bottom:10px;
-}
-
-.empty-state p{
-  color:var(--muted);
-  font-size:12px;
-}
-
-/* =========================
+/* =========================================================
    BRAND STRIP
-========================= */
+========================================================= */
 
 .brand-strip{
+
   background:var(--emerald);
-  color:#f8f3e8;
+
   border-top:1px solid var(--gold-light);
+
   border-bottom:1px solid var(--gold-light);
+
+  color:white;
+
 }
+
 
 .brand-strip-inner{
+
   max-width:1380px;
+
   margin:auto;
-  padding:35px 34px;
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  text-align:center;
+
 }
+
 
 .brand-feature{
-  padding:8px 20px;
-  border-right:1px solid rgba(215,194,143,.25);
+
+  text-align:center;
+
+  padding:34px 20px;
+
+  border-right:1px solid rgba(215,194,143,.22);
+
 }
+
 
 .brand-feature:last-child{
+
   border-right:0;
+
 }
+
 
 .brand-feature strong{
+
   display:block;
+
   font-family:'Cormorant Garamond',serif;
+
   font-size:24px;
+
   font-weight:500;
+
+  color:#f5ecda;
+
   margin-bottom:5px;
+
 }
+
 
 .brand-feature span{
-  font-size:9px;
+
+  font-size:8px;
+
   letter-spacing:1.8px;
+
   text-transform:uppercase;
-  color:#d8d1c4;
+
+  color:#c7c0b2;
+
 }
 
-/* =========================
-   EDITORIAL MINI SECTION
-========================= */
 
-.edit{
+/* =========================================================
+   EDITORIAL SECTION
+========================================================= */
+
+.edit-section{
+
   max-width:1380px;
+
   margin:auto;
-  padding:85px 34px;
+
+  padding:85px 30px;
+
   display:grid;
-  grid-template-columns:.9fr 1.1fr;
+
+  grid-template-columns:.85fr 1.15fr;
+
   gap:65px;
+
   align-items:center;
+
 }
 
-.edit-copy .eyebrow{
-  margin-bottom:10px;
-}
 
 .edit-copy h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:56px;
-  line-height:.95;
+
   color:var(--emerald);
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:56px;
+
+  line-height:.95;
+
   font-weight:500;
+
   margin-bottom:20px;
+
 }
+
 
 .edit-copy p{
+
+  max-width:460px;
+
   color:var(--muted);
-  font-size:12px;
+
+  font-size:11px;
+
   line-height:1.9;
-  max-width:470px;
+
 }
+
 
 .edit-link{
-  display:inline-flex;
-  margin-top:25px;
-  padding-bottom:8px;
+
+  display:inline-block;
+
+  margin-top:24px;
+
+  padding-bottom:7px;
+
   border-bottom:1px solid var(--gold);
+
   color:var(--emerald);
-  font-size:10px;
+
+  font-size:9px;
+
   letter-spacing:2px;
+
   text-transform:uppercase;
+
 }
+
 
 .edit-visual{
-  min-height:330px;
+
+  min-height:310px;
+
   background:
-    linear-gradient(135deg,rgba(18,63,53,.92),rgba(18,63,53,.98)),
+
+    radial-gradient(
+      circle at center,
+      rgba(215,194,143,.12),
+      transparent 40%
+    ),
+
     var(--emerald);
-  position:relative;
-  overflow:hidden;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
+  position:relative;
+
+  overflow:hidden;
+
 }
+
 
 .edit-visual::before{
+
   content:"ALANKRA";
+
   position:absolute;
+
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(70px,9vw,130px);
-  letter-spacing:5px;
-  color:rgba(215,194,143,.09);
+
+  font-size:120px;
+
+  letter-spacing:7px;
+
+  color:rgba(215,194,143,.08);
+
   white-space:nowrap;
+
 }
+
 
 .edit-frame{
+
   width:70%;
-  height:72%;
+
+  height:70%;
+
   border:1px solid rgba(215,194,143,.5);
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   position:relative;
+
   z-index:1;
+
 }
+
 
 .edit-frame span{
+
+  color:#e1d0a8;
+
   font-family:'Cormorant Garamond',serif;
-  color:#e4d4ad;
-  font-size:36px;
-  letter-spacing:2px;
+
+  font-size:38px;
+
+  letter-spacing:4px;
+
 }
 
-/* =========================
+
+/* =========================================================
    NEWSLETTER
-========================= */
+========================================================= */
 
 .newsletter{
+
   background:#eee7da;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+
+  border-top:1px solid var(--border);
+
+  border-bottom:1px solid var(--border);
+
 }
+
 
 .newsletter-inner{
-  max-width:850px;
+
+  max-width:700px;
+
   margin:auto;
+
   text-align:center;
-  padding:65px 30px;
+
+  padding:65px 25px;
+
 }
+
 
 .newsletter h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:45px;
+
   color:var(--emerald);
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:46px;
+
   font-weight:500;
-  margin-bottom:10px;
+
+  margin-bottom:9px;
+
 }
+
 
 .newsletter p{
-  font-size:11px;
+
   color:var(--muted);
+
+  font-size:10px;
+
   line-height:1.8;
-  margin-bottom:24px;
+
+  margin-bottom:25px;
+
 }
+
 
 .newsletter-form{
-  max-width:470px;
+
+  max-width:450px;
+
   margin:auto;
+
   display:flex;
-  border-bottom:1px solid #b8ad9b;
+
+  border-bottom:1px solid #bcae99;
+
 }
+
 
 .newsletter-form input{
+
   flex:1;
-  min-width:0;
+
   border:0;
-  background:transparent;
-  padding:13px 5px;
+
   outline:none;
-  font-size:11px;
+
+  background:transparent;
+
+  padding:12px 4px;
+
+  font-size:10px;
+
 }
+
 
 .newsletter-form button{
+
   border:0;
+
   background:none;
+
   color:var(--emerald);
-  font-size:10px;
-  letter-spacing:1.8px;
+
+  font-size:8px;
+
+  letter-spacing:2px;
+
   text-transform:uppercase;
+
 }
 
-/* =========================
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
-footer{
-  background:#0d302a;
+.footer{
+
+  background:var(--emerald-dark);
+
   color:#eee8dc;
+
 }
 
-.footer-main{
+
+.footer-inner{
+
   max-width:1380px;
+
   margin:auto;
-  padding:65px 34px 50px;
+
+  padding:60px 30px 45px;
+
   display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
+
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+
   gap:50px;
+
 }
 
-.footer-brand img{
-  width:105px;
+
+.footer-logo{
+
+  width:115px;
+
   margin-bottom:18px;
+
   filter:brightness(0) invert(1);
-  opacity:.95;
+
 }
+
 
 .footer-brand p{
+
   max-width:280px;
+
   color:#bdb7aa;
-  font-size:11px;
-  line-height:1.8;
+
+  font-size:10px;
+
+  line-height:1.9;
+
 }
 
-.footer-col h3{
-  font-size:9px;
-  letter-spacing:2px;
-  text-transform:uppercase;
+
+.footer-column h3{
+
   color:var(--gold-light);
+
+  font-size:8px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
   margin-bottom:18px;
+
 }
 
-.footer-col a{
+
+.footer-column a{
+
   display:block;
-  font-size:11px;
-  color:#c9c2b5;
+
+  color:#c6bfb1;
+
+  font-size:10px;
+
   margin-bottom:11px;
+
   transition:.2s;
+
 }
 
-.footer-col a:hover{
+
+.footer-column a:hover{
+
   color:white;
+
 }
+
 
 .footer-bottom{
+
   max-width:1380px;
+
   margin:auto;
-  border-top:1px solid rgba(215,194,143,.18);
-  padding:20px 34px;
+
+  padding:20px 30px;
+
+  border-top:1px solid rgba(215,194,143,.17);
+
   display:flex;
+
   justify-content:space-between;
-  gap:20px;
-  color:#aaa397;
-  font-size:9px;
+
+  color:#9f988d;
+
+  font-size:8px;
+
   letter-spacing:1px;
+
 }
 
-/* =========================
+
+/* =========================================================
    TOAST
-========================= */
+========================================================= */
 
 .toast{
+
   position:fixed;
+
   left:50%;
+
   bottom:25px;
+
   transform:translate(-50%,20px);
+
   background:var(--emerald);
+
   color:white;
+
   padding:14px 24px;
-  font-size:10px;
+
+  font-size:9px;
+
   letter-spacing:1.3px;
+
   text-transform:uppercase;
+
   opacity:0;
+
   pointer-events:none;
+
   transition:.3s;
-  z-index:2000;
+
+  z-index:5000;
+
   box-shadow:var(--shadow);
+
 }
+
 
 .toast.show{
+
   opacity:1;
+
   transform:translate(-50%,0);
+
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:900px){
 
-  .nav{
-    padding:0 18px;
-    min-height:74px;
+  .header{
+
+    height:72px;
+
   }
+
+
+  .header-inner{
+
+    padding:0 18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+  }
+
+
+  .nav-left{
+
+    display:none;
+
+  }
+
+
+  .logo{
+
+    order:1;
+
+  }
+
+
+  .nav-right{
+
+    order:2;
+
+    gap:12px;
+
+  }
+
+
+  .nav-label{
+
+    display:none;
+
+  }
+
 
   .logo img{
-    width:92px;
+
+    width:120px;
+
   }
 
-  .nav-links{
-    display:none;
+
+  .shop-intro{
+
+    padding:50px 20px 32px;
+
   }
 
-  .nav-actions{
-    gap:12px;
-  }
 
-  .shop-head{
-    padding:52px 20px 25px;
-  }
+  .shop-intro h1{
 
-  .shop-head h1{
     font-size:52px;
+
   }
 
-  .category-wrap{
-    padding:10px 15px 20px;
+
+  .category-section{
+
+    padding:0 15px;
+
     overflow-x:auto;
+
   }
 
-  .categories{
+
+  .category-bar{
+
     justify-content:flex-start;
+
     width:max-content;
+
     min-width:100%;
+
   }
+
 
   .category-btn{
-    padding:15px 17px;
+
+    padding:16px 17px;
+
   }
 
-  .category-btn::after{
-    left:17px;
-    right:17px;
-  }
 
   .toolbar{
-    padding:15px 18px 25px;
+
+    padding:20px 18px 25px;
+
   }
 
-  .search-box{
-    width:180px;
+
+  .search{
+
+    width:190px;
+
   }
+
 
   .product-grid{
-    padding:0 15px 55px;
+
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:34px 12px;
+
+    gap:35px 12px;
+
+    padding:0 15px 65px;
+
   }
 
-  .product-image{
-    padding:15px;
+
+  .product-image-box{
+
+    aspect-ratio:1 / 1.06;
+
+    padding:7px;
+
   }
 
-  .quick-add{
-    opacity:1;
-    transform:none;
-    left:9px;
-    right:9px;
-    bottom:9px;
-    height:38px;
-    font-size:8px;
-  }
 
   .wishlist{
-    width:32px;
-    height:32px;
-    top:9px;
-    right:9px;
+
+    width:33px;
+
+    height:33px;
+
+    top:13px;
+
+    right:13px;
+
+    font-size:16px;
+
   }
 
-  .product-info{
-    padding-top:12px;
+
+  .add-bag{
+
+    opacity:1;
+
+    transform:none;
+
+    left:13px;
+
+    right:13px;
+
+    bottom:13px;
+
+    height:37px;
+
+    font-size:7px;
+
   }
+
 
   .product-name{
-    font-size:20px;
+
+    font-size:21px;
+
   }
 
-  .product-category{
-    font-size:8px;
-  }
 
-  .product-price{
-    font-size:10px;
-  }
+  .view-piece{
 
-  .view-link{
     display:none;
+
   }
+
 
   .brand-strip-inner{
+
     grid-template-columns:1fr;
-    padding:28px 20px;
-    gap:0;
+
   }
+
 
   .brand-feature{
+
     border-right:0;
+
     border-bottom:1px solid rgba(215,194,143,.2);
-    padding:17px 10px;
+
+    padding:20px;
+
   }
+
 
   .brand-feature:last-child{
+
     border-bottom:0;
+
   }
 
-  .edit{
+
+  .edit-section{
+
     grid-template-columns:1fr;
-    padding:60px 20px;
+
+    padding:65px 20px;
+
     gap:35px;
+
   }
+
 
   .edit-copy h2{
+
     font-size:48px;
+
   }
+
 
   .edit-visual{
+
     min-height:270px;
+
   }
 
-  .footer-main{
+
+  .footer-inner{
+
     grid-template-columns:1fr 1fr;
+
     padding:50px 22px 35px;
+
     gap:35px 20px;
+
   }
+
 
   .footer-brand{
+
     grid-column:1/-1;
+
   }
 
+
   .footer-bottom{
+
     padding:18px 22px;
+
     flex-direction:column;
+
+    gap:8px;
+
   }
+
 }
+
 
 @media(max-width:500px){
 
-  .topbar{
-    font-size:8px;
-    letter-spacing:1.3px;
+  .top-bar{
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+
   }
 
-  .shop-head h1{
+
+  .shop-intro h1{
+
     font-size:46px;
+
   }
 
-  .shop-head p{
-    font-size:11px;
+
+  .shop-intro p{
+
+    font-size:10px;
+
   }
+
 
   .toolbar{
+
     flex-direction:column;
+
     align-items:stretch;
+
+    gap:12px;
+
   }
 
-  .search-box{
+
+  .search{
+
     width:100%;
+
   }
+
 
   .product-grid{
-    gap:30px 10px;
+
+    gap:30px 9px;
+
   }
 
-  .product-image-wrap{
-    aspect-ratio:1/1.12;
+
+  .product-image-box{
+
+    aspect-ratio:1 / 1.08;
+
   }
+
+
+  .product-details{
+
+    padding-top:12px;
+
+  }
+
+
+  .product-category{
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+
+  }
+
 
   .product-name{
-    font-size:18px;
+
+    font-size:19px;
+
   }
 
-  .product-bottom{
-    display:block;
-  }
 
   .product-price{
-    display:block;
-    margin-top:3px;
+
+    font-size:10px;
+
   }
 
-  .newsletter-inner{
-    padding:50px 20px;
-  }
 
   .newsletter h2{
-    font-size:38px;
-  }
 
-  .footer-main{
-    grid-template-columns:1fr 1fr;
+    font-size:38px;
+
   }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<div class="topbar">
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
   Luxury in Every Detail
+
 </div>
 
-<header>
 
-  <nav class="nav">
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+  <div class="header-inner">
+
+
+    <!-- LEFT -->
+
+    <nav class="nav-left">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="shop.html" class="active">
+        Shop
+      </a>
+
+      <a href="collections.html">
+        Collections
+      </a>
+
+      <a href="about.html">
+        Our Story
+      </a>
+
+    </nav>
+
+
+    <!-- LOGO -->
 
     <a href="index.html" class="logo">
-      <img src="LOGO.png" alt="ALANKRA">
+
+      <img
+        src="LOGO.png"
+        alt="ALANKRA"
+      >
+
     </a>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shop.html" class="active">Shop</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About</a>
-      <a href="care.html">Jewellery Care</a>
-      <a href="contact.html">Contact</a>
+
+    <!-- RIGHT -->
+
+    <div class="nav-right">
+
+
+      <a href="care.html">
+        Care
+      </a>
+
+
+      <button
+        class="nav-icon"
+        onclick="focusSearch()"
+        aria-label="Search"
+      >
+
+        <svg viewBox="0 0 24 24">
+
+          <circle
+            cx="10.8"
+            cy="10.8"
+            r="6.8"
+          />
+
+          <path
+            d="M16 16l5 5"
+          />
+
+        </svg>
+
+        <span class="nav-label">
+          Search
+        </span>
+
+      </button>
+
+
+      <button
+        class="nav-icon bag-wrap"
+        onclick="openBag()"
+        aria-label="Shopping Bag"
+      >
+
+        <svg viewBox="0 0 24 24">
+
+          <path
+            d="M6 8h12l1 13H5L6 8z"
+          />
+
+          <path
+            d="M9 8V6a3 3 0 0 1 6 0v2"
+          />
+
+        </svg>
+
+        <span class="nav-label">
+          Bag
+        </span>
+
+        <span
+          class="bag-count"
+          id="bagCount"
+        >
+          0
+        </span>
+
+      </button>
+
+
     </div>
 
-    <div class="nav-actions">
 
-      <button class="icon-btn" onclick="focusSearch()" aria-label="Search">
-        ⌕
-      </button>
-
-      <button class="icon-btn" onclick="scrollToWishlist()" aria-label="Wishlist">
-        ♡
-      </button>
-
-      <button class="icon-btn" onclick="openBag()" aria-label="Shopping bag">
-        ♡
-        <span class="bag-count" id="bagCount">0</span>
-      </button>
-
-    </div>
-
-  </nav>
+  </div>
 
 </header>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
-  <!-- SHOP INTRO -->
 
-  <section class="shop-head">
+<!-- =====================================================
+     SHOP INTRO
+===================================================== -->
 
-    <div class="eyebrow">The ALANKRA Collection</div>
+<section class="shop-intro">
 
-    <h1>Shop Jewellery</h1>
+  <div class="eyebrow">
+    The ALANKRA Collection
+  </div>
+
+  <h1>
+    Shop Jewellery
+  </h1>
+
+  <p>
+    Discover refined pieces designed to bring a little
+    more beauty into the everyday. Explore necklaces,
+    earrings, bracelets and rings created for your
+    own expression of everyday luxury.
+  </p>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORY NAV
+===================================================== -->
+
+<section class="category-section">
+
+  <div class="category-bar">
+
+
+    <button
+      class="category-btn active"
+      data-category="All"
+    >
+      All Jewellery
+    </button>
+
+
+    <button
+      class="category-btn"
+      data-category="Necklaces"
+    >
+      Necklaces
+    </button>
+
+
+    <button
+      class="category-btn"
+      data-category="Earrings"
+    >
+      Earrings
+    </button>
+
+
+    <button
+      class="category-btn"
+      data-category="Bracelets"
+    >
+      Bracelets
+    </button>
+
+
+    <button
+      class="category-btn"
+      data-category="Rings"
+    >
+      Rings
+    </button>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     TOOLBAR
+===================================================== -->
+
+<div class="toolbar">
+
+
+  <div
+    class="product-count"
+    id="productCount"
+  >
+    23 pieces
+  </div>
+
+
+  <div class="search">
+
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search jewellery..."
+      autocomplete="off"
+    >
+
+    <span class="search-icon">
+      ⌕
+    </span>
+
+  </div>
+
+
+</div>
+
+
+<!-- =====================================================
+     PRODUCT GRID
+===================================================== -->
+
+<section
+  class="product-grid"
+  id="productGrid"
+></section>
+
+
+<!-- EMPTY STATE -->
+
+<div
+  id="emptyState"
+  style="
+    display:none;
+    text-align:center;
+    padding:50px 20px 100px;
+  "
+>
+
+  <div class="eyebrow">
+    ALANKRA
+  </div>
+
+  <h2
+    style="
+      font-family:'Cormorant Garamond',serif;
+      font-size:42px;
+      color:#123f35;
+      font-weight:500;
+      margin-bottom:8px;
+    "
+  >
+    No pieces found
+  </h2>
+
+  <p
+    style="
+      color:#81786b;
+      font-size:11px;
+    "
+  >
+    Try another search or explore another collection.
+  </p>
+
+</div>
+
+
+<!-- =====================================================
+     BRAND STRIP
+===================================================== -->
+
+<section class="brand-strip">
+
+  <div class="brand-strip-inner">
+
+
+    <div class="brand-feature">
+
+      <strong>
+        Stainless Steel
+      </strong>
+
+      <span>
+        Designed for everyday wear
+      </span>
+
+    </div>
+
+
+    <div class="brand-feature">
+
+      <strong>
+        18K Gold Finish
+      </strong>
+
+      <span>
+        Elegant golden detailing
+      </span>
+
+    </div>
+
+
+    <div class="brand-feature">
+
+      <strong>
+        Everyday Luxury
+      </strong>
+
+      <span>
+        Jewellery made to be worn
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDITORIAL
+===================================================== -->
+
+<section class="edit-section">
+
+
+  <div class="edit-copy">
+
+    <div class="eyebrow">
+      The ALANKRA Edit
+    </div>
+
+    <h2>
+      Jewellery that feels like you.
+    </h2>
 
     <p>
-      Discover refined pieces designed to bring a little more beauty
-      into the everyday. From delicate necklaces to statement bracelets,
-      find your own expression of everyday luxury.
+      From delicate everyday pieces to details that
+      deserve a little attention, ALANKRA is designed
+      around the idea that luxury does not always have
+      to wait for a special occasion.
     </p>
 
-  </section>
+    <a
+      href="collections.html"
+      class="edit-link"
+    >
+      Explore Collections
+    </a>
+
+  </div>
 
 
-  <!-- CATEGORIES -->
+  <div class="edit-visual">
 
-  <div class="category-wrap">
+    <div class="edit-frame">
 
-    <div class="categories">
-
-      <button class="category-btn active" data-category="All">
-        All Jewellery
-      </button>
-
-      <button class="category-btn" data-category="Necklaces">
-        Necklaces
-      </button>
-
-      <button class="category-btn" data-category="Earrings">
-        Earrings
-      </button>
-
-      <button class="category-btn" data-category="Bracelets">
-        Bracelets
-      </button>
-
-      <button class="category-btn" data-category="Rings">
-        Rings
-      </button>
+      <span>
+        ALANKRA
+      </span>
 
     </div>
 
   </div>
 
 
-  <!-- TOOLBAR -->
+</section>
 
-  <div class="toolbar">
 
-    <div class="result-count" id="resultCount">
-      23 pieces
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+  <div class="newsletter-inner">
+
+    <div class="eyebrow">
+      Stay in the loop
     </div>
 
-    <div class="search-box">
+    <h2>
+      A little luxury, delivered.
+    </h2>
+
+    <p>
+      Be the first to discover new pieces,
+      collections and moments from ALANKRA.
+    </p>
+
+
+    <form
+      class="newsletter-form"
+      id="newsletterForm"
+    >
 
       <input
-        id="searchInput"
-        type="text"
-        placeholder="Search jewellery..."
-        autocomplete="off"
+        id="newsletterEmail"
+        type="email"
+        placeholder="Your email address"
+        required
       >
 
-      <span>⌕</span>
+      <button type="submit">
+        Subscribe
+      </button>
 
-    </div>
-
-  </div>
-
-
-  <!-- PRODUCTS -->
-
-  <section class="product-grid" id="productGrid"></section>
-
-  <div class="empty-state" id="emptyState">
-
-    <h2>No pieces found</h2>
-
-    <p>
-      Try another search or explore one of our jewellery categories.
-    </p>
+    </form>
 
   </div>
 
+</section>
 
-  <!-- BRAND STRIP -->
-
-  <section class="brand-strip">
-
-    <div class="brand-strip-inner">
-
-      <div class="brand-feature">
-        <strong>Stainless Steel</strong>
-        <span>Designed for everyday wear</span>
-      </div>
-
-      <div class="brand-feature">
-        <strong>18K Gold Finish</strong>
-        <span>Elegant golden detailing</span>
-      </div>
-
-      <div class="brand-feature">
-        <strong>Everyday Luxury</strong>
-        <span>Made to be worn & loved</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EDIT -->
-
-  <section class="edit">
-
-    <div class="edit-copy">
-
-      <div class="eyebrow">The ALANKRA Edit</div>
-
-      <h2>Jewellery that feels like you.</h2>
-
-      <p>
-        From quiet everyday pieces to details that deserve a little
-        attention, ALANKRA is designed around the idea that luxury
-        doesn't always have to wait for a special occasion.
-      </p>
-
-      <a href="collections.html" class="edit-link">
-        Explore Collections
-      </a>
-
-    </div>
-
-    <div class="edit-visual">
-
-      <div class="edit-frame">
-        <span>ALANKRA</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- NEWSLETTER -->
-
-  <section class="newsletter">
-
-    <div class="newsletter-inner">
-
-      <div class="eyebrow">Stay in the loop</div>
-
-      <h2>A little luxury, delivered.</h2>
-
-      <p>
-        Be the first to discover new pieces, collections and moments
-        from ALANKRA.
-      </p>
-
-      <form class="newsletter-form" id="newsletterForm">
-
-        <input
-          type="email"
-          id="newsletterEmail"
-          placeholder="Your email address"
-          required
-        >
-
-        <button type="submit">
-          Subscribe
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-<footer>
+<footer class="footer">
 
-  <div class="footer-main">
+
+  <div class="footer-inner">
+
 
     <div class="footer-brand">
 
-      <img src="LOGO.png" alt="ALANKRA">
+      <img
+        src="LOGO.png"
+        alt="ALANKRA"
+        class="footer-logo"
+      >
 
       <p>
         Jewellery designed for everyday moments,
@@ -1235,65 +2267,123 @@ footer{
     </div>
 
 
-    <div class="footer-col">
+    <div class="footer-column">
 
-      <h3>Shop</h3>
+      <h3>
+        Shop
+      </h3>
 
-      <a href="shop.html">All Jewellery</a>
-      <a href="shop.html?category=Necklaces">Necklaces</a>
-      <a href="shop.html?category=Earrings">Earrings</a>
-      <a href="shop.html?category=Bracelets">Bracelets</a>
-      <a href="shop.html?category=Rings">Rings</a>
+      <a href="shop.html">
+        All Jewellery
+      </a>
+
+      <a href="shop.html?category=Necklaces">
+        Necklaces
+      </a>
+
+      <a href="shop.html?category=Earrings">
+        Earrings
+      </a>
+
+      <a href="shop.html?category=Bracelets">
+        Bracelets
+      </a>
+
+      <a href="shop.html?category=Rings">
+        Rings
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>
+        Explore
+      </h3>
+
+      <a href="collections.html">
+        Collections
+      </a>
+
+      <a href="about.html">
+        Our Story
+      </a>
+
+      <a href="care.html">
+        Jewellery Care
+      </a>
+
+      <a href="faq.html">
+        FAQs
+      </a>
 
     </div>
 
 
-    <div class="footer-col">
+    <div class="footer-column">
 
-      <h3>Explore</h3>
+      <h3>
+        Information
+      </h3>
 
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About ALANKRA</a>
-      <a href="care.html">Jewellery Care</a>
-      <a href="faq.html">FAQs</a>
+      <a href="shipping.html">
+        Shipping
+      </a>
+
+      <a href="returns.html">
+        Returns
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="privacy.html">
+        Privacy
+      </a>
+
+      <a href="terms.html">
+        Terms
+      </a>
 
     </div>
 
-
-    <div class="footer-col">
-
-      <h3>Information</h3>
-
-      <a href="shipping.html">Shipping</a>
-      <a href="returns.html">Returns</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms & Conditions</a>
-
-    </div>
 
   </div>
 
 
   <div class="footer-bottom">
 
-    <span>© 2026 ALANKRA. All rights reserved.</span>
+    <span>
+      © 2026 ALANKRA. All rights reserved.
+    </span>
 
-    <span>Luxury in Every Detail.</span>
+    <span>
+      Luxury in Every Detail.
+    </span>
 
   </div>
+
 
 </footer>
 
 
-<div class="toast" id="toast"></div>
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+  class="toast"
+  id="toast"
+></div>
 
 
 <script>
 
-/* ==========================================
+/* =========================================================
    PRODUCT DATA
-========================================== */
+========================================================= */
 
 const products = [
 
@@ -1301,214 +2391,204 @@ const products = [
     code:"ALK-B001",
     name:"Golden Knot Bracelet",
     category:"Bracelets",
-    price:499,
-    image:"golden knot bracelet.png"
+    price:499
   },
 
   {
     code:"ALK-E001",
     name:"Golden Petal Earrings",
     category:"Earrings",
-    price:499,
-    image:"golden petal earring.jpeg"
+    price:499
   },
 
   {
     code:"ALK-E002",
     name:"Purple Vintage Earrings",
     category:"Earrings",
-    price:449,
-    image:"purple vintage earrings.jpeg"
+    price:449
   },
 
   {
     code:"ALK-E003",
     name:"Crystal Stud Earrings",
     category:"Earrings",
-    price:499,
-    image:null
+    price:499
   },
 
   {
     code:"ALK-E004",
     name:"Vintage Butterfly Earrings",
     category:"Earrings",
-    price:449,
-    image:"vintage butterfly earrings.jpeg"
+    price:449
   },
 
   {
     code:"ALK-N001",
     name:"Pearl Bloom Necklace",
     category:"Necklaces",
-    price:499,
-    image:"pearl bloom necklace.jpeg"
+    price:499
   },
 
   {
     code:"ALK-N002",
     name:"Lucky Clover Necklace",
     category:"Necklaces",
-    price:499,
-    image:"lucky clover necklace.jpeg"
+    price:499
   },
 
   {
     code:"ALK-B002",
     name:"Green Stone Bracelet",
     category:"Bracelets",
-    price:599,
-    image:"green stone bracelet.png"
+    price:599
   },
 
   {
     code:"ALK-N003",
     name:"Mini Tulip Necklace",
     category:"Necklaces",
-    price:499,
-    image:"mini tulip necklace.png"
+    price:499
   },
 
   {
     code:"ALK-B003",
     name:"Golden Glow Bracelet",
     category:"Bracelets",
-    price:499,
-    image:"golden glow bracelet.png"
+    price:499
   },
 
   {
     code:"ALK-N004",
     name:"Black Clover Necklace",
     category:"Necklaces",
-    price:499,
-    image:"black clover necklace.jpeg"
+    price:499
   },
 
   {
     code:"ALK-N005",
     name:"White Drop Necklace",
     category:"Necklaces",
-    price:599,
-    image:"white drop necklace set.jpeg"
+    price:599
   },
 
   {
     code:"ALK-N006",
     name:"Silver Swan Necklace",
     category:"Necklaces",
-    price:499,
-    image:"silver swan necklace.jpeg"
+    price:499
   },
 
   {
     code:"ALK-E005",
     name:"Vintage Square Earrings",
     category:"Earrings",
-    price:449,
-    image:null
+    price:449
   },
 
   {
     code:"ALK-N007",
     name:"Golden Rose Necklace",
     category:"Necklaces",
-    price:499,
-    image:"golden rose necklace.png"
+    price:499
   },
 
   {
     code:"ALK-R001",
     name:"Crystal Cross Ring",
     category:"Rings",
-    price:399,
-    image:"crystal cross ring.png"
+    price:399
   },
 
   {
     code:"ALK-R002",
     name:"Classic V Ring",
     category:"Rings",
-    price:449,
-    image:null
+    price:449
   },
 
   {
     code:"ALK-B004",
     name:"Bow & Heart Bracelet",
     category:"Bracelets",
-    price:599,
-    image:"heart and bow bracelet.png"
+    price:599
   },
 
   {
     code:"ALK-B005",
     name:"Nail Bracelet",
     category:"Bracelets",
-    price:599,
-    image:"nail bracelet.jpeg"
+    price:599
   },
 
   {
     code:"ALK-N008",
     name:"Golden Coin Necklace",
     category:"Necklaces",
-    price:449,
-    image:null
+    price:449
   },
 
   {
     code:"ALK-N009",
     name:"Pink Heart Necklace",
     category:"Necklaces",
-    price:499,
-    image:"Pink heart necklace.jpeg"
+    price:499
   },
 
   {
     code:"ALK-N010",
     name:"Daisy Bloom Necklace",
     category:"Necklaces",
-    price:549,
-    image:null
+    price:549
   },
 
   {
     code:"ALK-N011",
     name:"Heart Mangalsutra",
     category:"Necklaces",
-    price:499,
-    image:"heart mangalsutra.png"
+    price:499
   }
 
 ];
 
 
-/* ==========================================
+/* =========================================================
    STATE
-========================================== */
+========================================================= */
 
 let activeCategory = "All";
+
 let searchTerm = "";
 
-const grid = document.getElementById("productGrid");
-const resultCount = document.getElementById("resultCount");
-const emptyState = document.getElementById("emptyState");
-const searchInput = document.getElementById("searchInput");
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const productGrid =
+  document.getElementById("productGrid");
+
+const productCount =
+  document.getElementById("productCount");
+
+const emptyState =
+  document.getElementById("emptyState");
+
+const searchInput =
+  document.getElementById("searchInput");
 
 
-/* ==========================================
+/* =========================================================
    WISHLIST
-========================================== */
+========================================================= */
 
 let wishlist = JSON.parse(
   localStorage.getItem("alankraWishlist") || "[]"
 );
 
 
-/* ==========================================
+/* =========================================================
    BAG
-========================================== */
+========================================================= */
 
 let bag = JSON.parse(
   localStorage.getItem("alankraBag") || "[]"
@@ -1518,148 +2598,195 @@ let bag = JSON.parse(
 function updateBagCount(){
 
   const count = bag.reduce(
-    (total,item) => total + (item.quantity || 1),
+    (total,item) =>
+      total + (item.quantity || 1),
     0
   );
 
-  document.getElementById("bagCount").textContent = count;
+  document.getElementById("bagCount").textContent =
+    count;
 
 }
 
 
-function openBag(){
+/* =========================================================
+   IMAGE PATH
+========================================================= */
 
-  if(!bag.length){
+function imagePath(code){
 
-    showToast("Your bag is currently empty.");
+  const shortCode =
+    code.replace("ALK-","");
 
-    return;
-  }
-
-  showToast(
-    bag.length === 1
-      ? "1 piece is in your bag."
-      : bag.length + " pieces are in your bag."
-  );
+  return `ALK-${shortCode}-01.jpg`;
 
 }
 
 
-/* ==========================================
+function imagePathPNG(code){
+
+  const shortCode =
+    code.replace("ALK-","");
+
+  return `ALK-${shortCode}-01.png`;
+
+}
+
+
+/* =========================================================
    RENDER PRODUCTS
-========================================== */
+========================================================= */
 
 function renderProducts(){
 
-  const filtered = products.filter(product => {
+  const filtered =
+    products.filter(product => {
 
-    const matchesCategory =
-      activeCategory === "All" ||
-      product.category === activeCategory;
-
-    const matchesSearch =
-      !searchTerm ||
-      product.name.toLowerCase().includes(searchTerm) ||
-      product.category.toLowerCase().includes(searchTerm);
-
-    return matchesCategory && matchesSearch;
-
-  });
+      const categoryMatch =
+        activeCategory === "All" ||
+        product.category === activeCategory;
 
 
-  grid.innerHTML = "";
+      const searchMatch =
+        !searchTerm ||
+
+        product.name
+          .toLowerCase()
+          .includes(searchTerm) ||
+
+        product.category
+          .toLowerCase()
+          .includes(searchTerm);
 
 
-  resultCount.textContent =
-    filtered.length +
-    (filtered.length === 1 ? " piece" : " pieces");
+      return categoryMatch && searchMatch;
+
+    });
 
 
-  if(!filtered.length){
+  productGrid.innerHTML = "";
 
-    emptyState.style.display = "block";
+
+  productCount.textContent =
+    `${filtered.length} ${
+      filtered.length === 1
+        ? "piece"
+        : "pieces"
+    }`;
+
+
+  if(filtered.length === 0){
+
+    emptyState.style.display =
+      "block";
 
     return;
 
   }
 
 
-  emptyState.style.display = "none";
+  emptyState.style.display =
+    "none";
 
 
   filtered.forEach(product => {
 
-    const isWishlisted =
+
+    const wishlisted =
       wishlist.includes(product.code);
 
 
-    const card = document.createElement("article");
+    const card =
+      document.createElement("article");
 
-    card.className = "product-card";
+
+    card.className =
+      "product-card";
 
 
-    let imageHTML = "";
+    const jpg =
+      imagePath(product.code);
 
-    if(product.image){
 
-      imageHTML = `
-        <img
-          class="product-image"
-          src="${product.image}"
-          alt="${product.name}"
-          loading="lazy"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
-
-        <div class="image-placeholder" style="display:none;">
-          <span>AL</span>
-          <span>Image coming soon</span>
-        </div>
-      `;
-
-    }else{
-
-      imageHTML = `
-        <div class="image-placeholder">
-          <span>AL</span>
-          <span>Image coming soon</span>
-        </div>
-      `;
-
-    }
+    const png =
+      imagePathPNG(product.code);
 
 
     card.innerHTML = `
 
-      <div class="product-image-wrap">
+      <div class="product-image-box">
 
-        <a href="product.html?product=${product.code}">
 
-          ${imageHTML}
+        <a
+          href="product.html?product=${product.code}"
+          class="product-image-link"
+        >
+
+          <img
+            src="${jpg}"
+            class="product-image"
+            alt="${product.name}"
+            loading="lazy"
+            onerror="
+              if(this.dataset.pngTried !== 'yes'){
+                this.dataset.pngTried='yes';
+                this.src='${png}';
+              }else{
+                this.style.display='none';
+                this.nextElementSibling.style.display='flex';
+              }
+            "
+          >
+
+
+          <div
+            class="placeholder"
+            style="display:none;"
+          >
+
+            <div class="placeholder-title">
+              AL
+            </div>
+
+            <div class="placeholder-text">
+              Image coming soon
+            </div>
+
+          </div>
+
 
         </a>
 
 
         <button
-          class="wishlist ${isWishlisted ? "active" : ""}"
-          aria-label="Add to wishlist"
-          onclick="toggleWishlist('${product.code}', this)"
+          class="wishlist ${wishlisted ? "active" : ""}"
+          onclick="toggleWishlist(
+            '${product.code}',
+            this
+          )"
+          aria-label="Wishlist"
         >
-          ${isWishlisted ? "♥" : "♡"}
+
+          ${wishlisted ? "♥" : "♡"}
+
         </button>
 
 
         <button
-          class="quick-add"
+          class="add-bag"
           onclick="addToBag('${product.code}')"
         >
+
           Add to Bag
+
         </button>
+
 
       </div>
 
 
-      <div class="product-info">
+      <div class="product-details">
+
 
         <div class="product-category">
           ${product.category}
@@ -1670,114 +2797,168 @@ function renderProducts(){
           href="product.html?product=${product.code}"
           class="product-name"
         >
+
           ${product.name}
+
         </a>
 
 
-        <div class="product-bottom">
+        <div class="product-meta">
+
 
           <span class="product-price">
+
             ₹${product.price}
+
           </span>
 
 
           <a
             href="product.html?product=${product.code}"
-            class="view-link"
+            class="view-piece"
           >
-            View piece
+
+            View Piece
+
           </a>
 
+
         </div>
+
 
       </div>
 
     `;
 
 
-    grid.appendChild(card);
+    productGrid.appendChild(card);
 
   });
 
 }
 
 
-/* ==========================================
+/* =========================================================
    CATEGORY FILTER
-========================================== */
+========================================================= */
 
-document.querySelectorAll(".category-btn").forEach(button => {
+document
+  .querySelectorAll(".category-btn")
+  .forEach(button => {
 
-  button.addEventListener("click", () => {
 
-    document
-      .querySelectorAll(".category-btn")
-      .forEach(btn => btn.classList.remove("active"));
+    button.addEventListener(
+      "click",
+      () => {
 
-    button.classList.add("active");
 
-    activeCategory =
-      button.dataset.category;
+        document
+          .querySelectorAll(".category-btn")
+          .forEach(btn =>
+            btn.classList.remove("active")
+          );
 
-    renderProducts();
+
+        button.classList.add("active");
+
+
+        activeCategory =
+          button.dataset.category;
+
+
+        renderProducts();
+
+
+        window.scrollTo({
+          top:
+            document.querySelector(
+              ".toolbar"
+            ).offsetTop - 80,
+
+          behavior:"smooth"
+        });
+
+
+      }
+    );
 
   });
 
-});
 
-
-/* ==========================================
+/* =========================================================
    SEARCH
-========================================== */
+========================================================= */
 
-searchInput.addEventListener("input", event => {
+searchInput.addEventListener(
+  "input",
+  event => {
 
-  searchTerm =
-    event.target.value
-      .trim()
-      .toLowerCase();
+    searchTerm =
+      event.target.value
+        .trim()
+        .toLowerCase();
 
-  renderProducts();
+    renderProducts();
 
-});
+  }
+);
 
 
 function focusSearch(){
 
   searchInput.focus();
 
-  window.scrollTo({
-    top:document.querySelector(".toolbar").offsetTop - 100,
-    behavior:"smooth"
-  });
+  document
+    .querySelector(".toolbar")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
 }
 
 
-/* ==========================================
+/* =========================================================
    WISHLIST
-========================================== */
+========================================================= */
 
-function toggleWishlist(code, button){
+function toggleWishlist(
+  code,
+  button
+){
 
   if(wishlist.includes(code)){
 
     wishlist =
-      wishlist.filter(item => item !== code);
+      wishlist.filter(
+        item => item !== code
+      );
 
-    button.classList.remove("active");
-    button.textContent = "♡";
+    button.classList.remove(
+      "active"
+    );
 
-    showToast("Removed from wishlist.");
+    button.textContent =
+      "♡";
+
+    showToast(
+      "Removed from wishlist."
+    );
 
   }else{
 
     wishlist.push(code);
 
-    button.classList.add("active");
-    button.textContent = "♥";
+    button.classList.add(
+      "active"
+    );
 
-    showToast("Added to wishlist.");
+    button.textContent =
+      "♥";
+
+    showToast(
+      "Added to wishlist."
+    );
 
   }
 
@@ -1790,27 +2971,25 @@ function toggleWishlist(code, button){
 }
 
 
-function scrollToWishlist(){
-
-  showToast("Your wishlist is saved on this device.");
-
-}
-
-
-/* ==========================================
-   ADD TO BAG
-========================================== */
+/* =========================================================
+   BAG
+========================================================= */
 
 function addToBag(code){
 
   const product =
-    products.find(item => item.code === code);
+    products.find(
+      item => item.code === code
+    );
+
 
   if(!product) return;
 
 
   const existing =
-    bag.find(item => item.code === code);
+    bag.find(
+      item => item.code === code
+    );
 
 
   if(existing){
@@ -1821,10 +3000,15 @@ function addToBag(code){
   }else{
 
     bag.push({
+
       code:product.code,
+
       name:product.name,
+
       price:product.price,
+
       quantity:1
+
     });
 
   }
@@ -1838,66 +3022,120 @@ function addToBag(code){
 
   updateBagCount();
 
-  showToast(product.name + " added to bag.");
+
+  showToast(
+    `${product.name} added to bag.`
+  );
 
 }
 
 
-/* ==========================================
+function openBag(){
+
+  if(!bag.length){
+
+    showToast(
+      "Your bag is currently empty."
+    );
+
+    return;
+
+  }
+
+
+  showToast(
+    `${bag.length} ${
+      bag.length === 1
+        ? "piece"
+        : "pieces"
+    } in your bag.`
+  );
+
+}
+
+
+/* =========================================================
    TOAST
-========================================== */
+========================================================= */
 
 function showToast(message){
 
   const toast =
     document.getElementById("toast");
 
-  toast.textContent = message;
+
+  toast.textContent =
+    message;
+
 
   toast.classList.add("show");
 
 
-  clearTimeout(window.toastTimer);
+  clearTimeout(
+    window.alankraToast
+  );
 
 
-  window.toastTimer =
-    setTimeout(() => {
+  window.alankraToast =
+    setTimeout(
+      () => {
 
-      toast.classList.remove("show");
+        toast.classList.remove(
+          "show"
+        );
 
-    },2600);
+      },
+      2500
+    );
 
 }
 
 
-/* ==========================================
+/* =========================================================
    NEWSLETTER
-========================================== */
+========================================================= */
 
 document
   .getElementById("newsletterForm")
-  .addEventListener("submit", event => {
+  .addEventListener(
+    "submit",
+    function(event){
 
-    event.preventDefault();
-
-    const email =
-      document.getElementById("newsletterEmail").value.trim();
-
-    if(!email) return;
-
-    showToast("Thank you for joining ALANKRA.");
-
-    event.target.reset();
-
-  });
+      event.preventDefault();
 
 
-/* ==========================================
-   URL CATEGORY SUPPORT
-========================================== */
+      const email =
+        document
+          .getElementById(
+            "newsletterEmail"
+          )
+          .value
+          .trim();
+
+
+      if(!email) return;
+
+
+      showToast(
+        "Thank you for joining ALANKRA."
+      );
+
+
+      this.reset();
+
+    }
+  );
+
+
+/* =========================================================
+   URL CATEGORY
+========================================================= */
 
 const params =
-  new URLSearchParams(window.location.search);
+  new URLSearchParams(
+    window.location.search
+  );
+
 
 const urlCategory =
   params.get("category");
@@ -1905,10 +3143,16 @@ const urlCategory =
 
 if(
   urlCategory &&
-  ["Necklaces","Earrings","Bracelets","Rings"].includes(urlCategory)
+  [
+    "Necklaces",
+    "Earrings",
+    "Bracelets",
+    "Rings"
+  ].includes(urlCategory)
 ){
 
-  activeCategory = urlCategory;
+  activeCategory =
+    urlCategory;
 
 
   document
@@ -1917,7 +3161,8 @@ if(
 
       button.classList.toggle(
         "active",
-        button.dataset.category === urlCategory
+        button.dataset.category ===
+        urlCategory
       );
 
     });
@@ -1925,15 +3170,16 @@ if(
 }
 
 
-/* ==========================================
+/* =========================================================
    INITIALISE
-========================================== */
+========================================================= */
 
 updateBagCount();
 
 renderProducts();
 
 </script>
+
 
 </body>
 </html>
