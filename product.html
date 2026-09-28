@@ -52,16 +52,21 @@ color:inherit;
 text-decoration:none;
 }
 
-button{
+button,
+input{
 font:inherit;
+}
+
+button{
+cursor:pointer;
 }
 
 img{
 display:block;
-width:100%;
+max-width:100%;
 }
 
-/* ANNOUNCEMENT */
+/* ================= ANNOUNCEMENT ================= */
 
 .announcement{
 background:var(--green);
@@ -73,7 +78,7 @@ letter-spacing:2px;
 text-transform:uppercase;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
 position:sticky;
@@ -154,7 +159,7 @@ justify-content:center;
 display:none;
 }
 
-/* MOBILE MENU */
+/* ================= MOBILE MENU ================= */
 
 .mobile-menu{
 display:none;
@@ -176,7 +181,7 @@ letter-spacing:1.5px;
 text-transform:uppercase;
 }
 
-/* BREADCRUMB */
+/* ================= BREADCRUMB ================= */
 
 .breadcrumb-wrap{
 max-width:1250px;
@@ -194,7 +199,7 @@ letter-spacing:1px;
 color:var(--gold);
 }
 
-/* PRODUCT SECTION */
+/* ================= PRODUCT SECTION ================= */
 
 .product-section{
 max-width:1250px;
@@ -209,23 +214,116 @@ gap:70px;
 align-items:start;
 }
 
-/* IMAGE */
+/* ================= PRODUCT GALLERY ================= */
 
-.product-image-wrap{
+.product-gallery{
+position:relative;
+}
+
+.main-image-wrap{
 position:relative;
 background:var(--ivory);
+border:1px solid var(--border);
 overflow:hidden;
 }
 
-.product-image{
+.main-product-image{
 width:100%;
 aspect-ratio:1/1.08;
-object-fit:cover;
-transition:transform .6s ease;
+object-fit:contain;
+padding:28px;
+background:
+radial-gradient(
+circle at center,
+#fffdf9 0,
+#f8f5ee 58%,
+#eee8dc 100%
+);
+transition:
+opacity .25s ease,
+transform .5s ease;
 }
 
-.product-image-wrap:hover .product-image{
-transform:scale(1.015);
+.main-image-wrap:hover .main-product-image{
+transform:scale(1.025);
+}
+
+.image-label{
+position:absolute;
+left:18px;
+top:18px;
+z-index:4;
+background:rgba(255,253,248,.94);
+border:1px solid var(--border);
+padding:7px 11px;
+font-size:7px;
+letter-spacing:1.7px;
+text-transform:uppercase;
+color:var(--green);
+}
+
+.wishlist-product{
+position:absolute;
+right:18px;
+top:18px;
+z-index:5;
+width:45px;
+height:45px;
+border-radius:50%;
+border:1px solid var(--border);
+background:rgba(255,253,248,.94);
+color:var(--green);
+font-size:21px;
+transition:.25s;
+}
+
+.wishlist-product:hover,
+.wishlist-product.active{
+background:var(--green);
+color:#fff;
+}
+
+.product-thumbnails{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin-top:12px;
+}
+
+.product-thumb{
+position:relative;
+border:1px solid var(--border);
+background:var(--ivory);
+padding:0;
+overflow:hidden;
+transition:.25s ease;
+}
+
+.product-thumb:hover{
+border-color:var(--gold);
+}
+
+.product-thumb.active{
+border:1px solid var(--gold);
+box-shadow:0 0 0 1px var(--gold);
+}
+
+.product-thumb img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+}
+
+.thumb-label{
+position:absolute;
+left:7px;
+bottom:7px;
+background:rgba(18,60,50,.9);
+color:#fff;
+padding:5px 7px;
+font-size:6px;
+letter-spacing:1px;
+text-transform:uppercase;
 }
 
 .image-placeholder{
@@ -235,7 +333,12 @@ align-items:center;
 justify-content:center;
 text-align:center;
 background:
-radial-gradient(circle at center,#fff 0,#f8f5ee 55%,#eee8dc 100%);
+radial-gradient(
+circle at center,
+#fff 0,
+#f8f5ee 55%,
+#eee8dc 100%
+);
 }
 
 .image-placeholder div{
@@ -254,31 +357,7 @@ color:var(--muted);
 margin-top:6px;
 }
 
-/* WISHLIST */
-
-.wishlist-product{
-position:absolute;
-right:18px;
-top:18px;
-z-index:3;
-width:45px;
-height:45px;
-border-radius:50%;
-border:1px solid var(--border);
-background:rgba(255,253,248,.94);
-color:var(--green);
-cursor:pointer;
-font-size:21px;
-transition:.25s;
-}
-
-.wishlist-product:hover,
-.wishlist-product.active{
-background:var(--green);
-color:#fff;
-}
-
-/* INFO */
+/* ================= PRODUCT INFORMATION ================= */
 
 .product-info{
 padding-top:5px;
@@ -323,7 +402,7 @@ color:#615b54;
 margin-bottom:30px;
 }
 
-/* TRUST FEATURES */
+/* ================= FEATURES ================= */
 
 .features{
 display:grid;
@@ -365,7 +444,7 @@ color:var(--muted);
 margin-top:3px;
 }
 
-/* DETAILS */
+/* ================= DETAILS ================= */
 
 .details{
 border-top:1px solid var(--border);
@@ -392,7 +471,7 @@ font-weight:500;
 text-align:right;
 }
 
-/* BUY AREA */
+/* ================= BUY AREA ================= */
 
 .buy-area{
 margin-top:28px;
@@ -418,7 +497,6 @@ width:38px;
 border:0;
 background:transparent;
 color:var(--green);
-cursor:pointer;
 font-size:17px;
 }
 
@@ -440,7 +518,6 @@ gap:10px;
 .btn{
 min-height:53px;
 border:1px solid var(--green);
-cursor:pointer;
 font-size:9px;
 letter-spacing:1.5px;
 text-transform:uppercase;
@@ -466,8 +543,6 @@ background:var(--green);
 color:#fff;
 }
 
-/* REASSURANCE */
-
 .reassurance{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -489,8 +564,6 @@ font-size:9px;
 margin-bottom:2px;
 }
 
-/* CARE */
-
 .care-note{
 margin-top:15px;
 padding:16px;
@@ -504,7 +577,7 @@ color:var(--muted);
 color:var(--green);
 }
 
-/* RELATED */
+/* ================= RELATED PRODUCTS ================= */
 
 .related{
 max-width:1250px;
@@ -550,6 +623,7 @@ margin-bottom:12px;
 }
 
 .related-image img{
+width:100%;
 height:100%;
 object-fit:cover;
 transition:.5s;
@@ -572,7 +646,7 @@ margin-top:4px;
 color:var(--text);
 }
 
-/* MARQUEE */
+/* ================= MARQUEE ================= */
 
 .marquee{
 overflow:hidden;
@@ -591,11 +665,18 @@ animation:scroll 25s linear infinite;
 }
 
 @keyframes scroll{
-from{transform:translateX(0)}
-to{transform:translateX(-50%)}
+
+from{
+transform:translateX(0);
 }
 
-/* FOOTER */
+to{
+transform:translateX(-50%);
+}
+
+}
+
+/* ================= FOOTER ================= */
 
 footer{
 background:#102f28;
@@ -657,7 +738,7 @@ color:rgba(255,255,255,.45);
 font-size:9px;
 }
 
-/* TOAST */
+/* ================= TOAST ================= */
 
 .toast{
 position:fixed;
@@ -678,7 +759,7 @@ transform:translate(-50%,0);
 opacity:1;
 }
 
-/* MOBILE */
+/* ================= TABLET ================= */
 
 @media(max-width:850px){
 
@@ -715,6 +796,8 @@ gap:35px;
 
 }
 
+/* ================= MOBILE ================= */
+
 @media(max-width:520px){
 
 .announcement{
@@ -740,6 +823,19 @@ padding:17px 16px 0;
 
 .product-name{
 font-size:47px;
+}
+
+.main-product-image{
+padding:18px;
+}
+
+.product-thumbnails{
+gap:7px;
+}
+
+.thumb-label{
+font-size:5px;
+padding:4px 5px;
 }
 
 .features{
@@ -790,9 +886,14 @@ flex-direction:column;
 
 <body>
 
+<!-- ================= ANNOUNCEMENT ================= -->
+
 <div class="announcement">
 Anti-Tarnish · Water-Resistant · Everyday Luxury
 </div>
+
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -813,10 +914,21 @@ class="logo">
 </a>
 
 <div class="nav-links">
+
 <a href="./shop.html">Shop</a>
-<a href="./collections.html">Collections</a>
-<a href="./about.html">Our Story</a>
-<a href="./care.html">Experience</a>
+
+<a href="./collections.html">
+Collections
+</a>
+
+<a href="./about.html">
+Our Story
+</a>
+
+<a href="./care.html">
+Experience
+</a>
+
 </div>
 
 <div class="nav-actions">
@@ -833,7 +945,11 @@ class="icon-btn"
 onclick="goToWishlist()"
 aria-label="Wishlist">
 ♡
-<span class="count" id="wishlistCount">0</span>
+<span
+class="count"
+id="wishlistCount">
+0
+</span>
 </button>
 
 <button
@@ -841,51 +957,114 @@ class="icon-btn"
 onclick="openCart()"
 aria-label="Shopping Bag">
 🛍
-<span class="count" id="cartCount">0</span>
+<span
+class="count"
+id="cartCount">
+0
+</span>
 </button>
 
 </div>
 
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
 
-<a href="./shop.html">Shop</a>
-<a href="./collections.html">Collections</a>
-<a href="./about.html">Our Story</a>
-<a href="./care.html">Jewellery Care</a>
-<a href="./shipping.html">Shipping & Delivery</a>
-<a href="./returns.html">Returns & Exchange</a>
-<a href="./faq.html">FAQs</a>
-<a href="./contact.html">Contact Us</a>
-<a href="./privacy.html">Privacy Policy</a>
-<a href="./terms.html">Terms & Conditions</a>
+<!-- MOBILE MENU -->
+
+<div
+class="mobile-menu"
+id="mobileMenu">
+
+<a href="./shop.html">
+Shop
+</a>
+
+<a href="./collections.html">
+Collections
+</a>
+
+<a href="./about.html">
+Our Story
+</a>
+
+<a href="./care.html">
+Jewellery Care
+</a>
+
+<a href="./shipping.html">
+Shipping & Delivery
+</a>
+
+<a href="./returns.html">
+Returns & Exchange
+</a>
+
+<a href="./faq.html">
+FAQs
+</a>
+
+<a href="./contact.html">
+Contact Us
+</a>
+
+<a href="./privacy.html">
+Privacy Policy
+</a>
+
+<a href="./terms.html">
+Terms & Conditions
+</a>
 
 </div>
 
 </header>
 
+
+<!-- ================= BREADCRUMB ================= -->
+
 <div class="breadcrumb-wrap">
 
 <div class="breadcrumb">
 
-<a href="./index.html">Home</a>
+<a href="./index.html">
+Home
+</a>
+
 &nbsp; / &nbsp;
-<a href="./shop.html">Shop</a>
+
+<a href="./shop.html">
+Shop
+</a>
+
 &nbsp; / &nbsp;
-<span id="breadcrumbProduct">Product</span>
+
+<span id="breadcrumbProduct">
+Product
+</span>
 
 </div>
 
 </div>
+
+
+<!-- ================= PRODUCT ================= -->
 
 <main class="product-section">
 
 <div class="product-layout">
 
-<!-- PRODUCT IMAGE -->
 
-<div class="product-image-wrap">
+<!-- ================= GALLERY ================= -->
+
+<div class="product-gallery">
+
+<div class="main-image-wrap">
+
+<div
+class="image-label"
+id="imageLabel">
+Complete Look
+</div>
 
 <button
 class="wishlist-product"
@@ -900,7 +1079,17 @@ aria-label="Add to wishlist">
 </div>
 
 
-<!-- PRODUCT INFORMATION -->
+<!-- THUMBNAILS -->
+
+<div
+class="product-thumbnails"
+id="productThumbnails">
+</div>
+
+</div>
+
+
+<!-- ================= PRODUCT INFO ================= -->
 
 <div class="product-info">
 
@@ -931,64 +1120,123 @@ Product Code
 <p
 class="product-description"
 id="productDescription">
-Elegant everyday jewellery designed to add a little luxury to every moment.
+
+Elegant everyday jewellery designed to add
+a little luxury to every moment.
+
 </p>
 
 
-<!-- TRUST FEATURES -->
+<!-- FEATURES -->
 
 <div class="features">
 
 <div class="feature">
-<span class="feature-icon">✦</span>
-<strong>Anti-Tarnish</strong>
-<span>Everyday elegance</span>
+
+<span class="feature-icon">
+✦
+</span>
+
+<strong>
+Anti-Tarnish
+</strong>
+
+<span>
+Everyday elegance
+</span>
+
 </div>
+
 
 <div class="feature">
-<span class="feature-icon">◇</span>
-<strong>Water-Resistant</strong>
-<span>Made for daily wear</span>
+
+<span class="feature-icon">
+◇
+</span>
+
+<strong>
+Water-Resistant
+</strong>
+
+<span>
+Made for daily wear
+</span>
+
 </div>
+
 
 <div class="feature">
-<span class="feature-icon">♡</span>
-<strong>Skin-Friendly</strong>
-<span>Comfort focused</span>
-</div>
+
+<span class="feature-icon">
+♡
+</span>
+
+<strong>
+Skin-Friendly
+</strong>
+
+<span>
+Comfort focused
+</span>
 
 </div>
 
+</div>
 
-<!-- PRODUCT DETAILS -->
+
+<!-- DETAILS -->
 
 <div class="details">
 
 <div class="detail-row">
-<span>Material</span>
-<span>Stainless Steel</span>
+
+<span>
+Material
+</span>
+
+<span>
+Stainless Steel
+</span>
+
 </div>
+
 
 <div class="detail-row">
-<span>Finish</span>
-<span>18K Gold Finish</span>
+
+<span>
+Finish
+</span>
+
+<span>
+18K Gold Finish
+</span>
+
 </div>
+
 
 <div class="detail-row">
-<span>Wear</span>
-<span>Everyday</span>
-</div>
+
+<span>
+Wear
+</span>
+
+<span>
+Everyday
+</span>
 
 </div>
 
+</div>
 
-<!-- BUY -->
+
+<!-- BUY AREA -->
 
 <div class="buy-area">
 
 <div class="quantity-label">
 Quantity
 </div>
+
 
 <div class="quantity">
 
@@ -1008,35 +1256,50 @@ readonly>
 
 </div>
 
+
 <div class="button-row">
 
 <button
 class="btn btn-primary"
 onclick="addToBag()">
+
 Add to Bag
+
 </button>
+
 
 <button
 class="btn btn-secondary"
 onclick="orderWhatsApp()">
+
 Order via WhatsApp
+
 </button>
 
 </div>
 
 
-<!-- REASSURANCE -->
-
 <div class="reassurance">
 
 <div>
-<strong>Carefully Packed</strong>
+
+<strong>
+Carefully Packed
+</strong>
+
 Thoughtful packaging for your order.
+
 </div>
 
+
 <div>
-<strong>Customer Support</strong>
+
+<strong>
+Customer Support
+</strong>
+
 We're here if you need help.
+
 </div>
 
 </div>
@@ -1044,11 +1307,17 @@ We're here if you need help.
 
 <div class="care-note">
 
-<strong>A little care goes a long way.</strong><br>
+<strong>
+A little care goes a long way.
+</strong>
 
-To keep your jewellery looking beautiful, avoid prolonged contact with
-water, perfume, lotions and harsh chemicals. Wipe gently with a soft,
-dry cloth after wearing and store separately in a dry place.
+<br>
+
+To keep your jewellery looking beautiful,
+avoid prolonged contact with water, perfume,
+lotions and harsh chemicals. Wipe gently with
+a soft, dry cloth after wearing and store
+separately in a dry place.
 
 </div>
 
@@ -1061,7 +1330,7 @@ dry cloth after wearing and store separately in a dry place.
 </main>
 
 
-<!-- RELATED PRODUCTS -->
+<!-- ================= RELATED ================= -->
 
 <section class="related">
 
@@ -1085,23 +1354,30 @@ id="relatedGrid">
 </section>
 
 
+<!-- ================= MARQUEE ================= -->
+
 <div class="marquee">
 
 <div class="marquee-inner">
+
 ALANKRA · LUXURY IN EVERY DETAIL ·
 ALANKRA · LUXURY IN EVERY DETAIL ·
 ALANKRA · LUXURY IN EVERY DETAIL ·
 ALANKRA · LUXURY IN EVERY DETAIL ·
-</div>
 
 </div>
 
+</div>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
 <div class="footer-inner">
 
 <div class="footer-grid">
+
 
 <div class="footer-brand">
 
@@ -1110,9 +1386,11 @@ src="./WEBSITE LOGO.png"
 alt="ALANKRA">
 
 <p>
+
 Everyday jewellery, elevated.
-Thoughtful details, feminine designs and
-affordable luxury made for every moment.
+Thoughtful details, feminine designs
+and affordable luxury made for every moment.
+
 </p>
 
 </div>
@@ -1208,7 +1486,9 @@ Email Us
 href="https://www.instagram.com/alankra.jewels/"
 target="_blank"
 rel="noopener">
+
 Instagram
+
 </a>
 
 </div>
@@ -1245,18 +1525,22 @@ Terms
 </footer>
 
 
+<!-- ================= TOAST ================= -->
+
 <div
 class="toast"
 id="toast">
+
 Added to your ALANKRA bag ♡
+
 </div>
 
 
 <script>
 
-/* ==========================================
-   ALANKRA PRODUCT CATALOGUE
-========================================== */
+/* =========================================================
+   PRODUCT CATALOGUE
+========================================================= */
 
 const products = [
 
@@ -1447,9 +1731,9 @@ image:"heart mangalsutra.png"
 ];
 
 
-/* ==========================================
-   GET PRODUCT
-========================================== */
+/* =========================================================
+   URL PRODUCT
+========================================================= */
 
 const params =
 new URLSearchParams(window.location.search);
@@ -1458,63 +1742,266 @@ const productCode =
 params.get("product");
 
 let product =
-products.find(item => item.code === productCode);
+products.find(
+item => item.code === productCode
+) || products[0];
 
-if(!product){
-product = products[0];
+
+/* =========================================================
+   IMAGE TYPES
+========================================================= */
+
+const imageTypes = [
+
+{
+suffix:"01",
+label:"Complete Look"
+},
+
+{
+suffix:"02",
+label:"Close-Up"
+},
+
+{
+suffix:"03",
+label:"Model Look"
+}
+
+];
+
+
+/* =========================================================
+   PRODUCT GALLERY
+========================================================= */
+
+function loadProductGallery(){
+
+const container =
+document.getElementById("imageContainer");
+
+const thumbnails =
+document.getElementById("productThumbnails");
+
+
+thumbnails.innerHTML = "";
+
+
+/* MAIN IMAGE */
+
+container.innerHTML = `
+
+<img
+id="mainProductImage"
+class="main-product-image"
+
+src="./${product.code}-01.jpg"
+
+alt="${product.name} — Complete Look"
+
+onerror="tryPngFallback(
+this,
+'./${product.code}-01.png'
+)">
+
+`;
+
+
+document.getElementById(
+"imageLabel"
+).textContent = "Complete Look";
+
+
+/* THUMBNAILS */
+
+imageTypes.forEach(
+(image,index)=>{
+
+const button =
+document.createElement("button");
+
+button.type = "button";
+
+button.className =
+"product-thumb" +
+(index === 0 ? " active" : "");
+
+
+button.innerHTML = `
+
+<img
+
+src="./${product.code}-${image.suffix}.jpg"
+
+alt="${product.name} — ${image.label}"
+
+onerror="tryPngFallback(
+this,
+'./${product.code}-${image.suffix}.png'
+)">
+
+<span class="thumb-label">
+${image.label}
+</span>
+
+`;
+
+
+button.addEventListener(
+"click",
+()=>changeMainProductImage(
+image,
+button
+)
+);
+
+
+thumbnails.appendChild(button);
+
+});
+
 }
 
 
-/* ==========================================
+/* =========================================================
+   CHANGE MAIN IMAGE
+========================================================= */
+
+function changeMainProductImage(
+image,
+button
+){
+
+const main =
+document.getElementById(
+"mainProductImage"
+);
+
+const label =
+document.getElementById(
+"imageLabel"
+);
+
+
+main.style.opacity = "0";
+
+
+setTimeout(()=>{
+
+main.src =
+`./${product.code}-${image.suffix}.jpg`;
+
+main.alt =
+`${product.name} — ${image.label}`;
+
+
+main.onerror = ()=>{
+
+main.onerror = null;
+
+main.src =
+`./${product.code}-${image.suffix}.png`;
+
+};
+
+
+main.onload = ()=>{
+
+main.style.opacity = "1";
+
+};
+
+},120);
+
+
+label.textContent =
+image.label;
+
+
+document
+.querySelectorAll(".product-thumb")
+.forEach(
+item =>
+item.classList.remove("active")
+);
+
+
+button.classList.add("active");
+
+}
+
+
+/* =========================================================
+   PNG FALLBACK
+========================================================= */
+
+function tryPngFallback(
+image,
+pngPath
+){
+
+if(image.dataset.fallbackUsed){
+
+return;
+
+}
+
+image.dataset.fallbackUsed =
+"true";
+
+image.src = pngPath;
+
+}
+
+
+/* =========================================================
    DISPLAY PRODUCT
-========================================== */
+========================================================= */
 
 function displayProduct(){
 
 document.title =
 `${product.name} | ALANKRA`;
 
-document.getElementById("productName")
-.textContent = product.name;
 
-document.getElementById("productPrice")
-.textContent = `₹${product.price}`;
-
-document.getElementById("productCode")
-.textContent =
-`Product Code · ${product.code}`;
-
-document.getElementById("productCategory")
-.textContent =
-product.category;
-
-document.getElementById("breadcrumbProduct")
-.textContent =
+document.getElementById(
+"productName"
+).textContent =
 product.name;
 
-document.getElementById("productDescription")
-.textContent =
+
+document.getElementById(
+"productPrice"
+).textContent =
+`₹${product.price}`;
+
+
+document.getElementById(
+"productCode"
+).textContent =
+`Product Code · ${product.code}`;
+
+
+document.getElementById(
+"productCategory"
+).textContent =
+product.category;
+
+
+document.getElementById(
+"breadcrumbProduct"
+).textContent =
+product.name;
+
+
+document.getElementById(
+"productDescription"
+).textContent =
+
 `A beautifully detailed ${product.name.toLowerCase()} designed to bring effortless elegance to your everyday look. A versatile piece made to be styled, layered and loved for every moment.`;
 
 
-const container =
-document.getElementById("imageContainer");
-
-if(product.image){
-
-container.innerHTML = `
-<img
-src="./${product.image}"
-alt="${product.name}"
-class="product-image"
-onerror="showPlaceholder()">
-`;
-
-}else{
-
-showPlaceholder();
-
-}
+loadProductGallery();
 
 updateWishlistButton();
 
@@ -1523,67 +2010,50 @@ renderRelatedProducts();
 }
 
 
-/* ==========================================
-   IMAGE PLACEHOLDER
-========================================== */
-
-function showPlaceholder(){
-
-document.getElementById("imageContainer").innerHTML = `
-
-<div class="image-placeholder">
-
-<div>
-
-ALANKRA
-
-<small>
-Image Coming Soon
-</small>
-
-</div>
-
-</div>
-
-`;
-
-}
-
-
-/* ==========================================
+/* =========================================================
    QUANTITY
-========================================== */
+========================================================= */
 
 function changeQuantity(amount){
 
 const input =
-document.getElementById("quantity");
+document.getElementById(
+"quantity"
+);
 
 let value =
 parseInt(input.value) + amount;
 
+
 if(value < 1){
+
 value = 1;
+
 }
+
 
 input.value = value;
 
 }
 
 
-/* ==========================================
+/* =========================================================
    CART
-========================================== */
+========================================================= */
 
 function getCart(){
 
 try{
 
 return JSON.parse(
-localStorage.getItem("alankraCart")
+localStorage.getItem(
+"alankraCart"
+)
 ) || [];
 
-}catch{
+}
+
+catch{
 
 return [];
 
@@ -1606,35 +2076,51 @@ function addToBag(){
 
 const quantity =
 parseInt(
-document.getElementById("quantity").value
+document.getElementById(
+"quantity"
+).value
 ) || 1;
 
-let cart = getCart();
+
+let cart =
+getCart();
+
 
 const existing =
-cart.find(item =>
+cart.find(
+item =>
 item.code === product.code
 );
+
 
 if(existing){
 
 existing.quantity =
-(existing.quantity || 1) + quantity;
+(existing.quantity || 1)
++ quantity;
 
-}else{
+}
+
+else{
 
 cart.push({
 
 code:product.code,
+
 name:product.name,
+
 price:product.price,
+
 image:product.image,
+
 category:product.category,
+
 quantity:quantity
 
 });
 
 }
+
 
 saveCart(cart);
 
@@ -1647,19 +2133,23 @@ showToast(
 }
 
 
-/* ==========================================
+/* =========================================================
    WISHLIST
-========================================== */
+========================================================= */
 
 function getWishlist(){
 
 try{
 
 return JSON.parse(
-localStorage.getItem("alankraWishlist")
+localStorage.getItem(
+"alankraWishlist"
+)
 ) || [];
 
-}catch{
+}
+
+catch{
 
 return [];
 
@@ -1683,26 +2173,38 @@ function toggleProductWishlist(){
 let wishlist =
 getWishlist();
 
+
 const index =
-wishlist.indexOf(product.code);
+wishlist.indexOf(
+product.code
+);
+
 
 if(index > -1){
 
-wishlist.splice(index,1);
+wishlist.splice(
+index,
+1
+);
 
 showToast(
 "Removed from wishlist"
 );
 
-}else{
+}
 
-wishlist.push(product.code);
+else{
+
+wishlist.push(
+product.code
+);
 
 showToast(
 "Added to your wishlist ♡"
 );
 
 }
+
 
 saveWishlist(wishlist);
 
@@ -1723,26 +2225,39 @@ document.getElementById(
 const wishlist =
 getWishlist();
 
-if(wishlist.includes(product.code)){
 
-button.classList.add("active");
+if(
+wishlist.includes(
+product.code
+)
+){
 
-button.textContent = "♥";
+button.classList.add(
+"active"
+);
 
-}else{
+button.textContent =
+"♥";
 
-button.classList.remove("active");
+}
 
-button.textContent = "♡";
+else{
+
+button.classList.remove(
+"active"
+);
+
+button.textContent =
+"♡";
 
 }
 
 }
 
 
-/* ==========================================
+/* =========================================================
    COUNTS
-========================================== */
+========================================================= */
 
 function updateCounts(){
 
@@ -1752,17 +2267,26 @@ getCart();
 const wishlist =
 getWishlist();
 
+
 const cartCount =
 cart.reduce(
-(total,item) =>
-total + Number(item.quantity || 1),
+
+(total,item)=>
+total +
+Number(
+item.quantity || 1
+),
+
 0
+
 );
+
 
 document.getElementById(
 "cartCount"
 ).textContent =
 cartCount;
+
 
 document.getElementById(
 "wishlistCount"
@@ -1772,9 +2296,9 @@ wishlist.length;
 }
 
 
-/* ==========================================
+/* =========================================================
    RELATED PRODUCTS
-========================================== */
+========================================================= */
 
 function renderRelatedProducts(){
 
@@ -1783,94 +2307,160 @@ document.getElementById(
 "relatedGrid"
 );
 
+
 let related =
-products.filter(item =>
-item.category === product.category &&
-item.code !== product.code
+products.filter(
+
+item =>
+item.category ===
+product.category
+&&
+item.code !==
+product.code
+
 );
+
 
 if(related.length < 4){
 
 const additional =
-products.filter(item =>
-item.code !== product.code &&
+products.filter(
+
+item =>
+item.code !==
+product.code
+&&
 !related.some(
-r => r.code === item.code
+r =>
+r.code === item.code
 )
+
 );
 
+
 related =
-related.concat(additional);
+related.concat(
+additional
+);
 
 }
 
+
 related =
-related.slice(0,4);
+related.slice(
+0,
+4
+);
+
 
 grid.innerHTML =
-related.map(item => {
+related.map(
+item=>{
 
-const image =
-item.image
-?
-`
+let image;
+
+
+if(item.image){
+
+image = `
+
 <img
+
 src="./${item.image}"
+
 alt="${item.name}"
-onerror="this.style.display='none'">
-`
-:
-`
-<div class="image-placeholder">
-<div>
-ALANKRA
-<small>Coming Soon</small>
-</div>
-</div>
+
+onerror="
+this.style.display='none'
+">
+
 `;
+
+}
+
+else{
+
+image = `
+
+<div class="image-placeholder">
+
+<div>
+
+ALANKRA
+
+<small>
+Coming Soon
+</small>
+
+</div>
+
+</div>
+
+`;
+
+}
+
 
 return `
 
 <a
+
 class="related-card"
-href="./product.html?product=${encodeURIComponent(item.code)}">
+
+href="./product.html?product=${encodeURIComponent(item.code)}"
+
+>
 
 <div class="related-image">
+
 ${image}
+
 </div>
 
 <div class="related-name">
+
 ${item.name}
+
 </div>
 
 <div class="related-price">
+
 ₹${item.price}
+
 </div>
 
 </a>
 
 `;
 
-}).join("");
+}
+
+).join("");
 
 }
 
 
-/* ==========================================
-   WHATSAPP
-========================================== */
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
 
 function orderWhatsApp(){
 
 const quantity =
 parseInt(
-document.getElementById("quantity").value
+document.getElementById(
+"quantity"
+).value
 ) || 1;
 
+
 const total =
-product.price * quantity;
+product.price *
+quantity;
+
 
 const message =
+
 `Hi ALANKRA 🤍
 
 I would like to order:
@@ -1882,9 +2472,17 @@ Price: ₹${total}
 
 Please share the next steps for my order.`;
 
+
 const whatsappURL =
-"https://wa.me/919311690960?text=" +
-encodeURIComponent(message);
+
+"https://wa.me/919311690960?text="
+
++
+
+encodeURIComponent(
+message
+);
+
 
 window.open(
 whatsappURL,
@@ -1894,15 +2492,19 @@ whatsappURL,
 }
 
 
-/* ==========================================
+/* =========================================================
    NAVIGATION
-========================================== */
+========================================================= */
 
 function toggleMenu(){
 
 document
-.getElementById("mobileMenu")
-.classList.toggle("active");
+.getElementById(
+"mobileMenu"
+)
+.classList.toggle(
+"active"
+);
 
 }
 
@@ -1932,37 +2534,56 @@ window.location.href =
 }
 
 
-/* ==========================================
+/* =========================================================
    TOAST
-========================================== */
+========================================================= */
 
 let toastTimer;
+
 
 function showToast(message){
 
 const toast =
-document.getElementById("toast");
+document.getElementById(
+"toast"
+);
+
 
 toast.textContent =
 message;
 
-toast.classList.add("show");
 
-clearTimeout(toastTimer);
+toast.classList.add(
+"show"
+);
+
+
+clearTimeout(
+toastTimer
+);
+
 
 toastTimer =
-setTimeout(() => {
+setTimeout(
 
-toast.classList.remove("show");
+()=>{
 
-},2500);
+toast.classList.remove(
+"show"
+);
+
+},
+
+2500
+
+);
 
 }
 
 
-/* ==========================================
+/* =========================================================
    START
-========================================== */
+========================================================= */
 
 displayProduct();
 
