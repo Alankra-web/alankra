@@ -10,23 +10,23 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-  --ivory:#f8f4ed;
-  --cream:#eee5d8;
-  --champagne:#d9c6a8;
-  --gold:#b99a62;
-  --gold-dark:#927546;
-  --emerald:#123d35;
-  --emerald-light:#1d5147;
-  --ink:#24211d;
-  --muted:#746e66;
+  --ivory:#f8f4ec;
+  --cream:#eee7da;
   --white:#fffdf9;
-  --line:rgba(146,117,70,.22);
-  --shadow:0 14px 35px rgba(46,35,23,.08);
+  --emerald:#123f35;
+  --deep:#0b2d27;
+  --gold:#b59658;
+  --gold-light:#d7c28f;
+  --text:#26231f;
+  --muted:#777066;
+  --line:rgba(181,150,88,.28);
+  --shadow:0 12px 35px rgba(31,26,19,.08);
 }
 
 *{
@@ -41,9 +41,9 @@ html{
 
 body{
   background:var(--ivory);
-  color:var(--ink);
+  color:var(--text);
   font-family:'Montserrat',sans-serif;
-  line-height:1.6;
+  font-weight:400;
 }
 
 a{
@@ -61,12 +61,12 @@ button{
 }
 
 /* =========================
-   ANNOUNCEMENT
+   TOP BAR
 ========================= */
 
-.announcement{
+.topbar{
   background:var(--emerald);
-  color:#f8f1e4;
+  color:#f8f3e8;
   text-align:center;
   padding:9px 15px;
   font-size:10px;
@@ -79,7 +79,7 @@ button{
 ========================= */
 
 header{
-  background:rgba(248,244,237,.97);
+  background:rgba(248,244,236,.96);
   border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
@@ -88,239 +88,124 @@ header{
 }
 
 .nav{
-  max-width:1400px;
+  max-width:1380px;
   margin:auto;
   min-height:88px;
-  padding:0 42px;
-  display:grid;
-  grid-template-columns:1fr auto 1fr;
-  align-items:center;
-  gap:30px;
-}
-
-.nav-left,
-.nav-right{
+  padding:0 34px;
   display:flex;
   align-items:center;
-  gap:27px;
-}
-
-.nav-right{
-  justify-content:flex-end;
-}
-
-.nav a{
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:1.7px;
-  text-transform:uppercase;
-}
-
-.nav a:hover{
-  color:var(--gold-dark);
+  justify-content:space-between;
+  gap:30px;
 }
 
 .logo{
   display:flex;
-  justify-content:center;
+  align-items:center;
 }
 
 .logo img{
-  width:118px;
-  max-height:58px;
-  object-fit:contain;
+  width:112px;
+  height:auto;
+  display:block;
 }
 
-.nav-icon{
-  border:0;
-  background:none;
-  color:var(--ink);
+.nav-links{
   display:flex;
   align-items:center;
-  gap:6px;
-  font-size:10px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
+  justify-content:center;
+  gap:34px;
+  flex:1;
 }
 
-.nav-icon svg{
-  width:19px;
-  height:19px;
-  stroke:currentColor;
-  fill:none;
-  stroke-width:1.5;
+.nav-links a{
+  font-size:11px;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  color:#39352f;
+  position:relative;
+  padding:7px 0;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:1px;
+  background:var(--gold);
+  transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+  width:100%;
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.icon-btn{
+  border:0;
+  background:none;
+  color:var(--emerald);
+  font-size:18px;
+  position:relative;
+  padding:4px;
 }
 
 .bag-count{
-  color:var(--gold-dark);
-  font-size:9px;
-  margin-left:-3px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  max-width:1400px;
-  margin:0 auto;
-  padding:52px 42px 35px;
-}
-
-.hero-box{
-  min-height:430px;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(135deg,#f7f1e7 0%,#eee3d3 100%);
-  box-shadow:var(--shadow);
-}
-
-.hero-copy{
-  padding:65px 65px 60px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  position:relative;
-}
-
-.hero-copy:before{
-  content:"";
   position:absolute;
-  width:190px;
-  height:190px;
-  border:1px solid rgba(185,154,98,.25);
+  top:-7px;
+  right:-8px;
+  min-width:17px;
+  height:17px;
   border-radius:50%;
-  top:-65px;
-  left:-65px;
-}
-
-.eyebrow{
-  color:var(--gold-dark);
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:17px;
-}
-
-.hero h1{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:500;
-  font-size:clamp(50px,5.3vw,82px);
-  line-height:.9;
-  letter-spacing:-2px;
-  max-width:560px;
-  margin-bottom:23px;
-}
-
-.hero h1 em{
-  font-weight:400;
-  color:var(--emerald);
-}
-
-.hero-text{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
-  max-width:480px;
-  margin-bottom:30px;
-}
-
-.hero-btn{
-  width:max-content;
-  background:var(--emerald);
-  color:#fff;
-  padding:14px 28px;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  border:1px solid var(--emerald);
-  transition:.3s ease;
-}
-
-.hero-btn:hover{
-  background:transparent;
-  color:var(--emerald);
-}
-
-.hero-visual{
-  padding:22px;
+  background:var(--gold);
+  color:white;
+  font-size:9px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:
-    radial-gradient(circle at center,rgba(255,255,255,.75),transparent 57%),
-    #e5d6c0;
-}
-
-.hero-frame{
-  width:100%;
-  height:100%;
-  max-height:386px;
-  border:1px solid rgba(146,117,70,.35);
-  padding:18px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.hero-frame:before,
-.hero-frame:after{
-  content:"";
-  position:absolute;
-  width:20px;
-  height:20px;
-  border-color:var(--gold);
-  border-style:solid;
-}
-
-.hero-frame:before{
-  left:9px;
-  top:9px;
-  border-width:1px 0 0 1px;
-}
-
-.hero-frame:after{
-  right:9px;
-  bottom:9px;
-  border-width:0 1px 1px 0;
-}
-
-.hero-frame img{
-  width:100%;
-  height:100%;
-  max-height:345px;
-  object-fit:contain;
-  mix-blend-mode:multiply;
 }
 
 /* =========================
    SHOP INTRO
 ========================= */
 
-.shop-intro{
-  text-align:center;
-  padding:34px 20px 25px;
-}
-
-.shop-intro h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:43px;
-  font-weight:500;
-  line-height:1;
-  margin-bottom:10px;
-}
-
-.shop-intro p{
-  color:var(--muted);
-  font-size:12px;
-  max-width:600px;
+.shop-head{
+  max-width:1380px;
   margin:auto;
+  padding:72px 34px 32px;
+  text-align:center;
+}
+
+.eyebrow{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+.shop-head h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(48px,6vw,76px);
+  line-height:.95;
+  font-weight:500;
+  color:var(--emerald);
+  margin-bottom:20px;
+}
+
+.shop-head p{
+  max-width:650px;
+  margin:auto;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
 }
 
 /* =========================
@@ -328,99 +213,101 @@ header{
 ========================= */
 
 .category-wrap{
-  max-width:1400px;
+  max-width:1380px;
   margin:auto;
-  padding:8px 42px 35px;
+  padding:16px 34px 30px;
 }
 
 .categories{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
   display:flex;
   justify-content:center;
   align-items:center;
   flex-wrap:wrap;
-  gap:8px;
+  gap:0;
 }
 
 .category-btn{
-  border:1px solid var(--line);
-  background:transparent;
-  color:var(--ink);
-  padding:10px 21px;
-  font-size:9px;
-  font-weight:600;
-  letter-spacing:1.8px;
+  border:0;
+  background:none;
+  padding:18px 25px;
+  color:#615b52;
+  font-size:10px;
+  letter-spacing:1.7px;
   text-transform:uppercase;
-  transition:.25s ease;
+  position:relative;
+  transition:.25s;
+}
+
+.category-btn::after{
+  content:"";
+  position:absolute;
+  left:25px;
+  right:25px;
+  bottom:8px;
+  height:1px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transition:.25s;
 }
 
 .category-btn:hover,
 .category-btn.active{
-  background:var(--emerald);
-  border-color:var(--emerald);
-  color:#fff;
+  color:var(--emerald);
+}
+
+.category-btn.active::after,
+.category-btn:hover::after{
+  transform:scaleX(1);
 }
 
 /* =========================
-   SHOP TOOLBAR
+   TOOLBAR
 ========================= */
 
-.shop-area{
-  max-width:1400px;
-  margin:auto;
-  padding:0 42px 80px;
-}
-
 .toolbar{
+  max-width:1380px;
+  margin:auto;
+  padding:20px 34px 28px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:15px 0;
-  margin-bottom:30px;
+  justify-content:space-between;
   gap:20px;
 }
 
 .result-count{
-  font-size:9px;
-  font-weight:600;
-  letter-spacing:1.7px;
+  font-size:10px;
   color:var(--muted);
+  letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
 .search-box{
-  position:relative;
   width:260px;
+  position:relative;
 }
 
 .search-box input{
   width:100%;
   border:0;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid #cfc6b6;
   background:transparent;
-  padding:9px 29px 9px 3px;
+  padding:10px 30px 10px 4px;
   outline:none;
-  font-size:11px;
-  color:var(--ink);
+  color:var(--text);
+  font-size:12px;
 }
 
-.search-box input::placeholder{
-  color:#999086;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  font-size:9px;
+.search-box input:focus{
+  border-color:var(--gold);
 }
 
-.search-box svg{
+.search-box span{
   position:absolute;
-  right:2px;
-  top:8px;
-  width:17px;
-  height:17px;
-  stroke:var(--gold-dark);
-  fill:none;
-  stroke-width:1.5;
+  right:5px;
+  top:9px;
+  color:var(--gold);
 }
 
 /* =========================
@@ -428,10 +315,17 @@ header{
 ========================= */
 
 .product-grid{
+  max-width:1380px;
+  margin:auto;
+  padding:0 34px 80px;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:38px 25px;
+  gap:48px 24px;
 }
+
+/* =========================
+   PRODUCT CARD
+========================= */
 
 .product-card{
   position:relative;
@@ -440,142 +334,117 @@ header{
 
 .product-image-wrap{
   position:relative;
-  aspect-ratio:1 / 1.08;
-  background:
-    linear-gradient(145deg,#f4eee5,#e9dece);
-  border:1px solid var(--line);
+  background:#f1ece3;
+  border:1px solid rgba(181,150,88,.16);
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:.35s ease;
+  aspect-ratio:1 / 1.08;
 }
 
-.product-card:hover .product-image-wrap{
-  transform:translateY(-3px);
-  box-shadow:0 16px 32px rgba(46,35,23,.10);
-  border-color:rgba(146,117,70,.4);
-}
-
-.product-image-wrap:before{
-  content:"";
-  position:absolute;
-  inset:9px;
-  border:1px solid rgba(146,117,70,.13);
-  pointer-events:none;
+.product-image-wrap a{
+  display:block;
+  width:100%;
+  height:100%;
 }
 
 .product-image{
-  width:78%;
-  height:78%;
+  width:100%;
+  height:100%;
   object-fit:contain;
-  mix-blend-mode:multiply;
-  transition:transform .45s ease;
-  position:relative;
-  z-index:1;
+  display:block;
+  padding:28px;
+  transition:transform .5s ease;
 }
 
 .product-card:hover .product-image{
-  transform:scale(1.045);
+  transform:scale(1.035);
 }
 
-.wishlist{
-  position:absolute;
-  top:16px;
-  right:16px;
-  width:35px;
-  height:35px;
-  border:1px solid rgba(146,117,70,.24);
-  background:rgba(255,253,249,.88);
-  border-radius:50%;
-  z-index:4;
+.image-placeholder{
+  width:100%;
+  height:100%;
   display:flex;
   align-items:center;
   justify-content:center;
-  transition:.25s ease;
+  flex-direction:column;
+  background:
+    radial-gradient(circle at center,rgba(255,255,255,.75),rgba(236,228,215,.8));
+  color:var(--gold);
 }
 
-.wishlist svg{
-  width:16px;
-  height:16px;
-  stroke:var(--ink);
-  fill:none;
-  stroke-width:1.4;
+.image-placeholder span:first-child{
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;
+  margin-bottom:6px;
 }
 
-.wishlist:hover{
-  background:var(--emerald);
-}
-
-.wishlist:hover svg{
-  stroke:#fff;
-}
-
-.product-tag{
-  position:absolute;
-  top:17px;
-  left:17px;
-  background:var(--emerald);
-  color:#fff;
-  padding:6px 10px;
-  font-size:7px;
-  letter-spacing:1.5px;
-  font-weight:600;
-  text-transform:uppercase;
-  z-index:3;
-}
-
-.product-actions{
-  position:absolute;
-  left:15px;
-  right:15px;
-  bottom:15px;
-  opacity:0;
-  transform:translateY(8px);
-  transition:.3s ease;
-  z-index:4;
-}
-
-.product-card:hover .product-actions{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.add-btn{
-  width:100%;
-  border:0;
-  background:rgba(18,61,53,.96);
-  color:#fff;
-  padding:13px;
+.image-placeholder span:last-child{
   font-size:9px;
-  font-weight:600;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
-.add-btn:hover{
-  background:#0b2e28;
+.wishlist{
+  position:absolute;
+  top:15px;
+  right:15px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid rgba(181,150,88,.35);
+  background:rgba(255,253,249,.9);
+  color:var(--emerald);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:4;
+  transition:.25s;
+}
+
+.wishlist:hover,
+.wishlist.active{
+  background:var(--emerald);
+  color:white;
+}
+
+.quick-add{
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  height:46px;
+  border:1px solid var(--emerald);
+  background:rgba(18,63,53,.96);
+  color:white;
+  font-size:10px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  opacity:0;
+  transform:translateY(8px);
+  transition:.3s;
+}
+
+.product-card:hover .quick-add{
+  opacity:1;
+  transform:translateY(0);
 }
 
 .product-info{
   padding:17px 4px 0;
-  text-align:left;
 }
 
 .product-category{
-  color:var(--gold-dark);
-  font-size:8px;
-  letter-spacing:1.7px;
+  font-size:9px;
+  color:var(--gold);
+  letter-spacing:2px;
   text-transform:uppercase;
-  font-weight:600;
-  margin-bottom:6px;
+  margin-bottom:7px;
 }
 
 .product-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:25px;
-  line-height:1;
-  font-weight:500;
+  font-size:24px;
+  line-height:1.05;
+  color:var(--emerald);
   margin-bottom:8px;
 }
 
@@ -583,171 +452,175 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:12px;
+  gap:10px;
 }
 
 .product-price{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:.5px;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#49443d;
 }
 
-.product-code{
-  color:#9b948b;
-  font-size:8px;
-  letter-spacing:1.4px;
+.view-link{
+  font-size:9px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
-}
-
-/* missing image */
-
-.placeholder{
-  width:78%;
-  height:78%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  text-align:center;
-  border:1px solid rgba(146,117,70,.18);
-  position:relative;
-  background:
-    radial-gradient(circle at center,rgba(255,255,255,.65),transparent 65%);
-}
-
-.placeholder span:first-child{
-  font-family:'Cormorant Garamond',serif;
-  font-size:32px;
-  color:var(--gold-dark);
-}
-
-.placeholder span:last-child{
-  margin-top:5px;
-  color:#8b8379;
-  font-size:7px;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
+  color:var(--gold);
+  border-bottom:1px solid rgba(181,150,88,.4);
+  padding-bottom:3px;
 }
 
 /* =========================
-   FEATURE STRIP
+   EMPTY STATE
 ========================= */
 
-.feature-strip{
-  max-width:1400px;
-  margin:0 auto 80px;
-  padding:0 42px;
+.empty-state{
+  max-width:600px;
+  margin:50px auto 100px;
+  text-align:center;
+  display:none;
 }
 
-.feature-inner{
+.empty-state h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:40px;
+  color:var(--emerald);
+  margin-bottom:10px;
+}
+
+.empty-state p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================
+   BRAND STRIP
+========================= */
+
+.brand-strip{
   background:var(--emerald);
-  color:#f8f2e8;
+  color:#f8f3e8;
+  border-top:1px solid var(--gold-light);
+  border-bottom:1px solid var(--gold-light);
+}
+
+.brand-strip-inner{
+  max-width:1380px;
+  margin:auto;
+  padding:35px 34px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  border:1px solid rgba(185,154,98,.35);
-}
-
-.feature{
-  padding:28px 25px;
+  gap:20px;
   text-align:center;
-  border-right:1px solid rgba(255,255,255,.12);
 }
 
-.feature:last-child{
+.brand-feature{
+  padding:8px 20px;
+  border-right:1px solid rgba(215,194,143,.25);
+}
+
+.brand-feature:last-child{
   border-right:0;
 }
 
-.feature-number{
-  color:#d8bd8b;
+.brand-feature strong{
+  display:block;
   font-family:'Cormorant Garamond',serif;
-  font-size:28px;
-  margin-bottom:3px;
-}
-
-.feature h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:21px;
+  font-size:24px;
   font-weight:500;
-  margin-bottom:3px;
+  margin-bottom:5px;
 }
 
-.feature p{
-  color:rgba(255,255,255,.65);
-  font-size:8px;
-  letter-spacing:1px;
+.brand-feature span{
+  font-size:9px;
+  letter-spacing:1.8px;
   text-transform:uppercase;
+  color:#d8d1c4;
 }
 
 /* =========================
-   EDIT SECTION
+   EDITORIAL MINI SECTION
 ========================= */
 
-.edit-section{
-  max-width:1400px;
-  margin:0 auto 90px;
-  padding:0 42px;
-}
-
-.edit-box{
+.edit{
+  max-width:1380px;
+  margin:auto;
+  padding:85px 34px;
   display:grid;
-  grid-template-columns:.75fr 1.25fr;
-  background:#e9dfd0;
-  border:1px solid var(--line);
-  min-height:350px;
-}
-
-.edit-copy{
-  padding:50px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  grid-template-columns:.9fr 1.1fr;
+  gap:65px;
+  align-items:center;
 }
 
 .edit-copy .eyebrow{
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .edit-copy h2{
   font-family:'Cormorant Garamond',serif;
-  font-size:46px;
-  font-weight:500;
+  font-size:56px;
   line-height:.95;
-  margin-bottom:17px;
+  color:var(--emerald);
+  font-weight:500;
+  margin-bottom:20px;
 }
 
 .edit-copy p{
-  font-size:11px;
   color:var(--muted);
-  max-width:360px;
-  line-height:1.8;
+  font-size:12px;
+  line-height:1.9;
+  max-width:470px;
+}
+
+.edit-link{
+  display:inline-flex;
+  margin-top:25px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--gold);
+  color:var(--emerald);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
 }
 
 .edit-visual{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  padding:18px;
-}
-
-.edit-tile{
-  background:#f7f2e9;
-  border:1px solid rgba(146,117,70,.18);
+  min-height:330px;
+  background:
+    linear-gradient(135deg,rgba(18,63,53,.92),rgba(18,63,53,.98)),
+    var(--emerald);
+  position:relative;
+  overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
 }
 
-.edit-tile img{
-  width:84%;
-  height:84%;
-  object-fit:contain;
-  mix-blend-mode:multiply;
-  transition:.3s ease;
+.edit-visual::before{
+  content:"ALANKRA";
+  position:absolute;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(70px,9vw,130px);
+  letter-spacing:5px;
+  color:rgba(215,194,143,.09);
+  white-space:nowrap;
 }
 
-.edit-tile:hover img{
-  transform:scale(1.06);
+.edit-frame{
+  width:70%;
+  height:72%;
+  border:1px solid rgba(215,194,143,.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:1;
+}
+
+.edit-frame span{
+  font-family:'Cormorant Garamond',serif;
+  color:#e4d4ad;
+  font-size:36px;
+  letter-spacing:2px;
 }
 
 /* =========================
@@ -755,53 +628,56 @@ header{
 ========================= */
 
 .newsletter{
-  background:#eee5d7;
+  background:#eee7da;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
-  text-align:center;
-  padding:65px 20px;
 }
 
-.newsletter .eyebrow{
-  margin-bottom:9px;
+.newsletter-inner{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  padding:65px 30px;
 }
 
 .newsletter h2{
   font-family:'Cormorant Garamond',serif;
-  font-size:43px;
+  font-size:45px;
+  color:var(--emerald);
   font-weight:500;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
 .newsletter p{
-  color:var(--muted);
   font-size:11px;
-  margin-bottom:25px;
+  color:var(--muted);
+  line-height:1.8;
+  margin-bottom:24px;
 }
 
 .newsletter-form{
-  max-width:450px;
+  max-width:470px;
   margin:auto;
   display:flex;
-  border-bottom:1px solid var(--gold-dark);
+  border-bottom:1px solid #b8ad9b;
 }
 
 .newsletter-form input{
   flex:1;
-  background:transparent;
+  min-width:0;
   border:0;
-  outline:0;
-  padding:12px 4px;
-  font-size:10px;
+  background:transparent;
+  padding:13px 5px;
+  outline:none;
+  font-size:11px;
 }
 
 .newsletter-form button{
-  background:transparent;
   border:0;
+  background:none;
   color:var(--emerald);
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:1.7px;
+  font-size:10px;
+  letter-spacing:1.8px;
   text-transform:uppercase;
 }
 
@@ -810,227 +686,263 @@ header{
 ========================= */
 
 footer{
-  background:#102f2a;
-  color:#eee7dc;
-  padding:65px 42px 25px;
+  background:#0d302a;
+  color:#eee8dc;
 }
 
-.footer-grid{
-  max-width:1400px;
+.footer-main{
+  max-width:1380px;
   margin:auto;
+  padding:65px 34px 50px;
   display:grid;
-  grid-template-columns:1.7fr 1fr 1fr 1fr;
-  gap:55px;
-  padding-bottom:45px;
-  border-bottom:1px solid rgba(255,255,255,.12);
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:50px;
 }
 
 .footer-brand img{
   width:105px;
+  margin-bottom:18px;
   filter:brightness(0) invert(1);
-  opacity:.94;
-  margin-bottom:17px;
+  opacity:.95;
 }
 
 .footer-brand p{
-  color:rgba(255,255,255,.58);
-  font-size:10px;
-  line-height:1.8;
   max-width:280px;
+  color:#bdb7aa;
+  font-size:11px;
+  line-height:1.8;
 }
 
-.footer-col h4{
-  color:#d8bd8b;
+.footer-col h3{
   font-size:9px;
   letter-spacing:2px;
   text-transform:uppercase;
-  margin-bottom:17px;
+  color:var(--gold-light);
+  margin-bottom:18px;
 }
 
 .footer-col a{
   display:block;
-  color:rgba(255,255,255,.67);
-  font-size:10px;
-  margin-bottom:10px;
+  font-size:11px;
+  color:#c9c2b5;
+  margin-bottom:11px;
+  transition:.2s;
 }
 
 .footer-col a:hover{
-  color:#fff;
+  color:white;
 }
 
 .footer-bottom{
-  max-width:1400px;
+  max-width:1380px;
   margin:auto;
-  padding-top:22px;
+  border-top:1px solid rgba(215,194,143,.18);
+  padding:20px 34px;
   display:flex;
   justify-content:space-between;
   gap:20px;
-  color:rgba(255,255,255,.4);
-  font-size:8px;
+  color:#aaa397;
+  font-size:9px;
   letter-spacing:1px;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,20px);
+  background:var(--emerald);
+  color:white;
+  padding:14px 24px;
+  font-size:10px;
+  letter-spacing:1.3px;
   text-transform:uppercase;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:2000;
+  box-shadow:var(--shadow);
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
 }
 
 /* =========================
-   EMPTY STATE
+   MOBILE
 ========================= */
 
-.empty{
-  display:none;
-  text-align:center;
-  padding:70px 20px;
-  color:var(--muted);
-}
-
-.empty h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:32px;
-  color:var(--ink);
-  margin-bottom:7px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:1000px){
+@media(max-width:900px){
 
   .nav{
-    padding:0 24px;
+    padding:0 18px;
+    min-height:74px;
   }
 
-  .nav-left{
-    gap:16px;
+  .logo img{
+    width:92px;
   }
 
-  .nav-left a:nth-child(n+3){
+  .nav-links{
     display:none;
   }
 
-  .nav-right a{
-    display:none;
+  .nav-actions{
+    gap:12px;
   }
 
-  .hero{
-    padding:30px 24px;
+  .shop-head{
+    padding:52px 20px 25px;
   }
 
-  .hero-box{
-    grid-template-columns:1fr 1fr;
+  .shop-head h1{
+    font-size:52px;
   }
 
-  .hero-copy{
-    padding:45px;
+  .category-wrap{
+    padding:10px 15px 20px;
+    overflow-x:auto;
   }
 
-  .hero h1{
-    font-size:58px;
+  .categories{
+    justify-content:flex-start;
+    width:max-content;
+    min-width:100%;
   }
 
-  .shop-area,
-  .category-wrap,
-  .feature-strip,
-  .edit-section{
-    padding-left:24px;
-    padding-right:24px;
+  .category-btn{
+    padding:15px 17px;
+  }
+
+  .category-btn::after{
+    left:17px;
+    right:17px;
+  }
+
+  .toolbar{
+    padding:15px 18px 25px;
+  }
+
+  .search-box{
+    width:180px;
   }
 
   .product-grid{
-    gap:30px 18px;
+    padding:0 15px 55px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:34px 12px;
   }
 
-  .footer-grid{
-    grid-template-columns:1.5fr 1fr 1fr;
+  .product-image{
+    padding:15px;
   }
 
-  .footer-grid .footer-col:last-child{
+  .quick-add{
+    opacity:1;
+    transform:none;
+    left:9px;
+    right:9px;
+    bottom:9px;
+    height:38px;
+    font-size:8px;
+  }
+
+  .wishlist{
+    width:32px;
+    height:32px;
+    top:9px;
+    right:9px;
+  }
+
+  .product-info{
+    padding-top:12px;
+  }
+
+  .product-name{
+    font-size:20px;
+  }
+
+  .product-category{
+    font-size:8px;
+  }
+
+  .product-price{
+    font-size:10px;
+  }
+
+  .view-link{
     display:none;
   }
 
+  .brand-strip-inner{
+    grid-template-columns:1fr;
+    padding:28px 20px;
+    gap:0;
+  }
+
+  .brand-feature{
+    border-right:0;
+    border-bottom:1px solid rgba(215,194,143,.2);
+    padding:17px 10px;
+  }
+
+  .brand-feature:last-child{
+    border-bottom:0;
+  }
+
+  .edit{
+    grid-template-columns:1fr;
+    padding:60px 20px;
+    gap:35px;
+  }
+
+  .edit-copy h2{
+    font-size:48px;
+  }
+
+  .edit-visual{
+    min-height:270px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+    padding:50px 22px 35px;
+    gap:35px 20px;
+  }
+
+  .footer-brand{
+    grid-column:1/-1;
+  }
+
+  .footer-bottom{
+    padding:18px 22px;
+    flex-direction:column;
+  }
 }
 
-@media(max-width:720px){
+@media(max-width:500px){
 
-  .announcement{
+  .topbar{
     font-size:8px;
     letter-spacing:1.3px;
   }
 
-  .nav{
-    min-height:72px;
-    grid-template-columns:1fr auto 1fr;
-    padding:0 16px;
+  .shop-head h1{
+    font-size:46px;
   }
 
-  .nav-left a{
-    display:none;
-  }
-
-  .logo img{
-    width:98px;
-  }
-
-  .nav-right{
-    gap:11px;
-  }
-
-  .nav-icon{
-    font-size:0;
-  }
-
-  .hero{
-    padding:20px 15px 25px;
-  }
-
-  .hero-box{
-    grid-template-columns:1fr;
-  }
-
-  .hero-copy{
-    padding:42px 30px 35px;
-  }
-
-  .hero h1{
-    font-size:54px;
-    letter-spacing:-1.5px;
-  }
-
-  .hero-text{
+  .shop-head p{
     font-size:11px;
   }
 
-  .hero-visual{
-    min-height:310px;
-  }
-
-  .shop-intro{
-    padding:25px 18px 20px;
-  }
-
-  .shop-intro h2{
-    font-size:36px;
-  }
-
-  .category-wrap{
-    padding:8px 15px 25px;
-  }
-
-  .categories{
-    gap:6px;
-  }
-
-  .category-btn{
-    padding:8px 13px;
-    font-size:7px;
-  }
-
-  .shop-area{
-    padding:0 15px 60px;
-  }
-
   .toolbar{
-    align-items:flex-start;
     flex-direction:column;
+    align-items:stretch;
   }
 
   .search-box{
@@ -1038,131 +950,36 @@ footer{
   }
 
   .product-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:28px 12px;
+    gap:30px 10px;
   }
 
   .product-image-wrap{
-    aspect-ratio:1 / 1.08;
-  }
-
-  .product-image{
-    width:82%;
-    height:82%;
-  }
-
-  .product-actions{
-    opacity:1;
-    transform:none;
-    bottom:9px;
-    left:9px;
-    right:9px;
-  }
-
-  .add-btn{
-    padding:10px 6px;
-    font-size:7px;
-  }
-
-  .wishlist{
-    width:31px;
-    height:31px;
-    top:10px;
-    right:10px;
+    aspect-ratio:1/1.12;
   }
 
   .product-name{
-    font-size:21px;
+    font-size:18px;
   }
 
-  .product-price{
-    font-size:10px;
-  }
-
-  .product-code{
-    display:none;
-  }
-
-  .feature-strip{
-    padding:0 15px;
-    margin-bottom:60px;
-  }
-
-  .feature-inner{
-    grid-template-columns:1fr;
-  }
-
-  .feature{
-    border-right:0;
-    border-bottom:1px solid rgba(255,255,255,.12);
-    padding:23px;
-  }
-
-  .feature:last-child{
-    border-bottom:0;
-  }
-
-  .edit-section{
-    padding:0 15px;
-    margin-bottom:60px;
-  }
-
-  .edit-box{
-    grid-template-columns:1fr;
-  }
-
-  .edit-copy{
-    padding:38px 28px;
-  }
-
-  .edit-copy h2{
-    font-size:39px;
-  }
-
-  .edit-visual{
-    min-height:280px;
-  }
-
-  footer{
-    padding:48px 20px 22px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-    gap:35px 25px;
-  }
-
-  .footer-brand{
-    grid-column:1 / -1;
-  }
-
-  .footer-grid .footer-col:last-child{
+  .product-bottom{
     display:block;
   }
 
-  .footer-bottom{
-    flex-direction:column;
-    gap:8px;
+  .product-price{
+    display:block;
+    margin-top:3px;
   }
 
-}
-
-@media(max-width:420px){
-
-  .product-grid{
-    gap:24px 10px;
+  .newsletter-inner{
+    padding:50px 20px;
   }
 
-  .product-name{
-    font-size:19px;
+  .newsletter h2{
+    font-size:38px;
   }
 
-  .product-category{
-    font-size:7px;
-  }
-
-  .hero h1{
-    font-size:47px;
+  .footer-main{
+    grid-template-columns:1fr 1fr;
   }
 
 }
@@ -1172,58 +989,40 @@ footer{
 
 <body>
 
-<!-- =========================
-     ANNOUNCEMENT
-========================= -->
-
-<div class="announcement">
-  Complimentary luxury packaging on every ALANKRA order
+<div class="topbar">
+  Luxury in Every Detail
 </div>
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
   <nav class="nav">
 
-    <div class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">Our Story</a>
-    </div>
-
     <a href="index.html" class="logo">
-      <img src="WEBSITE LOGO.png" alt="ALANKRA">
+      <img src="LOGO.png" alt="ALANKRA">
     </a>
 
-    <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About</a>
+      <a href="care.html">Jewellery Care</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-      <a href="care.html">Care</a>
+    <div class="nav-actions">
 
-      <button class="nav-icon" onclick="focusSearch()" aria-label="Search">
-
-        <svg viewBox="0 0 24 24">
-          <circle cx="10.8" cy="10.8" r="6.8"></circle>
-          <path d="M16 16l5 5"></path>
-        </svg>
-
-        <span>Search</span>
-
+      <button class="icon-btn" onclick="focusSearch()" aria-label="Search">
+        ⌕
       </button>
 
-      <button class="nav-icon" onclick="scrollToBag()" aria-label="Shopping bag">
+      <button class="icon-btn" onclick="scrollToWishlist()" aria-label="Wishlist">
+        ♡
+      </button>
 
-        <svg viewBox="0 0 24 24">
-          <path d="M6 8h12l1 13H5L6 8Z"></path>
-          <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
-        </svg>
-
-        <span>Bag</span>
+      <button class="icon-btn" onclick="openBag()" aria-label="Shopping bag">
+        ♡
         <span class="bag-count" id="bagCount">0</span>
-
       </button>
 
     </div>
@@ -1233,114 +1032,57 @@ footer{
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<main>
 
-<section class="hero">
+  <!-- SHOP INTRO -->
 
-  <div class="hero-box">
+  <section class="shop-head">
 
-    <div class="hero-copy">
+    <div class="eyebrow">The ALANKRA Collection</div>
 
-      <div class="eyebrow">
-        The ALANKRA Edit
-      </div>
+    <h1>Shop Jewellery</h1>
 
-      <h1>
-        Jewellery for<br>
-        <em>every beautiful</em><br>
-        moment.
-      </h1>
+    <p>
+      Discover refined pieces designed to bring a little more beauty
+      into the everyday. From delicate necklaces to statement bracelets,
+      find your own expression of everyday luxury.
+    </p>
 
-      <p class="hero-text">
-        Discover refined everyday pieces designed to bring a little
-        more elegance to the ordinary. Thoughtfully chosen. Beautifully
-        finished. Made to become part of your story.
-      </p>
+  </section>
 
-      <a href="#shop" class="hero-btn">
-        Explore the Collection
-      </a>
+
+  <!-- CATEGORIES -->
+
+  <div class="category-wrap">
+
+    <div class="categories">
+
+      <button class="category-btn active" data-category="All">
+        All Jewellery
+      </button>
+
+      <button class="category-btn" data-category="Necklaces">
+        Necklaces
+      </button>
+
+      <button class="category-btn" data-category="Earrings">
+        Earrings
+      </button>
+
+      <button class="category-btn" data-category="Bracelets">
+        Bracelets
+      </button>
+
+      <button class="category-btn" data-category="Rings">
+        Rings
+      </button>
 
     </div>
 
-    <div class="hero-visual">
-
-      <div class="hero-frame">
-
-        <img
-          src="golden rose necklace.png"
-          alt="ALANKRA Golden Rose Necklace"
-        >
-
-      </div>
-
-    </div>
-
   </div>
 
-</section>
 
-
-<!-- =========================
-     INTRO
-========================= -->
-
-<section class="shop-intro">
-
-  <div class="eyebrow">
-    Curated Jewellery
-  </div>
-
-  <h2>Luxury, made effortless.</h2>
-
-  <p>
-    Explore necklaces, earrings, bracelets and rings created
-    for everyday elegance.
-  </p>
-
-</section>
-
-
-<!-- =========================
-     CATEGORIES
-========================= -->
-
-<section class="category-wrap">
-
-  <div class="categories">
-
-    <button class="category-btn active" data-category="all">
-      All Jewellery
-    </button>
-
-    <button class="category-btn" data-category="necklaces">
-      Necklaces
-    </button>
-
-    <button class="category-btn" data-category="earrings">
-      Earrings
-    </button>
-
-    <button class="category-btn" data-category="bracelets">
-      Bracelets
-    </button>
-
-    <button class="category-btn" data-category="rings">
-      Rings
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     SHOP
-========================= -->
-
-<section class="shop-area" id="shop">
+  <!-- TOOLBAR -->
 
   <div class="toolbar">
 
@@ -1351,182 +1093,143 @@ footer{
     <div class="search-box">
 
       <input
-        type="text"
         id="searchInput"
+        type="text"
         placeholder="Search jewellery..."
         autocomplete="off"
       >
 
-      <svg viewBox="0 0 24 24">
-        <circle cx="10.8" cy="10.8" r="6.8"></circle>
-        <path d="M16 16l5 5"></path>
-      </svg>
+      <span>⌕</span>
 
     </div>
 
   </div>
 
 
-  <div class="product-grid" id="productGrid"></div>
+  <!-- PRODUCTS -->
 
-  <div class="empty" id="emptyState">
+  <section class="product-grid" id="productGrid"></section>
 
-    <h3>Nothing quite like that.</h3>
+  <div class="empty-state" id="emptyState">
+
+    <h2>No pieces found</h2>
 
     <p>
-      Try another search or explore one of our collections.
+      Try another search or explore one of our jewellery categories.
     </p>
 
   </div>
 
-</section>
 
+  <!-- BRAND STRIP -->
 
-<!-- =========================
-     FEATURE STRIP
-========================= -->
+  <section class="brand-strip">
 
-<section class="feature-strip">
+    <div class="brand-strip-inner">
 
-  <div class="feature-inner">
+      <div class="brand-feature">
+        <strong>Stainless Steel</strong>
+        <span>Designed for everyday wear</span>
+      </div>
 
-    <div class="feature">
+      <div class="brand-feature">
+        <strong>18K Gold Finish</strong>
+        <span>Elegant golden detailing</span>
+      </div>
 
-      <div class="feature-number">01</div>
-
-      <h3>Everyday Luxury</h3>
-
-      <p>Designed to be worn, loved & remembered</p>
-
-    </div>
-
-    <div class="feature">
-
-      <div class="feature-number">02</div>
-
-      <h3>Thoughtfully Finished</h3>
-
-      <p>Stainless steel · 18K gold finish</p>
+      <div class="brand-feature">
+        <strong>Everyday Luxury</strong>
+        <span>Made to be worn & loved</span>
+      </div>
 
     </div>
 
-    <div class="feature">
-
-      <div class="feature-number">03</div>
-
-      <h3>Made for Your Moments</h3>
-
-      <p>From everyday dressing to celebrations</p>
-
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     THE ALANKRA EDIT
-========================= -->
+  <!-- EDIT -->
 
-<section class="edit-section">
-
-  <div class="edit-box">
+  <section class="edit">
 
     <div class="edit-copy">
 
-      <div class="eyebrow">
-        The Signature Edit
-      </div>
+      <div class="eyebrow">The ALANKRA Edit</div>
 
-      <h2>
-        Pieces you'll<br>
-        reach for<br>
-        again & again.
-      </h2>
+      <h2>Jewellery that feels like you.</h2>
 
       <p>
-        From delicate necklaces to statement bracelets,
-        discover the pieces that make everyday dressing
-        feel a little more special.
+        From quiet everyday pieces to details that deserve a little
+        attention, ALANKRA is designed around the idea that luxury
+        doesn't always have to wait for a special occasion.
       </p>
+
+      <a href="collections.html" class="edit-link">
+        Explore Collections
+      </a>
 
     </div>
 
     <div class="edit-visual">
 
-      <div class="edit-tile">
-        <img src="pearl bloom necklace.jpeg" alt="Pearl Bloom Necklace">
-      </div>
-
-      <div class="edit-tile">
-        <img src="golden knot bracelet.png" alt="Golden Knot Bracelet">
-      </div>
-
-      <div class="edit-tile">
-        <img src="silver swan necklace.jpeg" alt="Silver Swan Necklace">
+      <div class="edit-frame">
+        <span>ALANKRA</span>
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     NEWSLETTER
-========================= -->
+  <!-- NEWSLETTER -->
 
-<section class="newsletter">
+  <section class="newsletter">
 
-  <div class="eyebrow">
-    Stay in the ALANKRA circle
-  </div>
+    <div class="newsletter-inner">
 
-  <h2>Something beautiful is coming.</h2>
+      <div class="eyebrow">Stay in the loop</div>
 
-  <p>
-    Be the first to discover new drops, edits and little luxuries.
-  </p>
+      <h2>A little luxury, delivered.</h2>
 
-  <form
-    class="newsletter-form"
-    onsubmit="subscribe(event)"
-  >
+      <p>
+        Be the first to discover new pieces, collections and moments
+        from ALANKRA.
+      </p>
 
-    <input
-      type="email"
-      id="emailInput"
-      placeholder="Your email address"
-      required
-    >
+      <form class="newsletter-form" id="newsletterForm">
 
-    <button type="submit">
-      Join Us
-    </button>
+        <input
+          type="email"
+          id="newsletterEmail"
+          placeholder="Your email address"
+          required
+        >
 
-  </form>
+        <button type="submit">
+          Subscribe
+        </button>
 
-</section>
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-  <div class="footer-grid">
+  <div class="footer-main">
 
     <div class="footer-brand">
 
-      <img src="WEBSITE LOGO.png" alt="ALANKRA">
+      <img src="LOGO.png" alt="ALANKRA">
 
       <p>
-        Jewellery designed for everyday luxury —
-        elegant, effortless and made to become part
-        of your story.
+        Jewellery designed for everyday moments,
+        thoughtful gifting and a little extra luxury.
       </p>
 
     </div>
@@ -1534,38 +1237,38 @@ footer{
 
     <div class="footer-col">
 
-      <h4>Shop</h4>
+      <h3>Shop</h3>
 
       <a href="shop.html">All Jewellery</a>
-      <a href="shop.html?category=necklaces">Necklaces</a>
-      <a href="shop.html?category=earrings">Earrings</a>
-      <a href="shop.html?category=bracelets">Bracelets</a>
-      <a href="shop.html?category=rings">Rings</a>
+      <a href="shop.html?category=Necklaces">Necklaces</a>
+      <a href="shop.html?category=Earrings">Earrings</a>
+      <a href="shop.html?category=Bracelets">Bracelets</a>
+      <a href="shop.html?category=Rings">Rings</a>
 
     </div>
 
 
     <div class="footer-col">
 
-      <h4>ALANKRA</h4>
+      <h3>Explore</h3>
 
-      <a href="about.html">Our Story</a>
       <a href="collections.html">Collections</a>
+      <a href="about.html">About ALANKRA</a>
       <a href="care.html">Jewellery Care</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="faq.html">FAQs</a>
 
     </div>
 
 
     <div class="footer-col">
 
-      <h4>Customer Care</h4>
+      <h3>Information</h3>
 
-      <a href="shipping.html">Shipping & Delivery</a>
-      <a href="returns.html">Returns & Exchange</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="returns.html">Returns</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
 
     </div>
 
@@ -1574,368 +1277,434 @@ footer{
 
   <div class="footer-bottom">
 
-    <span>
-      © 2026 ALANKRA. All rights reserved.
-    </span>
+    <span>© 2026 ALANKRA. All rights reserved.</span>
 
-    <span>
-      Luxury in Every Detail
-    </span>
+    <span>Luxury in Every Detail.</span>
 
   </div>
 
 </footer>
 
 
+<div class="toast" id="toast"></div>
+
+
 <script>
 
-/* =========================
+/* ==========================================
    PRODUCT DATA
-========================= */
+========================================== */
 
 const products = [
 
   {
     code:"ALK-B001",
     name:"Golden Knot Bracelet",
+    category:"Bracelets",
     price:499,
-    category:"bracelets",
     image:"golden knot bracelet.png"
   },
 
   {
     code:"ALK-E001",
     name:"Golden Petal Earrings",
+    category:"Earrings",
     price:499,
-    category:"earrings",
     image:"golden petal earring.jpeg"
   },
 
   {
     code:"ALK-E002",
     name:"Purple Vintage Earrings",
+    category:"Earrings",
     price:449,
-    category:"earrings",
     image:"purple vintage earrings.jpeg"
   },
 
   {
     code:"ALK-E003",
     name:"Crystal Stud Earrings",
+    category:"Earrings",
     price:499,
-    category:"earrings",
     image:null
   },
 
   {
     code:"ALK-E004",
     name:"Vintage Butterfly Earrings",
+    category:"Earrings",
     price:449,
-    category:"earrings",
     image:"vintage butterfly earrings.jpeg"
   },
 
   {
     code:"ALK-N001",
     name:"Pearl Bloom Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"pearl bloom necklace.jpeg"
   },
 
   {
     code:"ALK-N002",
     name:"Lucky Clover Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"lucky clover necklace.jpeg"
   },
 
   {
     code:"ALK-B002",
     name:"Green Stone Bracelet",
+    category:"Bracelets",
     price:599,
-    category:"bracelets",
     image:"green stone bracelet.png"
   },
 
   {
     code:"ALK-N003",
     name:"Mini Tulip Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"mini tulip necklace.png"
   },
 
   {
     code:"ALK-B003",
     name:"Golden Glow Bracelet",
+    category:"Bracelets",
     price:499,
-    category:"bracelets",
     image:"golden glow bracelet.png"
   },
 
   {
     code:"ALK-N004",
     name:"Black Clover Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"black clover necklace.jpeg"
   },
 
   {
     code:"ALK-N005",
     name:"White Drop Necklace",
+    category:"Necklaces",
     price:599,
-    category:"necklaces",
     image:"white drop necklace set.jpeg"
   },
 
   {
     code:"ALK-N006",
     name:"Silver Swan Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"silver swan necklace.jpeg"
   },
 
   {
     code:"ALK-E005",
     name:"Vintage Square Earrings",
+    category:"Earrings",
     price:449,
-    category:"earrings",
     image:null
   },
 
   {
     code:"ALK-N007",
     name:"Golden Rose Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"golden rose necklace.png"
   },
 
   {
     code:"ALK-R001",
     name:"Crystal Cross Ring",
+    category:"Rings",
     price:399,
-    category:"rings",
     image:"crystal cross ring.png"
   },
 
   {
     code:"ALK-R002",
     name:"Classic V Ring",
+    category:"Rings",
     price:449,
-    category:"rings",
     image:null
   },
 
   {
     code:"ALK-B004",
     name:"Bow & Heart Bracelet",
+    category:"Bracelets",
     price:599,
-    category:"bracelets",
     image:"heart and bow bracelet.png"
   },
 
   {
     code:"ALK-B005",
     name:"Nail Bracelet",
+    category:"Bracelets",
     price:599,
-    category:"bracelets",
     image:"nail bracelet.jpeg"
   },
 
   {
     code:"ALK-N008",
     name:"Golden Coin Necklace",
+    category:"Necklaces",
     price:449,
-    category:"necklaces",
     image:null
   },
 
   {
     code:"ALK-N009",
     name:"Pink Heart Necklace",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"Pink heart necklace.jpeg"
   },
 
   {
     code:"ALK-N010",
     name:"Daisy Bloom Necklace",
+    category:"Necklaces",
     price:549,
-    category:"necklaces",
     image:null
   },
 
   {
     code:"ALK-N011",
     name:"Heart Mangalsutra",
+    category:"Necklaces",
     price:499,
-    category:"necklaces",
     image:"heart mangalsutra.png"
   }
 
 ];
 
 
-/* =========================
+/* ==========================================
    STATE
-========================= */
+========================================== */
 
-let activeCategory = "all";
+let activeCategory = "All";
 let searchTerm = "";
+
+const grid = document.getElementById("productGrid");
+const resultCount = document.getElementById("resultCount");
+const emptyState = document.getElementById("emptyState");
+const searchInput = document.getElementById("searchInput");
+
+
+/* ==========================================
+   WISHLIST
+========================================== */
+
+let wishlist = JSON.parse(
+  localStorage.getItem("alankraWishlist") || "[]"
+);
+
+
+/* ==========================================
+   BAG
+========================================== */
 
 let bag = JSON.parse(
   localStorage.getItem("alankraBag") || "[]"
 );
 
 
-/* =========================
+function updateBagCount(){
+
+  const count = bag.reduce(
+    (total,item) => total + (item.quantity || 1),
+    0
+  );
+
+  document.getElementById("bagCount").textContent = count;
+
+}
+
+
+function openBag(){
+
+  if(!bag.length){
+
+    showToast("Your bag is currently empty.");
+
+    return;
+  }
+
+  showToast(
+    bag.length === 1
+      ? "1 piece is in your bag."
+      : bag.length + " pieces are in your bag."
+  );
+
+}
+
+
+/* ==========================================
    RENDER PRODUCTS
-========================= */
+========================================== */
 
 function renderProducts(){
 
-  const grid = document.getElementById("productGrid");
-  const empty = document.getElementById("emptyState");
-  const count = document.getElementById("resultCount");
+  const filtered = products.filter(product => {
 
-  let filtered = products.filter(product => {
-
-    const categoryMatch =
-      activeCategory === "all" ||
+    const matchesCategory =
+      activeCategory === "All" ||
       product.category === activeCategory;
 
-    const searchMatch =
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.code.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch =
+      !searchTerm ||
+      product.name.toLowerCase().includes(searchTerm) ||
+      product.category.toLowerCase().includes(searchTerm);
 
-    return categoryMatch && searchMatch;
+    return matchesCategory && matchesSearch;
 
   });
 
 
-  count.textContent =
-    `${filtered.length} ${filtered.length === 1 ? "piece" : "pieces"}`;
+  grid.innerHTML = "";
 
 
-  if(filtered.length === 0){
+  resultCount.textContent =
+    filtered.length +
+    (filtered.length === 1 ? " piece" : " pieces");
 
-    grid.innerHTML = "";
-    empty.style.display = "block";
+
+  if(!filtered.length){
+
+    emptyState.style.display = "block";
+
     return;
 
   }
 
-  empty.style.display = "none";
+
+  emptyState.style.display = "none";
 
 
-  grid.innerHTML = filtered.map(product => {
+  filtered.forEach(product => {
 
-    const imageHTML = product.image
+    const isWishlisted =
+      wishlist.includes(product.code);
 
-      ? `
+
+    const card = document.createElement("article");
+
+    card.className = "product-card";
+
+
+    let imageHTML = "";
+
+    if(product.image){
+
+      imageHTML = `
         <img
           class="product-image"
           src="${product.image}"
           alt="${product.name}"
           loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
-      `
 
-      : `
-        <div class="placeholder">
-
-          <span>ALANKRA</span>
-
+        <div class="image-placeholder" style="display:none;">
+          <span>AL</span>
           <span>Image coming soon</span>
-
         </div>
       `;
 
+    }else{
 
-    return `
+      imageHTML = `
+        <div class="image-placeholder">
+          <span>AL</span>
+          <span>Image coming soon</span>
+        </div>
+      `;
 
-      <article class="product-card">
+    }
 
-        <div class="product-image-wrap">
 
-          ${product.category === "necklaces" ? "" : ""}
+    card.innerHTML = `
 
-          <button
-            class="wishlist"
-            onclick="toggleWishlist('${product.code}', this)"
-            aria-label="Add ${product.name} to wishlist"
-          >
+      <div class="product-image-wrap">
 
-            <svg viewBox="0 0 24 24">
-
-              <path
-                d="M20.8 8.9c0 5.2-8.8 10.1-8.8 10.1S3.2 14.1 3.2 8.9A4.6 4.6 0 0 1 12 6.1a4.6 4.6 0 0 1 8.8 2.8Z"
-              ></path>
-
-            </svg>
-
-          </button>
-
+        <a href="product.html?product=${product.code}">
 
           ${imageHTML}
 
+        </a>
 
-          <div class="product-actions">
 
-            <button
-              class="add-btn"
-              onclick="addToBag('${product.code}')"
-            >
-              Add to Bag
-            </button>
+        <button
+          class="wishlist ${isWishlisted ? "active" : ""}"
+          aria-label="Add to wishlist"
+          onclick="toggleWishlist('${product.code}', this)"
+        >
+          ${isWishlisted ? "♥" : "♡"}
+        </button>
 
-          </div>
 
+        <button
+          class="quick-add"
+          onclick="addToBag('${product.code}')"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+
+      <div class="product-info">
+
+        <div class="product-category">
+          ${product.category}
         </div>
 
 
-        <div class="product-info">
+        <a
+          href="product.html?product=${product.code}"
+          class="product-name"
+        >
+          ${product.name}
+        </a>
 
-          <div class="product-category">
-            ${product.category}
-          </div>
 
-          <h3 class="product-name">
-            ${product.name}
-          </h3>
+        <div class="product-bottom">
 
-          <div class="product-bottom">
+          <span class="product-price">
+            ₹${product.price}
+          </span>
 
-            <span class="product-price">
-              ₹${product.price}
-            </span>
 
-            <span class="product-code">
-              ${product.code}
-            </span>
-
-          </div>
+          <a
+            href="product.html?product=${product.code}"
+            class="view-link"
+          >
+            View piece
+          </a>
 
         </div>
 
-      </article>
+      </div>
 
     `;
 
-  }).join("");
+
+    grid.appendChild(card);
+
+  });
 
 }
 
 
-/* =========================
+/* ==========================================
    CATEGORY FILTER
-========================= */
+========================================== */
 
 document.querySelectorAll(".category-btn").forEach(button => {
 
@@ -1952,51 +1721,85 @@ document.querySelectorAll(".category-btn").forEach(button => {
 
     renderProducts();
 
-    document
-      .getElementById("shop")
-      .scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-
   });
 
 });
 
 
-/* =========================
+/* ==========================================
    SEARCH
-========================= */
+========================================== */
 
-document
-  .getElementById("searchInput")
-  .addEventListener("input", event => {
+searchInput.addEventListener("input", event => {
 
-    searchTerm = event.target.value.trim();
+  searchTerm =
+    event.target.value
+      .trim()
+      .toLowerCase();
 
-    renderProducts();
+  renderProducts();
 
-  });
+});
 
 
 function focusSearch(){
 
-  const input =
-    document.getElementById("searchInput");
+  searchInput.focus();
 
-  input.focus();
-
-  input.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
+  window.scrollTo({
+    top:document.querySelector(".toolbar").offsetTop - 100,
+    behavior:"smooth"
   });
 
 }
 
 
-/* =========================
-   BAG
-========================= */
+/* ==========================================
+   WISHLIST
+========================================== */
+
+function toggleWishlist(code, button){
+
+  if(wishlist.includes(code)){
+
+    wishlist =
+      wishlist.filter(item => item !== code);
+
+    button.classList.remove("active");
+    button.textContent = "♡";
+
+    showToast("Removed from wishlist.");
+
+  }else{
+
+    wishlist.push(code);
+
+    button.classList.add("active");
+    button.textContent = "♥";
+
+    showToast("Added to wishlist.");
+
+  }
+
+
+  localStorage.setItem(
+    "alankraWishlist",
+    JSON.stringify(wishlist)
+  );
+
+}
+
+
+function scrollToWishlist(){
+
+  showToast("Your wishlist is saved on this device.");
+
+}
+
+
+/* ==========================================
+   ADD TO BAG
+========================================== */
 
 function addToBag(code){
 
@@ -2006,137 +1809,92 @@ function addToBag(code){
   if(!product) return;
 
 
-  bag.push(product);
+  const existing =
+    bag.find(item => item.code === code);
+
+
+  if(existing){
+
+    existing.quantity =
+      (existing.quantity || 1) + 1;
+
+  }else{
+
+    bag.push({
+      code:product.code,
+      name:product.name,
+      price:product.price,
+      quantity:1
+    });
+
+  }
+
 
   localStorage.setItem(
     "alankraBag",
     JSON.stringify(bag)
   );
 
+
   updateBagCount();
 
-  const button =
-    event && event.target
-      ? event.target
-      : null;
+  showToast(product.name + " added to bag.");
 
-  if(button){
+}
 
-    const original =
-      button.textContent;
 
-    button.textContent =
-      "Added ✓";
+/* ==========================================
+   TOAST
+========================================== */
 
+function showToast(message){
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+
+  clearTimeout(window.toastTimer);
+
+
+  window.toastTimer =
     setTimeout(() => {
-      button.textContent =
-        original;
-    },1200);
 
-  }
+      toast.classList.remove("show");
 
-}
-
-
-function updateBagCount(){
-
-  document.getElementById("bagCount").textContent =
-    bag.length;
+    },2600);
 
 }
 
 
-function scrollToBag(){
-
-  if(bag.length === 0){
-
-    alert(
-      "Your ALANKRA bag is currently empty."
-    );
-
-    return;
-
-  }
-
-  alert(
-    `Your ALANKRA bag has ${bag.length} ${bag.length === 1 ? "piece" : "pieces"}.`
-  );
-
-}
-
-
-/* =========================
-   WISHLIST
-========================= */
-
-function toggleWishlist(code, button){
-
-  const key = "alankraWishlist";
-
-  let wishlist =
-    JSON.parse(localStorage.getItem(key) || "[]");
-
-  if(wishlist.includes(code)){
-
-    wishlist =
-      wishlist.filter(item => item !== code);
-
-    button.style.background =
-      "rgba(255,253,249,.88)";
-
-  }else{
-
-    wishlist.push(code);
-
-    button.style.background =
-      "#123d35";
-
-  }
-
-  localStorage.setItem(
-    key,
-    JSON.stringify(wishlist)
-  );
-
-}
-
-
-/* =========================
+/* ==========================================
    NEWSLETTER
-========================= */
+========================================== */
 
-function subscribe(event){
+document
+  .getElementById("newsletterForm")
+  .addEventListener("submit", event => {
 
-  event.preventDefault();
+    event.preventDefault();
 
-  const email =
-    document.getElementById("emailInput").value;
+    const email =
+      document.getElementById("newsletterEmail").value.trim();
 
-  if(!email) return;
+    if(!email) return;
 
-  alert(
-    "Welcome to the ALANKRA circle ✦"
-  );
+    showToast("Thank you for joining ALANKRA.");
 
-  document
-    .getElementById("emailInput")
-    .value = "";
+    event.target.reset();
 
-}
+  });
 
 
-/* =========================
-   INITIALISE
-========================= */
-
-updateBagCount();
-
-renderProducts();
-
-
-/* =========================
-   CATEGORY FROM URL
-========================= */
+/* ==========================================
+   URL CATEGORY SUPPORT
+========================================== */
 
 const params =
   new URLSearchParams(window.location.search);
@@ -2144,12 +1902,14 @@ const params =
 const urlCategory =
   params.get("category");
 
+
 if(
-  ["necklaces","earrings","bracelets","rings"]
-    .includes(urlCategory)
+  urlCategory &&
+  ["Necklaces","Earrings","Bracelets","Rings"].includes(urlCategory)
 ){
 
   activeCategory = urlCategory;
+
 
   document
     .querySelectorAll(".category-btn")
@@ -2162,9 +1922,16 @@ if(
 
     });
 
-  renderProducts();
-
 }
+
+
+/* ==========================================
+   INITIALISE
+========================================== */
+
+updateBagCount();
+
+renderProducts();
 
 </script>
 
